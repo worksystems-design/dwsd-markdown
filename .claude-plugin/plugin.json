@@ -1,0 +1,7 @@
+{
+  "name": "dwsd-md",
+  "description": "Read, write, and validate DWSD organization entities — the Dynamic Worksystems Design markdown format.",
+  "version": "0.1.0",
+  "author": { "name": "Thomas Krause" },
+  "keywords": ["dwsd", "markdown", "organization", "flightlevels"]
+}

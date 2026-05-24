@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "name": "dwsd-markdown",
+  "plugins": [
+    {
+      "name": "dwsd-md",
+      "description": "Read, write, and validate DWSD organization entities.",
+      "version": "0.1.0",
+      "source": {
+        "type": "github",
+        "repository": "worksystems-design/dwsd-markdown",
+        "path": "."
+      }
+    }
+  ]
+}

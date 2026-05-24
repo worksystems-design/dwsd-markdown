@@ -1,0 +1,168 @@
+# Conventions
+
+Rules that apply to **every** entity, regardless of type. Each type's spec page only
+adds what is specific to it.
+
+## One file, one entity
+
+An organization is a folder of Markdown files. Each `.md` file is exactly one entity.
+Files are grouped into per-type subfolders, but the folder is a convenience — the
+**`type:` field decides the type**, not the folder.
+
+Entities fall into four **categories** — but these are conceptual, **not folders**. Each
+type keeps its own flat plural folder (`individuals/`, `roles/`, …, `signals/`, …); the
+category is a way of thinking about an entity, not a directory.
+
+- **Structure** — the organization's makeup (who, and how they're organized): individual,
+  role, unit, work-system, ai-agent.
+- **Flow** — how work is coordinated and flows: interaction, meeting, agreement,
+  flight-item-type, flight-route, visualization.
+- **Navigation** — working *on* the system, sensing and deciding (sense → respond):
+  signal, insight, driver, proposal. These **look at** the organization; they are not part of it.
+- **Change** — records of decided organizational change: design-record (more may follow).
+
+```yaml
+---
+type: individual
+---
+```
+
+A file with **no frontmatter**, or with an **unknown/missing `type`**, is silently
+skipped by the parser. It is not an entity.
+
+## Filename = label = slug
+
+The filename without extension is both the **display label** and the source of the
+**slug** (the stable id used in wikilinks and internally).
+
+- `individuals/Aaron Turner.md` → label `Aaron Turner`, slug `aaron-turner`
+- Spaces and non-ASCII are allowed in filenames; the slug is normalized.
+
+Because the filename is the identity, **renaming a file renames the entity** — update
+the wikilinks that point at it.
+
+## Relationships are wikilinks
+
+Connections between entities are expressed in the frontmatter as Obsidian-style
+wikilinks pointing at the **label** of the target:
+
+```yaml
+member-of: "[[Sales Team]]"          # single
+role-keeper:                          # or a list
+  - "[[Head of 3P]]"
+  - "[[Head of 4P]]"
+```
+
+- `[[Target]]` and `[[Target|Alias]]` both resolve to `Target`.
+- A field can hold a single wikilink or a list of them.
+- The target is a label; the parser resolves it to a slug. An unresolved target is
+  kept as a dangling reference.
+
+### Relationship fields
+
+Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
+
+| Field (variants) | Meaning |
+|---|---|
+| `reports-to` / `reports_to` | Reporting line — **individuals only** (individual → individual) |
+| `member-of` | Belongs to a unit / work system — an **individual** or a **unit** can be a member |
+| `contributes-to` | A work system contributes to a higher-level work system |
+| `role-keeper` / `role_keeper` | Who holds this role |
+| `for-domain` / `for_domain` | The domain / work system a role or agreement is scoped to |
+| `interaction-of` | The work system(s) an interaction is of |
+| `observes` | The entity an insight observes |
+| `uses-route` | The flight route an entity uses |
+| `defined-for` | The entity something is defined for |
+| `visualization-of` / `visualization_of` | The work system a visualization renders |
+
+## Structure vs. flow
+
+Two orthogonal views of the organization, modeled with two different relationships. Keep
+them apart — an entity can sit very differently in each.
+
+- **`reports-to` → structure** (the formal reporting line — "who reports to whom").
+  **Individuals only.**
+
+- **`member-of` → flow, optionally** (value creation — how work flows). `member-of`
+  expresses *belonging* to a unit or work system; an **individual or a unit** can be a
+  member. That belonging *can* describe the flow side — but need not. Use the membership
+  that matters in context.
+
+A **`unit`** sits **between** the two: a named grouping that one or more people, teams, or
+other units belong to. It need not be a team — it can be an R&D department, a SAFe ART, or
+any other named unit, and units can nest. A unit that also participates in flow is a work
+system (it carries a `flightlevel`). See [`types/unit.md`](types/unit.md)
+and [`types/work-system.md`](types/work-system.md).
+
+## Work systems are implicit
+
+`unit` is the base structural type. **A unit that has a `flightlevel` is implicitly also
+a work system** — it carries the full domain description (Purpose … Evaluation Schedule;
+see [`types/work-system.md`](types/work-system.md)). A unit *without* a
+`flightlevel` is just a structural team.
+
+This is a deliberate simplification: a unit and "its" work system are modeled as **one
+entity** wearing two hats, not two linked entities. The cleaner two-entity model — where
+a work system can span several teams, or a team can have none — was considered and
+dropped for simplicity.
+
+> **`flightlevel`** is written as one word — no underscore, no hyphen.
+
+## Subtypes and kinds — the `<base>-type` key
+
+Where a type has subtypes or kinds, the discriminator key is **named after the
+base type** (`<base>-type`), not a generic `subtype`, so it reads unambiguously for both
+humans and tools:
+
+- `type: visualization` + **`visualization-type: board`**
+- `type: unit` + **`unit-type: team`**
+
+## Tracking fields
+
+Optional provenance/timestamps. Hyphen and underscore spellings both accepted:
+
+```yaml
+created_at: "2026-03-15"
+updated_at: "2026-03-20"
+created_by: "thomas"
+```
+
+## `sources` block (discovered / synced entities)
+
+Entities pulled in from an external system carry a `sources:` block recording where
+they came from (one key per source system, each with an `id` and `url`):
+
+```yaml
+sources:
+  atlassian:
+    id: "00000000-0000-0000-0000-000000000000"
+    url: "https://example.atlassian.net/o/<org-id>/people/team/00000000-0000-0000-0000-000000000000"
+  discovery:
+    id: discovery-00000000
+    url: "https://www.notion.so/00000000000000000000000000000000"
+```
+
+Some synced entities instead carry flat `atlassian_id` / `atlassian_url` fields — both
+patterns are valid.
+
+## Embedded DSL fences
+
+Two types carry a fenced code block that the app parses and renders:
+
+- `visualization` (boards) → ```` ```board ```` — see
+  [`types/visualization.md`](types/visualization.md)
+- `flight-route` → ```` ```flightroute ```` — see
+  [`types/flight-route.md`](types/flight-route.md)
+
+## Markwhen siblings (`.mw`)
+
+A scheduled `interaction` (e.g. a recurring meeting) may have a sibling file with the same
+basename and a `.mw` extension holding a one-line [Markwhen](https://markwhen.com) timeline
+entry:
+
+```
+interactions/3P Coordination.md
+interactions/3P Coordination.mw
+```
+
+The `.mw` file is not an entity on its own; it is attached to the interaction.

@@ -1,0 +1,5 @@
+# Local-only notes — never published.
+/_local/
+
+# Local-only Claude Code instructions — loaded locally, never committed.
+/CLAUDE.local.md
