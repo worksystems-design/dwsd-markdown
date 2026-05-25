@@ -1,7 +1,7 @@
 ---
 name: dwsd-format
 description: >-
-  Read, write, and review DWSD organization entities — the Dynamic Worksystems Design
+  Read, write, and review DWSD organization entities — the Dynamic Work Systems Design
   markdown format (entity types, frontmatter contracts, wikilink relationships, the board
   and flightroute DSLs, and the flat per-type folder layout). Use whenever creating,
   editing, or reviewing files in a DWSD org folder, or when asked about the DWSD format.

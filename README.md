@@ -1,6 +1,6 @@
 # dwsd-markdown
 
-**DWSD** — *Dynamic Worksystems Design* — is an approach to designing how an organization
+**DWSD** — *Dynamic Work Systems Design* — is an approach to designing how an organization
 works; it is more than a folder of files. This repository is its **Markdown foundation**:
 the essentials for laying a **semantic layer** over the messy reality of how organizations
 are actually built — so that both humans and AI agents can read, navigate, and reason

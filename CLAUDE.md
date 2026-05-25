@@ -7,7 +7,7 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 ## Hard rules
 
 - **Public repo — keep everything publishable.** No secrets, no internal or customer
-  project names. **DWSD** = *Dynamic Worksystems Design*.
+  project names. **DWSD** = *Dynamic Work Systems Design*.
 - **English (US) only.** Translations, if ever, are a deliberate future restructuring —
   not a parallel tree maintained now.
 - Inspirations (Sociocracy 3.0, Flight Levels, Ladder of Inference,
