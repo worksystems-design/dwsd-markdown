@@ -33,6 +33,10 @@ indented modifiers (2 spaces) refine them. The essentials:
 - **Group:** `group Development` with indented columns under it.
 - **Lane / swimlane:** `lane Expedite !expedite`, declared *before* the columns.
 
+> **Column names are currently single tokens** — no spaces or `&` (use hyphens, e.g.
+> `In-Progress`, `Ready-for-Dispatch`). Multi-word names are planned but not yet supported
+> by the parser.
+
 ## Example
 
 ```markdown
@@ -46,7 +50,7 @@ visualization-of: "[[3P]]"
 ```board
 Backlog
 Selected #todo
-In Progress #in-progress
+In-Progress #in-progress
 Review #waiting
 Done #done
 ```

@@ -16,6 +16,6 @@ route "Daily Replenishment Flow"
   flow:
     FL2: @bakery-operations#Planned
       -[generate: @daily-replenishment-order]-> FL1: @bakehouse#Backlog
-    FL1: @bakehouse#Ready for Dispatch
+    FL1: @bakehouse#Ready-for-Dispatch
       -[deliver: @daily-replenishment-order]-> FL1: @market-street-shop#Incoming
 ```

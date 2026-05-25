@@ -10,5 +10,5 @@ route "<Route name>"
     FL2: @<work-system>#<Column>
       -[generate: @<flight-item-type>]-> FL2: @<work-system>#<Column>
     FL1: @<work-system>#Done
-      -[copy: @<flight-item-type>]-> FL1: @<work-system>#To Do
+      -[copy: @<flight-item-type>]-> FL1: @<work-system>#To-Do
 ```

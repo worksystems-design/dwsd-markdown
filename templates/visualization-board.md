@@ -8,7 +8,7 @@ visualization-of: "[[]]"   # the work system this board renders
 ```board
 Backlog
 Selected #todo
-In Progress #in-progress
+In-Progress #in-progress
 Review #waiting
 Done #done
 ```

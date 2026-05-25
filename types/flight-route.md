@@ -38,10 +38,10 @@ route "Standard Order Fulfillment"
   flow:
     FL2: @sales-fl2#Backlog
       -[generate: @standard-order]-> FL2: @3p-fl2#Backlog
-    FL2: @3p-fl2#In Progress
-      -[copy: @component-spec]-> FL1: @3p-sw-fl1#To Do
+    FL2: @3p-fl2#In-Progress
+      -[copy: @component-spec]-> FL1: @3p-sw-fl1#To-Do
     FL1: @3p-sw-fl1#Done
-      -[copy: @component-spec]-> FL1: @assem-1-fl1#To Do
+      -[copy: @component-spec]-> FL1: @assem-1-fl1#To-Do
 ```
 
 Reading an edge: `FL2: @sales-fl2#Backlog -[generate: @standard-order]-> FL2: @3p-fl2#Backlog`

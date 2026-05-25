@@ -3,3 +3,8 @@
 
 # Local-only Claude Code instructions — loaded locally, never committed.
 /CLAUDE.local.md
+
+# Editor / OS cruft — never published.
+.obsidian/
+.DS_Store
+Thumbs.db

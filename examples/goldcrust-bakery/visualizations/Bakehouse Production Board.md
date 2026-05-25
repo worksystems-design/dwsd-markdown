@@ -11,10 +11,10 @@ dispatch.
 
 ```board
 Backlog
-Mise en Place #todo
-Mixing & Proofing #in-progress [3]
+Mise-en-Place #todo
+Mixing-Proofing [3] #in-progress
 Baking #in-progress
   aging: 1d
 Cooling #waiting
-Ready for Dispatch #done
+Ready-for-Dispatch #done
 ```
