@@ -23,8 +23,7 @@ version: "1.0"
 
 <Inputs required.>
 
-## Activities
+## Interactions
 
-| Activity | Category | Outcome |
-|---|---|---|
-| <…> | discover-plan \| deliver \| improve | <…> |
+- <interaction> → <outcome>
+- "[[Another Interaction or Meeting]]" → <outcome>

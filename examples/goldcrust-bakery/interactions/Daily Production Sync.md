@@ -29,10 +29,8 @@ Next-day quantities and bake sequence ([[Head Baker]]); trade-offs when capacity
 The [[Bakehouse Production Board]], today's sell-through and closing-stock counts from both
 shops, and any known events for tomorrow.
 
-## Activities
+## Interactions
 
-| Activity | Category | Outcome |
-|---|---|---|
-| Review today's sell-through and stockouts | deliver | Shared demand picture |
-| Confirm next-day quantities per shop | discover-plan | Agreed replenishment order |
-| Flag capacity or supply risks | improve | Risks with owners |
+- Review today's sell-through and stockouts → shared demand picture
+- Confirm next-day quantities per shop → agreed [[Daily Replenishment Order]]
+- Flag capacity or supply risks → risks with owners

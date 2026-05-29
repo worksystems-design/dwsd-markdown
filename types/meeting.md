@@ -1,8 +1,9 @@
 # `meeting` (an `interaction` of type `meeting`)
 
-> A scheduled [`interaction`](interaction.md), described by the **Meeting Canvas** and
-> made up of a sequence of activities. The canvas describes the meeting; the activities
-> are listed in a compact table.
+> A scheduled [`interaction`](interaction.md) that bundles a **list of interactions**
+> (each with an outcome). It is a lightweight container: when people meet, and the
+> interactions they run. Flight Levels calls this pattern a *meeting container*; we keep
+> the term **meeting**.
 
 **Serialized `type`:** `interaction` + `interaction-type: meeting`
 
@@ -16,11 +17,11 @@
 | `start` | no | ISO datetime | First occurrence start |
 | `end` | no | ISO datetime | First occurrence end |
 | `rrule` | no | iCal RRULE | Recurrence, e.g. `RRULE:FREQ=WEEKLY;BYDAY=TU` |
-| `version` | no | string | Version of the canvas |
+| `version` | no | string | Version of the meeting |
 
 Plus the shared optionals from [conventions](../conventions.md).
 
-## Body — Meeting Canvas
+## Body
 
 | Section | Holds |
 |---|---|
@@ -28,13 +29,11 @@ Plus the shared optionals from [conventions](../conventions.md).
 | `## What is the outcome?` | The result it should produce |
 | `## What decisions are we making, and who makes them?` | Decisions in scope and who is needed |
 | `## What information do we need?` | The inputs required |
-| `## Activities` | The activities the meeting runs, as a table (its step-by-step process) |
+| `## Interactions` | The interactions this meeting bundles, as a list — each with its outcome |
 
-The **Activities** table — one row per activity, in order:
-
-| Activity | Category | Outcome |
-|---|---|---|
-| … | `discover-plan` \| `deliver` \| `improve` | … |
+The **Interactions** list has one line per interaction, in order — each names the
+interaction and its outcome. Reference a standalone interaction or another meeting with
+`[[…]]` when one exists; otherwise an inline line is enough.
 
 ## Markwhen sibling (`.mw`)
 
@@ -72,13 +71,11 @@ Sprint re-sequencing ([[Head of 3P]]); escalation of cross-product conflicts
 
 The 3P board, current blockers, upcoming hand-off windows with [[Assembly]].
 
-## Activities
+## Interactions
 
-| Activity | Category | Outcome |
-|---|---|---|
-| Review Progress | deliver | Shared status |
-| Blocker Clustering | improve | Grouped blockers, owners |
-| Sequence | discover-plan | Next sprint order |
+- Review progress → shared status
+- Blocker clustering → grouped blockers with owners
+- Sequence next sprint → agreed sprint order
 ```
 
 `interactions/3P Coordination.mw`:
@@ -89,8 +86,8 @@ May 12 2026 10:00-11:00 every week on Tuesday: 3P Coordination
 
 ## Notes
 
-- A meeting consists of multiple activities; an activity is not necessarily a meeting.
-- Activity categories follow the Flight Levels FL2 groups (Discover & Plan, Deliver,
-  Improve).
-- The Meeting Canvas adapts the Flight Levels Activity Canvas (Flight Levels GmbH,
-  CC BY-SA 4.0).
+- A meeting **bundles interactions** — each a small, named interaction with its own outcome.
+- **Interactions** entries can be inline, or `[[wikilinks]]` to an interaction or meeting.
+  Because a meeting *is* an interaction, larger events (e.g. a quarterly review + planning +
+  retro) can be composed from smaller meetings.
+- Influence: Flight Levels — the *meeting container* bundles interactions and their outcomes.

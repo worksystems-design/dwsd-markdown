@@ -47,8 +47,9 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - **`unit`** is the base structural type; a unit whose `unit-type` includes `work-system`
   (and which carries a `flightlevel`) is a **work system**. A unit is any named grouping
   (team, R&D dept, SAFe ART, …), nestable.
-- **`meeting`** is an `interaction` of `interaction-type: meeting`; it runs a table of
-  activities (the Meeting Canvas). `activity` is not its own type.
+- **`meeting`** is an `interaction` of `interaction-type: meeting`; it bundles a **list of
+  interactions** (a meeting "container"), each with its outcome. Any interaction may
+  optionally use the same four framing questions.
 - **`sources`** is documented only in `conventions.md` — don't repeat it on type pages.
 - **Out of scope:** the change-accompaniment *workflow* (facilitation, consent process) is
   an application concern, not this spec.
@@ -68,3 +69,5 @@ convention lives in `conventions.md`.
 - "Concerns" means *attention areas* on `role` but *objections* on `agreement` — align or
   leave context-dependent (open).
 - `design-record` placement may still evolve.
+- An interaction **board-related / supporting** classifier (and a pointer to a specific board
+  column), plus a meeting **`participants`** field, are **deferred** — may emerge later.

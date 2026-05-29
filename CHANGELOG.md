@@ -17,3 +17,10 @@ commit onward**. The current model is described by the reference itself — `REA
   (`unit-type`, `visualization-type`, `agreement-type`, `interaction-type`) may hold a
   single token or a YAML list, so an entity can declare several kinds at once. In practice
   only `unit-type` uses this today.
+- **Meetings are containers of interactions.** A `meeting` (an `interaction` of
+  `interaction-type: meeting`) now bundles a **list of interactions** — each with its outcome
+  — in a `## Interactions` body section. The earlier step/agenda table (with its
+  `discover-plan / deliver / improve` categories) and the "Meeting Canvas" label are removed;
+  the four framing questions stay as plain body sections. Entries may be inline or
+  `[[wikilinks]]` to an interaction or another meeting, so larger events compose from smaller
+  meetings. Any interaction may optionally use the same four framing questions.

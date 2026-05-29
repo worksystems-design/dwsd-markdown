@@ -61,7 +61,7 @@ and **change** (records of decided change). These are conceptual, **not folders*
 | `work-system` | structure | [spec](types/work-system.md) | A flow / value-creation system (a unit whose `unit-type` includes `work-system`) |
 | `ai-agent` | structure | [spec](types/ai-agent.md) | An AI-agent surface — where an AI appears in the workflow (preliminary) |
 | `interaction` | flow | [spec](types/interaction.md) | People acting in relation across work systems |
-| `meeting` | flow | [spec](types/meeting.md) | A scheduled interaction — Meeting Canvas + activities table |
+| `meeting` | flow | [spec](types/meeting.md) | A scheduled interaction that bundles a list of interactions |
 | `agreement` | flow | [spec](types/agreement.md) | A working agreement between work systems |
 | `flight-item-type` | flow | [spec](types/flight-item-type.md) | A class of work item |
 | `flight-route` | flow | [spec](types/flight-route.md) | A path of work through the flight levels |

@@ -15,11 +15,22 @@
 | `interaction-of` | no | wikilink or list | The work system(s) it coordinates |
 
 Plus the shared optionals from [conventions](../conventions.md). The `meeting` kind adds
-scheduling and an agenda of activities — see [`meeting.md`](meeting.md).
+scheduling and a **list of interactions** it bundles — see [`meeting.md`](meeting.md).
 
 ## Relationships
 
 - **`interaction-of`** — the work system(s) the interaction belongs to.
+
+## Body
+
+An interaction's body is free-form — often a one-line `## Purpose`. When more structure
+helps, it may *optionally* use the same four framing questions a [`meeting`](meeting.md)
+uses:
+
+- `## Why are we doing this?`
+- `## What is the outcome?`
+- `## What decisions are we making, and who makes them?`
+- `## What information do we need?`
 
 ## Example
 
