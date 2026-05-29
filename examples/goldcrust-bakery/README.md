@@ -1,8 +1,9 @@
 # Goldcrust Bakery — example organization
 
 A small, fictional bakery described in DWSD: a production **Bakehouse**, two retail shops,
-a coordination layer, and a strategy layer. It is a **worked example** — every DWSD entity
-type appears at least once, wired together into one self-consistent organization.
+a delivery team, a coordination layer, and a strategy layer. It is a **worked example** —
+every DWSD entity type appears at least once, wired together into one self-consistent
+organization.
 
 > Fictional and public-safe. Names and numbers are invented.
 
@@ -15,10 +16,21 @@ FL2  Bakery Operations      coordinates production + retail
         ▲                ▲                  ▲
 FL1  Bakehouse        Market Street Shop   Station Road Shop
      (production)     (retail)             (retail)
+
+     Deliveries  — a plain team (no flightlevel) that carries the morning dispatch;
+                   participates in the flow Bakery Operations coordinates
 ```
 
-`Goldcrust Bakery` (in `units/`) is the structural root — a plain `unit` with **no**
-`flightlevel`. The five work systems are `unit`s **with** a `flightlevel`.
+A unit is a **work system** when its `unit-type` includes `work-system` (it then also
+carries a `flightlevel`). This example shows all three shapes of `unit`:
+
+- **Plain unit** — `Goldcrust Bakery` (in `units/`), `unit-type: company`, no `flightlevel`:
+  the structural root that groups everything; it does not coordinate a flow.
+- **Plain team** — `Deliveries` (in `units/`), `unit-type: team`, no `flightlevel`: a real
+  team of people that is *not* a work system.
+- **Team that is also a work system** — `Bakehouse` (in `work-systems/`),
+  `unit-type: [team, work-system]`, `flightlevel: 1`: the two hats on one unit. The other
+  four work systems carry `work-system` the same way.
 
 ## How to read this folder
 
@@ -32,7 +44,8 @@ FL1  Bakehouse        Market Street Shop   Station Road Shop
 ## Entry points
 
 - **Structure** — [`work-systems/`](work-systems/): `Bakehouse.md` carries the fullest
-  domain description. [`units/`](units/) holds the root `Goldcrust Bakery.md`.
+  domain description (and is a `[team, work-system]`). [`units/`](units/) holds the root
+  `Goldcrust Bakery.md` and the plain-team `Deliveries.md`.
 - **Flow** — [`visualizations/`](visualizations/) (the production board),
   [`flight-routes/`](flight-routes/) (the replenishment route),
   [`interactions/`](interactions/) (the `Daily Production Sync` meeting + its `.mw` sibling).

@@ -18,11 +18,16 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
 
 1. **Frontmatter sanity** — every `.md` entity has a valid `type:` and any required
    discriminator. Folder placement follows the *conceptual* type, not the bare `type:`:
-   - `type: unit` **with** `flightlevel` → `work-systems/`; without → `units/`.
+   - `type: unit` whose `unit-type` **includes `work-system`** → `work-systems/`; otherwise
+     → `units/`.
    - `type: interaction` (including `interaction-type: meeting`) → `interactions/`.
    - every other type → its plural folder (`signal` → `signals/`, …).
    Flag a `visualization` missing `visualization-type`, an `agreement` missing
    `agreement-type`, or an `interaction` missing `interaction-type`.
+   - **Work-system integrity:** a unit whose `unit-type` includes `work-system` **must**
+     have a `flightlevel` (flag if missing). Conversely, **warn** on a unit that has a
+     `flightlevel` but does *not* list `work-system` in `unit-type` — `flightlevel` no
+     longer makes a unit a work system, so this is likely an authoring slip.
 2. **Wikilink integrity** — collect every `[[Target]]` (frontmatter and body) and confirm a
    file `Target.md` exists somewhere in the org (labels are unique). Report danglers.
 3. **Handle integrity** — for every `@handle` in ` ```board ` / ` ```flightroute ` fences,
@@ -31,5 +36,5 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
 4. **Ladder integrity** — every `derived-from` resolves; trace
    signal → insight → driver → proposal → agreement chains and report breaks.
 5. **Type coverage** (informational) — list which of the 16 types are present / absent
-   (remember: work systems are `unit`+`flightlevel`; meetings are
+   (remember: work systems are `unit` whose `unit-type` includes `work-system`; meetings are
    `interaction`+`interaction-type: meeting`).

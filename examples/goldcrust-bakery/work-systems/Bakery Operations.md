@@ -1,7 +1,7 @@
 ---
 type: unit
+unit-type: [department, work-system]
 flightlevel: 2
-unit-type: department
 member-of: "[[Bakery Strategy]]"
 contributes-to: "[[Bakery Strategy]]"
 delegator: "[[Mara Holt]]"

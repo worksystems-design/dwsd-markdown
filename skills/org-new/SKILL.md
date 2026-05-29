@@ -12,11 +12,13 @@ Create a new DWSD entity of type **$ARGUMENTS**. If the type or the name is miss
 
 1. Resolve the type to its template `${CLAUDE_PLUGIN_ROOT}/templates/<type>.md` and its
    contract `${CLAUDE_PLUGIN_ROOT}/types/<type>.md`, and read both. Mind the subtypes: a
-   **work system** is the `unit` template **plus** a `flightlevel`; a **meeting** is the
-   `meeting` template (a `type: interaction` with `interaction-type: meeting`).
+   **work system** is the `unit` template **plus** `work-system` in `unit-type` (and a
+   `flightlevel`); a **meeting** is the `meeting` template (a `type: interaction` with
+   `interaction-type: meeting`).
 2. Determine the target folder by the *conceptual* type:
    - `individual` → `individuals/`, `role` → `roles/`, plain `unit` → `units/`,
-     **work system (`unit`+`flightlevel`) → `work-systems/`**, `interaction` and
+     **work system (`unit` with `work-system` in `unit-type`) → `work-systems/`**,
+     `interaction` and
      **`meeting` → `interactions/`**, `agreement` → `agreements/`, `signal` → `signals/`,
      `insight` → `insights/`, `driver` → `drivers/`, `proposal` → `proposals/`,
      `design-record` → `design-records/`, `visualization` → `visualizations/`,

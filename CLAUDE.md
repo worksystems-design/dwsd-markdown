@@ -37,14 +37,16 @@ organization as a folder of Markdown files. It is a **public** repo, written for
   *look at* the org), `change` (design-record).
 - **Keys are kebab-case.** `flightlevel` is one word. Subtype/kind discriminators are
   named `<base>-type` (`visualization-type`, `unit-type`, `agreement-type`,
-  `interaction-type`).
+  `interaction-type`) and may hold a single token **or a YAML list** (e.g.
+  `unit-type: [team, work-system]`).
 - **Relationships are wikilinks** (`[[Target]]`). `reports-to` (individuals only) =
   structure; `member-of` (individuals + units) = flow. `derived-from` and `delegator` are
   **metadata** (no parser relationship type yet), not typed edges.
 - **Ladder of Inference (navigation → change):** signal → insight → driver → proposal →
   agreement; a `design-record` (ADR-style) records a decision.
-- **`unit`** is the base structural type; a unit with a `flightlevel` is implicitly a
-  **work system**. A unit is any named grouping (team, R&D dept, SAFe ART, …), nestable.
+- **`unit`** is the base structural type; a unit whose `unit-type` includes `work-system`
+  (and which carries a `flightlevel`) is a **work system**. A unit is any named grouping
+  (team, R&D dept, SAFe ART, …), nestable.
 - **`meeting`** is an `interaction` of `interaction-type: meeting`; it runs a table of
   activities (the Meeting Canvas). `activity` is not its own type.
 - **`sources`** is documented only in `conventions.md` — don't repeat it on type pages.

@@ -1,20 +1,22 @@
-# `work-system` (a unit with a flightlevel)
+# `work-system` (a unit whose `unit-type` includes `work-system`)
 
 > A work system is the **flow** / value-creation view. In the
-> target model it is **not a separate type**: it is a [`unit`](unit.md) that has a
-> **`flightlevel`**. Any unit with a `flightlevel` is implicitly a work system and
-> carries the domain description below. In Flight Levels terms a work system is a
-> **domain** of work, which is why roles point at it with `for-domain`.
+> target model it is **not a separate type**: it is a [`unit`](unit.md) whose
+> **`unit-type` includes `work-system`** and which carries a **`flightlevel`**. The
+> `work-system` value on `unit-type` is the marker; a unit can declare both hats at once,
+> e.g. `unit-type: [team, work-system]` — a frontline team that is also a work system. In
+> Flight Levels terms a work system is a **domain** of work, which is why roles point at it
+> with `for-domain`.
 
-**Serialized `type`:** `unit` + `flightlevel`
+**Serialized `type`:** `unit` + `unit-type` containing `work-system` (+ `flightlevel`)
 
 ## Frontmatter
 
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `unit` | Base type — a work system is a unit |
-| `flightlevel` | yes | `1` \| `2` \| `3` | **What makes it a work system**; the flight level |
-| `unit-type` | no | `team` \| `department` \| … | Kind of unit |
+| `unit-type` | yes | must include `work-system` — e.g. `[team, work-system]`, `[department, work-system]` | **What marks it a work system**, alongside the kind of unit |
+| `flightlevel` | yes | `1` \| `2` \| `3` | The flight level — required on a work system (carried, not the marker) |
 | `contributes-to` | no | wikilink | The higher work system this one feeds |
 | `member-of` | no | wikilink | The work system / strategy layer this belongs to |
 | `delegator` | no | wikilink | Who delegated this domain (see note — metadata, not a typed edge) |
@@ -57,8 +59,8 @@ Describe the work system as a domain. All sections are `##` headings.
 ```markdown
 ---
 type: unit
+unit-type: [department, work-system]
 flightlevel: 2
-unit-type: department
 contributes-to: "[[Strategic Direction]]"
 member-of: "[[Strategic Direction]]"
 delegator: "[[COO]]"
@@ -116,8 +118,8 @@ Reviewed quarterly; next review 2026-08-11.
 
 ## Notes
 
-- A work system is **not its own type** — it is a `unit` with a `flightlevel`. The
-  folder (`work-systems/`) is organizational only.
+- A work system is **not its own type** — it is a `unit` whose `unit-type` includes
+  `work-system`. The folder (`work-systems/`) is organizational only.
 - One-entity model: a unit and "its" work system are the same entity. The cleaner
   two-entity alternative — a work system that can span several teams — was considered and
   dropped for simplicity.

@@ -1,7 +1,7 @@
 ---
 type: unit
-flightlevel: 2           # presence makes this unit a work system
-unit-type: department    # kind of unit
+unit-type: [department, work-system]   # `work-system` in unit-type marks it a work system
+flightlevel: 2           # the flight level — required on a work system (carried, not the marker)
 contributes-to: "[[]]"   # the higher work system this one feeds
 member-of: "[[]]"
 delegator: "[[]]"        # who delegated this domain

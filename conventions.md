@@ -91,20 +91,26 @@ them apart — an entity can sit very differently in each.
 A **`unit`** sits **between** the two: a named grouping that one or more people, teams, or
 other units belong to. It need not be a team — it can be an R&D department, a SAFe ART, or
 any other named unit, and units can nest. A unit that also participates in flow is a work
-system (it carries a `flightlevel`). See [`types/unit.md`](types/unit.md)
-and [`types/work-system.md`](types/work-system.md).
+system (its `unit-type` includes `work-system`, and it carries a `flightlevel`). See
+[`types/unit.md`](types/unit.md) and [`types/work-system.md`](types/work-system.md).
 
-## Work systems are implicit
+## Work systems are marked on `unit-type`
 
-`unit` is the base structural type. **A unit that has a `flightlevel` is implicitly also
-a work system** — it carries the full domain description (Purpose … Evaluation Schedule;
-see [`types/work-system.md`](types/work-system.md)). A unit *without* a
-`flightlevel` is just a structural team.
+`unit` is the base structural type. **A unit is a work system when its `unit-type`
+includes `work-system`** — it then carries the full domain description (Purpose …
+Evaluation Schedule; see [`types/work-system.md`](types/work-system.md)) and a
+`flightlevel` recording its flight level. A unit *without* `work-system` in its
+`unit-type` is purely structural — e.g. a plain `unit-type: team`.
+
+The marker is **explicit on `unit-type`**, not inferred from the presence of a
+`flightlevel`. `flightlevel` is an attribute a work system carries — required on every
+work system — but it is not what *makes* a unit one. This lets a single unit declare both
+of its hats at once: a team that is also a work system is `unit-type: [team, work-system]`.
 
 This is a deliberate simplification: a unit and "its" work system are modeled as **one
-entity** wearing two hats, not two linked entities. The cleaner two-entity model — where
-a work system can span several teams, or a team can have none — was considered and
-dropped for simplicity.
+entity** wearing two hats — now stated literally by the multi-valued `unit-type` — not as
+two linked entities. The cleaner two-entity model — where a work system can span several
+teams, or a team can have none — was considered and dropped for simplicity.
 
 > **`flightlevel`** is written as one word — no underscore, no hyphen.
 
@@ -116,6 +122,14 @@ humans and tools:
 
 - `type: visualization` + **`visualization-type: board`**
 - `type: unit` + **`unit-type: team`**
+
+A `<base>-type` discriminator holds a **single token or a YAML list** — a list when the
+entity is several kinds at once. This is what lets a unit wear two hats:
+
+- `type: unit` + **`unit-type: [team, work-system]`** — a team that is also a work system.
+
+Every `<base>-type` (`unit-type`, `visualization-type`, `agreement-type`,
+`interaction-type`) accepts a list; in practice only `unit-type` uses it today.
 
 ## Tracking fields
 

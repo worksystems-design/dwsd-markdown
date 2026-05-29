@@ -1,7 +1,7 @@
 ---
 type: unit
+unit-type: [team, work-system]
 flightlevel: 1
-unit-type: team
 member-of: "[[Bakery Operations]]"
 contributes-to: "[[Bakery Operations]]"
 delegator: "[[Mara Holt]]"

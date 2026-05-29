@@ -36,14 +36,15 @@ Two conceptual types are expressed as a **base `type:` plus a discriminator** �
 `type: work-system` or `type: meeting`. Recognize them by the discriminator, and place them
 by the **conceptual** type, not the bare `type:`:
 
-- **work system** = `type: unit` **with** a `flightlevel: 1|2|3`. Lives in `work-systems/`
-  and carries the full domain description. A plain `unit` *without* `flightlevel` is just a
-  structural team and lives in `units/`.
+- **work system** = `type: unit` whose **`unit-type` includes `work-system`** (e.g.
+  `unit-type: [team, work-system]`); it also carries a `flightlevel: 1|2|3`. Lives in
+  `work-systems/` and carries the full domain description. A unit *without* `work-system` in
+  its `unit-type` is just a structural unit (e.g. `unit-type: team`) and lives in `units/`.
 - **meeting** = `type: interaction` **with** `interaction-type: meeting`. Lives in
   `interactions/`, alongside non-meeting interactions.
 
-When scanning an org, key off the discriminator (`flightlevel`, `interaction-type`), not
-`type:` alone.
+When scanning an org, key off the discriminator (`unit-type` containing `work-system`,
+`interaction-type`), not `type:` alone.
 
 ## Cross-cutting rules to keep in mind
 
@@ -53,7 +54,8 @@ When scanning an org, key off the discriminator (`flightlevel`, `interaction-typ
 - **`reports-to`** = structure (individuals only). **`member-of`** = flow (individual or
   unit). `derived-from` and `delegator` are metadata, not typed edges.
 - **Discriminators are named `<base>-type`**: `unit-type`, `interaction-type`,
-  `agreement-type`, `visualization-type`. `flightlevel` is one word.
+  `agreement-type`, `visualization-type`. Each may hold a single token **or a YAML list**
+  (e.g. `unit-type: [team, work-system]`). `flightlevel` is one word.
 - **Two types carry embedded DSL:** `visualization` → ` ```board `; `flight-route` →
   ` ```flightroute `. Inside the DSL, work systems and item types are referenced by
   `@`-handle (the target's slug). See `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
