@@ -11,6 +11,13 @@ review_date: "2026-08-20"
 created_at: "2026-05-24"
 ---
 
+## In context
+
+```wsd-topology
+mode: infer
+radius: 2
+```
+
 ## Purpose
 
 Bake the daily range of breads and pastries to a dependable quality and schedule, so the

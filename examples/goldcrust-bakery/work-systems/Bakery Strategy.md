@@ -8,6 +8,13 @@ review_date: "2026-11-20"
 created_at: "2026-05-24"
 ---
 
+## In context
+
+```wsd-topology
+mode: infer
+radius: 2
+```
+
 ## Purpose
 
 Set the direction of the bakery — range, locations, and growth — and connect that strategy

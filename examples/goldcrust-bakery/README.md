@@ -9,6 +9,15 @@ organization.
 
 ## Flight-level map
 
+```wsd-topology
+mode: infer
+focus: "[[Bakery Operations]]"
+radius: 1
+```
+
+<!-- The same flight-level map as plain text (renders everywhere, even without the
+     DWSD renderer): -->
+
 ```
 FL3  Bakery Strategy        sets direction
         ▲ contributes-to
