@@ -4,6 +4,18 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-06-20
+
+- **OKF compatibility documented.** DWSD is stated **conformant with the Open Knowledge
+  Format** (OKF v0.1, Google Cloud, June 2026) as an *organizational profile* of it. The
+  new [`okf.md`](okf.md) records the conformance — OKF's three requirements (parseable
+  frontmatter, a required non-empty `type`, reserved-filename handling) are met by
+  construction — plus the DWSD ↔ OKF field mapping and two honest supersets (relationships
+  live in frontmatter rather than body links; non-entity docs are skipped rather than named
+  `index.md`). This is **descriptive, not a model change**: nothing in the format changes,
+  and the alignment is backward-compatible. OKF, `agents.md`, and DWSD share the same
+  Karpathy LLM-wiki lineage.
+
 ## 2026-05-29
 
 - **Work systems are marked on `unit-type`, not by `flightlevel`.** A unit is a work
