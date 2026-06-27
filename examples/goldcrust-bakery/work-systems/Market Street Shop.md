@@ -7,6 +7,13 @@ contributes-to: "[[Bakery Operations]]"
 created_at: "2026-05-24"
 ---
 
+## In context
+
+```wsd-topology
+mode: infer
+radius: 2
+```
+
 ## Purpose
 
 Sell the daily range to walk-in customers at the Market Street location, and feed real

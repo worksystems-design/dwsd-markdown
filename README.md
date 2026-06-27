@@ -32,6 +32,10 @@ DWSD draws inspiration from [Sociocracy 3.0](https://sociocracy30.org) and
 [Flight Levels](https://flightlevels.io), among other models — adapted to fit, never
 followed slavishly.
 
+DWSD is **conformant with the [Open Knowledge Format](okf.md) (OKF)** — Google's open spec
+for representing knowledge as a folder of Markdown — as an *organizational profile* of it.
+OKF, `agents.md`, and DWSD share the same Karpathy LLM-wiki lineage. See [`okf.md`](okf.md).
+
 > **Canonical model, English-only.** The pages here are the canonical description of the
 > format — explicit and self-contained.
 
@@ -40,6 +44,8 @@ followed slavishly.
 - **[conventions.md](conventions.md)** — the rules that apply to *every* entity:
   frontmatter, the `type` field, wikilink relationships, positions, tracking fields,
   DSL fences, and the structure vs. flow distinction.
+- **[okf.md](okf.md)** — how DWSD conforms to the Open Knowledge Format (OKF), and what it
+  adds as the organizational profile of that format.
 
 > **Editing in VS Code.** `[[wikilinks]]` show as plain text in the default Markdown
 > preview. Install [Foam](https://github.com/foambubble/foam) or **Markdown Memo** to make

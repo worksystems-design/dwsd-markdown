@@ -7,6 +7,13 @@ contributes-to: "[[Bakery Operations]]"
 created_at: "2026-05-24"
 ---
 
+## In context
+
+```wsd-topology
+mode: infer
+radius: 2
+```
+
 ## Purpose
 
 Sell the daily range at the Station Road location, where an early commuter rush drives a
