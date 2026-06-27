@@ -1,7 +1,8 @@
 ---
 type: interaction
 interaction-type: meeting
-interaction-of: "[[Bakery Operations]]"
+for-domain: "[[Bakehouse]]"
+interaction-of: "@bakehouse-production-board"
 start: "2026-05-25T13:30:00"
 end: "2026-05-25T13:45:00"
 rrule: "RRULE:FREQ=DAILY"
@@ -31,6 +32,8 @@ shops, and any known events for tomorrow.
 
 ## Interactions
 
-- Review today's sell-through and stockouts → shared demand picture
-- Confirm next-day quantities per shop → agreed [[Daily Replenishment Order]]
-- Flag capacity or supply risks → risks with owners
+| Name                               | Outcome                              | On board                                       |
+|------------------------------------|--------------------------------------|------------------------------------------------|
+| Confirm tomorrow's bake quantities | agreed [[Daily Replenishment Order]] | @bakehouse-production-board#Backlog            |
+| Check the morning dispatch cleared | shared demand picture                | @bakehouse-production-board#Ready-for-Dispatch |
+| Flag capacity or supply risks      | risks with owners                    | @bakehouse-production-board#Mixing-Proofing    |

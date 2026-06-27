@@ -1,7 +1,8 @@
 ---
 type: interaction
 interaction-type: meeting
-interaction-of: "[[]]"        # the work system(s) it coordinates
+for-domain: "[[]]"            # the work system it is scoped to (up)
+interaction-of: "@board"      # the board it is of (detail) — @board#Column for a specific position
 start: "2026-01-01T10:00:00"
 end: "2026-01-01T11:00:00"
 rrule: "RRULE:FREQ=WEEKLY;BYDAY=TU"

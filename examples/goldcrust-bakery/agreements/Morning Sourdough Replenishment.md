@@ -1,7 +1,8 @@
 ---
 type: agreement
 agreement-type: work
-for-domain: "[[Bakery Operations]]"
+for-domain: "[[Bakehouse]]"
+agreement-of: "@bakehouse-production-board#Ready-for-Dispatch"
 derived-from: "[[Prioritize Morning Sourdough]]"
 version: "1.0"
 decision_date: "2026-05-22"

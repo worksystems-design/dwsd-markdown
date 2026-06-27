@@ -68,12 +68,22 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `member-of` | Belongs to a unit / work system — an **individual** or a **unit** can be a member |
 | `contributes-to` | A work system contributes to a higher-level work system |
 | `role-keeper` / `role_keeper` | Who holds this role |
-| `for-domain` / `for_domain` | The domain / work system a role or agreement is scoped to |
-| `interaction-of` | The work system(s) an interaction is of |
+| `for-domain` / `for_domain` | The **work system** (domain) a role, agreement, or interaction is scoped to — points *up* |
+| `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: `@board#Column`, or `@board` for the whole board |
+| `agreement-of` | The **board (position)** an agreement is of — the same `@board#Column` anchor as `interaction-of`; coexists with `for-domain` |
 | `observes` | The entity an insight observes |
 | `uses-route` | The flight route an entity uses |
 | `defined-for` | The entity something is defined for |
 | `visualization-of` / `visualization_of` | The work system a visualization renders |
+
+> **Up vs. into the detail.** `for-domain` names the **work system** (the domain — points
+> *up*); `interaction-of` / `agreement-of` name a **board position** (`@board#Column` — points
+> *into the detail*). A board is **not** a work system, so the two coexist and neither field is
+> overloaded to mean both. A board renders exactly one work system (`visualization-of`), so the
+> work system is **inferable** from the board — `for-domain` is therefore optional, and stating
+> it is just clearer. If both are present and the board's work system differs from `for-domain`,
+> that mismatch is something a validator can flag. The `@board#Column` anchor is the same one
+> the board / flight-route DSLs use (see [Embedded DSL fences](#embedded-dsl-fences)).
 
 ## Structure vs. flow
 

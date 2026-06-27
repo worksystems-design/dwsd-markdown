@@ -13,7 +13,8 @@
 |---|---|---|---|
 | `type` | yes | `interaction` | Base type |
 | `interaction-type` | yes | `meeting` | Marks it a meeting |
-| `interaction-of` | no | wikilink or list | The work system(s) it coordinates |
+| `interaction-of` | no | `@board#Column` or `@board` | The **board (position)** it is of — points *into the detail* |
+| `for-domain` / `for_domain` | no | wikilink | The **work system** it is scoped to — points *up* |
 | `start` | no | ISO datetime | First occurrence start |
 | `end` | no | ISO datetime | First occurrence end |
 | `rrule` | no | iCal RRULE | Recurrence, e.g. `RRULE:FREQ=WEEKLY;BYDAY=TU` |
@@ -29,11 +30,37 @@ Plus the shared optionals from [conventions](../conventions.md).
 | `## What is the outcome?` | The result it should produce |
 | `## What decisions are we making, and who makes them?` | Decisions in scope and who is needed |
 | `## What information do we need?` | The inputs required |
-| `## Interactions` | The interactions this meeting bundles, as a list — each with its outcome |
+| `## Interactions` | The interactions this meeting bundles — as a list **or** as a 3-column table that also **anchors each interaction to a board position** |
 
-The **Interactions** list has one line per interaction, in order — each names the
-interaction and its outcome. Reference a standalone interaction or another meeting with
-`[[…]]` when one exists; otherwise an inline line is enough.
+The **Interactions** section takes one of two forms:
+
+**Bullet-list form** — one line per interaction, in order, each naming the
+interaction and its outcome. Reference a standalone interaction or another meeting
+with `[[…]]` when one exists; otherwise an inline line is enough:
+
+```markdown
+## Interactions
+
+- Review progress → shared status
+- Blocker clustering → grouped blockers with owners
+```
+
+**Table form** — a 3-column table whose third column anchors each interaction to a **board
+position** (`@board#Column`), so one meeting pins several board positions at once (one row =
+one anchor):
+
+```markdown
+## Interactions
+
+| Name         | Outcome             | On board              |
+|--------------|---------------------|-----------------------|
+| What's done? | Items moved to Done | @sprint-board#Done    |
+| Where stuck? | Blockers visible    | @sprint-board#Blocked |
+```
+
+The board (`@sprint-board`) is the meeting's `interaction-of`; each row names one of its
+columns (`@board#Column`, the same anchor the board / flight-route DSLs use). For an
+agreement container the heading is `## Agreements`, read the same way.
 
 ## Markwhen sibling (`.mw`)
 
@@ -76,6 +103,24 @@ The 3P board, current blockers, upcoming hand-off windows with [[Assembly]].
 - Review progress → shared status
 - Blocker clustering → grouped blockers with owners
 - Sequence next sprint → agreed sprint order
+```
+
+A meeting that anchors its interactions to board positions uses the **table form** instead
+(one row → one board position):
+
+```markdown
+---
+type: interaction
+interaction-type: meeting
+for-domain: "[[Standard Production]]"
+interaction-of: "@sprint-board"
+---
+## Interactions
+
+| Name         | Outcome             | On board              |
+|--------------|---------------------|-----------------------|
+| What's done? | Items moved to Done | @sprint-board#Done    |
+| Where stuck? | Blockers visible    | @sprint-board#Blocked |
 ```
 
 `interactions/3P Coordination.mw`:

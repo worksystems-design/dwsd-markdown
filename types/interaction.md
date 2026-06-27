@@ -12,14 +12,19 @@
 |---|---|---|---|
 | `type` | yes | `interaction` | Entity type |
 | `interaction-type` | yes | `meeting` \| `conversation` \| `bilateral` \| … | Kind of interaction (open vocabulary) |
-| `interaction-of` | no | wikilink or list | The work system(s) it coordinates |
+| `interaction-of` | no | `@board#Column` or `@board` | The **board (position)** it is of — points *into the detail*, e.g. `@sprint-board#Doing` |
+| `for-domain` / `for_domain` | no | wikilink | The **work system** it is scoped to — points *up*, e.g. `[[Strategic Direction]]` |
 
 Plus the shared optionals from [conventions](../conventions.md). The `meeting` kind adds
 scheduling and a **list of interactions** it bundles — see [`meeting.md`](meeting.md).
 
 ## Relationships
 
-- **`interaction-of`** — the work system(s) the interaction belongs to.
+- **`interaction-of`** — the **board (position)** the interaction is of: `@board#Column` (a
+  specific column) or `@board` (the whole board). Points *into the detail*.
+- **`for-domain`** — the **work system** the interaction is scoped to. Points *up*. Optional —
+  inferable from the board, but clearer when stated (board ≠ work system). See
+  [conventions](../conventions.md).
 
 ## Body
 
@@ -38,7 +43,8 @@ uses:
 ---
 type: interaction
 interaction-type: bilateral
-interaction-of: "[[3P]]"
+for-domain: "[[3P]]"               # the work system (up)
+interaction-of: "@3p-board#Doing"  # the board position it's of (detail)
 ---
 ## Purpose
 Ad-hoc alignment between [[Head of 3P]] and [[Head of Assembly]] on the next hand-off window.
