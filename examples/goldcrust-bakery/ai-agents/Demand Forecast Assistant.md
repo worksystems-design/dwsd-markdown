@@ -3,7 +3,7 @@ type: ai-agent
 platform: internal-assistant
 status: active
 for-domain: "[[Bakehouse]]"
-bound-to: "@bakehouse-production-board#Backlog"
+bound-to: "[[Bakehouse Production Board]]#Bakehouse Production/col:Backlog::in"
 description: Suggests next-day quantities from recent sell-through and weather.
 created_at: "2026-05-24"
 ---

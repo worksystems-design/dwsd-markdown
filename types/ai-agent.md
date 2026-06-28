@@ -19,7 +19,7 @@
 | `description` | no | string | What the agent is / does |
 | `status` | no | `active` \| `deactivated` \| … | Lifecycle (e.g. `deactivated` when switched off) |
 | `for-domain` / `for_domain` | no | wikilink | The work system the agent belongs to (as for a role) |
-| `bound-to` | no | `@`-handle or list | Where the agent's surface appears — a board-column anchor (`@handle#Column`). Preliminary convention, to be revisited. |
+| `bound-to` | no | board locator or list | Where the agent's surface appears — a board-position anchor, the same locator as `interaction-of` / `agreement-of` (e.g. `[[Board]]#BoardName/col:Column::in`). Preliminary convention, to be revisited. |
 
 Plus the shared optionals from [conventions](../conventions.md).
 
@@ -34,7 +34,7 @@ description: Rovo agent surfacing on a board column
 status: active
 for-domain: "[[Customer Support]]"
 bound-to:
-  - "@second-project#My Little Agent"
+  - "[[Support Board]]#Support Board/col:Triage::in"
 ---
 ```
 
@@ -42,6 +42,6 @@ bound-to:
 
 - An ai-agent is really a **surface**: use `bound-to` when it appears at a specific point
   in the workflow (a board column), and/or `for-domain` for the work system it belongs to.
-- `bound-to` uses the `@handle#Column` anchor style of the **route** DSL (boards are now
-  addressed by the richer `interaction-of` / `agreement-of` locator) — this preliminary
-  convention is still being settled and may move to the locator form.
+- `bound-to` is a **board-position anchor** and uses the same board **locator** as
+  `interaction-of` / `agreement-of` (`[[Board]]#BoardName/col:Column::in`), so it resolves and
+  renders as a link. This preliminary convention is still being settled.
