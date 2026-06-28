@@ -30,12 +30,19 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      longer makes a unit a work system, so this is likely an authoring slip.
 2. **Wikilink integrity** — collect every `[[Target]]` (frontmatter and body) and confirm a
    file `Target.md` exists somewhere in the org (labels are unique). Report danglers.
-3. **Handle integrity** — for every `@handle` in ` ```board ` / ` ```flightroute ` fences
-   **and in `interaction-of` / `agreement-of` frontmatter** (`@board#Column`), confirm it maps
-   to an entity slug (kebab-case of a filename); for every `@handle#Column`, confirm the column
-   exists in that board's ` ```board ` fence.
+3. **Handle & locator integrity** — two distinct reference forms:
+   - **Route `@handle`** — for every `@handle` in ` ```flightroute ` fences, confirm it maps to
+     an entity slug (kebab-case of a filename); for every `@work-system#Column`, confirm the
+     column exists in that work system's board (its ` ```dwsd-board ` fence, found via
+     `visualization-of`).
+   - **Board locator** — `interaction-of` / `agreement-of` carry a locator
+     `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board, or
+     a bare `[[Work System]]` for a work-system anchor). Confirm the `[[Board]]` file exists and
+     that any `col:` / `lane:` / `group:` / `split:` segment names a unit present in that board's
+     ` ```dwsd-board ` YAML. Inline inside-out `agreements:` / `interactions:` keys on a
+     column/lane/group are valid board content, not references to resolve.
    - **Board-binding consistency:** when an entity carries both `for-domain` (a work system)
-     and an `interaction-of` / `agreement-of` board anchor, **warn** if the anchored board's
+     and a board-position `interaction-of` / `agreement-of`, **warn** if the anchored board's
      work system (its `visualization-of`) differs from `for-domain`.
 4. **Ladder integrity** — every `derived-from` resolves; trace
    signal → insight → driver → proposal → agreement chains and report breaks.

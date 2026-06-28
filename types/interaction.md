@@ -12,7 +12,7 @@
 |---|---|---|---|
 | `type` | yes | `interaction` | Entity type |
 | `interaction-type` | yes | `meeting` \| `conversation` \| `bilateral` \| … | Kind of interaction (open vocabulary) |
-| `interaction-of` | no | `@board#Column` or `@board` | The **board (position)** it is of — points *into the detail*, e.g. `@sprint-board#Doing` |
+| `interaction-of` | no | board locator (or `[[Work System]]`) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in` |
 | `for-domain` / `for_domain` | no | wikilink | The **work system** it is scoped to — points *up*, e.g. `[[Strategic Direction]]` |
 
 Plus the shared optionals from [conventions](../conventions.md). The `meeting` kind adds
@@ -20,8 +20,10 @@ scheduling and a **list of interactions** it bundles — see [`meeting.md`](meet
 
 ## Relationships
 
-- **`interaction-of`** — the **board (position)** the interaction is of: `@board#Column` (a
-  specific column) or `@board` (the whole board). Points *into the detail*.
+- **`interaction-of`** — the **board (position)** the interaction is of: a board **locator**
+  `[[Board]]#BoardName/col:Column::in` (a specific column) or `[[Board]]#BoardName::in` (the
+  whole board). Value-polymorphic: a bare `[[Work System]]` anchors to a work system instead.
+  Points *into the detail*.
 - **`for-domain`** — the **work system** the interaction is scoped to. Points *up*. Optional —
   inferable from the board, but clearer when stated (board ≠ work system). See
   [conventions](../conventions.md).
@@ -44,7 +46,7 @@ uses:
 type: interaction
 interaction-type: bilateral
 for-domain: "[[3P]]"               # the work system (up)
-interaction-of: "@3p-board#Doing"  # the board position it's of (detail)
+interaction-of: "[[3P Board]]#3P Board/col:Doing::in"  # the board position it's of
 ---
 ## Purpose
 Ad-hoc alignment between [[Head of 3P]] and [[Head of Assembly]] on the next hand-off window.

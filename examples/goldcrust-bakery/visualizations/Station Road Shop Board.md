@@ -10,10 +10,18 @@ The FL1 retail board for the [[Station Road Shop]] — same retail flow as Marke
 the early commuter rush drains the shelves first, so the morning dispatch has to land before
 the peak. The closing count becomes tomorrow's [[Daily Replenishment Order]].
 
-```board
-Incoming #todo
-On-Shelf #in-progress
-Low-Stock #waiting
-Sold-Out #blocked
-Reorder #done
+```dwsd-board
+board: Station Road Shop
+flightlevel: FL1
+columns:
+  - name: Incoming
+    status-category: to-do
+  - name: On-Shelf
+    status-category: in-progress
+  - name: Low-Stock
+    status-category: waiting
+  - name: Sold-Out
+    status-category: waiting
+  - name: Reorder
+    status-category: done
 ```

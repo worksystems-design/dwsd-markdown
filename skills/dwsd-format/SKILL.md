@@ -56,9 +56,13 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
 - **Discriminators are named `<base>-type`**: `unit-type`, `interaction-type`,
   `agreement-type`, `visualization-type`. Each may hold a single token **or a YAML list**
   (e.g. `unit-type: [team, work-system]`). `flightlevel` is one word.
-- **Two types carry embedded DSL:** `visualization` → ` ```board `; `flight-route` →
-  ` ```flightroute `. Inside the DSL, work systems and item types are referenced by
-  `@`-handle (the target's slug). See `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
+- **Two types carry embedded DSL:** `visualization` → ` ```dwsd-board ` (**plain YAML**:
+  `columns:` / `lanes:` / `groups:`, with inline inside-out `agreements:` / `interactions:` on
+  any node — no inline sugar like `#status` or `[wip]`); `flight-route` → ` ```flightroute `.
+  In the **route** DSL, work systems and item types are referenced by `@`-handle (the target's
+  slug). External entities anchor **into** a board via a **locator**
+  (`interaction-of` / `agreement-of`: `[[Board]]#BoardName/col:Column::in`). See
+  `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
   `${CLAUDE_PLUGIN_ROOT}/types/flight-route.md`.
 - **Navigation ladder:** `signal` → `insight` → `driver` → `proposal` → `agreement`,
   linked downward with `derived-from`.

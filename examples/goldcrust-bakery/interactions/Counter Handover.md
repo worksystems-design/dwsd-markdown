@@ -2,9 +2,9 @@
 type: interaction
 interaction-type: handover
 interaction-of:
-  - "@bakehouse-production-board#Ready-for-Dispatch"
-  - "@market-street-shop-board#Incoming"
-  - "@station-road-shop-board#Incoming"
+  - "[[Bakehouse Production Board]]#Bakehouse Production/col:Ready-for-Dispatch::in"
+  - "[[Market Street Shop Board]]#Market Street Shop/col:Incoming::in"
+  - "[[Station Road Shop Board]]#Station Road Shop/col:Incoming::in"
 created_at: "2026-05-24"
 ---
 

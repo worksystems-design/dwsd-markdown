@@ -69,21 +69,29 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `contributes-to` | A work system contributes to a higher-level work system |
 | `role-keeper` / `role_keeper` | Who holds this role |
 | `for-domain` / `for_domain` | The **work system** (domain) a role, agreement, or interaction is scoped to — points *up* |
-| `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: `@board#Column`, or `@board` for the whole board |
-| `agreement-of` | The **board (position)** an agreement is of — the same `@board#Column` anchor as `interaction-of`; coexists with `for-domain` |
+| `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board) |
+| `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of`; coexists with `for-domain` |
 | `observes` | The entity an insight observes |
 | `uses-route` | The flight route an entity uses |
 | `defined-for` | The entity something is defined for |
 | `visualization-of` / `visualization_of` | The work system a visualization renders |
 
 > **Up vs. into the detail.** `for-domain` names the **work system** (the domain — points
-> *up*); `interaction-of` / `agreement-of` name a **board position** (`@board#Column` — points
+> *up*); `interaction-of` / `agreement-of` name a **board position** (a locator — points
 > *into the detail*). A board is **not** a work system, so the two coexist and neither field is
 > overloaded to mean both. A board renders exactly one work system (`visualization-of`), so the
 > work system is **inferable** from the board — `for-domain` is therefore optional, and stating
 > it is just clearer. If both are present and the board's work system differs from `for-domain`,
-> that mismatch is something a validator can flag. The `@board#Column` anchor is the same one
-> the board / flight-route DSLs use (see [Embedded DSL fences](#embedded-dsl-fences)).
+> that mismatch is something a validator can flag.
+>
+> **The locator** (`interaction-of` / `agreement-of`) is **value-polymorphic**: a bare
+> `[[Work System]]` wikilink anchors to a whole **work system**; a value carrying a `#BoardName`
+> and/or a `/kind:Name` path is a **board-position** locator. The path drills in with
+> `/`-chained `col:` · `lane:` · `group:` · `split:` segments and an optional trailing
+> `::before` · `::in` · `::after` (bare = `::in`), e.g.
+> `[[Sprint Board]]#Sprint Board/col:Build/split:QA::before`. This is the **outside-in**
+> direction; the board may also declare relationships **inside-out** with inline `agreements:` /
+> `interactions:` keys on a column/lane/group (see [Embedded DSL fences](#embedded-dsl-fences)).
 
 ## Structure vs. flow
 
@@ -173,10 +181,13 @@ patterns are valid.
 
 Two types carry a fenced code block that the app parses and renders:
 
-- `visualization` (boards) → ```` ```board ```` — see
-  [`types/visualization.md`](types/visualization.md)
+- `visualization` (boards) → ```` ```dwsd-board ```` — **plain YAML** (columns, lanes,
+  groups, and inline inside-out `agreements:` / `interactions:`); no inline sugar. See
+  [`types/visualization.md`](types/visualization.md).
 - `flight-route` → ```` ```flightroute ```` — see
-  [`types/flight-route.md`](types/flight-route.md)
+  [`types/flight-route.md`](types/flight-route.md). The route DSL still references work
+  systems and item types by `@`-handle (`@work-system#Column`); this is distinct from the
+  board **locator** used by `interaction-of` / `agreement-of` above.
 
 ## Markwhen siblings (`.mw`)
 

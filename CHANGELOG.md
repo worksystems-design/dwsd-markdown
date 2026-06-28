@@ -4,6 +4,29 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-06-28
+
+- **Board DSL is now YAML (` ```dwsd-board `).** The board fence moved from the old
+  line-based form (`Column #status`, `[wip]`, indented `aging:` lines) to **plain YAML** with
+  spelled-out keys: a board header (`board`, `flightlevel: FL1|FL2|FL3`, `timebox`, `tags`,
+  `agreements`, `interactions`), `columns:`, `lanes:`, and `groups:`. There is **no inline
+  sugar** — status is `status-category: to-do|in-progress|done|waiting|assess` (no `blocked`;
+  a stuck column is `waiting`), WIP is `wip: N` (column max) or `wip: [min, max]`, plus
+  `aging:`, `max-returns:`, `check:`, `split:`. The parser is tolerant (a `board.*` diagnostic
+  + clamp/skip, never a throw).
+- **Inside-out / outside-in anchoring.** A board node may declare relationships **inside-out**
+  via inline `agreements:` / `interactions:` keys on a board / column / lane / group / split.
+  External entities anchor **outside-in** via a **locator** in `interaction-of` /
+  `agreement-of`: `[[Board]]#BoardName/col:Column::in` (path of `/`-chained
+  `col:` · `lane:` · `group:` · `split:` segments + optional `::before|in|after`, bare = `in`),
+  or `[[Board]]#BoardName::in` for the whole board. The keys are **value-polymorphic** — a bare
+  `[[Work System]]` still anchors to a work system. The old `@board#Column` anchor is retired
+  for boards.
+- **Lanes** are `named | assignee | expedite`; they are **not** bound to a flight-item-type. A
+  "swimlane per item type" is authored as a `named` lane named after the type.
+- **The route DSL is unchanged** — ` ```flightroute ` still references work systems and item
+  types by `@`-handle (`@work-system#Column`), distinct from the board locator above.
+
 ## 2026-06-20
 
 - **OKF compatibility documented.** DWSD is stated **conformant with the Open Knowledge

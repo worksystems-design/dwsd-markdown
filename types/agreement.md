@@ -12,7 +12,7 @@
 | `type` | yes | `agreement` | Entity type |
 | `agreement-type` | yes | `organizational` \| `work` | What it governs — see *Kinds* below |
 | `for-domain` / `for_domain` | no | wikilink | The **work system** (domain) it is scoped to — points *up* |
-| `agreement-of` | no | `@board#Column` or `@board` | The **board (position)** it is of — points *into the detail*, e.g. `@sprint-board#Doing`. Coexists with `for-domain` |
+| `agreement-of` | no | board locator (or `[[Work System]]`) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`. Coexists with `for-domain` |
 | `derived-from` | no | wikilink | The [`proposal`](proposal.md) it was consented from (metadata) |
 | `version` | no | string | Version of the agreement, e.g. `1.2` |
 | `decision_date` | no | date | When this version was decided |
@@ -39,9 +39,11 @@ Both kinds share the body structure below.
 ## Relationships
 
 - **`for-domain`** — the **work system** (domain) the agreement is scoped to. Points *up*.
-- **`agreement-of`** — the **board (position)** the agreement is of: `@board#Column` or
-  `@board`. Points *into the detail*. Coexists with `for-domain` (board ≠ work system); the
-  work system is inferable from the board, so `for-domain` is optional but clearer. See
+- **`agreement-of`** — the **board (position)** the agreement is of: a board **locator**
+  `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board).
+  Points *into the detail*. Value-polymorphic: a bare `[[Work System]]` anchors to a work
+  system instead. Coexists with `for-domain` (board ≠ work system); the work system is
+  inferable from the board, so `for-domain` is optional but clearer. See
   [conventions](../conventions.md).
 
 ## Body — recommended structure
@@ -70,7 +72,7 @@ The **Appendix** groups three subsections:
 type: agreement
 agreement-type: work
 for-domain: "[[Strategic Direction]]"   # the work system (up)
-agreement-of: "@strategy-board#Doing"   # the board position it's of (detail)
+agreement-of: "[[Strategy Board]]#Strategy Board/col:Doing::in"   # the board position it's of
 version: "1.2"
 decision_date: "2026-05-11"
 review_date: "2026-08-11"

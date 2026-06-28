@@ -2,8 +2,8 @@
 type: interaction
 interaction-type: bilateral
 interaction-of:
-  - "@market-street-shop-board#Reorder"
-  - "@station-road-shop-board#Reorder"
+  - "[[Market Street Shop Board]]#Market Street Shop/col:Reorder::in"
+  - "[[Station Road Shop Board]]#Station Road Shop/col:Reorder::in"
 created_at: "2026-06-28"
 ---
 

@@ -7,14 +7,28 @@ created_at: "2026-05-24"
 ---
 
 The daily production board for the [[Bakehouse]] — one column per stage from order to
-dispatch.
+dispatch. `Mixing-Proofing` carries both an inline (inside-out) agreement and an external
+(outside-in) one — [[Mixing-Proofing WIP Limit]] anchors to the same column.
 
-```board
-Backlog
-Mise-en-Place #todo
-Mixing-Proofing [3] #in-progress
-Baking #in-progress
-  aging: 1d
-Cooling #waiting
-Ready-for-Dispatch #done
+```dwsd-board
+board: Bakehouse Production
+flightlevel: FL1
+columns:
+  - Backlog
+  - name: Mise-en-Place
+    status-category: to-do
+  - name: Mixing-Proofing
+    wip: 3
+    status-category: in-progress
+    agreements:
+      - "Pull a new batch only when a proofer frees up"
+  - name: Baking
+    status-category: in-progress
+    aging: 1d
+  - name: Cooling
+    status-category: waiting
+    agreements:
+      - "Cool to room temperature before dispatch"
+  - name: Ready-for-Dispatch
+    status-category: done
 ```

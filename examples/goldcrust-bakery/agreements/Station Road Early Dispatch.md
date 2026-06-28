@@ -2,7 +2,7 @@
 type: agreement
 agreement-type: work
 for-domain: "[[Bakehouse]]"
-agreement-of: "@bakehouse-production-board#Ready-for-Dispatch"
+agreement-of: "[[Bakehouse Production Board]]#Bakehouse Production/col:Ready-for-Dispatch::in"
 version: "1.0"
 decision_date: "2026-05-26"
 review_date: "2026-08-26"

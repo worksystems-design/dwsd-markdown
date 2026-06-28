@@ -13,7 +13,7 @@
 |---|---|---|---|
 | `type` | yes | `interaction` | Base type |
 | `interaction-type` | yes | `meeting` | Marks it a meeting |
-| `interaction-of` | no | `@board#Column` or `@board` | The **board (position)** it is of — points *into the detail* |
+| `interaction-of` | no | board locator (or `[[Work System]]`) | The **board (position)** it is of — points *into the detail* |
 | `for-domain` / `for_domain` | no | wikilink | The **work system** it is scoped to — points *up* |
 | `start` | no | ISO datetime | First occurrence start |
 | `end` | no | ISO datetime | First occurrence end |
@@ -46,21 +46,22 @@ with `[[…]]` when one exists; otherwise an inline line is enough:
 ```
 
 **Table form** — a 3-column table whose third column anchors each interaction to a **board
-position** (`@board#Column`), so one meeting pins several board positions at once (one row =
+position** with a locator, so one meeting pins several board positions at once (one row =
 one anchor):
 
 ```markdown
 ## Interactions
 
-| Name         | Outcome             | On board              |
-|--------------|---------------------|-----------------------|
-| What's done? | Items moved to Done | @sprint-board#Done    |
-| Where stuck? | Blockers visible    | @sprint-board#Blocked |
+| Name         | Outcome             | Interaction of                                |
+|--------------|---------------------|-----------------------------------------------|
+| What's done? | Items moved to Done | [[Sprint Board]]#Sprint Board/col:Done::in    |
+| Where stuck? | Blockers visible    | [[Sprint Board]]#Sprint Board/col:Blocked::in |
 ```
 
-The board (`@sprint-board`) is the meeting's `interaction-of`; each row names one of its
-columns (`@board#Column`, the same anchor the board / flight-route DSLs use). For an
-agreement container the heading is `## Agreements`, read the same way.
+Each row's locator may be **relative** (`#col:Done::in` or `col:Done::in`, no `[[file]]`) —
+it then inherits the meeting's frontmatter `interaction-of` head. For an
+agreement container the heading is `## Agreements` and the column is `Agreement of`, read
+the same way.
 
 ## Markwhen sibling (`.mw`)
 
@@ -113,14 +114,14 @@ A meeting that anchors its interactions to board positions uses the **table form
 type: interaction
 interaction-type: meeting
 for-domain: "[[Standard Production]]"
-interaction-of: "@sprint-board"
+interaction-of: "[[Sprint Board]]#Sprint Board::in"
 ---
 ## Interactions
 
-| Name         | Outcome             | On board              |
-|--------------|---------------------|-----------------------|
-| What's done? | Items moved to Done | @sprint-board#Done    |
-| Where stuck? | Blockers visible    | @sprint-board#Blocked |
+| Name         | Outcome             | Interaction of                                |
+|--------------|---------------------|-----------------------------------------------|
+| What's done? | Items moved to Done | [[Sprint Board]]#Sprint Board/col:Done::in    |
+| Where stuck? | Blockers visible    | [[Sprint Board]]#Sprint Board/col:Blocked::in |
 ```
 
 `interactions/3P Coordination.mw`:

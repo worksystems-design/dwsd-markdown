@@ -42,5 +42,6 @@ bound-to:
 
 - An ai-agent is really a **surface**: use `bound-to` when it appears at a specific point
   in the workflow (a board column), and/or `for-domain` for the work system it belongs to.
-- `bound-to` uses the `@handle#Column` anchor style shared with the board/route DSLs — that
-  anchor convention was recently extended and is still being settled.
+- `bound-to` uses the `@handle#Column` anchor style of the **route** DSL (boards are now
+  addressed by the richer `interaction-of` / `agreement-of` locator) — this preliminary
+  convention is still being settled and may move to the locator form.

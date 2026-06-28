@@ -2,7 +2,7 @@
 type: interaction
 interaction-type: meeting
 for-domain: "[[]]"            # the work system it is scoped to (up)
-interaction-of: "@board"      # the board it is of (detail) — @board#Column for a specific position
+interaction-of: "[[Board]]#Board Name::in"   # the board it is of — add /col:Column::in for a specific position
 start: "2026-01-01T10:00:00"
 end: "2026-01-01T11:00:00"
 rrule: "RRULE:FREQ=WEEKLY;BYDAY=TU"
