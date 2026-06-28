@@ -1,0 +1,18 @@
+---
+type: interaction
+interaction-type: bilateral
+interaction-of:
+  - "@market-street-shop-board#Reorder"
+  - "@station-road-shop-board#Reorder"
+created_at: "2026-06-28"
+---
+
+## Purpose
+
+The close-of-day routine at each shop: count the closing stock, compare it against the
+day's sell-through, and place tomorrow's [[Daily Replenishment Order]]. This is where demand
+enters the flow — each shop's `Reorder` column feeds the [[Daily Replenishment Flow]] up to
+[[Bakery Operations]].
+
+A short, recurring interaction — the [[Shop Manager]] at each location counts, records, and
+submits the order under the standing authority of the [[Shop Manager Mandate]].

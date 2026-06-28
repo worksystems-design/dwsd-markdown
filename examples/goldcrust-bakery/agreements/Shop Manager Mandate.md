@@ -2,6 +2,7 @@
 type: agreement
 agreement-type: organizational
 for-domain: "[[Bakery Operations]]"
+agreement-of: "@bakery-operations-coordination-board"
 version: "1.0"
 decision_date: "2026-05-20"
 review_date: "2026-11-20"

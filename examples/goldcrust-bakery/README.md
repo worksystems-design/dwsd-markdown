@@ -55,9 +55,11 @@ carries a `flightlevel`). This example shows all three shapes of `unit`:
 - **Structure** — [`work-systems/`](work-systems/): `Bakehouse.md` carries the fullest
   domain description (and is a `[team, work-system]`). [`units/`](units/) holds the root
   `Goldcrust Bakery.md` and the plain-team `Deliveries.md`.
-- **Flow** — [`visualizations/`](visualizations/) (the production board),
-  [`flight-routes/`](flight-routes/) (the replenishment route),
-  [`interactions/`](interactions/) (the `Daily Production Sync` meeting + its `.mw` sibling).
+- **Flow** — [`visualizations/`](visualizations/) (a board per operational work system —
+  Bakehouse, Bakery Operations, and both shops), [`flight-routes/`](flight-routes/) (the
+  `Daily Replenishment Flow` route that closes the loop across those boards — demand up,
+  plan down, product across), [`interactions/`](interactions/) (the `Daily Production Sync`
+  meeting + its `.mw` sibling).
 - **Navigation ladder** — follow the morning-sourdough thread:
   [`signals/`](signals/) → [`insights/`](insights/) → [`drivers/`](drivers/) →
   [`proposals/`](proposals/) → [`agreements/`](agreements/).

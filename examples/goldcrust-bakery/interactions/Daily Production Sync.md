@@ -34,6 +34,8 @@ shops, and any known events for tomorrow.
 
 | Name                               | Outcome                              | On board                                       |
 |------------------------------------|--------------------------------------|------------------------------------------------|
-| Confirm tomorrow's bake quantities | agreed [[Daily Replenishment Order]] | @bakehouse-production-board#Backlog            |
+| Pull together the shops' demand    | one shared demand picture            | @bakery-operations-coordination-board#Demand-In |
+| Confirm tomorrow's bake quantities | agreed [[Daily Replenishment Order]] | @bakery-operations-coordination-board#Planned  |
+| Hand the plan to the Bakehouse     | next-day plan in production          | @bakehouse-production-board#Backlog            |
 | Check the morning dispatch cleared | shared demand picture                | @bakehouse-production-board#Ready-for-Dispatch |
 | Flag capacity or supply risks      | risks with owners                    | @bakehouse-production-board#Mixing-Proofing    |
