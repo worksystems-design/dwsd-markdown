@@ -1,8 +1,8 @@
 ---
 name: org-validate
 description: >-
-  Validate a DWSD organization folder — frontmatter, wikilink, @handle, and ladder
-  integrity. Use when asked to validate, check, or lint a DWSD org.
+  Validate a DWSD organization folder — frontmatter, wikilink, DSL-fence, locator, and
+  ladder integrity. Use when asked to validate, check, or lint a DWSD org.
 argument-hint: "[org-folder] (defaults to the current folder)"
 ---
 
@@ -30,17 +30,30 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      longer makes a unit a work system, so this is likely an authoring slip.
 2. **Wikilink integrity** — collect every `[[Target]]` (frontmatter and body) and confirm a
    file `Target.md` exists somewhere in the org (labels are unique). Report danglers.
-3. **Handle & locator integrity** — two distinct reference forms:
-   - **Route `@handle`** — for every `@handle` in ` ```flightroute ` fences, confirm it maps to
-     an entity slug (kebab-case of a filename); for every `@work-system#Column`, confirm the
-     column exists in that work system's board (its ` ```dwsd-board ` fence, found via
-     `visualization-of`).
-   - **Board locator** — `interaction-of` / `agreement-of` carry a locator
-     `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board, or
-     a bare `[[Work System]]` for a work-system anchor). Confirm the `[[Board]]` file exists and
-     that any `col:` / `lane:` / `group:` / `split:` segment names a unit present in that board's
-     ` ```dwsd-board ` YAML. Inline inside-out `agreements:` / `interactions:` keys on a
+3. **DSL fence & locator integrity** — three checks:
+   - **Route fences** (` ```dwsd.flightroute `) — only the closed key set `title:` /
+     `tags:` / `for:` / `bands:` / `triggers:` / `path:` / `bound-to:`. Flag retired
+     forms: a `route "…"` header or a root `route:` key (→ `title:`), a `flow:` section,
+     `@`-handle references, a `deliver` edge (→ `..> ()`), a bare `flightroute` fence tag.
+     Confirm `for:` resolves to a flight-item-type file. Every band named in a `path:`
+     edge or a trigger's `generates:` must be declared in `bands:` (`fl` ∈ 1..3 or a
+     numeric span). Edge sanity: one hop per line; `()` reached only via `..>`; `->`
+     stays inside one band, `-->` crosses bands (warn otherwise). **Flow ⊆ Path:** every
+     `bound-to:` `band` is declared in `bands:`, and every pinned item type lives in that
+     band per `path:`; each `board:` wikilink resolves to a visualization file, and each
+     pinned locator segment (`lane:` / `col:` / …) names a unit present in that board's
+     YAML.
+   - **Board fences** (` ```dwsd.board `) — the name key is `title:` (a root `board:`
+     key is retired); flag a hyphenated `dwsd-board` fence tag (it highlights but does
+     not render). Inline inside-out `agreements:` / `interactions:` keys on a
      column/lane/group are valid board content, not references to resolve.
+   - **Locator** — `interaction-of` / `agreement-of` carry a locator
+     `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole
+     board, a bare `[[Work System]]` for a work-system anchor, or
+     `[[Route]]/stage:itemType @ Band::in` for a **route stage**). Confirm the target
+     file exists; any `col:` / `lane:` / `group:` / `split:` segment names a unit present
+     in that board's YAML; a `stage:` segment names an `itemType @ Band` pair the route's
+     `path:` (or a trigger's `generates:`) actually places in that band.
    - **Board-binding consistency:** when an entity carries both `for-domain` (a work system)
      and a board-position `interaction-of` / `agreement-of`, **warn** if the anchored board's
      work system (its `visualization-of`) differs from `for-domain`.

@@ -48,7 +48,8 @@ carries a `flightlevel`). This example shows all three shapes of `unit`:
   …) — the folder is a convenience, the `type:` is authoritative.
 - Relationships are `[[wikilinks]]` to other entities (rendered by the DWSD parser or
   Obsidian; plain VS Code preview shows them as text).
-- Boards and flight routes carry embedded DSL (` ```dwsd-board ` YAML, ` ```flightroute `).
+- Boards and flight routes carry embedded DSL (` ```dwsd.board ` and ` ```dwsd.flightroute `,
+  both plain YAML).
 
 ## Entry points
 
@@ -56,14 +57,17 @@ carries a `flightlevel`). This example shows all three shapes of `unit`:
   domain description (and is a `[team, work-system]`). [`units/`](units/) holds the root
   `Goldcrust Bakery.md` and the plain-team `Deliveries.md`.
 - **Flow** — [`visualizations/`](visualizations/): a board per work system, in the YAML
-  ` ```dwsd-board ` DSL. The Bakehouse and shop boards run the daily flow; the
+  ` ```dwsd.board ` DSL. The Bakehouse and shop boards run the daily flow; the
   `Bakery Operations Coordination` board is end-to-end with a **swimlane per
   flight-item-type**; the `Bakery Strategy` board (FL3) holds the few strategic bets. Boards
   carry **inside-out** working agreements inline (e.g. the Bakehouse `Mixing-Proofing` WIP
   rule); entities also anchor **outside-in** via locators in `interaction-of` /
-  `agreement-of`. [`flight-routes/`](flight-routes/) holds the `Daily Replenishment Flow`
-  route that closes the loop across the operational boards (demand up, plan down, product
-  across); [`flight-item-types/`](flight-item-types/) defines what flows.
+  `agreement-of`. [`flight-routes/`](flight-routes/) holds **four routes, one per
+  flight-item-type, each a different pattern**: the `Daily Replenishment Flow` (operational
+  closed loop — demand up, plan down, product across), the `Wholesale Contract Route`
+  (acquisition — the contract *generates* a standing order), the `New Shop Launch Route`
+  (top-down strategic, FL3 → FL2), and the `New Product Introduction Route` (bottom-up,
+  FL1 → FL3 → FL2 → FL1); [`flight-item-types/`](flight-item-types/) defines what flows.
   [`interactions/`](interactions/) holds the `Daily Production Sync` meeting + its `.mw`
   sibling.
 - **Navigation ladder** — follow the morning-sourdough thread:

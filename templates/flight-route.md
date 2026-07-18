@@ -1,14 +1,26 @@
 ---
 type: flight-route
 ---
-```flightroute
-route "<Route name>"
-  for: @<flight-item-type-handle>
-  triggers: <what sets this route in motion>
-  path: FL2: @<work-system> -> FL1: @<work-system>
-  flow:
-    FL2: @<work-system>#<Column>
-      -[generate: @<flight-item-type>]-> FL2: @<work-system>#<Column>
-    FL1: @<work-system>#Done
-      -[copy: @<flight-item-type>]-> FL1: @<work-system>#To-Do
+```dwsd.flightroute
+title: <Route name>
+for: "[[<Flight Item Type>]]"
+bands:
+  - name: <Band>
+    fl: <1|2|3>
+  - name: <Band>
+    fl: <1|2|3>
+triggers:
+  - name: <what sets this route in motion>
+    generates:
+      - <item-type> @ <Band>
+path:
+  - <item-type> @ <Band> -> <item-type> @ <Band>
+  - <item-type> @ <Band> --> <item-type> @ <Band>
+  - <item-type> @ <Band> ..> ()
+bound-to:
+  - band: <Band>
+    boards:
+      - board: "[[<Board>]]"
+        stages:
+          - <item-type>: "col:<Column>"
 ```

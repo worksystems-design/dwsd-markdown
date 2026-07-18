@@ -3,7 +3,7 @@ name: dwsd-format
 description: >-
   Read, write, and review DWSD organization entities — the Dynamic Work Systems Design
   markdown format (entity types, frontmatter contracts, wikilink relationships, the board
-  and flightroute DSLs, and the flat per-type folder layout). Use whenever creating,
+  and flight-route DSLs, and the flat per-type folder layout). Use whenever creating,
   editing, or reviewing files in a DWSD org folder, or when asked about the DWSD format.
 ---
 
@@ -56,12 +56,14 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
 - **Discriminators are named `<base>-type`**: `unit-type`, `interaction-type`,
   `agreement-type`, `visualization-type`. Each may hold a single token **or a YAML list**
   (e.g. `unit-type: [team, work-system]`). `flightlevel` is one word.
-- **Two types carry embedded DSL:** `visualization` → ` ```dwsd-board ` (**plain YAML**:
-  `columns:` / `lanes:` / `groups:`, with inline inside-out `agreements:` / `interactions:` on
-  any node — no inline sugar like `#status` or `[wip]`); `flight-route` → ` ```flightroute `.
-  In the **route** DSL, work systems and item types are referenced by `@`-handle (the target's
-  slug). External entities anchor **into** a board via a **locator**
-  (`interaction-of` / `agreement-of`: `[[Board]]#BoardName/col:Column::in`). See
+- **Two types carry embedded DSL — both plain YAML, dot-form fence tags:**
+  `visualization` → ` ```dwsd.board ` (`title:`, `columns:` / `lanes:` / `groups:`, with
+  inline inside-out `agreements:` / `interactions:` on any node — no inline sugar like
+  `#status` or `[wip]`); `flight-route` → ` ```dwsd.flightroute ` (`title:`, `for:` as a
+  wikilink, `bands:`, `triggers:`, glyph-typed `path:` edges `->` / `-->` / `..>` /
+  `..> ()`, and a `bound-to:` layer binding bands to boards). External entities anchor
+  **into** a board or route via a **locator** (`interaction-of` / `agreement-of`:
+  `[[Board]]#BoardName/col:Column::in`, or `[[Route]]/stage:itemType @ Band::in`). See
   `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
   `${CLAUDE_PLUGIN_ROOT}/types/flight-route.md`.
 - **Navigation ladder:** `signal` → `insight` → `driver` → `proposal` → `agreement`,

@@ -5,8 +5,8 @@ title: ""
 visualization-of: "[[]]"   # the work system this board renders
 ---
 
-```dwsd-board
-board: ""
+```dwsd.board
+title: ""
 flightlevel: FL1
 columns:
   - Backlog

@@ -50,5 +50,6 @@ Year-1 baseline: 2–4 weeks. Year-5 reality: 4–6 weeks.
 ## Notes
 
 - The four-question structure is a convention, not enforced.
-- Flight item types are referenced from [flight routes](flight-route.md) by `@`-handle
-  (e.g. `@standard-order`).
+- A [flight route](flight-route.md) names its primary flight-item-type in its `for:` key
+  as a wikilink (e.g. `for: "[[Standard Order]]"`). The short stage tokens inside a
+  route's `path:` (`order`, `contract`, …) are local to that route, not entity references.

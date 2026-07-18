@@ -12,8 +12,8 @@ through the day, and the closing count becomes tomorrow's [[Daily Replenishment 
 carries an inline (inside-out) pointer to the [[Counter Handover]], which also anchors here
 from its own file (outside-in).
 
-```dwsd-board
-board: Market Street Shop
+```dwsd.board
+title: Market Street Shop
 flightlevel: FL1
 columns:
   - name: Incoming

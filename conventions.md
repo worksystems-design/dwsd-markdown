@@ -87,11 +87,17 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 > **The locator** (`interaction-of` / `agreement-of`) is **value-polymorphic**: a bare
 > `[[Work System]]` wikilink anchors to a whole **work system**; a value carrying a `#BoardName`
 > and/or a `/kind:Name` path is a **board-position** locator. The path drills in with
-> `/`-chained `col:` · `lane:` · `group:` · `split:` segments and an optional trailing
-> `::before` · `::in` · `::after` (bare = `::in`), e.g.
+> `/`-chained `col:` · `lane:` · `group:` · `split:` · `stage:` segments and an optional
+> trailing `::before` · `::in` · `::after` (bare = `::in`), e.g.
 > `[[Sprint Board]]#Sprint Board/col:Build/split:QA::before`. This is the **outside-in**
 > direction; the board may also declare relationships **inside-out** with inline `agreements:` /
 > `interactions:` keys on a column/lane/group (see [Embedded DSL fences](#embedded-dsl-fences)).
+>
+> **`stage:` anchors into a route, not a board.** The same locator can point at a **route
+> stage**: `[[Route]]/stage:<itemType> @ <Band>::before|in|after`, where the name after
+> `stage:` is the full `itemType @ Band` pair (single space each side of `@`), e.g.
+> `[[Daily Replenishment Flow]]/stage:order @ Shops::before`. A `#Route Name` fragment
+> disambiguates when one file hosts several routes.
 
 ## Structure vs. flow
 
@@ -179,15 +185,17 @@ patterns are valid.
 
 ## Embedded DSL fences
 
-Two types carry a fenced code block that the app parses and renders:
+Two types carry a fenced code block that the app parses and renders. Both DSLs are
+**plain YAML**, and both fence tags use the dot form:
 
-- `visualization` (boards) → ```` ```dwsd-board ```` — **plain YAML** (columns, lanes,
-  groups, and inline inside-out `agreements:` / `interactions:`); no inline sugar. See
-  [`types/visualization.md`](types/visualization.md).
-- `flight-route` → ```` ```flightroute ```` — see
-  [`types/flight-route.md`](types/flight-route.md). The route DSL still references work
-  systems and item types by `@`-handle (`@work-system#Column`); this is distinct from the
-  board **locator** used by `interaction-of` / `agreement-of` above.
+- `visualization` (boards) → ```` ```dwsd.board ```` — columns, lanes, groups, and inline
+  inside-out `agreements:` / `interactions:`; no inline sugar; the board name is the
+  shared `title:` header key. See [`types/visualization.md`](types/visualization.md).
+- `flight-route` → ```` ```dwsd.flightroute ```` — `title:`, `for:`, `bands:`,
+  `triggers:`, glyph-typed `path:` edges, and a `bound-to:` layer that maps bands onto
+  boards via wikilinks and the **locator** above. The old `@`-handle references
+  (`@work-system#Column`) are retired. See
+  [`types/flight-route.md`](types/flight-route.md).
 
 ## Markwhen siblings (`.mw`)
 

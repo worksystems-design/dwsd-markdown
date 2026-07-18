@@ -38,4 +38,5 @@ shops, and any known events for tomorrow.
 | Confirm tomorrow's bake quantities | agreed [[Daily Replenishment Order]] | [[Bakery Operations Coordination Board]]#Bakery Operations Coordination/col:Planned::in   |
 | Hand the plan to the Bakehouse     | next-day plan in production          | [[Bakehouse Production Board]]#Bakehouse Production/col:Backlog::in              |
 | Check the morning dispatch cleared | shared demand picture                | [[Bakehouse Production Board]]#Bakehouse Production/col:Ready-for-Dispatch::in   |
+| Lift dispatch status into the order world | FL2 order cards current         | [[Daily Replenishment Flow]]/stage:dispatch @ Bakehouse::after                   |
 | Flag capacity or supply risks      | risks with owners                    | [[Bakehouse Production Board]]#Bakehouse Production/col:Mixing-Proofing::in      |

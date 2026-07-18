@@ -4,6 +4,33 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-07-18
+
+- **Route DSL is now YAML (` ```dwsd.flightroute `).** The route fence moved from the old
+  line-based form (`route "Name"`, `for: @handle`, `path:` FL chains, `flow:` edges with
+  `-[action: @item]->` arrows) to **plain YAML** with a closed key set: `title:`, `tags:`,
+  `for:` (the primary flight-item-type, as a wikilink), `bands:` (named bands with
+  `fl: 1|2|3` or a span), `triggers:` (`{name, generates}` — external start events), and a
+  glyph-typed `path:`: `->` generate (same band), `-->` copy (across bands), `..>` feedback,
+  `..> ()` delivery to the outside sink (⊙). A route is authored **unbound**; the separate
+  `bound-to:` layer maps bands onto boards via wikilinks and the locator, with per-stage
+  pins (`lane:X/col:Y`) under the one hard rule **Flow ⊆ Path**. The `@`-handle references
+  (`@work-system#Column`), the `flow:` section, and the `deliver` edge are retired.
+- **Fence tags converge on the dot form.** Renderable fences are ` ```dwsd.board ` and
+  ` ```dwsd.flightroute ` — the hyphenated `dwsd-board` tag and the bare `flightroute` tag
+  are retired (they may still highlight, but do not render). The board name key `board:` is
+  retired in favor of the shared document header `title:` (same key on both DSLs).
+- **Route-stage anchoring.** The locator gains a `stage:` segment: an interaction or
+  agreement can anchor onto a route stage via
+  `[[Route]]/stage:itemType @ Band::before|in|after` (with `#Route Name` disambiguating a
+  multi-route file).
+- **Goldcrust Bakery: four flight routes, one per flight-item-type.** A new
+  `New Product Introduction` item type joins the three existing ones, and each type now has
+  a route with a distinct pattern: `Daily Replenishment Flow` (operational closed loop,
+  migrated to the YAML DSL), `Wholesale Contract Route` (acquisition — a contract
+  *generates* a standing order), `New Shop Launch Route` (top-down strategic), and
+  `New Product Introduction Route` (bottom-up, FL1 → FL3 → FL2 → FL1).
+
 ## 2026-06-28
 
 - **Board DSL is now YAML (` ```dwsd-board `).** The board fence moved from the old

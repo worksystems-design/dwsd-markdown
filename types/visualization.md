@@ -22,16 +22,16 @@ Plus the shared optionals from [conventions](../conventions.md).
 
 ## Body — the `board` DSL
 
-The body holds one ```` ```dwsd-board ```` fenced block. The board DSL is **plain YAML** —
+The body holds one ```` ```dwsd.board ```` fenced block. The board DSL is **plain YAML** —
 every modifier is a spelled-out key, there is **no inline sugar** (no `#status` suffix, no
-`[wip]` brackets, no bare-modifier line). A viewer that recognizes the `dwsd-board` fence id
+`[wip]` brackets, no bare-modifier line). A viewer that recognizes the `dwsd.board` fence id
 renders it live; in plain Markdown the same block still reads as a YAML document.
 
 **Board header fields** (all optional):
 
 | Field | Shape | Meaning |
 |---|---|---|
-| `board` | string | The board name (the header text — there is no `title:` key here) |
+| `title` | string | The board name (the shared document header; the old `board:` key is retired — a hard error) |
 | `flightlevel` | `FL1` \| `FL2` \| `FL3` | The band the board sits in |
 | `timebox` | string (e.g. `5d`) | The cadence/timebox |
 | `aging` | string (e.g. `3d`) | Board-level aging duration |
@@ -77,8 +77,8 @@ title: "3P FL2 Coordination"
 visualization-of: "[[3P]]"
 ---
 
-```dwsd-board
-board: 3P FL2 Coordination
+```dwsd.board
+title: 3P FL2 Coordination
 flightlevel: FL2
 agreements:
   - "[[Team Working Agreements]]"

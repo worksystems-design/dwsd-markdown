@@ -10,8 +10,8 @@ The daily production board for the [[Bakehouse]] — one column per stage from o
 dispatch. `Mixing-Proofing` carries both an inline (inside-out) agreement and an external
 (outside-in) one — [[Mixing-Proofing WIP Limit]] anchors to the same column.
 
-```dwsd-board
-board: Bakehouse Production
+```dwsd.board
+title: Bakehouse Production
 flightlevel: FL1
 columns:
   - Backlog
