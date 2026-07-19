@@ -18,12 +18,12 @@ range at all. The mirror image of the [[New Shop Launch Route]]: FL1 → FL3 →
 title: New Product Introduction Route
 for: "[[New Product Introduction]]"
 bands:
-  - name: Bakehouse
-    fl: 1
-  - name: Coordination
-    fl: 2
   - name: Strategy
     fl: 3
+  - name: Coordination
+    fl: 2
+  - name: Bakehouse
+    fl: 1
 triggers:
   - name: counter requests and bakers' ideas
     generates:

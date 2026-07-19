@@ -24,10 +24,10 @@ The `bound-to:` layer maps the three bands onto [[Market Street Shop Board]],
 title: Daily Replenishment Flow
 for: "[[Daily Replenishment Order]]"
 bands:
-  - name: Shops
-    fl: 1
   - name: Coordination
     fl: 2
+  - name: Shops
+    fl: 1
   - name: Bakehouse
     fl: 1
 triggers:
