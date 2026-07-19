@@ -94,5 +94,8 @@ That's it. You've started.
   [Daily Replenishment Flow](flight-routes/Daily%20Replenishment%20Flow.md) — and three
   more routes, each a different pattern. (Flight levels are **altitudes on the work, not
   ranks** — the same eight people fly all three.)
+- An open thread no one has interpreted yet:
+  [Two Wholesale Enquiries Waiting at the Cap](signals/Two%20Wholesale%20Enquiries%20Waiting%20at%20the%20Cap.md)
+  — the ladder from stop 4 starts here, unclimbed. What would you do?
 - The rules behind it all: [conventions](../../conventions.md) and the
   [type index](../../README.md#types)

@@ -37,6 +37,15 @@ commit onward**. The current model is described by the reference itself — `REA
   `type:`), and uses plain relative links so it works on GitHub too. The example
   README's plain-text map fallback is collapsed into a `<details>` block, and the
   flight-level map now states that levels are altitudes on the work, not ranks.
+- **One range decision, one answer.** The range decision rights read consistently across
+  Head Baker, Daily Range Cap, and Shop Manager Mandate: the Head Baker *curates* the
+  standing range and decides recipes and the daily bake sequence; *changing* the range
+  is a Bakery Strategy bet under the Daily Range Cap, with Mara Holt holding the final
+  call — today both hats sit on the same person, and the files say so.
+- **An open thread.** A fresh, uninterpreted signal (`Two Wholesale Enquiries Waiting at
+  the Cap`, observing the Wholesale Capacity Cap) shows navigation with the ladder still
+  unclimbed — change in the example now has a future, not only a past. The tour points
+  at it as its closing question.
 
 ## 2026-07-18
 

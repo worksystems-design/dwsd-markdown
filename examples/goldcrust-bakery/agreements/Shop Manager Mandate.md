@@ -26,8 +26,9 @@ without escalating routine trading decisions.
 Each shop manager — [[Lena Frei]] as [[Market Street Shop Manager]], [[Selin Aydin]] as
 [[Station Road Shop Manager]] — may decide counter staffing, opening hours within the
 agreed band, and next-day replenishment quantities without prior sign-off. Range and
-pricing changes stay with the [[Head Baker]] and owner. One mandate, two roles: the
-agreement governs both location roles at once.
+pricing sit outside the mandate: the [[Head Baker]] curates the range, and changing it
+is a [[Bakery Strategy]] decision under the [[Daily Range Cap]]. One mandate, two roles:
+the agreement governs both location roles at once.
 
 ## Evaluation Criteria
 

@@ -22,8 +22,8 @@ standard.
 
 ## Description
 
-The Head Baker decides the daily range and recipes, sets the bake schedule, and holds the
-quality bar for everything that leaves the [[Bakehouse]].
+The Head Baker curates the standing range, decides recipes and the daily bake plan, sets
+the bake schedule, and holds the quality bar for everything that leaves the [[Bakehouse]].
 
 ## Concerns
 
@@ -37,7 +37,11 @@ Quality consistency, food-safety compliance, and protecting the morning dispatch
 
 ## Decision Rights
 
-- Decides recipes, range, and bake sequence (autonomous).
+- Decides recipes and the daily bake sequence (autonomous).
+- Curates the standing range and proposes changes to it — a range change is a
+  [[Bakery Strategy]] bet under the [[Daily Range Cap]]; [[Mara Holt]] holds the final
+  call. (Today both hats sit on Mara — the split still matters: it survives a hand-over
+  of the role.)
 - Consulted on hiring for the [[Bakehouse]]; the owner decides.
 
 ## Evaluation
