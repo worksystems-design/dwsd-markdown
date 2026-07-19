@@ -26,9 +26,9 @@ for: "[[Daily Replenishment Order]]"
 bands:
   - name: Coordination
     fl: 2
-  - name: Shops
-    fl: 1
   - name: Bakehouse
+    fl: 1
+  - name: Shops
     fl: 1
 triggers:
   - name: evening stock count
