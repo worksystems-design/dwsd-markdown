@@ -5,6 +5,9 @@ a delivery team, a coordination layer, and a strategy layer. It is a **worked ex
 every DWSD entity type appears at least once, wired together into one self-consistent
 organization.
 
+> **New here? [Take the tour](TOUR.md)** — six stops, ten minutes, no prior knowledge
+> needed: one person, one domain, one meeting, one decision, one board.
+
 > Fictional and public-safe. Names and numbers are invented.
 
 ## Flight-level map
@@ -15,8 +18,11 @@ focus: "[[Bakery Operations]]"
 radius: 1
 ```
 
-<!-- The same flight-level map as plain text (renders everywhere, even without the
-     DWSD renderer): -->
+The levels are **altitudes on the work, not ranks**: the same eight people fly all
+three — Mara bakes at FL1 in the morning and decides range bets at FL3 in the afternoon.
+
+<details>
+<summary>The same map as plain text (renders everywhere, even without the DWSD renderer)</summary>
 
 ```
 FL3  Bakery Strategy        sets direction
@@ -29,6 +35,8 @@ FL1  Bakehouse        Market Street Shop   Station Road Shop
      Deliveries  — a plain team (no flightlevel) that carries the morning dispatch;
                    participates in the flow Bakery Operations coordinates
 ```
+
+</details>
 
 A unit is a **work system** when its `unit-type` includes `work-system` (it then also
 carries a `flightlevel`). This example shows all three shapes of `unit`:

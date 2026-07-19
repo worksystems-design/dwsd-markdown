@@ -29,6 +29,14 @@ commit onward**. The current model is described by the reference itself — `REA
   sell-through; the 18:30 Evening Stock Count sets final quantities within that frame;
   sourdough's 24-hour lead is named in the Bakehouse. All five recurring interactions
   carry `start`/`end`/`rrule` plus `.mw` siblings, aggregated in `operating-rhythm.mw`.
+- **Goldcrust gets a door.** A guided `TOUR.md` (six stops: a person, a domain, a
+  meeting, the sourdough decision thread, the agreement, a board — then "your first
+  three files" from `templates/`) is now the first entry point: linked at the top of the
+  example README and as the first bullet of the root "Start here" (before
+  `conventions.md` — concrete before abstract). The tour is a guide, not an entity (no
+  `type:`), and uses plain relative links so it works on GitHub too. The example
+  README's plain-text map fallback is collapsed into a `<details>` block, and the
+  flight-level map now states that levels are altitudes on the work, not ranks.
 
 ## 2026-07-18
 

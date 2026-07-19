@@ -41,6 +41,10 @@ OKF, `agents.md`, and DWSD share the same Karpathy LLM-wiki lineage. See [`okf.m
 
 ## Start here
 
+- **New to DWSD?** Take the
+  **[Goldcrust Bakery tour](examples/goldcrust-bakery/TOUR.md)** — six stops through a
+  worked example, no prior knowledge needed. Concrete first; the rules below will make
+  twice as much sense afterwards.
 - **[conventions.md](conventions.md)** — the rules that apply to *every* entity:
   frontmatter, the `type` field, wikilink relationships, positions, tracking fields,
   DSL fences, and the structure vs. flow distinction.
