@@ -217,3 +217,8 @@ interactions/3P Coordination.mw
 ```
 
 The `.mw` file is not an entity on its own; it is attached to the interaction.
+
+An org folder may additionally keep **one consolidated timeline file** (e.g.
+`operating-rhythm.mw`) that aggregates the sibling lines — a pragmatic workaround while
+Markwhen viewers operate on a single file. It is not an entity either; the per-interaction
+siblings remain the source of truth.

@@ -2,6 +2,9 @@
 type: interaction
 interaction-type: bilateral
 for-domain: "[[Bakery Operations]]"
+start: "2026-07-23T14:00:00"
+end: "2026-07-23T14:30:00"
+rrule: "RRULE:FREQ=WEEKLY;BYDAY=TH"
 interaction-of:
   - "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:New Shop Launch/col:In-Prep::in"
   - "[[Bakery Strategy Board]]#Bakery Strategy/col:In-Flight::in"

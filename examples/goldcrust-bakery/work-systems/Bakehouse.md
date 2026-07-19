@@ -48,6 +48,8 @@ shops to plan the next day's [[Daily Replenishment Order]].
 
 - Morning peaks: several lines must be ready in the same narrow dispatch window.
 - Demand swings (weather, weekends) are hard to forecast at the product level.
+- Sourdough runs on a 24-hour lead: tomorrow's levain is built before tonight's final
+  quantities are in — the reserved quota absorbs that uncertainty.
 
 ## Key Resources
 

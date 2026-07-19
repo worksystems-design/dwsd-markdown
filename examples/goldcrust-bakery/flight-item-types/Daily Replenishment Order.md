@@ -20,4 +20,4 @@ To the [[Market Street Shop]] and [[Station Road Shop]] in the morning dispatch.
 
 ## How long does it take?
 
-One overnight cycle: ordered in the afternoon, baked overnight, dispatched before opening.
+One overnight cycle: ordered at close of day, baked overnight, dispatched before opening.

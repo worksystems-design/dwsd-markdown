@@ -14,9 +14,13 @@
 | `interaction-type` | yes | `meeting` \| `conversation` \| `bilateral` \| … | Kind of interaction (open vocabulary) |
 | `interaction-of` | no | board locator (or `[[Work System]]`) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in` |
 | `for-domain` / `for_domain` | no | wikilink | The **work system** it is scoped to — points *up*, e.g. `[[Strategic Direction]]` |
+| `start` | no | ISO datetime | First occurrence start — **any** interaction may be scheduled |
+| `end` | no | ISO datetime | First occurrence end |
+| `rrule` | no | iCal RRULE | Recurrence, e.g. `RRULE:FREQ=DAILY` |
 
-Plus the shared optionals from [conventions](../conventions.md). The `meeting` kind adds
-scheduling and a **list of interactions** it bundles — see [`meeting.md`](meeting.md).
+Plus the shared optionals from [conventions](../conventions.md). A scheduled interaction
+usually has a `.mw` Markwhen sibling (see [conventions](../conventions.md)). The `meeting`
+kind adds a **list of interactions** it bundles — see [`meeting.md`](meeting.md).
 
 ## Relationships
 

@@ -2,6 +2,9 @@
 type: interaction
 interaction-type: review
 for-domain: "[[Bakery Strategy]]"
+start: "2026-07-24T14:00:00"
+end: "2026-07-24T14:45:00"
+rrule: "RRULE:FREQ=WEEKLY;BYDAY=FR"
 interaction-of:
   - "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:New Product Introduction/col:Trial-Bakes::in"
   - "[[New Product Introduction Route]]/stage:new-product @ Bakehouse::after"

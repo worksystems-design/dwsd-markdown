@@ -1,0 +1,16 @@
+title: Goldcrust Bakery — Operating Rhythm
+
+// Aggregates the per-interaction .mw siblings into one timeline — Markwhen viewers
+// operate on a single file. The siblings remain the source of truth; keep in sync.
+
+group Daily rhythm
+May 25 2026 05:30-06:15 every day: Counter Handover
+May 25 2026 13:30-13:45 every day: Daily Production Sync
+May 25 2026 18:30-18:45 every day: Evening Stock Count
+endGroup
+
+group Weekly cadences
+Jul 21 2026 14:00-14:30 every week on Tuesday: Wholesale Account Review
+Jul 23 2026 14:00-14:30 every week on Thursday: Launch Check-in
+Jul 24 2026 14:00-14:45 every week on Friday: Trial Bake Tasting
+endGroup

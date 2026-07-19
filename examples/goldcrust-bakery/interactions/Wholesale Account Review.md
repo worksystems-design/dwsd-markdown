@@ -2,6 +2,9 @@
 type: interaction
 interaction-type: review
 for-domain: "[[Bakery Operations]]"
+start: "2026-07-21T14:00:00"
+end: "2026-07-21T14:30:00"
+rrule: "RRULE:FREQ=WEEKLY;BYDAY=TU"
 interaction-of:
   - "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:Wholesale Contract/col:Running::in"
   - "[[Wholesale Contract Route]]/stage:standing-order @ Coordination::in"

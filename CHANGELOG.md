@@ -18,6 +18,17 @@ commit onward**. The current model is described by the reference itself — `REA
   item type in the fence's `for:` key, and the item type points back with a frontmatter
   `uses-route` wikilink — documented on both type pages and exercised by all four
   Goldcrust item types.
+- **Scheduling generalizes to every interaction.** `start` / `end` / `rrule` are now
+  documented on `types/interaction.md` (previously only on the `meeting` page) — any
+  interaction may be scheduled, and a recurring one usually carries a `.mw` sibling. An
+  org folder may additionally keep one **consolidated timeline file** (e.g.
+  `operating-rhythm.mw`) aggregating the sibling lines — Markwhen viewers operate on a
+  single file; the siblings stay the source of truth.
+- **Goldcrust gets a clock.** The day now runs contradiction-free: the 13:30 Daily
+  Production Sync frames tomorrow on *yesterday's* closing counts and today's
+  sell-through; the 18:30 Evening Stock Count sets final quantities within that frame;
+  sourdough's 24-hour lead is named in the Bakehouse. All five recurring interactions
+  carry `start`/`end`/`rrule` plus `.mw` siblings, aggregated in `operating-rhythm.mw`.
 
 ## 2026-07-18
 

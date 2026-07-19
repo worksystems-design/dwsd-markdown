@@ -1,6 +1,9 @@
 ---
 type: interaction
 interaction-type: handover
+start: "2026-05-25T05:30:00"
+end: "2026-05-25T06:15:00"
+rrule: "RRULE:FREQ=DAILY"
 interaction-of:
   - "[[Bakehouse Production Board]]#Bakehouse Production/col:Ready-for-Dispatch::in"
   - "[[Market Street Shop Board]]#Market Street Shop/col:Incoming::in"
