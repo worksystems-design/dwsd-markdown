@@ -1,6 +1,9 @@
 {
   "version": "1.0",
   "name": "worksystems-design-dwsd-markdown",
+  "owner": {
+    "name": "Thomas Krause"
+  },
   "plugins": [
     {
       "name": "dwsd-md",
