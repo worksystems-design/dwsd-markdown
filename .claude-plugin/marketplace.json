@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "name": "dwsd-markdown",
+  "name": "worksystems-design-dwsd-markdown",
   "plugins": [
     {
       "name": "dwsd-md",
