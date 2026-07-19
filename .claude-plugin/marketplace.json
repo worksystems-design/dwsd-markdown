@@ -10,9 +10,8 @@
       "description": "Read, write, and validate DWSD organization entities.",
       "version": "0.1.0",
       "source": {
-        "type": "github",
-        "repository": "worksystems-design/dwsd-markdown",
-        "path": "."
+        "source": "url",
+        "url": "https://github.com/worksystems-design/dwsd-markdown.git"
       }
     }
   ]
