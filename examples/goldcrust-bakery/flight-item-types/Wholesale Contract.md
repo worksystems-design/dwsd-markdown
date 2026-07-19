@@ -1,5 +1,6 @@
 ---
 type: flight-item-type
+uses-route: "[[Wholesale Contract Route]]"
 created_at: "2026-06-28"
 ---
 

@@ -7,4 +7,4 @@ created_at: "2026-05-24"
 ---
 
 Lena runs the [[Market Street Shop]]: opening, sell-through, closing stock counts, and the
-next-day [[Daily Replenishment Order]]. She holds the [[Shop Manager]] role.
+next-day [[Daily Replenishment Order]]. She holds the [[Market Street Shop Manager]] role.

@@ -3,7 +3,7 @@ type: proposal
 for-domain: "[[Bakery Operations]]"
 derived-from: "[[Dependable Morning Sourdough]]"
 status: consented
-created_at: "2026-05-24"
+created_at: "2026-05-21"
 ---
 
 ## Proposal

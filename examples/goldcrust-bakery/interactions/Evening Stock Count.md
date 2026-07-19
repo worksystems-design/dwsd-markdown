@@ -1,6 +1,6 @@
 ---
 type: interaction
-interaction-type: bilateral
+interaction-type: routine
 interaction-of:
   - "[[Market Street Shop Board]]#Market Street Shop/col:Reorder::in"
   - "[[Station Road Shop Board]]#Station Road Shop/col:Reorder::in"
@@ -15,7 +15,8 @@ day's sell-through, and place tomorrow's [[Daily Replenishment Order]]. This is 
 enters the flow — each shop's `Reorder` column feeds the [[Daily Replenishment Flow]] up to
 [[Bakery Operations]].
 
-A short, recurring interaction — the [[Shop Manager]] at each location counts, records, and
+A short, recurring interaction — the shop manager at each location
+([[Market Street Shop Manager]], [[Station Road Shop Manager]]) counts, records, and
 submits the order under the standing authority of the [[Shop Manager Mandate]].
 
 Besides the two board positions, this interaction also anchors to the

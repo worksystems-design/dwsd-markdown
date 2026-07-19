@@ -1,5 +1,6 @@
 ---
 type: flight-item-type
+uses-route: "[[New Shop Launch Route]]"
 created_at: "2026-06-28"
 ---
 

@@ -1,5 +1,6 @@
 ---
 type: flight-item-type
+uses-route: "[[Daily Replenishment Flow]]"
 created_at: "2026-05-24"
 ---
 

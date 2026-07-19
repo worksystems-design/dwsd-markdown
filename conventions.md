@@ -185,8 +185,9 @@ patterns are valid.
 
 ## Embedded DSL fences
 
-Two types carry a fenced code block that the app parses and renders. Both DSLs are
-**plain YAML**, and both fence tags use the dot form:
+Three fence tags are parsed and rendered by the app. All three DSLs are **plain YAML**,
+and all fence tags use the dot form. The first two are tied to a type; the third may
+appear in any entity body:
 
 - `visualization` (boards) → ```` ```dwsd.board ```` — columns, lanes, groups, and inline
   inside-out `agreements:` / `interactions:`; no inline sugar; the board name is the
@@ -196,6 +197,13 @@ Two types carry a fenced code block that the app parses and renders. Both DSLs a
   boards via wikilinks and the **locator** above. The old `@`-handle references
   (`@work-system#Column`) are retired. See
   [`types/flight-route.md`](types/flight-route.md).
+- **any entity** (optional) → ```` ```dwsd.topology ```` — an inline **flight-level
+  context map**, inferred from the org's relationships rather than authored. Keys:
+  `mode: infer` (the only mode so far), `focus:` (a wikilink naming the entity to center
+  on; when omitted, the map centers on the entity hosting the block), and `radius:` (how
+  many relationship hops the map reaches). Purely a view — it declares no relationships
+  and is never part of a type's required body structure. ⚠ **Preliminary** — the key set
+  may still change.
 
 ## Markwhen siblings (`.mw`)
 

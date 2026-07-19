@@ -3,7 +3,7 @@ type: driver
 for-domain: "[[Market Street Shop]]"
 derived-from: "[[Market Street Morning Sourdough Shortfall]]"
 status: addressed
-created_at: "2026-05-24"
+created_at: "2026-05-20"
 ---
 
 The [[Market Street Shop]] needs dependable sourdough availability through the morning peak.

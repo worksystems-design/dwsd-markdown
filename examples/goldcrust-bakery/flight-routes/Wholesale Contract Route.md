@@ -32,6 +32,9 @@ path:
   - standing-order @ Coordination --> standing-order @ Bakehouse
   # the recurring early-morning delivery — tracked on the standing order at FL2
   - standing-order @ Coordination ..> ()
+  # delivery experience rises from the nightly bake back into the contract
+  # (carried by the weekly Wholesale Account Review, with the Head Baker in the room)
+  - standing-order @ Bakehouse ..> contract @ Coordination
 bound-to:
   - band: Coordination
     boards:

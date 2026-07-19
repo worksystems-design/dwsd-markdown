@@ -1,5 +1,6 @@
 ---
 type: flight-item-type
+uses-route: "[[New Product Introduction Route]]"
 created_at: "2026-07-18"
 ---
 

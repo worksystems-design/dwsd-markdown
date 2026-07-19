@@ -15,6 +15,10 @@ differently, so **each lane carries its own columns** (lane-local `columns:`): t
 accepted, prepared, and opened, and a [[New Product Introduction]] rolls out via trial
 bakes into the range.
 
+Status categories read from FL2's perspective: in the replenishment lane, `Planned` is
+`done` (the coordination work on the order is finished) while `In-Production` is
+`waiting` — the order sits with the [[Bakehouse]] at FL1, and FL2 is waiting on it.
+
 ```dwsd.board
 title: Bakery Operations Coordination
 flightlevel: FL2

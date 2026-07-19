@@ -4,6 +4,21 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-07-19
+
+- **The topology fence is documented — and joins the dot form (` ```dwsd.topology `).**
+  The inferred flight-level context map used in the Goldcrust example (`mode: infer`,
+  optional `focus:`, `radius:`) is now the documented third embedded DSL fence in
+  [`conventions.md`](conventions.md); the previously undocumented `wsd-topology` tag is
+  renamed to `dwsd.topology`. The block is **optional** — a view any entity body may
+  carry (the Goldcrust work systems use it as an "In context" demo), never part of a
+  type's required body structure. ⚠ Preliminary: the key set may still change.
+- **Item types point at their route with `uses-route`.** The
+  flight-item-type ↔ flight-route pair is now bidirectional: the route names its primary
+  item type in the fence's `for:` key, and the item type points back with a frontmatter
+  `uses-route` wikilink — documented on both type pages and exercised by all four
+  Goldcrust item types.
+
 ## 2026-07-18
 
 - **Route DSL is now YAML (` ```dwsd.flightroute `).** The route fence moved from the old

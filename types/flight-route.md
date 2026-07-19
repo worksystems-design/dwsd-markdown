@@ -17,7 +17,9 @@ itself lives in the body, not the frontmatter.
 
 ## Relationships
 
-- Other entities point at a route with **`uses-route`** (a wikilink).
+- Other entities point at a route with **`uses-route`** (a wikilink) — typically the
+  [flight-item-type](flight-item-type.md) that travels it, pointing back at the route
+  named in its `for:` key.
 - The route names its primary [flight-item-type](flight-item-type.md) in the fence's
   `for:` key, and maps onto boards via `bound-to:` — both are part of the DSL below.
 - External entities (interactions, agreements) can anchor **onto a route stage** with a

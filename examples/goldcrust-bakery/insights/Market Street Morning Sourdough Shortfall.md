@@ -3,7 +3,7 @@ type: insight
 observes: "[[Market Street Shop]]"
 derived-from: "[[Sourdough Sold Out Before 9am]]"
 status: acknowledged
-created_at: "2026-05-24"
+created_at: "2026-05-19"
 ---
 
 Morning sourdough demand at the [[Market Street Shop]] consistently outstrips the quantity

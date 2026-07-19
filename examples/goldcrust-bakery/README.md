@@ -9,7 +9,7 @@ organization.
 
 ## Flight-level map
 
-```wsd-topology
+```dwsd.topology
 mode: infer
 focus: "[[Bakery Operations]]"
 radius: 1
@@ -49,13 +49,17 @@ carries a `flightlevel`). This example shows all three shapes of `unit`:
 - Relationships are `[[wikilinks]]` to other entities (rendered by the DWSD parser or
   Obsidian; plain VS Code preview shows them as text).
 - Boards and flight routes carry embedded DSL (` ```dwsd.board ` and ` ```dwsd.flightroute `,
-  both plain YAML).
+  both plain YAML). The ` ```dwsd.topology ` blocks (the map above, and the "In context"
+  section in each work system) are the **optional** third fence — an inferred flight-level
+  context map, used here as a demo extra; a work system is complete without one.
 
 ## Entry points
 
 - **Structure** — [`work-systems/`](work-systems/): `Bakehouse.md` carries the fullest
   domain description (and is a `[team, work-system]`). [`units/`](units/) holds the root
-  `Goldcrust Bakery.md` and the plain-team `Deliveries.md`.
+  `Goldcrust Bakery.md` and the plain-team `Deliveries.md`. [`roles/`](roles/) keeps one
+  shop-manager role file per location — roles are individual and evolve independently; a
+  role *shared* by several people would instead list them all as `role-keeper`s.
 - **Flow** — [`visualizations/`](visualizations/): a board per work system, in the YAML
   ` ```dwsd.board ` DSL. The Bakehouse and shop boards run the daily flow; the
   `Bakery Operations Coordination` board is end-to-end with a **swimlane per

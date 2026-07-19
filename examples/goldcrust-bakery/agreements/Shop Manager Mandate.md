@@ -11,20 +11,23 @@ created_at: "2026-05-24"
 
 ## Driver and Requirement
 
-The shops can only run smoothly if each [[Shop Manager]] has clear, standing authority —
+The shops can only run smoothly if each shop's manager has clear, standing authority —
 without escalating routine trading decisions.
 
 ## Who is responsible for what?
 
-- [[Shop Manager]] — holds the authority described below for their location.
+- [[Market Street Shop Manager]] and [[Station Road Shop Manager]] — each holds the
+  authority described below for their location.
 - [[Bakery Operations]] — sets the boundaries and reviews them.
 - [[Mara Holt]] — delegator; retains authority over range and brand.
 
 ## Description
 
-Each [[Shop Manager]] (e.g. [[Lena Frei]] at the [[Market Street Shop]]) may decide counter
-staffing, opening hours within the agreed band, and next-day replenishment quantities
-without prior sign-off. Range and pricing changes stay with the [[Head Baker]] and owner.
+Each shop manager — [[Lena Frei]] as [[Market Street Shop Manager]], [[Selin Aydin]] as
+[[Station Road Shop Manager]] — may decide counter staffing, opening hours within the
+agreed band, and next-day replenishment quantities without prior sign-off. Range and
+pricing changes stay with the [[Head Baker]] and owner. One mandate, two roles: the
+agreement governs both location roles at once.
 
 ## Evaluation Criteria
 

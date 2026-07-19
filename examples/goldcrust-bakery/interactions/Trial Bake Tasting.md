@@ -11,7 +11,8 @@ created_at: "2026-07-19"
 ## Purpose
 
 The tasting that follows a round of trial bakes: the [[Head Baker]] presents the candidate,
-the [[Shop Manager]]s bring what customers actually ask for at the counter, and
+the shop managers ([[Market Street Shop Manager]], [[Station Road Shop Manager]]) bring
+what customers actually ask for at the counter, and
 [[Mara Holt]] holds the range decision. The outcome is a clear call — into the range,
 another trial round with changes, or dropped.
 

@@ -13,7 +13,7 @@ created_at: "2026-05-24"
 
 ## In context
 
-```wsd-topology
+```dwsd.topology
 mode: infer
 radius: 2
 ```
