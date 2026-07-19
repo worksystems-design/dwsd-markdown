@@ -6,5 +6,6 @@
 
 # Editor / OS cruft — never published.
 .obsidian/
+.vscode/
 .DS_Store
 Thumbs.db
