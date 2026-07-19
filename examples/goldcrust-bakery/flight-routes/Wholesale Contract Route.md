@@ -9,7 +9,9 @@ plans it, and the signed contract **generates** a standing order that joins nigh
 production at the [[Bakehouse]]. This is the acquisition route — one flight item type
 creating another: the contract lives on at FL2 while the standing order it spawned runs
 the daily delivery. The Bakehouse bakes each night's batch, but the delivery is tracked
-on the standing order at FL2.
+on the standing order at FL2. Delivery experience feeds the contract world through the
+weekly [[Wholesale Account Review]], and the [[Wholesale Capacity Cap]] limits how much
+of the Bakehouse's night a growing wholesale book may claim.
 
 ```dwsd.flightroute
 title: Wholesale Contract Route
@@ -35,8 +37,8 @@ bound-to:
     boards:
       - board: "[[Bakery Operations Coordination Board]]"
         stages:
-          - contract: "lane:Wholesale Contract/col:Planning"
-          - standing-order: "lane:Wholesale Contract"
+          - contract: "lane:Wholesale Contract/col:Negotiation"
+          - standing-order: "lane:Wholesale Contract/col:Running"
   - band: Bakehouse
     boards:
       - board: "[[Bakehouse Production Board]]"

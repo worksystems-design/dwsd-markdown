@@ -69,7 +69,9 @@ carries a `flightlevel`). This example shows all three shapes of `unit`:
   (top-down strategic, FL3 → FL2), and the `New Product Introduction Route` (bottom-up,
   FL1 → FL3 → FL2 → FL1); [`flight-item-types/`](flight-item-types/) defines what flows.
   [`interactions/`](interactions/) holds the `Daily Production Sync` meeting + its `.mw`
-  sibling.
+  sibling, and a review interaction per item type (`Wholesale Account Review`,
+  `Launch Check-in`, `Trial Bake Tasting`) — each anchored to both a board position and
+  a route stage.
 - **Navigation ladder** — follow the morning-sourdough thread:
   [`signals/`](signals/) → [`insights/`](insights/) → [`drivers/`](drivers/) →
   [`proposals/`](proposals/) → [`agreements/`](agreements/).

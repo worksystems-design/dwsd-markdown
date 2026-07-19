@@ -7,7 +7,8 @@ How a [[New Shop Launch]] travels from a strategic bet to an open door: the bet 
 at [[Bakery Strategy]] (FL3), a copy moves to [[Bakery Operations]] (FL2) which
 **generates** the concrete launch work — site, fit-out, hiring, range planning — worked by
 a temporary launch crew at the operational level. Progress lifts back into the bet, which
-is tracked — and finally lands — on the strategy board. The `Launch Crew` band is
+is tracked — and finally lands — on the strategy board; the weekly [[Launch Check-in]] is
+the interaction that carries that feedback edge. The `Launch Crew` band is
 deliberately **unbound**: a temporary crew with no standing board of its own. This is the
 top-down strategic route: months, not days, and the delivery is a new work system — from
 its first trading day the shop joins the [[Daily Replenishment Flow]].

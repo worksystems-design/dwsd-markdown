@@ -34,8 +34,8 @@ shops, and any known events for tomorrow.
 
 | Name                               | Outcome                              | Interaction of                                                                  |
 |------------------------------------|--------------------------------------|---------------------------------------------------------------------------------|
-| Pull together the shops' demand    | one shared demand picture            | [[Bakery Operations Coordination Board]]#Bakery Operations Coordination/col:Demand-In::in |
-| Confirm tomorrow's bake quantities | agreed [[Daily Replenishment Order]] | [[Bakery Operations Coordination Board]]#Bakery Operations Coordination/col:Planned::in   |
+| Pull together the shops' demand    | one shared demand picture            | [[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:Daily Replenishment Order/col:Demand-In::in |
+| Confirm tomorrow's bake quantities | agreed [[Daily Replenishment Order]] | [[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:Daily Replenishment Order/col:Planned::in   |
 | Hand the plan to the Bakehouse     | next-day plan in production          | [[Bakehouse Production Board]]#Bakehouse Production/col:Backlog::in              |
 | Check the morning dispatch cleared | shared demand picture                | [[Bakehouse Production Board]]#Bakehouse Production/col:Ready-for-Dispatch::in   |
 | Lift dispatch status into the order world | FL2 order cards current         | [[Daily Replenishment Flow]]/stage:dispatch @ Bakehouse::after                   |
