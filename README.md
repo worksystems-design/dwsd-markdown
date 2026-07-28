@@ -59,9 +59,11 @@ OKF, `agents.md`, and DWSD share the same Karpathy LLM-wiki lineage. See [`okf.m
 ## Types
 
 One file = one entity. The `type:` field in the frontmatter decides what it is. Entities
-fall into four **categories** — **structure** (the org's makeup), **flow** (how work is
-coordinated and flows), **navigation** (sensing and deciding — looking *on* the system),
-and **change** (records of decided change). These are conceptual, **not folders**.
+fall into three **categories** — **structure** (the org's makeup), **flow** (how work is
+coordinated and flows), and **change** (working *on* the system: sensing, deciding, and the
+record of what was decided). These are conceptual, **not folders**. The change category spans
+two phases of change work — **Assess** (signal · insight · driver) and **Design** (proposal ·
+organizational-decision-record); see [conventions](conventions.md).
 
 | Type | Category | Spec | One-liner |
 |---|---|---|---|
@@ -76,11 +78,11 @@ and **change** (records of decided change). These are conceptual, **not folders*
 | `flight-item-type` | flow | [spec](types/flight-item-type.md) | A class of work item |
 | `flight-route` | flow | [spec](types/flight-route.md) | A path of work through the flight levels |
 | `visualization` | flow | [spec](types/visualization.md) | A board (or other view) of a work system |
-| `signal` | navigation | [spec](types/signal.md) | A selected piece of data — before interpretation |
-| `insight` | navigation | [spec](types/insight.md) | An interpretation drawn from signals |
-| `driver` | navigation | [spec](types/driver.md) | The motive to act — situation, effect, need |
-| `proposal` | navigation | [spec](types/proposal.md) | A proposed response to a driver — before consent |
-| `design-record` | change | [spec](types/design-record.md) | An ADR-style record of an org-design decision (what · why · consequences) — minimal |
+| `signal` | change | [spec](types/signal.md) | A selected piece of data — before interpretation |
+| `insight` | change | [spec](types/insight.md) | An interpretation drawn from signals |
+| `driver` | change | [spec](types/driver.md) | The motive to act — situation, effect, need |
+| `proposal` | change | [spec](types/proposal.md) | A proposed response to a driver — before consent |
+| `organizational-decision-record` | change | [spec](types/organizational-decision-record.md) | An ADR-style record of an **organizational** design decision (what · why · consequences) — minimal |
 
 ## Templates
 

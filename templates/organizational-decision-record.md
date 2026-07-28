@@ -1,5 +1,5 @@
 ---
-type: design-record
+type: organizational-decision-record
 for-domain: "[[]]"       # the domain / work system the decision concerns
 status: proposed         # proposed | accepted | superseded | deprecated
 date: "2026-01-01"

@@ -13,7 +13,7 @@
 | `agreement-type` | yes | `organizational` \| `work` | What it governs — see *Kinds* below |
 | `for-domain` / `for_domain` | no | wikilink | The **work system** (domain) it is scoped to — points *up* |
 | `agreement-of` | no | board locator (or `[[Work System]]`) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`. Coexists with `for-domain` |
-| `derived-from` | no | wikilink | The [`proposal`](proposal.md) it was consented from (metadata) |
+| `derived-from` | no | wikilink | What it emerged from — the [ODR](organizational-decision-record.md) it operationalizes, or the [`proposal`](proposal.md) it was consented from. The [shared emergence key](../conventions.md#derived-from--the-shared-emergence-key) (metadata) |
 | `version` | no | string | Version of the agreement, e.g. `1.2` |
 | `decision_date` | no | date | When this version was decided |
 | `review_date` | no | date | When it is due for review |
@@ -45,6 +45,17 @@ Both kinds share the body structure below.
   system instead. Coexists with `for-domain` (board ≠ work system); the work system is
   inferable from the board, so `for-domain` is optional but clearer. See
   [conventions](../conventions.md).
+- **`derived-from`** — the decision this agreement carries out, normally an
+  [ODR](organizational-decision-record.md). This is what makes a decision's **bundle**
+  readable: the agreements belonging to one decision are exactly those whose `derived-from`
+  names it, so the bundle needs no field of its own. It also answers the question that comes
+  up later — *why does this rule apply?* — which is otherwise unanswerable once the people
+  who agreed it have moved on.
+
+> **Where each one is pinned.** An ODR is pinned at the **domain** (`for-domain` — the work
+> system the decision concerns); its agreements are pinned **where the work happens**
+> (`agreement-of` — a board position). One decision up at the system, its consequences down in
+> the flow.
 
 ## Body — recommended structure
 

@@ -31,10 +31,12 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 
 - **One file = one entity.** The `type:` field decides the type, not the folder. Each type
   lives in a flat plural folder (`individuals/`, `signals/`, …).
-- **Four conceptual categories — NOT folders:** `structure` (individual, role, unit,
+- **Three conceptual categories — NOT folders:** `structure` (individual, role, unit,
   work-system, ai-agent), `flow` (interaction, meeting, agreement, flight-item-type,
-  flight-route, visualization), `navigation` (signal, insight, driver, proposal — these
-  *look at* the org), `change` (design-record).
+  flight-route, visualization), `change` (signal, insight, driver, proposal,
+  organizational-decision-record — these *look at* the org and decide about it). The change
+  category spans two phases: **Assess** (signal/insight/driver) and **Design**
+  (proposal/ODR).
 - **Keys are kebab-case.** `flightlevel` is one word. Subtype/kind discriminators are
   named `<base>-type` (`visualization-type`, `unit-type`, `agreement-type`,
   `interaction-type`) and may hold a single token **or a YAML list** (e.g.
@@ -42,8 +44,10 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - **Relationships are wikilinks** (`[[Target]]`). `reports-to` (individuals only) =
   structure; `member-of` (individuals + units) = flow. `derived-from` and `delegator` are
   **metadata** (no parser relationship type yet), not typed edges.
-- **Ladder of Inference (navigation → change):** signal → insight → driver → proposal →
-  agreement; a `design-record` (ADR-style) records a decision.
+- **Ladder of Inference (through the change category):** signal → insight → driver →
+  proposal → `organizational-decision-record` → agreement(s). The ODR (ADR-style) is the
+  recorded decision; the agreements it produces carry on operationally and name it via
+  `derived-from`, which makes a decision's bundle readable in reverse.
 - **`unit`** is the base structural type; a unit whose `unit-type` includes `work-system`
   (and which carries a `flightlevel`) is a **work system**. A unit is any named grouping
   (team, R&D dept, SAFe ART, …), nestable.
@@ -68,6 +72,6 @@ convention lives in `conventions.md`.
 - `action` (the to-do that falls out of a design decision) — parked.
 - "Concerns" means *attention areas* on `role` but *objections* on `agreement` — align or
   leave context-dependent (open).
-- `design-record` placement may still evolve.
+- `organizational-decision-record` placement may still evolve.
 - An interaction **board-related / supporting** classifier (and a pointer to a specific board
   column), plus a meeting **`participants`** field, are **deferred** — may emerge later.

@@ -1,5 +1,5 @@
 ---
-type: design-record
+type: organizational-decision-record
 status: accepted
 date: "2026-05-20"
 decision-makers: "[[Mara Holt]]"

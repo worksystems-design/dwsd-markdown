@@ -21,7 +21,7 @@ Create a new DWSD entity of type **$ARGUMENTS**. If the type or the name is miss
      `interaction` and
      **`meeting` → `interactions/`**, `agreement` → `agreements/`, `signal` → `signals/`,
      `insight` → `insights/`, `driver` → `drivers/`, `proposal` → `proposals/`,
-     `design-record` → `design-records/`, `visualization` → `visualizations/`,
+     `organizational-decision-record` → `decision-records/`, `visualization` → `visualizations/`,
      `flight-item-type` → `flight-item-types/`, `flight-route` → `flight-routes/`,
      `ai-agent` → `ai-agents/`.
 3. Write `<folder>/<Name>.md` — the filename is the entity's human label (Title Case,

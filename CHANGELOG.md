@@ -4,6 +4,36 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-07-28
+
+- **`design-record` → `organizational-decision-record`.** The type is a *Decision* Record, not
+  a Design Record: the ADR lineage it is named after is *Architecture **Decision** Record*, and
+  its body section is `## Decision`. "Design" names the **phase** a decision is usually taken
+  in, and letting one word carry both the phase and the artifact was the source of the drift —
+  the same artifact was shipping under five different names downstream. The `organizational`
+  qualifier is kept deliberately: it is a **threshold**, not decoration. Plenty gets decided
+  about a product or a team's practice; none of that is an ODR. Folder convention in the
+  examples follows as `decision-records/`.
+- **The `navigation` category is folded into `change`.** All five types — `signal`, `insight`,
+  `driver`, `proposal`, `organizational-decision-record` — are one category: working *on* the
+  system. Four conceptual categories become three. The category **spans two phases** of change
+  work, the middle two of MADE (Map · **Assess** · **Design** · Elevate): Assess =
+  signal/insight/driver, Design = proposal/ODR. **Map** is the topology itself; **Elevate** is
+  deliberately not modeled here — moving from as-is toward to-be is facilitation work
+  (experiments, guides, katas), a practice artifact rather than a record.
+- **The phases are for thinking, not for filtering.** What matters while working is whether
+  something is still **in flux** (signal → proposal) or **decided** (the ODR, and the agreements
+  that follow). That cut runs *across* the phase cut on purpose — `proposal` is Design by phase
+  but still in flux by status.
+- **`derived-from` is documented once, as a shared key.** It says what an entity **emerged
+  from** and may sit on any entity; it was previously described per type, which is exactly why
+  the type that needed it most kept missing it downstream. Its most load-bearing use: an
+  `agreement` names the ODR it operationalizes, which makes a decision's **bundle** expressible
+  as the reverse reading of the key — no bundle field needed — and answers *why does this rule
+  apply?* long after the people who agreed it have moved on. It stays **metadata only**: no
+  relationship type, no typed edge; readable backwards in the document, walkable forwards only
+  via a reverse index.
+
 ## 2026-07-19
 
 - **The topology fence is documented — and joins the dot form (` ```dwsd.topology `).**

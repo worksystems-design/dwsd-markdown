@@ -33,7 +33,7 @@ OKF is deliberately minimal — only `type` is required, and producers define th
 fills that open space with an organizational vocabulary:
 
 - a fixed set of entity **types** (`individual`, `role`, `work-system`, `flight-route`, …)
-  grouped into four categories — structure, flow, navigation, change;
+  grouped into three categories — structure, flow, change;
 - **relationship** conventions (`reports-to`, `member-of`, `contributes-to`, …) expressed
   as `[[wikilinks]]` in the frontmatter;
 - per-type **frontmatter** and **body** schemas (one spec page per type).

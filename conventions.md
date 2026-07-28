@@ -17,9 +17,28 @@ category is a way of thinking about an entity, not a directory.
   role, unit, work-system, ai-agent.
 - **Flow** — how work is coordinated and flows: interaction, meeting, agreement,
   flight-item-type, flight-route, visualization.
-- **Navigation** — working *on* the system, sensing and deciding (sense → respond):
-  signal, insight, driver, proposal. These **look at** the organization; they are not part of it.
-- **Change** — records of decided organizational change: design-record (more may follow).
+- **Change** — working *on* the system: signal, insight, driver, proposal,
+  organizational-decision-record. These **look at** the organization and decide about it; they
+  are not part of it. The category spans two phases of that work (see below).
+
+### The Change category spans two phases
+
+The five Change types divide by the phase of change work they belong to — the middle two of the
+four MADE phases (Map · **Assess** · **Design** · Elevate):
+
+| Phase | Types | What it does |
+|---|---|---|
+| **Assess** | `signal` · `insight` · `driver` | Reads the organization as it is — selected data, its interpretation, and the need that follows |
+| **Design** | `proposal` · `organizational-decision-record` | Says what should be instead — a proposed response, and the decision once taken |
+
+**Map** is the topology itself (the as-is picture), and **Elevate** — actually moving from as-is
+toward to-be — is deliberately **not** modeled here: it is facilitation work (experiments, guides,
+katas), a practice artifact rather than a record, and it belongs elsewhere.
+
+The phases are a way of *thinking* about these five types. They are **not** how a reader filters
+them: what matters when working is whether something is still **in flux** (signal → proposal) or
+**decided** (the ODR, and the agreements that follow). Those two cuts run across each other on
+purpose — `proposal` is Design by phase but still in flux by status.
 
 ```yaml
 ---
@@ -71,7 +90,8 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `for-domain` / `for_domain` | The **work system** (domain) a role, agreement, or interaction is scoped to — points *up* |
 | `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board) |
 | `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of`; coexists with `for-domain` |
-| `observes` | The entity an insight observes |
+| `observes` | The entity a **signal** or **insight** observes — what was seen / interpreted |
+| `derived-from` / `derived_from` | What this entity **emerged from** — the shared lineage key, see below |
 | `uses-route` | The flight route an entity uses |
 | `defined-for` | The entity something is defined for |
 | `visualization-of` / `visualization_of` | The work system a visualization renders |
@@ -98,6 +118,37 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 > `stage:` is the full `itemType @ Band` pair (single space each side of `@`), e.g.
 > `[[Daily Replenishment Flow]]/stage:order @ Shops::before`. A `#Route Name` fragment
 > disambiguates when one file hosts several routes.
+
+### `derived-from` — the shared emergence key
+
+`derived-from` says **what an entity emerged from**. It is a **shared key, not a per-type
+field**: any entity may carry it, and it is documented here once rather than repeated on each
+type page.
+
+It traces the design conversation and what follows from it:
+
+```
+signal → insight → driver → proposal → organizational-decision-record → agreement(s)
+```
+
+Each step may name its origin — an insight the signal(s) it interprets, a driver the insight(s)
+it answers to, a proposal the driver, an ODR the proposal, and an **agreement the ODR it
+operationalizes**. That last link is what makes an ODR's *bundle* expressible: the agreements
+belonging to a decision are exactly those whose `derived-from` names it. No separate bundle
+field is needed — the bundle is the reverse reading of this key.
+
+- **Optional everywhere.** An entity without `derived-from` is complete; the key adds lineage,
+  it does not gate validity.
+- **Single or list.** `derived-from: "[[X]]"` or a list, like every other relationship field.
+- **Metadata only.** There is no `derived-from` relationship *type* — it is preserved and
+  readable, but it resolves to no marker and creates no typed edge. Read backwards ("what did
+  this come from?") it sits in the document; read forwards ("what came of this?") it needs a
+  reverse index over the key.
+
+> **Why a shared key and not a per-type field.** It used to be documented on each type that
+> happened to use it, and the type that most needed it — `agreement`, the one that answers
+> "why does this rule apply?" — never got it, because a per-type field has to be remembered at
+> every new type and eventually is not. Documented once, that whole class of omission goes away.
 
 ## Structure vs. flow
 

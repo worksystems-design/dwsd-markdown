@@ -87,5 +87,5 @@ carries a `flightlevel`). This example shows all three shapes of `unit`:
 - **Navigation ladder** — follow the morning-sourdough thread:
   [`signals/`](signals/) → [`insights/`](insights/) → [`drivers/`](drivers/) →
   [`proposals/`](proposals/) → [`agreements/`](agreements/).
-- **Change** — [`design-records/`](design-records/) records the decision to run a single
+- **Change** — [`decision-records/`](decision-records/) records the decision to run a single
   daily sync.
