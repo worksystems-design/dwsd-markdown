@@ -58,7 +58,9 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      and a board-position `interaction-of` / `agreement-of`, **warn** if the anchored board's
      work system (its `visualization-of`) differs from `for-domain`.
 4. **Ladder integrity** — every `derived-from` resolves; trace
-   signal → insight → driver → proposal → agreement chains and report breaks.
+   signal → insight → driver → proposal → organizational-decision-record → agreement(s)
+   chains and report breaks. `derived-from` is the shared emergence key (any entity may carry
+   it); reading it in reverse from an ODR yields that decision's **bundle** of agreements.
 5. **Type coverage** (informational) — list which of the 16 types are present / absent
    (remember: work systems are `unit` whose `unit-type` includes `work-system`; meetings are
    `interaction`+`interaction-type: meeting`).
