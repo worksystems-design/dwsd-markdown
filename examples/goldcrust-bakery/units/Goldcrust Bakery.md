@@ -17,6 +17,12 @@ Its operational reality is described by the work systems below (each a `unit` wh
 - [[Bakehouse]] — FL1, production.
 - [[Market Street Shop]] and [[Station Road Shop]] — FL1, retail.
 
-And one plain team that is *not* a work system:
+And two plain teams that are *not* work systems:
 
 - [[Deliveries]] — `unit-type: team`, no flightlevel; carries the morning dispatch.
+- [[Wholesale]] — `unit-type: team`, no flightlevel; keeps the standing daily orders.
+
+Read as a containment tree, the units nest three deep from this root: Goldcrust Bakery ⊃
+[[Bakery Strategy]] ⊃ [[Bakery Operations]] ⊃ the three FL1 work systems and the two plain
+teams. The org chart of the people who work in them is the standalone
+`Goldcrust Org Chart.dwsd-orgchart` at the org root; the unit tree is `Goldcrust Units.dwsd-units`.

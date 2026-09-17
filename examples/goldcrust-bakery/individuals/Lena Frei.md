@@ -1,7 +1,7 @@
 ---
 type: individual
 role: Shop Manager
-reports-to: "[[Mara Holt]]"
+reports-to: "[[Jonas Keller]]"
 member-of: "[[Market Street Shop]]"
 created_at: "2026-05-24"
 ---

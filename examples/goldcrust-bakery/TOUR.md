@@ -2,7 +2,7 @@
 
 This folder describes a small bakery the way DWSD describes any organization: **one
 Markdown file per thing** — people, teams, meetings, agreements, boards. You don't need
-to know Flight Levels, YAML, or anything else to take this tour. Six stops, about ten
+to know Flight Levels, YAML, or anything else to take this tour. Seven stops, about ten
 minutes. At each stop: open the linked file, read it, come back.
 
 > This page is a guide, not part of the organization — it carries no `type:` and is
@@ -76,6 +76,41 @@ same column — one rule, two views: prose for humans, a position on the board f
 work. This is the machine layer from stop 3 paying off: files can point at *places on a
 board*, and the board points back.
 
+## Stop 7 — The structure behind the flow
+
+Stops 2 to 6 were about the *work* — domains, meetings, boards. This stop is about the
+*structure*: who reports to whom, and which unit sits inside which. Neither is written
+down anywhere as a chart. Both are **inferred** from the files you have already seen —
+the `reports-to` line in each person's file, the `member-of` line in each unit's.
+
+The org chart of the fourteen people, one fence and nothing else:
+
+```dwsd.orgchart
+mode: infer
+```
+
+Mara at the top, [Jonas Keller](individuals/Jonas%20Keller.md) running operations under
+her, and one box named `NA1` — an open position (the Delivery Coordinator), kept in the
+chart as a person with no name yet so the reporting line and the seat stay visible. The
+same chart lives as a standalone file, [Goldcrust Org Chart.dwsd-orgchart](Goldcrust%20Org%20Chart.dwsd-orgchart).
+
+The units, nested three deep from the company root:
+
+```dwsd.units
+mode: infer
+layout: nested
+```
+
+[Goldcrust Bakery](units/Goldcrust%20Bakery.md) ⊃ Bakery Strategy ⊃ Bakery Operations ⊃
+the three FL1 work systems (the Bakehouse and the two shops) plus two plain teams, [Deliveries](units/Deliveries.md)
+and [Wholesale](units/Wholesale.md). Each box wears its `unit-type` as a chip — `company`,
+`[leadership, work-system]`, `team` — so you can tell a work system from a plain team at a
+glance. Standalone: [Goldcrust Units.dwsd-units](Goldcrust%20Units.dwsd-units).
+
+**Watch for:** nothing in these two fences names a person or a unit. Rename a file, move
+someone's `reports-to`, and both pictures follow. Structure and flow are two views over
+the same files — the flight-level map in the [README](README.md) is the third.
+
 ## Now you — your first three files
 
 Grab three skeletons from [`templates/`](../../templates/) and describe your own
@@ -93,7 +128,7 @@ That's it. You've started.
 - How work travels between the flight levels:
   [Daily Replenishment Flow](flight-routes/Daily%20Replenishment%20Flow.md) — and three
   more routes, each a different pattern. (Flight levels are **altitudes on the work, not
-  ranks** — the same eight people fly all three.)
+  ranks** — the same fourteen people fly all three.)
 - An open thread no one has interpreted yet:
   [Two Wholesale Enquiries Waiting at the Cap](signals/Two%20Wholesale%20Enquiries%20Waiting%20at%20the%20Cap.md)
   — the ladder from stop 4 starts here, unclimbed. What would you do?

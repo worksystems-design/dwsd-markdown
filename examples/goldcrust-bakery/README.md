@@ -18,7 +18,7 @@ focus: "[[Bakery Operations]]"
 radius: 1
 ```
 
-The levels are **altitudes on the work, not ranks**: the same eight people fly all
+The levels are **altitudes on the work, not ranks**: the same fourteen people fly all
 three — Mara bakes at FL1 in the morning and decides range bets at FL3 in the afternoon.
 
 <details>
@@ -65,7 +65,7 @@ carries a `flightlevel`). This example shows all three shapes of `unit`:
 
 - **Structure** — [`work-systems/`](work-systems/): `Bakehouse.md` carries the fullest
   domain description (and is a `[team, work-system]`). [`units/`](units/) holds the root
-  `Goldcrust Bakery.md` and the plain-team `Deliveries.md`. [`roles/`](roles/) keeps one
+  `Goldcrust Bakery.md` and the plain teams `Deliveries.md` and `Wholesale.md`. [`roles/`](roles/) keeps one
   shop-manager role file per location — roles are individual and evolve independently; a
   role *shared* by several people would instead list them all as `role-keeper`s.
 - **Flow** — [`visualizations/`](visualizations/): a board per work system, in the YAML

@@ -2,6 +2,7 @@
 type: unit
 unit-type: [leadership, work-system]
 flightlevel: 3
+member-of: "[[Goldcrust Bakery]]"
 version: "1.0"
 decision_date: "2026-05-20"
 review_date: "2026-11-20"

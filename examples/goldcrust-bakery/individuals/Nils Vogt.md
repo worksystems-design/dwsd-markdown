@@ -1,7 +1,7 @@
 ---
 type: individual
 role: Driver
-reports-to: "[[Mara Holt]]"
+reports-to: "[[Jonas Keller]]"
 member-of: "[[Deliveries]]"
 created_at: "2026-05-29"
 ---

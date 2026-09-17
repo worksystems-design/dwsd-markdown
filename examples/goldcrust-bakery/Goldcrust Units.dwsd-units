@@ -1,0 +1,6 @@
+# Goldcrust Bakery — which unit sits inside which.
+# Inferred from the `member-of` frontmatter of every unit (units/ and work-systems/):
+# Goldcrust Bakery ⊃ Bakery Strategy ⊃ Bakery Operations ⊃ the shops, the Bakehouse,
+# Deliveries and Wholesale. `layout: tree` draws the same containment as a tree.
+mode: infer
+layout: nested
