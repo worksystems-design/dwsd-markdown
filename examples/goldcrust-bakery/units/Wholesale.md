@@ -2,6 +2,7 @@
 type: unit
 unit-type: team
 member-of: "[[Bakery Operations]]"
+tags: [pilot]
 created_at: "2026-09-17"
 ---
 

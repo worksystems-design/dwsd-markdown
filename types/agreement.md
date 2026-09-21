@@ -11,8 +11,8 @@
 |---|---|---|---|
 | `type` | yes | `agreement` | Entity type |
 | `agreement-type` | yes | `organizational` \| `work` | What it governs — see *Kinds* below |
-| `for-domain` / `for_domain` | no | wikilink | The **work system** (domain) it is scoped to — points *up* |
-| `agreement-of` | no | board locator (or `[[Work System]]`) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`. Coexists with `for-domain` |
+| `for-domain` / `for_domain` | no | wikilink or list | The **domain** — a work system or a role — it is scoped to — points *up*. Naming a role lands the agreement on every keeper of that role |
+| `agreement-of` | no | board locator or list (or a bare `[[entity]]` — a work system, a unit or a person) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`. Coexists with `for-domain` |
 | `derived-from` | no | wikilink | What it emerged from — the [ODR](organizational-decision-record.md) it operationalizes, or the [`proposal`](proposal.md) it was consented from. The [shared emergence key](../conventions.md#derived-from--the-shared-emergence-key) (metadata) |
 | `version` | no | string | Version of the agreement, e.g. `1.2` |
 | `decision_date` | no | date | When this version was decided |
@@ -38,11 +38,14 @@ Both kinds share the body structure below.
 
 ## Relationships
 
-- **`for-domain`** — the **work system** (domain) the agreement is scoped to. Points *up*.
+- **`for-domain`** — the **domain** — a work system or a role — the agreement is scoped to.
+  Points *up*. A role as domain puts the agreement on every keeper of that role (one
+  mandate, two location roles → both shop managers).
 - **`agreement-of`** — the **board (position)** the agreement is of: a board **locator**
   `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board).
-  Points *into the detail*. Value-polymorphic: a bare `[[Work System]]` anchors to a work
-  system instead. Coexists with `for-domain` (board ≠ work system); the work system is
+  Points *into the detail*. Value-polymorphic: a bare `[[entity]]` — a work system, a unit
+  or a person (a personal working agreement) — anchors to that entity instead, wherever it
+  is drawn. Coexists with `for-domain` (board ≠ work system); the work system is
   inferable from the board, so `for-domain` is optional but clearer. See
   [conventions](../conventions.md).
 - **`derived-from`** — the decision this agreement carries out, normally an

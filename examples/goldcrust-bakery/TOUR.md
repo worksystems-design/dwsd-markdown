@@ -107,9 +107,29 @@ and [Wholesale](units/Wholesale.md). Each box wears its `unit-type` as a chip �
 `[leadership, work-system]`, `team` — so you can tell a work system from a plain team at a
 glance. Standalone: [Goldcrust Units.dwsd-units](Goldcrust%20Units.dwsd-units).
 
-**Watch for:** nothing in these two fences names a person or a unit. Rename a file, move
-someone's `reports-to`, and both pictures follow. Structure and flow are two views over
-the same files — the flight-level map in the [README](README.md) is the third.
+The boxes are annotated, and the annotations come from the same files as everything
+else. A signal that names a person — [Dispatch Mornings Double-Booked](signals/Dispatch%20Mornings%20Double-Booked.md)
+`observes: "[[Jonas Keller]]"` — pins on Jonas's box; the insight that follows it does
+too. A decision *about* Jonas is not anchored on him but through his role:
+[Jonas Keller Leads Operations](decision-records/Jonas%20Keller%20Leads%20Operations.md)
+carries `for-domain: "[[Head of Operations]]"`, and the record reaches the box of whoever
+keeps that role — open it and the drawer says "via Head of Operations". The same bridge
+puts the [Shop Manager Mandate](agreements/Shop%20Manager%20Mandate.md) on both shop
+managers, because its `for-domain` lists both shop-manager roles. On the units side the
+[Wholesale Capacity Cap](agreements/Wholesale%20Capacity%20Cap.md) names the
+[Wholesale](units/Wholesale.md) team with a bare wikilink and shows on that box; the
+[Demand Forecast Assistant](ai-agents/Demand%20Forecast%20Assistant.md) names the
+[Bakehouse](work-systems/Bakehouse.md), which is a team *and* a work system, so the same
+marker appears on its unit box here and on its node in the flight-level map. The little
+chips — `founder`, `new-role`, `pilot`, `core` — are the `tags:` line of each entity's
+frontmatter. One rule behind all of it: a bare wikilink means that entity, wherever it is
+drawn.
+
+**Watch for:** nothing in these two fences names a person or a unit. (The two standalone
+files each add one `notes:` entry — a note written on a box, and even that names its box
+with a bare wikilink.) Rename a file, move someone's `reports-to`, and both pictures
+follow. Structure and flow are two views over the same
+files — the flight-level map in the [README](README.md) is the third.
 
 ## Now you — your first three files
 

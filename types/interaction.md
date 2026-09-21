@@ -12,8 +12,8 @@
 |---|---|---|---|
 | `type` | yes | `interaction` | Entity type |
 | `interaction-type` | yes | `meeting` \| `conversation` \| `bilateral` \| … | Kind of interaction (open vocabulary) |
-| `interaction-of` | no | board locator (or `[[Work System]]`) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in` |
-| `for-domain` / `for_domain` | no | wikilink | The **work system** it is scoped to — points *up*, e.g. `[[Strategic Direction]]` |
+| `interaction-of` | no | board locator or list (or a bare `[[entity]]` — a work system, a unit or a person) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`; two persons make a 1:1 |
+| `for-domain` / `for_domain` | no | wikilink or list | The **domain** — a work system or a role — it is scoped to — points *up*, e.g. `[[Strategic Direction]]`. Naming a role lands the interaction on every keeper of that role |
 | `start` | no | ISO datetime | First occurrence start — **any** interaction may be scheduled |
 | `end` | no | ISO datetime | First occurrence end |
 | `rrule` | no | iCal RRULE | Recurrence, e.g. `RRULE:FREQ=DAILY` |
@@ -26,9 +26,11 @@ kind adds a **list of interactions** it bundles — see [`meeting.md`](meeting.m
 
 - **`interaction-of`** — the **board (position)** the interaction is of: a board **locator**
   `[[Board]]#BoardName/col:Column::in` (a specific column) or `[[Board]]#BoardName::in` (the
-  whole board). Value-polymorphic: a bare `[[Work System]]` anchors to a work system instead.
+  whole board). Value-polymorphic: a bare `[[entity]]` — a work system, a unit or a person —
+  anchors to that entity instead, wherever it is drawn; a list of two persons is a 1:1.
   Points *into the detail*.
-- **`for-domain`** — the **work system** the interaction is scoped to. Points *up*. Optional —
+- **`for-domain`** — the **domain** — a work system or a role — the interaction is scoped to.
+  Points *up*. Optional —
   inferable from the board, but clearer when stated (board ≠ work system). See
   [conventions](../conventions.md).
 

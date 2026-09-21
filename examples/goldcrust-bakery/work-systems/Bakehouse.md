@@ -5,6 +5,7 @@ flightlevel: 1
 member-of: "[[Bakery Operations]]"
 contributes-to: "[[Bakery Operations]]"
 delegator: "[[Mara Holt]]"
+tags: [core]
 version: "1.0"
 decision_date: "2026-05-20"
 review_date: "2026-08-20"

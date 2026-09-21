@@ -2,7 +2,9 @@
 type: agreement
 agreement-type: work
 for-domain: "[[Bakery Operations]]"
-agreement-of: "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:Wholesale Contract::in"
+agreement-of:
+  - "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:Wholesale Contract::in"
+  - "[[Wholesale]]"
 version: "1.0"
 decision_date: "2026-07-19"
 review_date: "2027-01-19"
@@ -20,6 +22,9 @@ range. The wholesale book needs a cap that protects the [[Daily Replenishment Fl
 - [[Bakery Operations]] — signs new contracts only while the wholesale book stays under
   the cap; sequences enquiries that would exceed it.
 - [[Head Baker]] — flags when nightly utilization approaches the limit.
+- [[Wholesale]] — keeps the standing orders inside the cap; the agreement is also
+  anchored to the team itself (`agreement-of: [[Wholesale]]`), so it shows on the
+  team's box in the units view.
 
 ## Description
 

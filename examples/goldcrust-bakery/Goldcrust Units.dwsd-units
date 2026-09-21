@@ -4,3 +4,6 @@
 # Deliveries and Wholesale. `layout: tree` draws the same containment as a tree.
 mode: infer
 layout: nested
+notes:
+  - on: "[[Deliveries]]"
+    text: "Second van budgeted for Q4"

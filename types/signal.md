@@ -12,13 +12,15 @@
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `signal` | Entity type |
-| `observes` | no | wikilink or list | The entity the signal is about |
+| `observes` | no | wikilink or list | The entity the signal is about — an individual, a unit, a work system, or another entity |
 
 Plus the shared optionals from [conventions](../conventions.md).
 
 ## Relationships
 
-- **`observes`** — the entity the signal concerns (an individual, work system, …).
+- **`observes`** — the entity the signal concerns (an individual, a unit, a work system, …).
+  A bare wikilink names that entity wherever it is drawn — a unit that is also a work system
+  shows the signal in both pictures.
 
 ## Body
 

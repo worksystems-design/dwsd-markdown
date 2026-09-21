@@ -2,7 +2,9 @@
 type: interaction
 interaction-type: meeting
 for-domain: "[[Bakery Operations]]"
-interaction-of: "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination::in"
+interaction-of:
+  - "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination::in"
+  - "[[Bakery Operations]]"
 start: "2026-05-25T13:30:00"
 end: "2026-05-25T13:45:00"
 rrule: "RRULE:FREQ=DAILY"

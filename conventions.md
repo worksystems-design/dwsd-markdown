@@ -87,25 +87,33 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `member-of` | Belongs to a unit / work system — an **individual** or a **unit** can be a member |
 | `contributes-to` | A work system contributes to a higher-level work system |
 | `role-keeper` / `role_keeper` | Who holds this role |
-| `for-domain` / `for_domain` | The **work system** (domain) a role, agreement, or interaction is scoped to — points *up* |
-| `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board) |
-| `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of`; coexists with `for-domain` |
-| `observes` | The entity a **signal** or **insight** observes — what was seen / interpreted |
+| `for-domain` / `for_domain` | The **domain** — a work system or a role — that a role, agreement, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to — points *up*. Naming a role lands the entity on every keeper of that role |
+| `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board), or a bare `[[entity]]` — a work system, a unit or a person |
+| `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
+| `bound-to` | Where an **AI agent**'s surface appears — the same **locator** as `interaction-of` / `agreement-of` (or a bare `[[entity]]` — a work system, a unit or a person) |
+| `observes` | The entity a **signal** or **insight** observes — what was seen / interpreted — a work system, a unit, a person, or another entity |
 | `derived-from` / `derived_from` | What this entity **emerged from** — the shared lineage key, see below |
 | `uses-route` | The flight route an entity uses |
 | `defined-for` | The entity something is defined for |
 | `visualization-of` / `visualization_of` | The work system a visualization renders |
 
-> **Up vs. into the detail.** `for-domain` names the **work system** (the domain — points
-> *up*); `interaction-of` / `agreement-of` name a **board position** (a locator — points
-> *into the detail*). A board is **not** a work system, so the two coexist and neither field is
-> overloaded to mean both. A board renders exactly one work system (`visualization-of`), so the
-> work system is **inferable** from the board — `for-domain` is therefore optional, and stating
-> it is just clearer. If both are present and the board's work system differs from `for-domain`,
-> that mismatch is something a validator can flag.
+> **Up vs. into the detail.** `for-domain` names the **domain** (points *up*);
+> `interaction-of` / `agreement-of` name a **board position** (a locator — points
+> *into the detail*). A domain is a work system or a role; `for-domain` never names a person or
+> a plain unit — a decision about a person is anchored through the role the person keeps, and it
+> then shows on the box of every keeper of that role (one hop: the role's own `for-domain` is
+> not followed further). A board is **not** a work system, so the two coexist and neither field
+> is overloaded to mean both. A board renders exactly one work system (`visualization-of`), so
+> the work system is **inferable** from the board — `for-domain` is therefore optional, and
+> stating it is just clearer. If both are present and the board's work system differs from
+> `for-domain`, that mismatch is something a validator can flag.
 >
-> **The locator** (`interaction-of` / `agreement-of`) is **value-polymorphic**: a bare
-> `[[Work System]]` wikilink anchors to a whole **work system**; a value carrying a `#BoardName`
+> **The locator** (`interaction-of` / `agreement-of` / `bound-to`) is **value-polymorphic**: a
+> bare `[[…]]` wikilink anchors to the **entity** it names — a work system, a unit, or a person
+> (a 1:1, a personal working agreement) — wherever that entity is drawn (the topology, the org
+> chart, the units view); a unit that is also a work system shows the same anchors in both
+> pictures. A same-named person and unit both receive the bare link; the path form
+> `[[individuals/Name]]` / `[[units/Name]]` names one of them. A value carrying a `#BoardName`
 > and/or a `/kind:Name` path is a **board-position** locator. The path drills in with
 > `/`-chained `col:` · `lane:` · `group:` · `split:` · `stage:` segments and an optional
 > trailing `::before` · `::in` · `::after` (bare = `::in`), e.g.
@@ -149,6 +157,15 @@ field is needed — the bundle is the reverse reading of this key.
 > happened to use it, and the type that most needed it — `agreement`, the one that answers
 > "why does this rule apply?" — never got it, because a per-type field has to be remembered at
 > every new type and eventually is not. Documented once, that whole class of omission goes away.
+
+### Shared optional fields
+
+Like `derived-from`, these are documented once and may appear on any entity; no type page
+repeats them.
+
+| Field | Meaning |
+|---|---|
+| `tags` | Descriptive chips on **any** entity type — a list of short words, e.g. `tags: [core, pilot]`. The renderers read them from the entity's frontmatter wherever the entity is drawn (the topology, the org chart, the units view); the view documents (board, flight-route, topology, org chart, units) carry a document-level `tags:` as well. A tag is a label, not a relationship — it resolves to nothing |
 
 ## Structure vs. flow
 

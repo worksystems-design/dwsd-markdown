@@ -2,4 +2,9 @@
 # Inferred from the `reports-to` frontmatter of every file in individuals/:
 # nothing is listed here; edit a person's file and the chart follows.
 # A person without `reports-to` (Mara) is a root; `NA1` is an open position.
+# Annotations (signals, agreements, decisions, …) come from the entity files too;
+# the one thing written here is a note on a box — a bare wikilink names the person.
 mode: infer
+notes:
+  - on: "[[NA1]]"
+    text: "Interviews in October"

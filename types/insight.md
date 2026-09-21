@@ -12,7 +12,7 @@
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `insight` | Entity type |
-| `observes` | no | wikilink or list | The entity (or entities) the insight is about |
+| `observes` | no | wikilink or list | The entity (or entities) the insight is about — an individual, a unit, a work system, or another entity |
 | `title` | no | string | Explicit title (otherwise the `#` heading / filename is the title) |
 | `status` | no | `new` \| `acknowledged` | Lifecycle |
 | `acknowledged_at` | no | ISO datetime | When it was acknowledged |
@@ -22,7 +22,8 @@ Plus the shared optionals from [conventions](../conventions.md).
 
 ## Relationships
 
-- **`observes`** — the entity (or entities) the insight is about.
+- **`observes`** — the entity (or entities) the insight is about (an individual, a unit, a
+  work system, …). A bare wikilink names that entity wherever it is drawn.
 - **`derived-from`** — the [signal(s)](signal.md) the interpretation is built on. Makes
   the Ladder of Inference visible: selected data → interpretation. *Metadata only:* the
   parser has no `derived-from` relationship type yet, so it is not a typed edge.

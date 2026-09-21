@@ -12,7 +12,7 @@
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `driver` | Entity type |
-| `for-domain` / `for_domain` | no | wikilink | The domain / work system whose team has the need |
+| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system or a role — whose team (or keeper) has the need. Naming a role lands the driver on every keeper of that role |
 | `derived-from` | no | wikilink or list | The [insight(s)](insight.md) this driver is built on (see note) |
 | `status` | no | string | Lifecycle, e.g. `new`, `addressed` |
 
@@ -20,7 +20,8 @@ Plus the shared optionals from [conventions](../conventions.md).
 
 ## Relationships
 
-- **`for-domain`** — the domain the driver belongs to (whose team has the need).
+- **`for-domain`** — the domain the driver belongs to (whose team has the need) — a work
+  system or a role.
 - **`derived-from`** — the [insight(s)](insight.md) the driver was distilled from, and
   through them the [signals](signal.md) beneath. Continues the Ladder of Inference.
   *Metadata only:* the parser has no `derived-from` relationship type, so it is not a

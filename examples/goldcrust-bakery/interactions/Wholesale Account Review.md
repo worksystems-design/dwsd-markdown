@@ -8,6 +8,7 @@ rrule: "RRULE:FREQ=WEEKLY;BYDAY=TU"
 interaction-of:
   - "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:Wholesale Contract/col:Running::in"
   - "[[Wholesale Contract Route]]/stage:standing-order @ Coordination::in"
+  - "[[Wholesale]]"
 created_at: "2026-07-19"
 ---
 
@@ -20,5 +21,6 @@ renegotiation.
 
 This is where delivery experience flows back into the contract world — the review anchors
 both to the `Running` column of the wholesale lane and to the
-[[Wholesale Contract Route]]'s `standing-order @ Coordination` stage. [[Bakery Operations]]
+[[Wholesale Contract Route]]'s `standing-order @ Coordination` stage — and, with a bare
+wikilink, to the [[Wholesale]] team whose accounts it reviews. [[Bakery Operations]]
 runs it; the [[Head Baker]] joins when capacity is the question.
