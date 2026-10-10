@@ -16,6 +16,7 @@ of the Bakehouse's night a growing wholesale book may claim.
 ```dwsd.flightroute
 title: Wholesale Contract Route
 for: "[[Wholesale Contract]]"
+for-domain: "[[Bakery Operations]]"
 bands:
   - name: Coordination
     fl: 2

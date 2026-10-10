@@ -16,6 +16,7 @@ its first trading day the shop joins the [[Daily Replenishment Flow]].
 ```dwsd.flightroute
 title: New Shop Launch Route
 for: "[[New Shop Launch]]"
+for-domain: "[[Bakery Strategy]]"
 bands:
   - name: Strategy
     fl: 3

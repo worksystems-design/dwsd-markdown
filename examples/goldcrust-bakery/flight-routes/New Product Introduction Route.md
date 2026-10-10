@@ -17,6 +17,7 @@ range at all. The mirror image of the [[New Shop Launch Route]]: FL1 → FL3 →
 ```dwsd.flightroute
 title: New Product Introduction Route
 for: "[[New Product Introduction]]"
+for-domain: ["[[Bakery Strategy]]", "[[Head Baker]]"]
 bands:
   - name: Strategy
     fl: 3
