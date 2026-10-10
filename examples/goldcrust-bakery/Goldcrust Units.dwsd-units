@@ -2,8 +2,12 @@
 # Inferred from the `member-of` frontmatter of every unit (units/ and work-systems/):
 # Goldcrust Bakery ⊃ Bakery Strategy ⊃ Bakery Operations ⊃ the shops, the Bakehouse,
 # Deliveries and Wholesale. `layout: tree` draws the same containment as a tree.
+# `focus` + `radius` scope the picture to this organization (the index spans the whole
+# workspace): `up: 0` = nothing above the company root, `down: inf` = everything inside it.
 mode: infer
 layout: nested
+focus: "[[Goldcrust Bakery]]"
+radius: { up: 0, down: inf }
 notes:
   - on: "[[Deliveries]]"
     text: "Second van budgeted for Q4"
