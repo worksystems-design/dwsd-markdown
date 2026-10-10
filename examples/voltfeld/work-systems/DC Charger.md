@@ -18,6 +18,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Develop the DC fast-charger product line — 50 to 150 kW systems for depots and public

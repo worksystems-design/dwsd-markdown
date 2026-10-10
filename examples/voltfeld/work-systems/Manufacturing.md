@@ -18,6 +18,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Build, test and ship every Voltfeld charger at the plant, and ramp production for each new

@@ -14,3 +14,11 @@ sit in ([[Wallbox]], [[DC Charger]], [[HW Base]], [[System Integration]]).
 That is why this unit has a box in the units view but no members of its own: it is where
 the reporting lines go, not where the work goes. Compare the org chart, where the same
 people sit directly under Kaspar.
+
+## In context
+
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```

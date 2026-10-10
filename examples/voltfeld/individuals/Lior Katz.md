@@ -9,3 +9,11 @@ created_at: "2026-10-10"
 Lior heads [[Software Engineering]]. The embedded and backend developers report to him and
 work in [[Wallbox]], [[DC Charger]], [[Connectivity]] and the [[Firmware Platform]]. Like
 Kaspar he keeps the line; the ART keeps the work.
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

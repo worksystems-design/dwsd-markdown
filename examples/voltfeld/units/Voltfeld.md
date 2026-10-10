@@ -26,3 +26,11 @@ Two trees hang off this root, and they are **not the same tree**:
 The same engineer appears in both — reporting to a department head in one picture, a
 member of a cross-functional team in the other. The standalone views are
 `Voltfeld Org Chart.dwsd-orgchart` and `Voltfeld Units.dwsd-units` at the org root.
+
+## In context
+
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```

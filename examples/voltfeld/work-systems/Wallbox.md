@@ -18,6 +18,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Develop the AC wallbox product line — 7 to 22 kW chargers for homes, workplaces and

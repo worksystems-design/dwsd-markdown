@@ -16,6 +16,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Decide which chargers Voltfeld builds, for which markets, with what budget — and connect

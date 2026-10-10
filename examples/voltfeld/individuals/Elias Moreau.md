@@ -10,3 +10,11 @@ Elias keeps the [[System Architect]] role of the [[Charger ART]]: the system arc
 across power electronics, firmware and backend, the architectural runway, and the line
 between what [[HW Base]] and the [[Firmware Platform]] provide and what the product teams
 build.
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

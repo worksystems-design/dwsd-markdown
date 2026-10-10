@@ -10,3 +10,11 @@ Ingrid runs [[Operations]] — the plant and the supply base. [[Manufacturing]] 
 [[Supply Chain]] report to her; she is the delegator of the Manufacturing work system and
 a [[Business Owner]] of the [[Charger ART]], the one who speaks for producibility at PI
 planning.
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

@@ -9,3 +9,11 @@ created_at: "2026-10-10"
 Bastian keeps the [[Manufacturing Lead]] role and runs the plant: the line, end-of-line
 test, and every ramp of a new variant. Reports to [[Ingrid Halvorsen]]. He is not in the
 [[Charger ART]] and hears about releases at the system demo.
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

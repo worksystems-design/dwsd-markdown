@@ -9,3 +9,11 @@ created_at: "2026-10-10"
 Kaspar heads [[Hardware Engineering]]. Six engineers report to him — and none of them
 works *in* his department: they are members of [[Wallbox]], [[DC Charger]], [[HW Base]] and
 [[System Integration]]. He hires, develops and reviews; the teams decide what gets built.
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

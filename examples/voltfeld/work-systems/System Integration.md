@@ -18,6 +18,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Integrate what the teams build into one system release and prove that it is safe and

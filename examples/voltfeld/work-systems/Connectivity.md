@@ -18,6 +18,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Build and run the cloud side of every Voltfeld charger: the fleet backend, the OCPP

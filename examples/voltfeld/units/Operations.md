@@ -13,3 +13,11 @@ Unlike the engineering departments, Operations *is* where its people work: the
 `member-of` and `reports-to` trees agree here. What does **not** agree is the flow:
 Manufacturing's output goes to customers and is steered from the [[Portfolio]], not from
 the [[Charger ART]] — see the topology map in the [README](../README.md).
+
+## In context
+
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```

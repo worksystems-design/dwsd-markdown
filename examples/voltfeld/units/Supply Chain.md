@@ -13,3 +13,11 @@ the enclosure and power-module suppliers, and tracks lead times. A **plain team*
 Its longest lead item is enclosure tooling: an injection mold takes about fourteen weeks,
 longer than one PI of the [[Charger ART]]. Supply Chain is not part of the ART and does not
 attend PI planning — it learns about new enclosure variants when the first drawings arrive.
+
+## In context
+
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```

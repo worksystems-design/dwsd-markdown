@@ -22,6 +22,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Provide the firmware every charger runs on: the real-time OS layer, bootloader and OTA

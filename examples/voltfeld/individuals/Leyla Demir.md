@@ -8,3 +8,11 @@ created_at: "2026-10-10"
 
 Leyla plans production against the volume targets from the [[Portfolio]] and the parts
 [[Supply Chain]] can deliver. Reports to [[Bastian Lorenz]].
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

@@ -8,3 +8,11 @@ created_at: "2026-10-10"
 
 Tomasz writes the [[DC Charger]] product firmware — high-power control and the payment
 terminal integration — on the [[Firmware Platform]] base. Reports to [[Lior Katz]].
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

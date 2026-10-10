@@ -9,3 +9,11 @@ created_at: "2026-10-10"
 Marek owns EMC and safety pre-tests and the certification dossiers in
 [[System Integration]] — the test-house slots the whole ART waits for. Reports to
 [[Kaspar Reinholt]].
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

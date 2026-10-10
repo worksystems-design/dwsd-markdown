@@ -8,3 +8,11 @@ created_at: "2026-10-10"
 
 Priya runs the system and HIL rigs in [[System Integration]] and integrates every PI's
 release candidate. Reports to [[Kaspar Reinholt]].
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

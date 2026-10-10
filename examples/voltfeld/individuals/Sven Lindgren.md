@@ -8,3 +8,11 @@ created_at: "2026-10-10"
 
 Sven leads the [[Firmware Platform]] technically: the RTOS layer, bootloader and OTA client.
 Reports to [[Lior Katz]].
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```
