@@ -14,3 +14,11 @@ It participates in the flow that [[Bakery Operations]] (FL2) coordinates — it 
 morning dispatch — but the delivery itself isn't a domain the bakery models as its own work
 system. Contrast it with the [[Bakehouse]], which *is* both a team **and** a work system
 (`unit-type: [team, work-system]`).
+
+## In context
+
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```

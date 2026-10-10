@@ -19,6 +19,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Bake the daily range of breads and pastries to a dependable quality and schedule, so the
