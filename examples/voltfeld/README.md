@@ -101,6 +101,19 @@ In [Operations](units/Operations.md) and [Commercial](units/Commercial.md) the t
 agree — people work where they report. The difference is confined to engineering, which is
 exactly what an ART does to a line organization.
 
+## Agents at sub-process level
+
+Three [`ai-agents/`](ai-agents/) work *inside* the flow, each bound to a part of a board
+rather than to a single column. The [DFM Check Agent](ai-agents/DFM%20Check%20Agent.md)
+is bound to the whole `Verification` **column group** of the HW Base board
+(`group:Verification::in`); the [Release Dossier Agent](ai-agents/Release%20Dossier%20Agent.md)
+to the `Release` group inside the ART board's feature lane
+(`lane:Feature/group:Release::in`); the
+[Field Issue Triage Agent](ai-agents/Field%20Issue%20Triage%20Agent.md) sits `::before`
+the `Triage` column of the expedite lane — the queue in front of the column, not the column.
+Each also anchors to a person or a unit, so the same agent shows on a box in the org chart
+or the units view. In every case the agent prepares and the people decide.
+
 ## How to read this folder
 
 - One file = one entity; the `type:` in the frontmatter decides what it is.
@@ -120,3 +133,31 @@ exactly what an ART does to a line organization.
   Manufacturing Lead — including [Business Owner](roles/Business%20Owner.md), a role
   **shared** by four keepers. [`individuals/`](individuals/): thirty people, one of them the
   vacancy [NA1](individuals/NA1.md).
+- **Flow** — [`visualizations/`](visualizations/): five boards. The
+  [Charger ART Board](visualizations/Charger%20ART%20Board.md) is the train's program board
+  (`timebox: 10w`) with a feature lane in three **column groups** and an **expedite lane**
+  for field issues; the [HW Base Board](visualizations/HW%20Base%20Board.md) runs hardware
+  work through `Design` → `Verification` → `Release`; the
+  [Portfolio Board](visualizations/Portfolio%20Board.md) is the FL3 epic kanban; a team
+  board and the [Manufacturing Board](visualizations/Manufacturing%20Board.md) — which
+  nothing on the ART board points at — complete the set.
+  [`flight-routes/`](flight-routes/) holds **three routes, one per item type, each a
+  different pattern**: the [Epic Route](flight-routes/Epic%20Route.md) (top-down, FL3 → FL2),
+  the [Feature Route](flight-routes/Feature%20Route.md) (one PI, ending with a release
+  copied to the plant — and no edge back), and the
+  [Field Issue Route](flight-routes/Field%20Issue%20Route.md) (bottom-up from a band with
+  no flight level, forking into hotfix or feature);
+  [`flight-item-types/`](flight-item-types/) defines what flows.
+  [`interactions/`](interactions/) holds the ART's cadence — [PI Planning](interactions/PI%20Planning.md),
+  [ART Sync](interactions/ART%20Sync.md), [System Demo](interactions/System%20Demo.md),
+  [Inspect and Adapt](interactions/Inspect%20and%20Adapt.md) — the monthly
+  [Portfolio Sync](interactions/Portfolio%20Sync.md), the weekly
+  [Field Issue Triage](interactions/Field%20Issue%20Triage.md), the unscheduled
+  [DFM Review](interactions/DFM%20Review.md) and a 1-1; each scheduled one has a `.mw`
+  sibling, aggregated in [operating-rhythm.mw](operating-rhythm.mw).
+  [`agreements/`](agreements/) holds four standing agreements, anchored on board positions
+  ([PI Commitment](agreements/PI%20Commitment.md) on a column group,
+  [Expedite Lane Policy](agreements/Expedite%20Lane%20Policy.md) on a lane) or on entities
+  ([Platform Variant Rule](agreements/Platform%20Variant%20Rule.md) on the two platforms and
+  the System Architect role, [DC Rig Booking](agreements/DC%20Rig%20Booking.md) on a team
+  without a board).
