@@ -53,6 +53,16 @@ commit onward**. The current model is described by the reference itself — `REA
   `for-domain:` joins the closed route key set, and the validator checks it names a work
   system or a role.
 
+- **Every person and unit page carries its own cut-out.** All 44 individuals of both examples
+  end with a ` ```dwsd.orgchart ` fence (`mode: infer`, `focus: self`, `radius: { up: 1,
+  down: 1 }`), all 25 units and work systems with a ` ```dwsd.units ` fence (`focus: self`,
+  `radius: { up: 1, down: inf }`) — on work systems as a second block in the existing
+  "In context" section, elsewhere in a new trailing one. `focus: self` is the page itself, so
+  the fence is identical on every page and the picture follows the frontmatter. The Goldcrust
+  tour's fourth stop now introduces the organizational decision record with the bakery's one
+  existing record.
+- **Plugin `dwsd-md` 0.3.0** — for-domain on routes, the cut-outs, the tour changes.
+
 ## 2026-07-28
 
 - **`design-record` → `organizational-decision-record`.** The type is a *Decision* Record, not
