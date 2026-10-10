@@ -4,6 +4,7 @@ type: flight-route
 ```dwsd.flightroute
 title: <Route name>
 for: "[[<Flight Item Type>]]"
+for-domain: "[[<Work System or Role>]]"
 bands:
   - name: <Band>
     fl: <1|2|3>

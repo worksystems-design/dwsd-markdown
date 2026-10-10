@@ -2,9 +2,14 @@
 # Inferred from the `reports-to` frontmatter of every file in individuals/:
 # nothing is listed here; edit a person's file and the chart follows.
 # Henrik Dahl has no `reports-to` and is the root; `NA1` is an open position.
+# `focus` + `radius` scope the picture to this organization: the index spans the whole
+# workspace, and a workspace that holds several example orgs would otherwise show every
+# root side by side. `up: 0` = nobody above Henrik, `down: inf` = everyone below him.
 # Compare this tree with `Voltfeld Units.dwsd-units`: the engineers sit under their
 # department heads here, and inside their ART teams there.
 mode: infer
+focus: "[[Henrik Dahl]]"
+radius: { up: 0, down: inf }
 notes:
   - on: "[[NA1]]"
     text: "Requisition approved; interviews from November"

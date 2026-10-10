@@ -37,6 +37,21 @@ commit onward**. The current model is described by the reference itself — `REA
 - **Plugin skills caught up.** `dwsd-format` lists all five fences and the full ladder
   (signal → insight → driver → proposal → ODR → agreement); `explore-example-org` knows two
   examples.
+- **`for-domain` on flight routes.** A route names the **domain responsible** for it — the
+  work system or role that has to take care when the route changes — with `for-domain:`, a
+  key inside the ` ```dwsd.flightroute ` block next to `for:` and `bound-to:` (a quoted
+  wikilink or a list of them). It is responsibility, not flow: the work systems a route flows
+  through stay **derived** (`bound-to` → board → `visualization-of`) and are never authored on
+  the route. An unresolved target is a warning, never an error. `for:` is unchanged.
+- **Stage item types resolve to entities.** A stage's item-type token resolves to a
+  `flight-item-type` entity of that name — the exact name first, otherwise a case-insensitive
+  match when exactly one entity matches. A resolved stage is a reference a renderer can make
+  navigable; an unresolved one stays a local token, never an error, so a route stays
+  authorable without any org model. Edge item-type references (`-[action: @item]->`) stay
+  retired.
+- The `org-validate` and `dwsd-format` skills and the flight-route template follow:
+  `for-domain:` joins the closed route key set, and the validator checks it names a work
+  system or a role.
 
 ## 2026-07-28
 

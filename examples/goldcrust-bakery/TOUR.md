@@ -85,10 +85,13 @@ Stops 2 to 6 were about the *work* — domains, meetings, boards. This stop is a
 down anywhere as a chart. Both are **inferred** from the files you have already seen —
 the `reports-to` line in each person's file, the `member-of` line in each unit's.
 
-The org chart of the fourteen people, one fence and nothing else:
+The org chart of the fourteen people — one fence, and the only thing it says is where to
+look:
 
 ```dwsd.orgchart
 mode: infer
+focus: "[[Mara Holt]]"
+radius: { up: 0, down: inf }
 ```
 
 Mara at the top, [Jonas Keller](individuals/Jonas%20Keller.md) running operations under
@@ -101,6 +104,8 @@ The units, nested three deep from the company root:
 ```dwsd.units
 mode: infer
 layout: nested
+focus: "[[Goldcrust Bakery]]"
+radius: { up: 0, down: inf }
 ```
 
 [Goldcrust Bakery](units/Goldcrust%20Bakery.md) ⊃ Bakery Strategy ⊃ Bakery Operations ⊃
@@ -127,11 +132,15 @@ chips — `founder`, `new-role`, `pilot`, `core` — are the `tags:` line of eac
 frontmatter. One rule behind all of it: a bare wikilink means that entity, wherever it is
 drawn.
 
-**Watch for:** nothing in these two fences names a person or a unit. (The two standalone
-files each add one `notes:` entry — a note written on a box, and even that names its box
-with a bare wikilink.) Rename a file, move someone's `reports-to`, and both pictures
-follow. Structure and flow are two views over the same
-files — the flight-level map in the [README](README.md) is the third.
+**Watch for:** neither fence lists a person or a unit. Each names one entity — the root to
+start from (`focus`) — and says how far to go (`radius: { up: 0, down: inf }`: nothing
+above it, everything below it). That scope is what keeps the picture to *this*
+organization when the renderer's index spans a whole workspace — this repository holds a
+second example org, and without it both roots would appear side by side. The dashed ring
+around the outer box marks the focus. (The two standalone files each add one `notes:` entry — a note written on a box, and even that
+names its box with a bare wikilink.) Rename a file, move someone's `reports-to`, and both
+pictures follow. Structure and flow are two views over the same files — the flight-level
+map in the [README](README.md) is the third.
 
 ## Now you — your first three files
 
@@ -151,6 +160,8 @@ That's it. You've started.
   [Daily Replenishment Flow](flight-routes/Daily%20Replenishment%20Flow.md) — and three
   more routes, each a different pattern. (Flight levels are **altitudes on the work, not
   ranks** — the same fourteen people fly all three.)
+  Each route names the domain responsible for it with `for-domain` — a renderer shows it
+  as a chip next to the route's title.
 - An open thread no one has interpreted yet:
   [Two Wholesale Enquiries Waiting at the Cap](signals/Two%20Wholesale%20Enquiries%20Waiting%20at%20the%20Cap.md)
   — the ladder from stop 4 starts here, unclimbed. What would you do?

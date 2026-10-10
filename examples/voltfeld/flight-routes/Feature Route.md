@@ -18,6 +18,7 @@ missing edge is the as-is this example's change ladder starts from.
 ```dwsd.flightroute
 title: Feature Route
 for: "[[Feature]]"
+for-domain: "[[Charger ART]]"
 bands:
   - name: Train
     fl: 2

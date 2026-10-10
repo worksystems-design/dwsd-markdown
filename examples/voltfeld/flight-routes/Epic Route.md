@@ -14,6 +14,7 @@ tracked at FL3, where it lives.
 ```dwsd.flightroute
 title: Epic Route
 for: "[[Epic]]"
+for-domain: "[[Portfolio]]"
 bands:
   - name: Portfolio
     fl: 3

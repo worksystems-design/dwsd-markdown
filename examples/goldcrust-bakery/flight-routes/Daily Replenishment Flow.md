@@ -23,6 +23,7 @@ The `bound-to:` layer maps the three bands onto [[Market Street Shop Board]],
 ```dwsd.flightroute
 title: Daily Replenishment Flow
 for: "[[Daily Replenishment Order]]"
+for-domain: "[[Bakery Operations]]"
 bands:
   - name: Coordination
     fl: 2

@@ -32,10 +32,15 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
    file `Target.md` exists somewhere in the org (labels are unique). Report danglers.
 3. **DSL fence & locator integrity** — three checks:
    - **Route fences** (` ```dwsd.flightroute `) — only the closed key set `title:` /
-     `tags:` / `for:` / `bands:` / `triggers:` / `path:` / `bound-to:`. Flag retired
-     forms: a `route "…"` header or a root `route:` key (→ `title:`), a `flow:` section,
-     `@`-handle references, a `deliver` edge (→ `..> ()`), a bare `flightroute` fence tag.
-     Confirm `for:` resolves to a flight-item-type file. Every band named in a `path:`
+     `tags:` / `for:` / `for-domain:` / `bands:` / `triggers:` / `path:` / `bound-to:`.
+     Flag retired forms: a `route "…"` header or a root `route:` key (→ `title:`), a
+     `flow:` section, `@`-handle references, a `deliver` edge (→ `..> ()`), a bare
+     `flightroute` fence tag. Confirm `for:` resolves to a flight-item-type file.
+     `for-domain:` (a quoted wikilink or a list of them) must resolve to a **work system
+     or a role** — **warn** otherwise, including when it names a person or a plain unit
+     (see `conventions.md` › Up vs. into the detail). A stage item-type token that matches
+     no flight-item-type file is fine and is **never** flagged — it stays a local token
+     (the resolution rule on the flight-route page). Every band named in a `path:`
      edge or a trigger's `generates:` must be declared in `bands:` (`fl` ∈ 1..3 or a
      numeric span). Edge sanity: one hop per line; `()` reached only via `..>`; `->`
      stays inside one band, `-->` crosses bands (warn otherwise). **Flow ⊆ Path:** every

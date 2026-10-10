@@ -22,6 +22,11 @@ itself lives in the body, not the frontmatter.
   named in its `for:` key.
 - The route names its primary [flight-item-type](flight-item-type.md) in the fence's
   `for:` key, and maps onto boards via `bound-to:` — both are part of the DSL below.
+- The route names its **responsible domain** — a [work system](work-system.md) or a
+  [role](role.md) — in the fence's `for-domain:` key. This is responsibility, not flow:
+  the work systems a route flows through are **derived** (`bound-to` → board →
+  `visualization-of`) and never authored on the route. A work system or role can list the
+  routes it is responsible for.
 - External entities (interactions, agreements) can anchor **onto a route stage** with a
   locator: `"[[Route]]/stage:<itemType> @ <Band>::before|in|after"` — see
   [conventions](../conventions.md).
@@ -40,6 +45,7 @@ boards. In plain Markdown the block still reads as a YAML document.
 | `title` | string | The route name (shared document header; the old `route:` key is retired) |
 | `tags` | string list | Descriptive chips, document scope only |
 | `for` | wikilink or string | The primary flight-item-type the route describes |
+| `for-domain` | wikilink or list of wikilinks | The **domain** — a work system or a role — **responsible** for the route: who has to take care when it changes. Points *up*. An unresolved target is a warning, never an error |
 | `bands` | list of `{ name, fl }` | The named bands work moves through; `fl` is `1`/`2`/`3` or a span like `[1, 2]`; omit `fl` for a pure custom band |
 | `triggers` | list of `{ name, generates }` | External start events outside the bands; `generates` is one stage or a list (fan-out) |
 | `path` | edge list | The route itself — typed edges between stages |
@@ -84,6 +90,7 @@ component ships to the customer.
 ```dwsd.flightroute
 title: Standard Order Fulfillment
 for: "[[Standard Order]]"
+for-domain: "[[Sales]]"
 bands:
   - name: Sales
     fl: 2
@@ -107,16 +114,22 @@ bound-to:
 ```
 ````
 
-Reading the path: the order *generates* component specs (same band, solid `->`); the
+Reading the path: Sales is the domain responsible for the route (`for-domain`); the
+order *generates* component specs (same band, solid `->`); the
 specs are *copied* down into the Assembly band (dashed `-->`); build status *feeds back*
 to the order (dotted `..>`); the finished component is *delivered* to the customer
 (`..> ()`, the ⊙ ring).
 
 ## Notes
 
-- `for:` and `bound-to: … board:` take wikilinks — the target entity's name, like every
-  other relationship in the model. Stage item types (`order`, `contract`, …) are short
-  lowercase tokens local to the route; they don't have to be entity files.
+- `for:`, `for-domain:` and `bound-to: … board:` take wikilinks — the target entity's
+  name, like every other relationship in the model.
+- Stage item types (`order`, `contract`, …) are short tokens. A stage's item type
+  **resolves** to a [flight-item-type](flight-item-type.md) entity when one of that name
+  exists — the exact name first, otherwise a case-insensitive match when exactly one
+  entity matches (`epic` → `Epic.md`). A resolved stage is a reference a renderer can make
+  navigable; an unresolved one stays a local token — never an error, so a route stays
+  authorable without any org model.
 - Retired forms (all hard errors or rejected): the `route "Name"` header and the root
   `route:` key (→ `title:`), the `flow:` section and `@`-handle column references
   (→ `path:` + `bound-to:`), the `deliver` edge (→ `..> ()`), `-[action: @item]->`

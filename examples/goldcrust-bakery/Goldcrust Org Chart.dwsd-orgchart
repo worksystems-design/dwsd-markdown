@@ -2,9 +2,14 @@
 # Inferred from the `reports-to` frontmatter of every file in individuals/:
 # nothing is listed here; edit a person's file and the chart follows.
 # A person without `reports-to` (Mara) is a root; `NA1` is an open position.
+# `focus` + `radius` scope the picture to this organization: the index spans the whole
+# workspace, and a workspace that holds several example orgs would otherwise show every
+# root side by side. `up: 0` = nobody above Mara, `down: inf` = everyone below her.
 # Annotations (signals, agreements, decisions, …) come from the entity files too;
 # the one thing written here is a note on a box — a bare wikilink names the person.
 mode: infer
+focus: "[[Mara Holt]]"
+radius: { up: 0, down: inf }
 notes:
   - on: "[[NA1]]"
     text: "Interviews in October"

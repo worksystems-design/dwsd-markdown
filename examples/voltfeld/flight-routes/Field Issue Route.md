@@ -18,6 +18,7 @@ and a named place where the decision between them is made.
 ```dwsd.flightroute
 title: Field Issue Route
 for: "[[Field Issue]]"
+for-domain: "[[Charger ART]]"
 bands:
   - name: Field
   - name: Train
