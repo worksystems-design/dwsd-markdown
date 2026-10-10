@@ -1,0 +1,15 @@
+---
+type: unit
+unit-type: department
+member-of: "[[Voltfeld]]"
+created_at: "2026-10-10"
+---
+
+Operations is [[Ingrid Halvorsen]]'s department: the plant and the supply base. It contains
+one work system — [[Manufacturing]], which builds and tests every charger — and one plain
+team, [[Supply Chain]], which sources parts and manages suppliers.
+
+Unlike the engineering departments, Operations *is* where its people work: the
+`member-of` and `reports-to` trees agree here. What does **not** agree is the flow:
+Manufacturing's output goes to customers and is steered from the [[Portfolio]], not from
+the [[Charger ART]] — see the topology map in the [README](../README.md).

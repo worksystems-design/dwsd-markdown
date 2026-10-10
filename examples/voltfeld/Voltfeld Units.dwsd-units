@@ -1,0 +1,11 @@
+# Voltfeld — which unit sits inside which.
+# Inferred from the `member-of` frontmatter of every unit (units/ and work-systems/):
+# Voltfeld ⊃ Portfolio · Charger ART ⊃ six teams · Hardware Engineering ·
+# Software Engineering · Operations ⊃ Manufacturing, Supply Chain · Commercial ⊃ Sales,
+# Field Service. The two engineering departments are empty boxes on purpose — their
+# people are members of the ART teams. `layout: tree` draws the same containment as a tree.
+mode: infer
+layout: nested
+notes:
+  - on: "[[Supply Chain]]"
+    text: "Not in the ART; 14-week tooling lead time"
