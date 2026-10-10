@@ -253,9 +253,10 @@ patterns are valid.
 
 ## Embedded DSL fences
 
-Three fence tags are parsed and rendered by the app. All three DSLs are **plain YAML**,
-and all fence tags use the dot form. The first two are tied to a type; the third may
-appear in any entity body:
+Five fence tags are parsed and rendered by the app. All five DSLs are **plain YAML**,
+and all fence tags use the dot form. The first two are tied to a type and are **authored**;
+the other three are **inferred views** that may appear in any entity body — or stand alone
+as a file (see below):
 
 - `visualization` (boards) → ```` ```dwsd.board ```` — columns, lanes, groups, and inline
   inside-out `agreements:` / `interactions:`; no inline sugar; the board name is the
@@ -270,8 +271,35 @@ appear in any entity body:
   `mode: infer` (the only mode so far), `focus:` (a wikilink naming the entity to center
   on; when omitted, the map centers on the entity hosting the block), and `radius:` (how
   many relationship hops the map reaches). Purely a view — it declares no relationships
-  and is never part of a type's required body structure. ⚠ **Preliminary** — the key set
-  may still change.
+  and is never part of a type's required body structure.
+- **any entity** (optional) → ```` ```dwsd.orgchart ```` — the **line organization**:
+  every `individual` and its `reports-to` chain, drawn top-down as a tree of person boxes.
+  A person without `reports-to` is a root; a vacancy is an individual with the position in
+  `role:` (the Goldcrust and Voltfeld examples name theirs `NA1`). Keys: `mode: infer`,
+  `focus:` (a person), `radius:` (a number or `{ up, down }`), and `notes:` — a note
+  written on a box, naming it with a bare wikilink. Nothing else is listed in the fence:
+  rename a file or move a `reports-to`, and the chart follows.
+- **any entity** (optional) → ```` ```dwsd.units ```` — the **unit structure**: every
+  `unit` (work systems included) nested by its **first** `member-of`; a unit without
+  `member-of` is a root. `layout: nested` (default) draws children inside the parent box,
+  `layout: tree` the same containment as a tree; each box wears its `unit-type` values as
+  chips, so a `[team, work-system]` is told from a plain `team` at a glance. Units only —
+  no people (that is the org chart), no flow between work systems (that is the topology).
+  Same `mode:` / `focus:` / `radius:` / `notes:` keys as the org chart.
+
+The three inferred views are **annotated from the entity files**, never from the fence: a
+signal or insight that `observes` a person or unit pins on that box; an interaction,
+agreement or AI agent whose locator names an entity shows on it (a unit that is also a work
+system shows the marker on its unit box *and* its topology node); an entity scoped
+`for-domain` to a role reaches the box of every keeper of that role — one hop. They declare
+no relationships and are never part of a type's required body structure. ⚠ **Preliminary**
+— the key sets of the three inferred views may still change.
+
+**Standalone view files.** Each inferred view may also live as a standalone file at the
+org root — `.dwsd-topology`, `.dwsd-orgchart`, `.dwsd-units` — holding the same YAML
+without a fence (the examples keep one org chart and one units file each, e.g.
+`Goldcrust Org Chart.dwsd-orgchart`). Such a file is **not an entity**: no frontmatter, no
+`type:`, skipped by the entity parser — a picture of the organization, not a part of it.
 
 ## Markwhen siblings (`.mw`)
 

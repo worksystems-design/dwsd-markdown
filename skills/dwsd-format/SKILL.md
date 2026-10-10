@@ -28,7 +28,8 @@ files as the `dwsd-markdown` repo). Before authoring or validating, read:
   frontmatter, relationships, body sections, a worked example). Always open the specific
   type page before authoring that type.
 - **`${CLAUDE_PLUGIN_ROOT}/templates/<type>.md`** — a bare copy-paste skeleton per type.
-- **`${CLAUDE_PLUGIN_ROOT}/examples/goldcrust-bakery/`** — a complete worked example.
+- **`${CLAUDE_PLUGIN_ROOT}/examples/`** — two complete worked examples: `goldcrust-bakery/`
+  (a small bakery) and `voltfeld/` (a hardware product company with an Agile Release Train).
 
 ## Subtypes: the `type:` value is not always the conceptual type
 
@@ -62,12 +63,21 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   `#status` or `[wip]`); `flight-route` → ` ```dwsd.flightroute ` (`title:`, `for:` as a
   wikilink, `bands:`, `triggers:`, glyph-typed `path:` edges `->` / `-->` / `..>` /
   `..> ()`, and a `bound-to:` layer binding bands to boards). External entities anchor
-  **into** a board or route via a **locator** (`interaction-of` / `agreement-of`:
-  `[[Board]]#BoardName/col:Column::in`, or `[[Route]]/stage:itemType @ Band::in`). See
-  `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
+  **into** a board or route via a **locator** (`interaction-of` / `agreement-of` /
+  `bound-to`: `[[Board]]#BoardName/col:Column::in`, a column group
+  `[[Board]]#BoardName/lane:Lane/group:Group::in`, the `::before` / `::after` slot of a
+  position, or `[[Route]]/stage:itemType @ Band::in`); a bare `[[Entity]]` anchors to a work
+  system, unit or person instead. See `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
   `${CLAUDE_PLUGIN_ROOT}/types/flight-route.md`.
-- **Navigation ladder:** `signal` → `insight` → `driver` → `proposal` → `agreement`,
-  linked downward with `derived-from`.
+- **Three more fences are inferred views any entity may host** (or standalone files at the
+  org root): ` ```dwsd.topology ` (flight-level context over `contributes-to`),
+  ` ```dwsd.orgchart ` (individuals over `reports-to`), ` ```dwsd.units ` (units over their
+  first `member-of`, `layout: nested | tree`). `mode: infer` lists nothing — the pictures
+  follow the entity files. See `${CLAUDE_PLUGIN_ROOT}/conventions.md` › Embedded DSL fences.
+- **Change ladder:** `signal` → `insight` → `driver` → `proposal` →
+  `organizational-decision-record` → `agreement`(s), each rung naming the one below with
+  `derived-from`; an agreement names the ODR it operationalizes, which makes a decision's
+  bundle readable in reverse.
 
 ## Authoring steps
 

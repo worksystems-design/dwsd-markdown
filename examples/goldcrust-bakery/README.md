@@ -5,8 +5,9 @@ a delivery team, a coordination layer, and a strategy layer. It is a **worked ex
 every DWSD entity type appears at least once, wired together into one self-consistent
 organization.
 
-> **New here? [Take the tour](TOUR.md)** — six stops, ten minutes, no prior knowledge
-> needed: one person, one domain, one meeting, one decision, one board.
+> **New here? [Take the tour](TOUR.md)** — seven stops, ten minutes, no prior knowledge
+> needed: one person, one domain, one meeting, one decision, one board, and the structure
+> behind the flow.
 
 > Fictional and public-safe. Names and numbers are invented.
 

@@ -4,6 +4,40 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-10
+
+- **A second worked example: Voltfeld.** A fictional EV-charging hardware maker that has
+  borrowed parts of SAFe — one Agile Release Train on a ten-week PI, a Release Train Engineer,
+  Product Management, Business Owners — without adopting the framework. About 110 files, every
+  type at least once, with its own `TOUR.md`. Where Goldcrust is small enough that the line and
+  the work almost coincide, Voltfeld is the example where they **do not**: engineers report into
+  two line departments (`reports-to`) and work in six cross-functional ART teams (`member-of`),
+  so the org chart and the units view draw two different trees from the same files.
+- **`contributes-to` as a list, lateral at FL1.** Two platform work systems (HW Base, Firmware
+  Platform) feed two and three teams respectively — the first example of a work system
+  contributing to more than one, and the first where `member-of` and `contributes-to`
+  disagree: Manufacturing belongs to Operations and contributes straight to the FL3 Portfolio.
+  Development and production share no FL2 — the as-is the example's change ladder addresses
+  (two signals → insight → driver → proposal → ODR → two agreements, dated October 2026 and in
+  force from the next PI, so the as-is pictures stay true today).
+- **Agents at sub-process level.** An `ai-agent`'s `bound-to` may name a **column group**
+  (`[[Board]]#Board/group:Verification::in`, `…/lane:Feature/group:Release::in`) or the
+  `::before` slot of a column. The locator grammar always allowed it; the example now exercises
+  it, and the pattern it shows is: the agent prepares, the people decide.
+- **The org-chart and units views are documented.** ` ```dwsd.orgchart ` (individuals over
+  `reports-to`) and ` ```dwsd.units ` (units over their first `member-of`, `layout: nested |
+  tree`) join the topology as the **three inferred views** in `conventions.md` — five fences in
+  total — together with the standalone file forms (`.dwsd-topology`, `.dwsd-orgchart`,
+  `.dwsd-units`), which are pictures, not entities. Goldcrust had used both since September
+  (its tour's seventh stop) without the spec naming them. ⚠ Preliminary, like the topology.
+- **A role as `for-domain` on an organizational agreement, exercised.** Voltfeld's Platform
+  Variant Rule names the System Architect role alongside two work systems, so it lands on the
+  keeper's box in the org chart — the Goldcrust Shop Manager Mandate pattern, now on an
+  `organizational` agreement anchored on entities rather than a board.
+- **Plugin skills caught up.** `dwsd-format` lists all five fences and the full ladder
+  (signal → insight → driver → proposal → ODR → agreement); `explore-example-org` knows two
+  examples.
+
 ## 2026-07-28
 
 - **`design-record` → `organizational-decision-record`.** The type is a *Decision* Record, not

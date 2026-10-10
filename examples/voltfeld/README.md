@@ -7,6 +7,12 @@ the thirty that carry the structure. It is the second worked example next to the
 [Goldcrust Bakery](../goldcrust-bakery/); where Goldcrust is small enough that the line and
 the work almost coincide, Voltfeld is the example where they **do not**.
 
+> **New here? [Take the tour](TOUR.md)** — seven stops, ten minutes: one engineer in two
+> pictures, a platform that serves two teams, the train's board, a route that stops at the
+> plant, two signals and a decision, the decision in two agreements, and an agent that
+> prepares while people decide. If this is your first DWSD example, start with the
+> [Goldcrust tour](../goldcrust-bakery/TOUR.md) instead — it is smaller.
+
 > Fictional and public-safe. Names and numbers are invented.
 
 ## Partially SAFe-inspired
@@ -161,3 +167,17 @@ or the units view. In every case the agent prepares and the people decide.
   ([Platform Variant Rule](agreements/Platform%20Variant%20Rule.md) on the two platforms and
   the System Architect role, [DC Rig Booking](agreements/DC%20Rig%20Booking.md) on a team
   without a board).
+- **Change** — the ladder climbs from two [`signals/`](signals/)
+  ([PI Objectives Missed on Enclosure Tooling Twice](signals/PI%20Objectives%20Missed%20on%20Enclosure%20Tooling%20Twice.md),
+  [Fixtures Built After the Release](signals/Fixtures%20Built%20After%20the%20Release.md))
+  through the [insight](insights/Production%20Is%20Outside%20the%20Train%27s%20Horizon.md),
+  the [driver](drivers/Long-Lead%20Work%20Needs%20a%20Longer%20Horizon%20Than%20the%20PI.md)
+  and the [proposal](proposals/Bring%20the%20Plant%20and%20Supply%20Chain%20into%20PI%20Planning.md)
+  to the decision record
+  [Production Joins the Train's Planning](decision-records/Production%20Joins%20the%20Train%27s%20Planning.md),
+  which two agreements operationalize via `derived-from`:
+  [Long-Lead Commitment at PI Planning](agreements/Long-Lead%20Commitment%20at%20PI%20Planning.md)
+  and [Ramp Readiness Review](agreements/Ramp%20Readiness%20Review.md). Decided 2026-10-06,
+  in force from the next PI planning — so the as-is pictures above are still true today. A
+  third signal, [Variant Request Declined Three Times](signals/Variant%20Request%20Declined%20Three%20Times.md),
+  is uninterpreted: the ladder starts there, unclimbed.

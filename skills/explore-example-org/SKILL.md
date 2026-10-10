@@ -17,13 +17,16 @@ the bundled examples otherwise live inside the plugin folder and are not visible
 workspace.
 
 1. **List the available examples.** Each subdirectory of `${CLAUDE_PLUGIN_ROOT}/examples/` is
-   one example org. Right now there is exactly one: `goldcrust-bakery` (a small bakery — the
-   DWSD tour org).
+   one example org. Right now there are two: `goldcrust-bakery` (a small bakery — the gentler
+   start, fourteen people) and `voltfeld` (an EV-charging hardware maker with an Agile Release
+   Train — the example where the org chart and the units view draw two different trees, with
+   platform work systems and agents bound to column groups).
 
 2. **Pick the example:**
    - If the user named one in **$ARGUMENTS**, use it.
    - Else if there is exactly one example, use that one.
-   - Else list the names and ask which one they want.
+   - Else list the names with their one-liners and ask which one they want; if they have no
+     preference, suggest `goldcrust-bakery` first.
 
 3. **Copy the whole tree** into a subfolder of the current directory named after the example,
    preserving its structure:
@@ -35,5 +38,6 @@ workspace.
 
 4. **Confirm and orient.** State the folder you copied (e.g. `goldcrust-bakery/`) and tell the
    user to start with **`<name>/TOUR.md`** — a short guided tour. Mention that the DWSD files
-   (`*.dwsd-board`, `*.dwsd-flightroute`, `*.dwsd-topology`, and `dwsd.board` fences inside
-   `.md` files) render visually via **"Open DWSD Preview"** at the top of the editor.
+   (`*.dwsd-board`, `*.dwsd-flightroute`, `*.dwsd-topology`, `*.dwsd-orgchart`,
+   `*.dwsd-units`, and the `dwsd.*` fences inside `.md` files) render visually via
+   **"Open DWSD Preview"** at the top of the editor.

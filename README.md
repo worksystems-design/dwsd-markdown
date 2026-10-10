@@ -42,9 +42,11 @@ OKF, `agents.md`, and DWSD share the same Karpathy LLM-wiki lineage. See [`okf.m
 ## Start here
 
 - **New to DWSD?** Take the
-  **[Goldcrust Bakery tour](examples/goldcrust-bakery/TOUR.md)** — six stops through a
-  worked example, no prior knowledge needed. Concrete first; the rules below will make
-  twice as much sense afterwards.
+  **[Goldcrust Bakery tour](examples/goldcrust-bakery/TOUR.md)** — seven stops through a
+  small worked example, no prior knowledge needed. Concrete first; the rules below will make
+  twice as much sense afterwards. Then the **[Voltfeld tour](examples/voltfeld/TOUR.md)** —
+  a hardware product company with an Agile Release Train, where the line and the work are
+  two different trees.
 - **[conventions.md](conventions.md)** — the rules that apply to *every* entity:
   frontmatter, the `type` field, wikilink relationships, positions, tracking fields,
   DSL fences, and the structure vs. flow distinction.
@@ -94,7 +96,9 @@ page also embeds its own annotated example.
 Worked example organizations live in [`examples/`](examples/) — complete, self-consistent
 instances that show the types wired together. Start with
 [`examples/goldcrust-bakery/`](examples/goldcrust-bakery/), a small bakery that exercises
-every type once.
+every type once; then [`examples/voltfeld/`](examples/voltfeld/), an EV-charging hardware
+maker with one Agile Release Train — platform work systems that contribute to several teams,
+agents bound to column groups, and an org chart that is not the units tree.
 
 ## Claude Code plugin
 
