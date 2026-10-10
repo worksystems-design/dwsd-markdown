@@ -87,7 +87,7 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `member-of` | Belongs to a unit / work system — an **individual** or a **unit** can be a member |
 | `contributes-to` | A work system contributes to a higher-level work system |
 | `role-keeper` / `role_keeper` | Who holds this role |
-| `for-domain` / `for_domain` | The **domain** — a work system or a role — that a role, agreement, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to — points *up*. Naming a role lands the entity on every keeper of that role |
+| `for-domain` / `for_domain` | The **domain** — a work system or a role — that a role, agreement, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to, and that a flight route (in its `dwsd.flightroute` block) names as the domain **responsible** for the route — points *up*. Naming a role lands the entity on every keeper of that role |
 | `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board), or a bare `[[entity]]` — a work system, a unit or a person |
 | `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
 | `bound-to` | Where an **AI agent**'s surface appears — the same **locator** as `interaction-of` / `agreement-of` (or a bare `[[entity]]` — a work system, a unit or a person) |
@@ -106,7 +106,9 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 > is overloaded to mean both. A board renders exactly one work system (`visualization-of`), so
 > the work system is **inferable** from the board — `for-domain` is therefore optional, and
 > stating it is just clearer. If both are present and the board's work system differs from
-> `for-domain`, that mismatch is something a validator can flag.
+> `for-domain`, that mismatch is something a validator can flag. On a flight route,
+> `for-domain` says who takes care when the route changes; the work systems the route flows
+> through are derived (`bound-to` → board → `visualization-of`), never authored there.
 >
 > **The locator** (`interaction-of` / `agreement-of` / `bound-to`) is **value-polymorphic**: a
 > bare `[[…]]` wikilink anchors to the **entity** it names — a work system, a unit, or a person

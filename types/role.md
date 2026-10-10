@@ -29,6 +29,8 @@ Plus the shared optionals from [conventions](../conventions.md).
   **domain** other entities can name: an agreement, interaction, ODR, driver, proposal or AI
   agent with `for-domain: "[[This Role]]"` shows up on every keeper of the role — one hop;
   the role's own `for-domain` is not followed further.
+- **Flight routes** — every [flight route](flight-route.md) whose `for-domain` names this
+  role; the route lists it as the domain responsible for it.
 
 ## Body
 

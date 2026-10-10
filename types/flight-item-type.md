@@ -20,6 +20,10 @@ Plus the shared optionals from [conventions](../conventions.md).
 - **`uses-route`** — the [flight route](flight-route.md) items of this type travel. The
   route points back with its `for:` key, making the pair bidirectional: the item type
   names its route, the route names its primary item type.
+- **Route stages** — in addition to the `uses-route` / `for:` pair, every route whose
+  **stages** name this item type references it, by the resolution rule on the
+  [flight route](flight-route.md) page (exact name first, otherwise a unique
+  case-insensitive match).
 
 ## Body
 
@@ -61,4 +65,5 @@ Year-1 baseline: 2–4 weeks. Year-5 reality: 4–6 weeks.
 - A [flight route](flight-route.md) names its primary flight-item-type in its `for:` key
   as a wikilink (e.g. `for: "[[Standard Order]]"`); the item type points back with
   `uses-route`. The short stage tokens inside a route's `path:` (`order`, `contract`, …)
-  are local to that route, not entity references.
+  reference this item type when they resolve to it; a token that resolves to no entity
+  stays local to that route — never an error.
