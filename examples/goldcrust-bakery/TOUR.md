@@ -51,6 +51,8 @@ Sourdough sells out before 9am. Follow the thread, one small file per rung:
 **Watch for:** each rung points back at the one below it. Months later, anyone can trace
 *why* the bakery changed — from decision all the way down to the observation.
 
+A decision about how the organization itself works can earn one more file: an [organizational decision record](../../types/organizational-decision-record.md), which keeps the context, what was decided, and what the bakery expects to follow from it. The bakery keeps one from a different thread, [Single Daily Production Sync](decision-records/Single%20Daily%20Production%20Sync.md) — why the shops and the Bakehouse now coordinate in one daily afternoon sync. The type page says when a proposal earns one.
+
 ## Stop 5 — The decision, made operational
 
 Open [Morning Sourdough Replenishment](agreements/Morning%20Sourdough%20Replenishment.md).
