@@ -26,3 +26,11 @@ Read as a containment tree, the units nest three deep from this root: Goldcrust 
 [[Bakery Strategy]] ⊃ [[Bakery Operations]] ⊃ the three FL1 work systems and the two plain
 teams. The org chart of the people who work in them is the standalone
 `Goldcrust Org Chart.dwsd-orgchart` at the org root; the unit tree is `Goldcrust Units.dwsd-units`.
+
+## In context
+
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```

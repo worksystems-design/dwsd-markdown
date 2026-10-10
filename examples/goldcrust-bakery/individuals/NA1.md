@@ -11,3 +11,11 @@ wholesale drops once the third van arrives. Modeled as an individual named `NA1`
 (*not applicable* — there is no one yet) so the reporting line to [[Jonas Keller]] and
 the seat in [[Deliveries]] keep their box in the org chart. A vacancy is an individual
 with the position in `role:`; there is no separate `role` entity for it.
+
+## In context
+
+```dwsd.orgchart
+mode: infer
+focus: self
+radius: { up: 1, down: 1 }
+```

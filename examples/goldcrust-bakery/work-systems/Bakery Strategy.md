@@ -16,6 +16,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Set the direction of the bakery — range, locations, and growth — and connect that strategy

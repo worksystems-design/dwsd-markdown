@@ -13,3 +13,11 @@ system: `unit-type: team`, no `flightlevel`, no `work-system`.
 The wholesale flow itself is modeled as a route, the [[Wholesale Contract Route]] — a
 contract *generates* a standing order that the [[Bakehouse]] then bakes into every
 morning's dispatch.
+
+## In context
+
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```

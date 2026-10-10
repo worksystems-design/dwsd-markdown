@@ -14,6 +14,12 @@ mode: infer
 radius: 2
 ```
 
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 ## Purpose
 
 Sell the daily range at the Station Road location, where an early commuter rush drives a
