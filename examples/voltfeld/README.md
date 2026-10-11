@@ -222,9 +222,10 @@ where the people meet when it does not work.
   [Order Studio Huddle](interactions/Order%20Studio%20Huddle.md), the monthly
   [Order Exceptions Review](interactions/Order%20Exceptions%20Review.md) and a 1-1; each scheduled one has a `.mw`
   sibling, aggregated in [operating-rhythm.mw](operating-rhythm.mw).
-  [`agreements/`](agreements/) holds four standing agreements, anchored on board positions
+  [`agreements/`](agreements/) holds five standing agreements, anchored on board positions
   ([PI Commitment](agreements/PI%20Commitment.md) on a column group,
-  [Expedite Lane Policy](agreements/Expedite%20Lane%20Policy.md) on a lane) or on entities
+  [Expedite Lane Policy](agreements/Expedite%20Lane%20Policy.md) on a lane), on a column and
+  a route stage at once ([Order Andon](agreements/Order%20Andon.md)) or on entities
   ([Platform Variant Rule](agreements/Platform%20Variant%20Rule.md) on the two platforms and
   the System Architect role, [DC Rig Booking](agreements/DC%20Rig%20Booking.md) on a team
   without a board).
@@ -242,4 +243,6 @@ where the people meet when it does not work.
   [Production Liaison](roles/Production%20Liaison.md). Decided 2026-10-06,
   in force from the next PI planning — so the as-is pictures above are still true today. A
   third signal, [Variant Request Declined Three Times](signals/Variant%20Request%20Declined%20Three%20Times.md),
-  is uninterpreted: the ladder starts there, unclimbed.
+  is uninterpreted: the ladder starts there, unclimbed. A fourth,
+  [Configuration Cases Pile Up in the Studio](signals/Configuration%20Cases%20Pile%20Up%20in%20the%20Studio.md),
+  comes out of the Order Exceptions Review and points at the same variant from the factory's side.
