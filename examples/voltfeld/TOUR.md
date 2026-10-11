@@ -113,7 +113,7 @@ FL2, no restructuring of Operations; that question is parked for two PIs. And it
 stop 4 are still true today. The organization has decided to change and has not yet changed.
 DWSD can say both at once.
 
-## Stop 6 — The decision, in two agreements
+## Stop 6 — The decision, in two agreements and a role
 
 Open [Long-Lead Commitment at PI Planning](agreements/Long-Lead%20Commitment%20at%20PI%20Planning.md)
 and [Ramp Readiness Review](agreements/Ramp%20Readiness%20Review.md). Both carry
@@ -127,6 +127,15 @@ group of the train's board, `::before` the `Tooling Released` column of the HW B
 the [Supply Chain](units/Supply%20Chain.md) team's box, on a column of the Manufacturing
 board. One decision up at the system, its consequences down in the flow — and the second
 agreement is, in route terms, the missing edge from stop 4 written down before it exists.
+
+The decision also made a role: [Production Liaison](roles/Production%20Liaison.md), the
+plant's seat in the train, again with `derived-from` the decision. It is kept by
+[Bastian Lorenz](individuals/Bastian%20Lorenz.md), who already keeps the
+[Manufacturing Lead](roles/Manufacturing%20Lead.md) role. **Watch for:** one person, two
+roles, two contexts, and each role with its own agreement. The long-lead commitment names
+the Liaison in its `for-domain` and lands on the train side of Bastian; the ramp review
+names the Manufacturing Lead and lands on the plant side. It is the inverse of the
+[Business Owner](roles/Business%20Owner.md) role, which one role shares across four people.
 
 ## Stop 7 — An agent that prepares, people who decide
 

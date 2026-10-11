@@ -38,9 +38,12 @@ on them.
 
 ```dwsd.topology
 mode: infer
-focus: "[[Charger ART]]"
-radius: 2
+focus: "[[Portfolio]]"
+radius: { up: 0, down: inf }
 ```
+
+The whole company, from the Portfolio down. Manufacturing contributes straight to the
+Portfolio, beside the train, not inside it.
 
 <details>
 <summary>The same map as plain text (renders everywhere, even without the DWSD renderer)</summary>
@@ -146,8 +149,9 @@ or the units view. In every case the agent prepares and the people decide.
 - **Structure** — [`work-systems/`](work-systems/): nine work systems; the
   [Charger ART](work-systems/Charger%20ART.md) and [HW Base](work-systems/HW%20Base.md)
   carry the fullest domain descriptions. [`units/`](units/) holds the company root, four
-  departments and three plain teams. [`roles/`](roles/) holds the ART roles and the
-  Manufacturing Lead — including [Business Owner](roles/Business%20Owner.md), a role
+  departments and three plain teams. [`roles/`](roles/) holds the ART roles, the
+  Manufacturing Lead and the [Production Liaison](roles/Production%20Liaison.md) — two roles
+  one person keeps in two contexts — including [Business Owner](roles/Business%20Owner.md), a role
   **shared** by four keepers. [`individuals/`](individuals/): thirty people, one of them the
   vacancy [NA1](individuals/NA1.md).
 - **Flow** — [`visualizations/`](visualizations/): five boards. The
@@ -186,9 +190,10 @@ or the units view. In every case the agent prepares and the people decide.
   and the [proposal](proposals/Bring%20the%20Plant%20and%20Supply%20Chain%20into%20PI%20Planning.md)
   to the decision record
   [Production Joins the Train's Planning](decision-records/Production%20Joins%20the%20Train%27s%20Planning.md),
-  which two agreements operationalize via `derived-from`:
-  [Long-Lead Commitment at PI Planning](agreements/Long-Lead%20Commitment%20at%20PI%20Planning.md)
-  and [Ramp Readiness Review](agreements/Ramp%20Readiness%20Review.md). Decided 2026-10-06,
+  which two agreements and one role operationalize via `derived-from`:
+  [Long-Lead Commitment at PI Planning](agreements/Long-Lead%20Commitment%20at%20PI%20Planning.md),
+  [Ramp Readiness Review](agreements/Ramp%20Readiness%20Review.md) and the
+  [Production Liaison](roles/Production%20Liaison.md). Decided 2026-10-06,
   in force from the next PI planning — so the as-is pictures above are still true today. A
   third signal, [Variant Request Declined Three Times](signals/Variant%20Request%20Declined%20Three%20Times.md),
   is uninterpreted: the ladder starts there, unclimbed.

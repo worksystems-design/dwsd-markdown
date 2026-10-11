@@ -31,10 +31,12 @@ objective slipped on a mold ([[PI Objectives Missed on Enclosure Tooling Twice]]
 [[Supply Chain]] and [[Manufacturing]] become **participants of the train's planning** —
 PI planning and the System Demo — without becoming teams of the ART. Long-lead work is
 planned one PI ahead of the features that need it; ramp readiness is reviewed inside the
-PI, not after it. Operationalized by two agreements:
-[[Long-Lead Commitment at PI Planning]] and [[Ramp Readiness Review]].
+PI, not after it. Operationalized by two agreements,
+[[Long-Lead Commitment at PI Planning]] and [[Ramp Readiness Review]], and one role:
+[[Production Liaison]], the plant's seat at the train's planning, kept by the
+[[Manufacturing Lead]].
 
-Explicitly **not** decided: no change to the structure. Manufacturing stays in
+Explicitly **not** decided: no change to the units. Manufacturing stays in
 [[Operations]], the plant does not join the ART board, and the question of a shared FL2
 for development and production is deferred until two PIs have run under this decision.
 

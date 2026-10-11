@@ -24,7 +24,9 @@ One role accountable for output, yield and ramps at the plant.
 
 The Manufacturing Lead runs the [[Manufacturing]] work system day to day: the line, the
 end-of-line test, the ramp of every new variant. Kept by [[Bastian Lorenz]]. The role is
-not part of the ART; it meets the ART's output at the system demo and as drawings.
+not part of the ART; it meets the ART's output at the system demo and as drawings. From the
+PI 27.1 planning on, the same person also keeps the [[Production Liaison]] role inside the
+train; the [[Ramp Readiness Review]] stays with this role.
 
 ## Concerns
 

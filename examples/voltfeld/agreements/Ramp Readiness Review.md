@@ -3,6 +3,7 @@ type: agreement
 agreement-type: work
 for-domain:
   - "[[Manufacturing]]"
+  - "[[Manufacturing Lead]]"
   - "[[Charger ART]]"
 agreement-of:
   - "[[Manufacturing Board]]#Manufacturing/col:Fixtures and Instructions::in"
@@ -25,8 +26,8 @@ going while the release is still in its hands.
 
 - [[Manufacturing]] — starts fixtures and work instructions for a feature when it reaches
   `Demoed`; brings ramp status to every [[System Demo]].
-- [[Manufacturing Lead]] — participant of PI planning and the System Demo, with a standing
-  slot; accepts a release as producible before it leaves `Certified`.
+- [[Manufacturing Lead]] — accepts a release as producible before it leaves `Certified`.
+- [[Production Liaison]] — brings ramp status to every [[System Demo]] in a standing slot.
 - [[Release Train Engineer]] — adds the ramp-readiness check as a standing row of the
   System Demo and carries blockers to the [[ART Sync]].
 - [[System Integration]] — delivers production test firmware with the release candidate,

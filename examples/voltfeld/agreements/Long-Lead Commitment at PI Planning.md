@@ -4,6 +4,7 @@ agreement-type: work
 for-domain:
   - "[[Charger ART]]"
   - "[[HW Base]]"
+  - "[[Production Liaison]]"
 agreement-of:
   - "[[Charger ART Board]]#Charger ART/lane:Feature/group:Preparation::in"
   - "[[HW Base Board]]#HW Base/group:Release/col:Tooling Released::before"
@@ -26,6 +27,8 @@ features that need them.
 
 - [[HW Base]] — at PI planning *n*, names every mold and long-lead part the features
   planned for PI *n+1* will need, with the feature it serves.
+- [[Production Liaison]] — names, at the same planning, the fixtures and production test
+  equipment the plant needs for those features.
 - [[Supply Chain]] — attends PI planning; orders each named item within one week; puts
   the confirmed delivery date on the dependency board.
 - [[Release Train Engineer]] — tracks tooling dates as dependencies at the [[ART Sync]];

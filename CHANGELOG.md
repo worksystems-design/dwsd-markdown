@@ -4,6 +4,21 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-11
+
+- **Voltfeld's flight-level map shows the whole company.** The README topology now starts at
+  the Portfolio (`focus: "[[Portfolio]]"`, `radius: { up: 0, down: inf }`) instead of the
+  train, so Manufacturing appears where the example's point is: contributing straight to
+  FL3, beside the train, not inside it.
+- **One person, two roles, two contexts.** The decision record "Production Joins the
+  Train's Planning" now also produces a role, the Production Liaison (`derived-from` the
+  record, `for-domain` the Charger ART), kept by the Manufacturing Lead's keeper. Each role
+  carries its own agreement through `for-domain`: the long-lead commitment lands on the
+  Liaison, the ramp-readiness review on the Manufacturing Lead. It is the inverse of the
+  shared Business Owner role (one role, four people). A role may carry `derived-from` like
+  any entity; nothing in the spec changes.
+- **Plugin `dwsd-md` 0.4.0.**
+
 ## 2026-10-10
 
 - **A second worked example: Voltfeld.** A fictional EV-charging hardware maker that has
