@@ -18,7 +18,8 @@ at the [[Daily Production Sync]].
 
 `bound-to` is a list: the board column where the suggestions appear, the person who
 reviews them ([[Mara Holt]] — the agent shows on her box in the org chart), and the
-[[Bakehouse]] itself — a team that is also a work system, so the agent marker appears
-both on the topology node and on the unit's box.
+[[Bakehouse]] work system itself, so the agent marker appears on its node in the
+flight-level map. (The units view stays out of it: Goldcrust's units are cut by site, and
+the work systems are not drawn there.)
 
 > `ai-agent` is a preliminary type and the `bound-to` anchor convention may still change.
