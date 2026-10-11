@@ -2,7 +2,7 @@
 type: individual
 role: Sales Assistant
 reports-to: "[[Selin Aydin]]"
-member-of: "[[Station Road Shop]]"
+member-of: ["[[Station Road]]", "[[Station Road Shop]]"]
 created_at: "2026-09-17"
 ---
 

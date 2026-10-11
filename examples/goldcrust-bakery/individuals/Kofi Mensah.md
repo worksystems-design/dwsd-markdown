@@ -2,7 +2,7 @@
 type: individual
 role: Apprentice Baker
 reports-to: "[[Mara Holt]]"
-member-of: "[[Bakehouse]]"
+member-of: ["[[Mill Lane]]", "[[Bakehouse]]"]
 created_at: "2026-09-17"
 ---
 

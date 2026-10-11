@@ -188,6 +188,13 @@ any other named unit, and units can nest. A unit that also participates in flow 
 system (its `unit-type` includes `work-system`, and it carries a `flightlevel`). See
 [`types/unit.md`](types/unit.md) and [`types/work-system.md`](types/work-system.md).
 
+The unit tree **need not mirror the topology.** `contributes-to` already says how work
+systems feed each other; `member-of` between work systems that only repeats it adds a
+second copy of the same picture. Cut the units by whatever dimension the organization
+actually groups by — departments, disciplines, sites — and let a work system carry
+`member-of` only where it really sits inside such a unit. A person can be `member-of` a
+unit and a work system at once (a list).
+
 ## Work systems are marked on `unit-type`
 
 `unit` is the base structural type. **A unit is a work system when its `unit-type`

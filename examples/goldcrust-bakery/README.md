@@ -40,10 +40,14 @@ FL1  Bakehouse        Market Street Shop   Station Road Shop
 </details>
 
 A unit is a **work system** when its `unit-type` includes `work-system` (it then also
-carries a `flightlevel`). This example shows all three shapes of `unit`:
+carries a `flightlevel`). This example shows the shapes of `unit`:
 
 - **Plain unit** — `Goldcrust Bakery` (in `units/`), `unit-type: company`, no `flightlevel`:
   the structural root that groups everything; it does not coordinate a flow.
+- **Site** — `Mill Lane`, `Market Street`, `Station Road` (in `units/`), `unit-type: site`:
+  the unit tree is cut by *where people work*. It does not redraw the topology — the work
+  systems carry no `member-of` and appear only in the flight-level map, and people are
+  `member-of` both their site and their work system.
 - **Plain team** — `Deliveries` (in `units/`), `unit-type: team`, no `flightlevel`: a real
   team of people that is *not* a work system.
 - **Team that is also a work system** — `Bakehouse` (in `work-systems/`),
@@ -66,7 +70,8 @@ carries a `flightlevel`). This example shows all three shapes of `unit`:
 
 - **Structure** — [`work-systems/`](work-systems/): `Bakehouse.md` carries the fullest
   domain description (and is a `[team, work-system]`). [`units/`](units/) holds the root
-  `Goldcrust Bakery.md` and the plain teams `Deliveries.md` and `Wholesale.md`. [`roles/`](roles/) keeps one
+  `Goldcrust Bakery.md`, the three sites and the plain teams `Deliveries.md` and
+  `Wholesale.md`. [`roles/`](roles/) keeps one
   shop-manager role file per location — roles are individual and evolve independently; a
   role *shared* by several people would instead list them all as `role-keeper`s.
 - **Flow** — [`visualizations/`](visualizations/): a board per work system, in the YAML

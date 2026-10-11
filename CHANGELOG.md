@@ -27,7 +27,15 @@ commit onward**. The current model is described by the reference itself — `REA
   Team Board becomes the FL2 Wallbox Board with one lane per team and an expedite lane;
   the Feature and Field Issue routes gain a `Product Lines` band and bind it there, using
   the lane × column cell form (`lane:Wallbox Home/col:In Progress`). Six new people.
-- **Plugin `dwsd-md` 0.4.0.**
+- **Goldcrust's units are cut by site, not by flow.** The unit tree used to nest the work
+  systems the way `contributes-to` already does (Strategy ⊃ Operations ⊃ Bakehouse and
+  shops), so the units view only redrew the topology. Now the company holds three
+  `unit-type: site` units — Mill Lane (bakehouse, office, van yard; home of the plain teams
+  Deliveries and Wholesale), Market Street and Station Road — and the five work systems
+  carry no `member-of`. People are `member-of` their site and their work system (a list).
+  `conventions.md` (Structure vs. flow) now says it outright: the unit tree need not mirror
+  the topology; cut it by the dimension the organization actually groups by.
+- **Plugin `dwsd-md` 0.4.1.**
 
 ## 2026-10-10
 

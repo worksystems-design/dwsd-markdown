@@ -2,7 +2,6 @@
 type: unit
 unit-type: [team, work-system]
 flightlevel: 1
-member-of: "[[Bakery Operations]]"
 contributes-to: "[[Bakery Operations]]"
 delegator: "[[Mara Holt]]"
 tags: [core]
@@ -17,12 +16,6 @@ created_at: "2026-05-24"
 ```dwsd.topology
 mode: infer
 radius: 2
-```
-
-```dwsd.units
-mode: infer
-focus: self
-radius: { up: 1, down: inf }
 ```
 
 ## Purpose

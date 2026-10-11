@@ -2,7 +2,6 @@
 type: unit
 unit-type: [leadership, work-system]
 flightlevel: 3
-member-of: "[[Goldcrust Bakery]]"
 version: "1.0"
 decision_date: "2026-05-20"
 review_date: "2026-11-20"
@@ -14,12 +13,6 @@ created_at: "2026-05-24"
 ```dwsd.topology
 mode: infer
 radius: 2
-```
-
-```dwsd.units
-mode: infer
-focus: self
-radius: { up: 1, down: inf }
 ```
 
 ## Purpose

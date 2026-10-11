@@ -2,7 +2,7 @@
 type: individual
 role: Head of Operations
 reports-to: "[[Mara Holt]]"
-member-of: "[[Bakery Operations]]"
+member-of: ["[[Mill Lane]]", "[[Bakery Operations]]"]
 tags: [new-role]
 created_at: "2026-09-17"
 ---

@@ -1,7 +1,7 @@
 ---
 type: individual
 role: Owner & Head Baker
-member-of: "[[Bakehouse]]"
+member-of: ["[[Mill Lane]]", "[[Bakehouse]]"]
 tags: [founder]
 created_at: "2026-05-24"
 ---

@@ -2,7 +2,7 @@
 type: individual
 role: Sales Assistant
 reports-to: "[[Lena Frei]]"
-member-of: "[[Market Street Shop]]"
+member-of: ["[[Market Street]]", "[[Market Street Shop]]"]
 created_at: "2026-09-17"
 ---
 

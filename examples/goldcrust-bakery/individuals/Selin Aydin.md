@@ -2,7 +2,7 @@
 type: individual
 role: Shop Manager
 reports-to: "[[Jonas Keller]]"
-member-of: "[[Station Road Shop]]"
+member-of: ["[[Station Road]]", "[[Station Road Shop]]"]
 created_at: "2026-07-19"
 ---
 

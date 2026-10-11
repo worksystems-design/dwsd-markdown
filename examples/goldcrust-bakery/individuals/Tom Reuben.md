@@ -2,7 +2,7 @@
 type: individual
 role: Baker
 reports-to: "[[Mara Holt]]"
-member-of: "[[Bakehouse]]"
+member-of: ["[[Mill Lane]]", "[[Bakehouse]]"]
 created_at: "2026-05-24"
 ---
 

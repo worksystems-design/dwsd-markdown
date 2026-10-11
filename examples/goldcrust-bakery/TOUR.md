@@ -99,7 +99,7 @@ her, and one box named `NA1` — an open position (the Delivery Coordinator), ke
 chart as a person with no name yet so the reporting line and the seat stay visible. The
 same chart lives as a standalone file, [Goldcrust Org Chart.dwsd-orgchart](Goldcrust%20Org%20Chart.dwsd-orgchart).
 
-The units, nested three deep from the company root:
+The units, cut by site:
 
 ```dwsd.units
 mode: infer
@@ -108,11 +108,19 @@ focus: "[[Goldcrust Bakery]]"
 radius: { up: 0, down: inf }
 ```
 
-[Goldcrust Bakery](units/Goldcrust%20Bakery.md) ⊃ Bakery Strategy ⊃ Bakery Operations ⊃
-the three FL1 work systems (the Bakehouse and the two shops) plus two plain teams, [Deliveries](units/Deliveries.md)
-and [Wholesale](units/Wholesale.md). Each box wears its `unit-type` as a chip — `company`,
-`[leadership, work-system]`, `team` — so you can tell a work system from a plain team at a
-glance. Standalone: [Goldcrust Units.dwsd-units](Goldcrust%20Units.dwsd-units).
+[Goldcrust Bakery](units/Goldcrust%20Bakery.md) ⊃ three sites:
+[Mill Lane](units/Mill%20Lane.md), where the bread is made and the two plain teams
+[Deliveries](units/Deliveries.md) and [Wholesale](units/Wholesale.md) sit, and the two shops,
+[Market Street](units/Market%20Street.md) and [Station Road](units/Station%20Road.md). Each
+box wears its `unit-type` as a chip — `company`, `site`, `team`. Standalone:
+[Goldcrust Units.dwsd-units](Goldcrust%20Units.dwsd-units).
+
+What is *not* in the tree: the five work systems. They carry no `member-of`, because the
+flight-level map of stop 2 already draws them, by how the work flows. Units are another
+cut of the same organization — here by place; elsewhere it might be departments or
+disciplines — and a unit tree that only redraws the topology adds nothing. People belong
+to both: [Lena Frei](individuals/Lena%20Frei.md) is `member-of` both the Market Street site
+and the Market Street Shop work system.
 
 The boxes are annotated, and the annotations come from the same files as everything
 else. A signal that names a person — [Dispatch Mornings Double-Booked](signals/Dispatch%20Mornings%20Double-Booked.md)
@@ -126,8 +134,8 @@ managers, because its `for-domain` lists both shop-manager roles. On the units s
 [Wholesale Capacity Cap](agreements/Wholesale%20Capacity%20Cap.md) names the
 [Wholesale](units/Wholesale.md) team with a bare wikilink and shows on that box; the
 [Demand Forecast Assistant](ai-agents/Demand%20Forecast%20Assistant.md) names the
-[Bakehouse](work-systems/Bakehouse.md), which is a team *and* a work system, so the same
-marker appears on its unit box here and on its node in the flight-level map. The little
+[Bakehouse](work-systems/Bakehouse.md), a work system, so its marker appears on the
+Bakehouse node in the flight-level map rather than in this tree. The little
 chips — `founder`, `new-role`, `pilot`, `core` — are the `tags:` line of each entity's
 frontmatter. One rule behind all of it: a bare wikilink means that entity, wherever it is
 drawn.
