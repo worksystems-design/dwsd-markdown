@@ -3,14 +3,14 @@
 A fictional maker of EV charging hardware, described in DWSD: an AC **Wallbox** line and a
 **DC Charger** line, developed by one Agile Release Train of three product lines, built in a plant,
 sold and serviced by a commercial department — about 120 people, of whom this folder models
-the thirty-six that carry the structure. It is the second worked example next to the
+the thirty-seven that carry the structure. It is the second worked example next to the
 [Goldcrust Bakery](../goldcrust-bakery/); where Goldcrust is small enough that the line and
 the work almost coincide, Voltfeld is the example where they **do not**.
 
-> **New here? [Take the tour](TOUR.md)** — seven stops, ten minutes: one engineer in two
+> **New here? [Take the tour](TOUR.md)** — eight stops, fifteen minutes: one engineer in two
 > pictures, a platform that serves two product lines, the train's board, a route that stops at the
-> plant, two signals and a decision, the decision in two agreements, and an agent that
-> prepares while people decide. If this is your first DWSD example, start with the
+> plant, two signals and a decision, the decision in two agreements, an agent that
+> prepares while people decide, and an order process with a factory and a studio. If this is your first DWSD example, start with the
 > [Goldcrust tour](../goldcrust-bakery/TOUR.md) instead — it is smaller.
 
 > Fictional and public-safe. Names and numbers are invented.
@@ -61,6 +61,8 @@ FL1  System Integration                                       Manufacturing
      Firmware Platform ► Wallbox, DC Charger, Connectivity    to FL3: development and
                                                               production share no FL2
      Supply Chain · Sales · Field Service — plain teams (no flightlevel)
+
+FL2  Order to Delivery ──► Portfolio   the order process: factory in the ERP, studio around it
 ```
 
 </details>
@@ -82,6 +84,9 @@ Two things to notice:
   production; they meet at FL3. That gap is the as-is this example describes, and it is
   the one that `member-of` and `contributes-to` disagree about: Manufacturing *belongs to*
   [Operations](units/Operations.md) and *contributes to* the Portfolio.
+- **Order to Delivery belongs to no department.** It is the work system around the order
+  process — people from Sales, Manufacturing and Supply Chain share it, and nobody reports
+  into it. See [Factory and studio](#factory-and-studio) below.
 
 ## Two trees, not one
 
@@ -139,6 +144,34 @@ the `Triage` column of the expedite lane — the queue in front of the column, n
 Each also anchors to a person or a unit, so the same agent shows on a box in the org chart
 or the units view. In every case the agent prepares and the people decide.
 
+## Factory and studio
+
+Most of what a company does with a customer order is defined in its ERP and runs there
+without anyone touching it. [Order to Delivery](work-systems/Order%20to%20Delivery.md) is the
+work system **around** that process, and the
+[Customer Order Route](flight-routes/Customer%20Order%20Route.md) shows how: two bands
+without a flight level stand for two **work modes**, not two places.
+
+- `ERP` is **factory mode** — order entry, scheduling, production order and invoice, run
+  by the system of record. The route's `sources:` block points at the ERP process; the band
+  is bound to no board, because the ERP is where that state lives.
+- `Studio` is **studio mode** — the seven orders in a hundred that do not go through. The
+  [Order Exception Agent](ai-agents/Order%20Exception%20Agent.md), bound to the factory
+  stage, flags them and prepares the case; people work it on the
+  [Order Studio Board](visualizations/Order%20Studio%20Board.md); the clarified order flows
+  back.
+
+The edge into the studio is an andon cord, and the [Order Andon](agreements/Order%20Andon.md)
+says who answers it within what time. The reason code every case leaves with feeds the
+monthly [Order Exceptions Review](interactions/Order%20Exceptions%20Review.md) — the
+improvement loop that used to be a ticket queue — and from there the ladder:
+[Configuration Cases Pile Up in the Studio](signals/Configuration%20Cases%20Pile%20Up%20in%20the%20Studio.md)
+is the factory's view of the variant the platform keeps declining.
+
+None of this needs a new type. A route, two bands, a board, an agreement, an agent and a
+signal are enough. The board is not the workflow: the workflow is in the ERP; the board is
+where the people meet when it does not work.
+
 ## How to read this folder
 
 - One file = one entity; the `type:` in the frontmatter decides what it is.
@@ -152,36 +185,42 @@ or the units view. In every case the agent prepares and the people decide.
 
 ## Entry points
 
-- **Structure** — [`work-systems/`](work-systems/): nine work systems; the
+- **Structure** — [`work-systems/`](work-systems/): ten work systems; the
   [Charger ART](work-systems/Charger%20ART.md) and [HW Base](work-systems/HW%20Base.md)
   carry the fullest domain descriptions. [`units/`](units/) holds the company root, four
   departments, three plain teams outside the train and the six teams of the product
   lines. [`roles/`](roles/) holds the ART roles, the
   Manufacturing Lead and the [Production Liaison](roles/Production%20Liaison.md) — two roles
   one person keeps in two contexts — including [Business Owner](roles/Business%20Owner.md), a role
-  **shared** by four keepers. [`individuals/`](individuals/): thirty-six people, one of them the
+  **shared** by four keepers. [`individuals/`](individuals/): thirty-seven people, one of them the
   vacancy [NA1](individuals/NA1.md).
-- **Flow** — [`visualizations/`](visualizations/): five boards. The
+- **Flow** — [`visualizations/`](visualizations/): six boards. The
   [Charger ART Board](visualizations/Charger%20ART%20Board.md) is the train's program board
   (`timebox: 10w`) with a feature lane in three **column groups** and an **expedite lane**
   for field issues; the [HW Base Board](visualizations/HW%20Base%20Board.md) runs hardware
   work through `Design` → `Verification` → `Release`; the
   [Portfolio Board](visualizations/Portfolio%20Board.md) is the FL3 epic kanban; a team
   board and the [Manufacturing Board](visualizations/Manufacturing%20Board.md) — which
-  nothing on the ART board points at — complete the set.
-  [`flight-routes/`](flight-routes/) holds **three routes, one per item type, each a
+  nothing on the ART board points at — and the
+  [Order Studio Board](visualizations/Order%20Studio%20Board.md), which shows only the
+  orders that need people, complete the set.
+  [`flight-routes/`](flight-routes/) holds **four routes, one per item type, each a
   different pattern**: the [Epic Route](flight-routes/Epic%20Route.md) (top-down, FL3 → FL2),
   the [Feature Route](flight-routes/Feature%20Route.md) (one PI, ending with a release
   copied to the plant — and no edge back), and the
   [Field Issue Route](flight-routes/Field%20Issue%20Route.md) (bottom-up from a band with
-  no flight level, forking into hotfix or feature);
+  no flight level, forking into hotfix or feature), and the
+  [Customer Order Route](flight-routes/Customer%20Order%20Route.md) (factory mode in the ERP,
+  studio mode around it);
   [`flight-item-types/`](flight-item-types/) defines what flows.
   [`interactions/`](interactions/) holds the ART's cadence — [PI Planning](interactions/PI%20Planning.md),
   [ART Sync](interactions/ART%20Sync.md), [System Demo](interactions/System%20Demo.md),
   [Inspect and Adapt](interactions/Inspect%20and%20Adapt.md) — the monthly
   [Portfolio Sync](interactions/Portfolio%20Sync.md), the weekly
   [Field Issue Triage](interactions/Field%20Issue%20Triage.md), the unscheduled
-  [DFM Review](interactions/DFM%20Review.md) and a 1-1; each scheduled one has a `.mw`
+  [DFM Review](interactions/DFM%20Review.md), the daily
+  [Order Studio Huddle](interactions/Order%20Studio%20Huddle.md), the monthly
+  [Order Exceptions Review](interactions/Order%20Exceptions%20Review.md) and a 1-1; each scheduled one has a `.mw`
   sibling, aggregated in [operating-rhythm.mw](operating-rhythm.mw).
   [`agreements/`](agreements/) holds four standing agreements, anchored on board positions
   ([PI Commitment](agreements/PI%20Commitment.md) on a column group,

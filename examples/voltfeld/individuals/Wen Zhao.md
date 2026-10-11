@@ -2,7 +2,7 @@
 type: individual
 role: Supply Chain Lead
 reports-to: "[[Ingrid Halvorsen]]"
-member-of: "[[Supply Chain]]"
+member-of: ["[[Supply Chain]]", "[[Order to Delivery]]"]
 created_at: "2026-10-10"
 ---
 

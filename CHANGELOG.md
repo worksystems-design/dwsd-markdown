@@ -6,6 +6,17 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-11
 
+- **Voltfeld: an order process with a factory and a studio.** A new FL2 work system,
+  Order to Delivery, owns the Customer Order Route. Two bands without a flight level stand
+  for two work modes: `ERP` (factory — the stages run by the system of record, which the
+  route's `sources:` block points at, bound to no board) and `Studio` (studio — the orders
+  that need people, on the Order Studio Board). The edge into the studio is an andon (the
+  Order Andon agreement), the edge back carries a reason code, and the monthly Order
+  Exceptions Review turns the codes into a signal that meets the train's own unclimbed
+  variant signal. One new person, an agent bound to the factory stage, a daily huddle. No
+  new type and no new field: transactional processes are described with what the model
+  already has.
+
 - **Voltfeld's flight-level map shows the whole company.** The README topology now starts at
   the Portfolio (`focus: "[[Portfolio]]"`, `radius: { up: 0, down: inf }`) instead of the
   train, so Manufacturing appears where the example's point is: contributing straight to
@@ -45,7 +56,7 @@ commit onward**. The current model is described by the reference itself — `REA
   `derived-from` are informational; a bare unit or person anchor in `interaction-of` /
   `agreement-of` is valid; `for-domain` may name a role (warn only on a person or plain
   unit); a board whose work system differs from `for-domain` is a note, never a warning.
-- **Plugin `dwsd-md` 0.4.3.**
+- **Plugin `dwsd-md` 0.5.0.**
 
 ## 2026-10-10
 

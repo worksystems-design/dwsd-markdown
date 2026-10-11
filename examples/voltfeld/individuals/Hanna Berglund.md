@@ -2,7 +2,7 @@
 type: individual
 role: Sales Lead
 reports-to: "[[Rolf Steinbach]]"
-member-of: "[[Sales]]"
+member-of: ["[[Sales]]", "[[Order to Delivery]]"]
 created_at: "2026-10-10"
 ---
 

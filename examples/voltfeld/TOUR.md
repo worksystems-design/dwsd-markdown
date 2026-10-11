@@ -4,7 +4,7 @@ This folder describes a company that builds EV chargers the way DWSD describes a
 organization: **one Markdown file per thing** — people, teams, boards, agreements. The
 company runs its product development as an Agile Release Train, borrowing parts of SAFe
 without adopting the framework; you do not need to know SAFe, Flight Levels, or YAML to take
-this tour. Seven stops, about ten minutes. At each stop: open the linked file, read it, come
+this tour. Eight stops, about fifteen minutes. At each stop: open the linked file, read it, come
 back. If this is your first DWSD example, take the [Goldcrust tour](../goldcrust-bakery/TOUR.md)
 first — it is smaller, and this one builds on what it shows.
 
@@ -155,6 +155,31 @@ and the locator says exactly where: a column, a group, the slot before one. Each
 is also anchored to a person or a team, so the same agent shows on a box in the org chart or
 the units view. And in every case the pattern is the same: the agent prepares, the people in
 the interaction decide.
+
+## Stop 8 — Factory and studio
+
+Open the [Customer Order Route](flight-routes/Customer%20Order%20Route.md). Most orders never
+need a person: entry, scheduling, production order and invoice are defined in the ERP and
+run there. That is the `ERP` band — **factory mode**. Seven orders in a hundred do not go
+through. The [Order Exception Agent](ai-agents/Order%20Exception%20Agent.md) flags them, and
+each leaves the factory as a case for the `Studio` band — **studio mode** — where people
+work it on the [Order Studio Board](visualizations/Order%20Studio%20Board.md) and send it
+back. The [Order Andon](agreements/Order%20Andon.md) sits on the edge between the two.
+
+Then open the [Order Exceptions Review](interactions/Order%20Exceptions%20Review.md) and the
+signal it produced,
+[Configuration Cases Pile Up in the Studio](signals/Configuration%20Cases%20Pile%20Up%20in%20the%20Studio.md).
+
+**Watch for:** two ways this goes wrong, and where the files guard against each.
+Ambiguous work run serially — the case that bounces between departments by mail — is
+*ineffective iteration*; that was Voltfeld before the andon, and the agreement's
+`Driver and Requirement` says so. Well-defined work run collaboratively — meetings about
+orders that would have gone through anyway — is *wasted attention*; the studio board shows
+only the cases, never the factory, and the huddle reviews the board without working the
+cases. (Both names come from Dynamic Work Modes.) And the studio does not end at the case:
+every case leaves a reason code, the monthly review turns the codes into signals, and the
+signal here points straight at the variant the platform keeps declining — the factory and
+the train looking at the same problem from two sides.
 
 ## Now you — your first three files
 

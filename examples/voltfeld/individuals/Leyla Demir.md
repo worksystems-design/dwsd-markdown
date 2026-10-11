@@ -2,7 +2,7 @@
 type: individual
 role: Production Planner
 reports-to: "[[Bastian Lorenz]]"
-member-of: "[[Manufacturing]]"
+member-of: ["[[Manufacturing]]", "[[Order to Delivery]]"]
 created_at: "2026-10-10"
 ---
 
