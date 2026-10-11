@@ -54,17 +54,26 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      column/lane/group are valid board content, not references to resolve.
    - **Locator** — `interaction-of` / `agreement-of` carry a locator
      `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole
-     board, a bare `[[Work System]]` for a work-system anchor, or
+     board, a bare `[[entity]]` — a work system, a **unit** or a **person** (two persons
+     make a 1:1) — for an entity anchor, or
      `[[Route]]/stage:itemType @ Band::in` for a **route stage**). Confirm the target
-     file exists; any `col:` / `lane:` / `group:` / `split:` segment names a unit present
+     file exists (a bare entity anchor that names a plain unit or a person is valid —
+     never flag it); any `col:` / `lane:` / `group:` / `split:` segment names a unit present
      in that board's YAML; a `stage:` segment names an `itemType @ Band` pair the route's
      `path:` (or a trigger's `generates:`) actually places in that band.
-   - **Board-binding consistency:** when an entity carries both `for-domain` (a work system)
-     and a board-position `interaction-of` / `agreement-of`, **warn** if the anchored board's
-     work system (its `visualization-of`) differs from `for-domain`.
+   - **`for-domain`** on any entity names a **work system or a role** (a list may mix
+     them) — both are valid; **warn** only when it names a person or a plain unit.
+   - **Board-binding consistency (informational):** when an entity carries both
+     `for-domain` (a work system) and a board-position `interaction-of` / `agreement-of`,
+     **note** — not warn — if the anchored board's work system (its `visualization-of`)
+     differs from `for-domain`. Cross-level on purpose is common (an FL2 domain meeting at
+     an FL1 board); list it so the author can confirm, but it never affects PASS/FAIL.
 4. **Ladder integrity** — every `derived-from` resolves; trace
    signal → insight → driver → proposal → organizational-decision-record → agreement(s)
-   chains and report breaks. `derived-from` is the shared emergence key (any entity may carry
+   chains and report breaks. Steps may be skipped: an agreement whose `derived-from`
+   names the **proposal** it was consented from (no ODR in between) is valid, and so is
+   an ODR without `derived-from` — report those as informational, not as breaks. A break
+   is a `derived-from` that does not resolve, or one that points *down* the ladder. `derived-from` is the shared emergence key (any entity may carry
    it); reading it in reverse from an ODR yields that decision's **bundle** of agreements.
 5. **Type coverage** (informational) — list which of the 16 types are present / absent
    (remember: work systems are `unit` whose `unit-type` includes `work-system`; meetings are

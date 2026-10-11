@@ -40,7 +40,12 @@ commit onward**. The current model is described by the reference itself — `REA
   `tags`, `status-category`), the three-deep limit, what `groups:` means at board, lane
   and group scope, and how locators reach into a group (flattened column-only groups vs.
   lane-hosting groups, and the lane × column cell). No change to the DSL itself.
-- **Plugin `dwsd-md` 0.4.2.**
+- **`org-validate` follows the spec.** The skill no longer warns on what the spec allows:
+  an agreement `derived-from` a proposal (no ODR in between) and an ODR without
+  `derived-from` are informational; a bare unit or person anchor in `interaction-of` /
+  `agreement-of` is valid; `for-domain` may name a role (warn only on a person or plain
+  unit); a board whose work system differs from `for-domain` is a note, never a warning.
+- **Plugin `dwsd-md` 0.4.3.**
 
 ## 2026-10-10
 
