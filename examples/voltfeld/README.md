@@ -1,14 +1,14 @@
 # Voltfeld — example organization
 
 A fictional maker of EV charging hardware, described in DWSD: an AC **Wallbox** line and a
-**DC Charger** line, developed by one Agile Release Train of six teams, built in a plant,
+**DC Charger** line, developed by one Agile Release Train of three product lines, built in a plant,
 sold and serviced by a commercial department — about 120 people, of whom this folder models
-the thirty that carry the structure. It is the second worked example next to the
+the thirty-six that carry the structure. It is the second worked example next to the
 [Goldcrust Bakery](../goldcrust-bakery/); where Goldcrust is small enough that the line and
 the work almost coincide, Voltfeld is the example where they **do not**.
 
 > **New here? [Take the tour](TOUR.md)** — seven stops, ten minutes: one engineer in two
-> pictures, a platform that serves two teams, the train's board, a route that stops at the
+> pictures, a platform that serves two product lines, the train's board, a route that stops at the
 > plant, two signals and a decision, the decision in two agreements, and an agent that
 > prepares while people decide. If this is your first DWSD example, start with the
 > [Goldcrust tour](../goldcrust-bakery/TOUR.md) instead — it is smaller.
@@ -28,7 +28,8 @@ rest of the company — the plant, the supply base, sales, field service — wor
 train, and that seam is where this example is interesting.
 
 DWSD describes this the way it describes any organization: the ART is a `unit` with
-`unit-type: [art, work-system]` at FL2; the teams are units at FL1; the portfolio is the FL3
+`unit-type: [art, work-system]` at FL2; its three product lines are work systems at FL2 beside it, each
+coordinating two teams that are plain units without a flightlevel; the portfolio is the FL3
 work system above. SAFe terms appear where Voltfeld uses them; nothing in the format depends
 on them.
 
@@ -49,16 +50,16 @@ Portfolio, beside the train, not inside it.
 <summary>The same map as plain text (renders everywhere, even without the DWSD renderer)</summary>
 
 ```
-FL3  Portfolio ◄────────────────────────────────────────────────┐
-        ▲ contributes-to                                        │
-FL2  Charger ART            plans, syncs, releases per PI       │
-        ▲          ▲            ▲              ▲                │
-FL1  Wallbox    DC Charger   Connectivity   System Integration  Manufacturing
-        ▲  ▲       ▲  ▲          ▲                              contributes straight up
-        │  └───────┼──┘          │                              to FL3: development and
-     HW Base       │             │                              production share no FL2
-     Firmware Platform ──────────┘
-
+FL3  Portfolio ◄──────────────────────────────────────────────┐
+        ▲ contributes-to                                      │
+FL2  Charger ART ◄──── Wallbox    DC Charger    Connectivity  │   plans, syncs,
+        ▲               ▲   ▲      ▲     ▲       ▲      ▲     │   releases per PI
+        │             Home Fleet  Power Site   Backend  App   │
+        │             └── six teams, not work systems ──┘     │
+FL1  System Integration                                       Manufacturing
+     HW Base ─────────► Wallbox, DC Charger                   contributes straight up
+     Firmware Platform ► Wallbox, DC Charger, Connectivity    to FL3: development and
+                                                              production share no FL2
      Supply Chain · Sales · Field Service — plain teams (no flightlevel)
 ```
 
@@ -67,9 +68,14 @@ FL1  Wallbox    DC Charger   Connectivity   System Integration  Manufacturing
 Two things to notice:
 
 - **Two platform work systems contribute to more than one.** [HW Base](work-systems/HW%20Base.md)
-  feeds both product teams; the [Firmware Platform](work-systems/Firmware%20Platform.md)
-  feeds both product teams *and* Connectivity. `contributes-to` is a list, and the edges
-  run laterally at FL1 — allowed, as long as nothing contributes *downward*.
+  feeds both hardware product lines; the [Firmware Platform](work-systems/Firmware%20Platform.md)
+  feeds those two *and* Connectivity. `contributes-to` is a list, and the edges run up from
+  FL1 to FL2. One level higher they run sideways: the three product lines contribute to the
+  Charger ART on the same level, and the train coordinates across them — allowed, as long as
+  nothing contributes *downward*. The six teams under the product lines are plain
+  `unit-type: team` units with `contributes-to`, not work systems: they have no flightlevel
+  and no board of their own; the [Wallbox Board](visualizations/Wallbox%20Board.md) gives
+  each Wallbox team a lane.
 - **Manufacturing has no FL2.** The [plant](work-systems/Manufacturing.md) is a work
   system — it coordinates a flow every day — but it is not in the ART. Its output is
   steered from the Portfolio directly. The ART coordinates development; the COO coordinates
@@ -93,7 +99,7 @@ radius: { up: 0, down: inf }
 ```
 
 **The units** — `member-of`, units only. The same engineers are members of the six
-cross-functional ART teams; the two engineering departments appear as boxes with no team
+cross-functional teams inside the train's product lines; the two engineering departments appear as boxes with no team
 inside them, because nobody *works* there — their `line` chip says so:
 
 ```dwsd.units
@@ -149,10 +155,11 @@ or the units view. In every case the agent prepares and the people decide.
 - **Structure** — [`work-systems/`](work-systems/): nine work systems; the
   [Charger ART](work-systems/Charger%20ART.md) and [HW Base](work-systems/HW%20Base.md)
   carry the fullest domain descriptions. [`units/`](units/) holds the company root, four
-  departments and three plain teams. [`roles/`](roles/) holds the ART roles, the
+  departments, three plain teams outside the train and the six teams of the product
+  lines. [`roles/`](roles/) holds the ART roles, the
   Manufacturing Lead and the [Production Liaison](roles/Production%20Liaison.md) — two roles
   one person keeps in two contexts — including [Business Owner](roles/Business%20Owner.md), a role
-  **shared** by four keepers. [`individuals/`](individuals/): thirty people, one of them the
+  **shared** by four keepers. [`individuals/`](individuals/): thirty-six people, one of them the
   vacancy [NA1](individuals/NA1.md).
 - **Flow** — [`visualizations/`](visualizations/): five boards. The
   [Charger ART Board](visualizations/Charger%20ART%20Board.md) is the train's program board

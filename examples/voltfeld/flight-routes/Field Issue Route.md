@@ -7,7 +7,8 @@ How a [[Field Issue]] travels bottom-up — the mirror of the [[Epic Route]]. It
 outside the flight levels: `Field` is a **custom band without a flight level**, because
 [[Field Service]] is a plain team, not a work system. The week's issues are brought to the
 [[Field Issue Triage]], where the route **forks**: a safety or fleet-down issue becomes a
-**hotfix** in the ART board's expedite lane and bypasses the PI; everything else becomes a
+**hotfix** in the ART board's expedite lane, goes to the expedite lane of the product line
+concerned, and bypasses the PI; everything else becomes a
 [[Feature]] and waits for PI planning like any other. The hotfix reaches the fleet over the
 air; what happened to each report flows back to Field Service, who close it with the
 customer.
@@ -23,6 +24,8 @@ bands:
   - name: Field
   - name: Train
     fl: 2
+  - name: Product Lines
+    fl: 2
   - name: Teams
     fl: 1
 triggers:
@@ -36,8 +39,10 @@ path:
   - issue @ Train -> hotfix @ Train
   # everything else becomes a feature for the next PI
   - issue @ Train -> feature @ Train
-  # a team takes the hotfix immediately
-  - hotfix @ Train --> hotfix @ Teams
+  # the product line takes the hotfix into its expedite lane
+  - hotfix @ Train --> hotfix @ Product Lines
+  # one of its teams fixes it immediately
+  - hotfix @ Product Lines --> hotfix @ Teams
   # the verified fix flows back into the issue
   - hotfix @ Teams ..> issue @ Train
   # the hotfix reaches the fleet over the air
@@ -52,9 +57,9 @@ bound-to:
           - issue: "lane:Field Issue/col:Triage"
           - hotfix: "lane:Field Issue/col:Fix-in-Progress"
           - feature: "lane:Feature/group:Preparation/col:Program Backlog"
-  - band: Teams
+  - band: Product Lines
     boards:
-      - board: "[[Wallbox Team Board]]"
+      - board: "[[Wallbox Board]]"
         stages:
-          - hotfix: "col:In Progress"
+          - hotfix: "lane:Hotfix/col:In Progress"
 ```

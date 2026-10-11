@@ -11,7 +11,7 @@ created_at: "2026-10-10"
 
 ## Driver and Requirement
 
-A PI is a promise six teams make together. If features can enter mid-PI whenever someone
+A PI is a promise a whole train makes together. If features can enter mid-PI whenever someone
 asks, the dependency board from PI planning is fiction within a month and the platform
 teams are pulled in three directions. The train needs a rule for what may change inside
 the ten weeks, and who may change it.

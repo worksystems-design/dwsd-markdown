@@ -40,7 +40,7 @@ The ART coordinates development; the plant is coordinated by the COO.
 - Build and end-of-line test wallboxes and DC chargers to the volume plan.
 - Ramp each new variant: fixtures, work instructions, production test, first-article
   inspection.
-- Feed design-for-manufacturing findings back to [[HW Base]] and the product teams.
+- Feed design-for-manufacturing findings back to [[HW Base]] and the product lines.
 
 ## Customers and Deliverables
 

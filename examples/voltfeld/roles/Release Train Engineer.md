@@ -12,7 +12,7 @@ created_at: "2026-10-10"
 
 ### Driver
 
-Six teams, two of them platforms serving the other four, cannot keep their dependencies
+Three product lines, two platforms serving them and an integration team cannot keep their dependencies
 straight by talking in corridors. The [[Charger ART]] needs someone whose job is the train
 itself, not any one wagon.
 
@@ -30,7 +30,7 @@ Borrowed from SAFe, where the role has the same name.
 
 ## Concerns
 
-Cross-team dependencies — above all between the two product teams and [[HW Base]] and the
+Cross-team dependencies — above all between the two product lines and [[HW Base]] and the
 [[Firmware Platform]]; PI predictability; the integration dates [[System Integration]]
 plans around; and lately, the lead times from [[Supply Chain]] that no ART event covers.
 

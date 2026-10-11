@@ -9,7 +9,7 @@ created_at: "2026-10-10"
 From [[Product Management]] splitting an [[Epic]] into pieces one PI can hold, and from
 market requests that arrive feature-sized — a payment terminal variant, a new OCPP
 profile, a quieter fan curve. One feature is one capability a customer can see, spanning
-as many teams as it needs: a hardware change in [[HW Base]], firmware in the product team,
+as many teams as it needs: a hardware change in [[HW Base]], firmware in the product line,
 a backend change in [[Connectivity]].
 
 ## Why are you working on these? What is the customer value?

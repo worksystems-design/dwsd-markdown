@@ -17,6 +17,16 @@ commit onward**. The current model is described by the reference itself — `REA
   Liaison, the ramp-readiness review on the Manufacturing Lead. It is the inverse of the
   shared Business Owner role (one role, four people). A role may carry `derived-from` like
   any entity; nothing in the spec changes.
+- **Product lines on FL2, teams that are not work systems.** Voltfeld's Wallbox, DC Charger
+  and Connectivity become FL2 product lines (`unit-type: [product-line, work-system]`),
+  `member-of` and `contributes-to` the Charger ART on the same level: the train coordinates
+  across them, each coordinates two teams of its own. The six teams are plain
+  `unit-type: team` units with `member-of` and `contributes-to` the product line — no
+  flightlevel, no board; `contributes-to` on a plain unit was always allowed
+  (`types/unit.md`). The platforms now feed the product lines from FL1 upward. The Wallbox
+  Team Board becomes the FL2 Wallbox Board with one lane per team and an expedite lane;
+  the Feature and Field Issue routes gain a `Product Lines` band and bind it there, using
+  the lane × column cell form (`lane:Wallbox Home/col:In Progress`). Six new people.
 - **Plugin `dwsd-md` 0.4.0.**
 
 ## 2026-10-10

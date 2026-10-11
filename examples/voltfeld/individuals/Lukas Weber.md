@@ -6,7 +6,7 @@ member-of: "[[Wallbox]]"
 created_at: "2026-10-10"
 ---
 
-Lukas keeps the [[Product Owner Wallbox]] role: the team backlog of the [[Wallbox]] team,
+Lukas keeps the [[Product Owner Wallbox]] role: the backlog of the [[Wallbox]] product line,
 split from the features [[Product Management]] ranks for the ART. Reports to
 [[Niamh Byrne]].
 

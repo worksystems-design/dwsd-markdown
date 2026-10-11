@@ -1,7 +1,7 @@
 ---
 type: unit
-unit-type: [team, work-system]
-flightlevel: 1
+unit-type: [product-line, work-system]
+flightlevel: 2
 member-of: "[[Charger ART]]"
 contributes-to: "[[Charger ART]]"
 delegator: "[[Marit Solberg]]"
@@ -28,6 +28,10 @@ radius: { up: 1, down: inf }
 
 Develop the AC wallbox product line — 7 to 22 kW chargers for homes, workplaces and
 semi-public parking — from feature to release-ready variant.
+
+An FL2 **product line**: it coordinates two teams, [[Wallbox Home]] and [[Wallbox Fleet]], on the [[Wallbox Board]],
+and contributes to the [[Charger ART]], which coordinates across all three product lines
+on the same level.
 
 ## Key Responsibilities
 

@@ -17,7 +17,7 @@ answers the team's questions daily — not a committee at FL2.
 
 ### Requirement
 
-A product owner for the Wallbox team: owns the team backlog, accepts stories, speaks for
+A product owner for the Wallbox product line: owns the team backlog, accepts stories, speaks for
 installers and home owners.
 
 ## Description
@@ -34,7 +34,7 @@ team builds on.
 
 ## Accountabilities
 
-- Own the Wallbox team backlog; accept stories.
+- Own the Wallbox product-line backlog; accept stories.
 - Represent the team's content at PI planning and the system demo.
 
 ## Decision Rights

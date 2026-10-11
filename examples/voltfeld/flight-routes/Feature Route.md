@@ -3,8 +3,9 @@ type: flight-route
 created_at: "2026-10-10"
 ---
 
-How a [[Feature]] travels through one PI — and where it leaves the train. A team takes it
-at PI planning and breaks it into stories; progress and demo results flow back into the
+How a [[Feature]] travels through one PI — and where it leaves the train. At PI planning
+the train hands it to a product line, which gives it to one of its teams; the team breaks it
+into stories; progress and demo results flow back into the
 feature at the weekly [[ART Sync]] and the biweekly [[System Demo]]; at the end of the PI
 the features bundle into one system **release**, a second item type the route generates.
 The release is then **copied to the plant**: drawings, BOM and production test firmware land
@@ -22,6 +23,8 @@ for-domain: "[[Charger ART]]"
 bands:
   - name: Train
     fl: 2
+  - name: Product Lines
+    fl: 2
   - name: Teams
     fl: 1
   - name: Plant
@@ -31,12 +34,16 @@ triggers:
     generates:
       - feature @ Train
 path:
-  # a team takes the feature at PI planning
-  - feature @ Train --> feature @ Teams
+  # a product line takes the feature at PI planning
+  - feature @ Train --> feature @ Product Lines
+  # the product line gives it to one of its teams
+  - feature @ Product Lines --> feature @ Teams
   # the team breaks it into stories
   - feature @ Teams -> story @ Teams
-  # story progress and demo results flow back into the feature (ART Sync, System Demo)
-  - story @ Teams ..> feature @ Train
+  # story progress flows back into the product line's feature
+  - story @ Teams ..> feature @ Product Lines
+  # feature progress and demo results flow back to the train (ART Sync, System Demo)
+  - feature @ Product Lines ..> feature @ Train
   # the PI's features bundle into one system release
   - feature @ Train -> release @ Train
   # the release lands at the plant as drawings, BOM and production test firmware
@@ -51,11 +58,13 @@ bound-to:
         stages:
           - feature: "lane:Feature/group:In PI/col:Implementing"
           - release: "lane:Feature/group:Release/col:Released"
+  - band: Product Lines
+    boards:
+      - board: "[[Wallbox Board]]"
+        stages:
+          - feature: "lane:Wallbox Home/col:In Progress"
   - band: Teams
     boards:
-      - board: "[[Wallbox Team Board]]"
-        stages:
-          - story: "col:In Progress"
       - board: "[[HW Base Board]]"
   - band: Plant
     boards:

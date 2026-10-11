@@ -14,8 +14,8 @@ created_at: "2026-10-10"
 
 ## Why are we doing this meeting?
 
-Keep the six teams in step inside the PI: where each feature stands, which integration
-dates hold, where the two product teams are pulling on the same platform team at once. The
+Keep the product lines and teams in step inside the PI: where each feature stands, which integration
+dates hold, where the two product lines are pulling on the same platform team at once. The
 [[Release Train Engineer]] runs it; the product owners, the [[System Architect]] and one
 person per team attend. Forty-five minutes, weekly — the train's heartbeat between PI
 plannings.
@@ -42,6 +42,6 @@ PI planning, and the rig schedule from [[System Integration]].
 |----------------------------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------|
 | Where is each feature                  | current picture per team                                  | [[Charger ART Board]]#Charger ART/lane:Feature/group:In PI/col:Implementing::in          |
 | Dependencies and integration dates     | slipped dates raised with owners                          | [[Charger ART Board]]#Charger ART/lane:Feature/group:In PI/col:Integrating::before       |
-| Platform pull conflicts                | sequence agreed between the platforms and product teams   | [[HW Base Board]]#HW Base/group:Design/col:Detailed Design::in                           |
+| Platform pull conflicts                | sequence agreed between the platforms and product lines   | [[HW Base Board]]#HW Base/group:Design/col:Detailed Design::in                           |
 | Lift story status into the feature     | FL2 feature cards current                                 | [[Feature Route]]/stage:story @ Teams::after                                             |
 | Risks to the PI objectives             | risks owned, accepted or escalated                        | [[Charger ART Board]]#Charger ART::in                                                    |

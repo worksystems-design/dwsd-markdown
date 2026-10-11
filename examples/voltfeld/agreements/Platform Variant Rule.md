@@ -25,7 +25,7 @@ the forks would have come back within two PIs.
 ## Who is responsible for what?
 
 - [[HW Base]] and the [[Firmware Platform]] — own the shared components and their variant
-  roadmap; serve both product teams from one design.
+  roadmap; serve both product lines from one design.
 - [[Wallbox]] and [[DC Charger]] — build on the platform; may request a variant, may not
   fork a platform component.
 - [[System Architect]] — decides what is platform and what is product, and arbitrates
@@ -35,9 +35,9 @@ the forks would have come back within two PIs.
 
 The power and metering module, control board, enclosure base, firmware base, bootloader,
 OTA client and protocol stack are **platform**: one design, versioned, owned by the
-platform teams. A product team needing something different files a variant request with
+platform teams. A product line needing something different files a variant request with
 the platform team; the [[System Architect]] decides within one iteration whether it becomes
-a platform variant, a product-side addition on top, or is declined. No product team
+a platform variant, a product-side addition on top, or is declined. No product line
 maintains a copy of a platform component.
 
 This agreement is **organizational** — it is about domains, not about a board column. It is

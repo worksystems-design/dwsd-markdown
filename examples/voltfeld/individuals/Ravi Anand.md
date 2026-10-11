@@ -2,11 +2,11 @@
 type: individual
 role: Backend Developer
 reports-to: "[[Lior Katz]]"
-member-of: "[[Connectivity]]"
+member-of: "[[Charge Point Backend]]"
 created_at: "2026-10-10"
 ---
 
-Ravi owns the OTA pipeline and the operator app in [[Connectivity]], and is the backend's
+Ravi owns the OTA pipeline in [[Charge Point Backend]], a team of [[Connectivity]], and is the backend's
 counterpart to the [[Firmware Platform]] for everything device-side. Reports to
 [[Lior Katz]].
 

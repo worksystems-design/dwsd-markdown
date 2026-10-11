@@ -2,11 +2,12 @@
 type: individual
 role: Backend Developer
 reports-to: "[[Lior Katz]]"
-member-of: "[[Connectivity]]"
+member-of: "[[Charge Point Backend]]"
 created_at: "2026-10-10"
 ---
 
-Chiara builds the fleet backend and the OCPP integration in [[Connectivity]]. Reports to
+Chiara builds the fleet backend and the OCPP integration in [[Charge Point Backend]], a team of the [[Connectivity]]
+product line. Reports to
 [[Lior Katz]].
 
 ## In context

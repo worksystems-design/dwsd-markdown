@@ -15,7 +15,8 @@ first — it is smaller, and this one builds on what it shows.
 
 Open [Daria Novak](individuals/Daria%20Novak.md). Two lines matter: she **reports to**
 [Kaspar Reinholt](individuals/Kaspar%20Reinholt.md), head of Hardware Engineering — and she is a
-**member of** the [Wallbox](work-systems/Wallbox.md) team, inside the Charger ART.
+**member of** the [Wallbox Fleet](units/Wallbox%20Fleet.md) team, in the
+[Wallbox](work-systems/Wallbox.md) product line inside the Charger ART.
 
 Those two lines draw two different pictures. Her reporting line, two levels up:
 
@@ -29,8 +30,8 @@ And the team she works in, inside the train:
 
 ```dwsd.units
 mode: infer
-focus: "[[Wallbox]]"
-radius: { up: 1, down: 0 }
+focus: "[[Wallbox Fleet]]"
+radius: { up: 2, down: 0 }
 ```
 
 **Watch for:** nothing in either fence names a person or a team. Both pictures are read off
@@ -54,8 +55,11 @@ focus: "[[HW Base]]"
 radius: 1
 ```
 
-**Watch for:** the edges run sideways. All three are FL1 teams; a platform does not sit
-*above* the teams it serves, it sits *beside* them and feeds them. And read HW Base's *Key
+**Watch for:** the edges run up. HW Base and the Firmware Platform are FL1 work systems;
+Wallbox, DC Charger and Connectivity are FL2 product lines, each coordinating two teams of its
+own. A platform belongs to none of the product lines it feeds. One level higher the edges run
+sideways: the product lines contribute to the [Charger ART](work-systems/Charger%20ART.md),
+which sits on the same level and coordinates across them. And read HW Base's *Key
 Challenges*: two customers with different cadences, a mold that has to be ordered before the
 design is finished. Keep that mold in mind — it comes back at stop 5.
 
@@ -75,8 +79,8 @@ team". Two directions, one surface: the board reaches out, the files reach in.
 ## Stop 4 — A route that stops at the plant
 
 Open [Feature Route](flight-routes/Feature%20Route.md). A feature travels from the train to a
-team and back as stories; at the end of the PI the features bundle into a **release**, and the
-release is copied to a third band, `Plant` — drawings, BOM and test firmware arrive at
+product line, from there to one of its teams, and back as stories; at the end of the PI the
+features bundle into a **release**, and the release is copied to a fourth band, `Plant` — drawings, BOM and test firmware arrive at
 [Manufacturing](work-systems/Manufacturing.md), who build the chargers that ship.
 
 **Watch for:** read the `Plant` band twice. The release arrives (`-->`), the chargers leave
@@ -176,7 +180,7 @@ That's it. You've started.
 - An open thread no one has interpreted yet:
   [Variant Request Declined Three Times](signals/Variant%20Request%20Declined%20Three%20Times.md)
   — the [Platform Variant Rule](agreements/Platform%20Variant%20Rule.md) is doing what it was
-  written to do, and a product team is quietly routing around it. The ladder from stop 5
+  written to do, and a product line is quietly routing around it. The ladder from stop 5
   starts here, unclimbed. What would you do?
 - The rules behind it all: [conventions](../../conventions.md) and the
   [type index](../../README.md#types).

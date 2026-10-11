@@ -16,7 +16,7 @@ created_at: "2026-10-10"
 
 ### Driver
 
-An ART that plans ten weeks of work for six teams needs the people who carry the business
+An ART that plans ten weeks of work for three product lines and their teams needs the people who carry the business
 outcome in the room — to set priorities, assign business value, and accept the result.
 
 ### Requirement

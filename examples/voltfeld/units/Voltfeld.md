@@ -20,7 +20,7 @@ Two trees hang off this root, and they are **not the same tree**:
   C-level leaders under him, and the engineers reporting to the heads of
   [[Hardware Engineering]] and [[Software Engineering]].
 - **The work** (`member-of`, drawn by the units view): the [[Portfolio]] (FL3), the
-  [[Charger ART]] (FL2) with its six teams (FL1), and [[Operations]] and [[Commercial]]
+  [[Charger ART]] (FL2) with its three product lines (FL2, two teams each) and three FL1 work systems, and [[Operations]] and [[Commercial]]
   with their teams.
 
 The same engineer appears in both — reporting to a department head in one picture, a

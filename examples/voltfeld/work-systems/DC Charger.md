@@ -1,7 +1,7 @@
 ---
 type: unit
-unit-type: [team, work-system]
-flightlevel: 1
+unit-type: [product-line, work-system]
+flightlevel: 2
 member-of: "[[Charger ART]]"
 contributes-to: "[[Charger ART]]"
 delegator: "[[Marit Solberg]]"
@@ -29,6 +29,10 @@ radius: { up: 1, down: inf }
 Develop the DC fast-charger product line — 50 to 150 kW systems for depots and public
 sites — including the power cabinet, the dispenser and the product firmware on top of the
 shared platforms.
+
+An FL2 **product line**: it coordinates two teams, [[DC Power Stage]] and [[DC Site Controller]], at PI planning and the [[ART Sync]] — the example draws no board for it,
+and contributes to the [[Charger ART]], which coordinates across all three product lines
+on the same level.
 
 ## Key Responsibilities
 

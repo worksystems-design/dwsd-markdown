@@ -35,7 +35,7 @@ groups:
       - "[[DFM Review]]"
     columns:
       - name: Design Review
-        check: "Interface to both product teams confirmed with the System Architect"
+        check: "Interface to both product lines confirmed with the System Architect"
       - name: DFM Check
         agreements:
           - "No drawing goes to tooling without a DFM review with Manufacturing"

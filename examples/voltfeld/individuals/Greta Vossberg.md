@@ -8,7 +8,7 @@ created_at: "2026-10-10"
 
 Greta keeps the [[Release Train Engineer]] role: she facilitates PI planning, the weekly ART
 sync, the system demo and inspect-and-adapt for the [[Charger ART]], and chases the
-cross-team dependencies between the product teams and the platforms.
+cross-team dependencies between the product lines and the platforms.
 
 ## In context
 

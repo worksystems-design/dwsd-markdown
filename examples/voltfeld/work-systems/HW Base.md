@@ -37,7 +37,7 @@ in the same release instead of being built twice.
 ## Key Responsibilities
 
 - Own the shared power module, metering, control board and enclosure base.
-- Keep a variant roadmap that serves both product teams' PI commitments.
+- Keep a variant roadmap that serves both product lines' PI commitments.
 - Run design-for-manufacturing reviews with [[Manufacturing]] before a tooling release.
 - Specify long-lead parts and tooling early enough for [[Supply Chain]] to source them.
 
@@ -64,7 +64,7 @@ safety pre-tests.
 - Two customers with different cadences and priorities pull on one team; the ART decides
   the order, but every PI planning is a negotiation.
 - A platform change ripples into both product lines' certification scope.
-- Tooling has to be released before the product teams have finished integrating — the
+- Tooling has to be released before the product lines have finished integrating — the
   team commits to a mold while the design is still moving.
 
 ## Key Resources
@@ -74,7 +74,7 @@ safety pre-tests.
 ## Delegator Responsibilities
 
 - [[Marit Solberg]] decides what is platform and what is product, and arbitrates when the
-  two product teams' needs collide.
+  two product lines' needs collide.
 
 ## Competencies, Qualities and Skills
 

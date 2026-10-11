@@ -2,12 +2,12 @@
 type: individual
 role: Embedded Developer
 reports-to: "[[Lior Katz]]"
-member-of: "[[Wallbox]]"
+member-of: "[[Wallbox Home]]"
 created_at: "2026-10-10"
 ---
 
-Amina writes the [[Wallbox]] product firmware on top of the [[Firmware Platform]] base.
-Reports to [[Lior Katz]]; works in the team.
+Amina writes the residential [[Wallbox]] firmware in [[Wallbox Home]], on top of the
+[[Firmware Platform]] base. Reports to [[Lior Katz]]; works in the team.
 
 ## In context
 

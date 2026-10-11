@@ -26,10 +26,12 @@ radius: { up: 1, down: inf }
 
 ## Purpose
 
-Coordinate the six teams that develop Voltfeld's chargers so that features land in
+Coordinate the three product lines and three FL1 work systems that develop Voltfeld's chargers so that features land in
 releases together — hardware, firmware and backend in step — on a ten-week Program
-Increment cadence. The ART is Voltfeld's one FL2 work system: it plans, syncs and
-demonstrates across teams; the teams build.
+Increment cadence. The ART coordinates across the three FL2 product lines —
+[[Wallbox]], [[DC Charger]], [[Connectivity]] — which sit on its level and contribute to it;
+it plans, syncs, integrates and releases across them, and the product lines coordinate their
+own teams.
 
 ## Key Responsibilities
 
@@ -37,7 +39,7 @@ demonstrates across teams; the teams build.
   workshop, facilitated by the [[Release Train Engineer]].
 - Turn portfolio epics into a ranked feature backlog ([[Product Management]]) and an
   architectural runway ([[System Architect]]).
-- Resolve cross-team dependencies — above all between the two product teams and the
+- Resolve cross-team dependencies — above all between the two product lines and the
   two platform teams they draw on, [[HW Base]] and [[Firmware Platform]].
 - Release: integrate, certify and ship a system release at the end of each PI.
 
@@ -62,14 +64,15 @@ certification slots.
 
 - Enclosure and tooling lead times exceed one PI; the ART plans in ten-week increments
   while Supply Chain works on fourteen-week lead times and is not in the room at PI planning.
-- Two product teams pull on the same two platform teams with different priorities.
+- Two product lines pull on the same two platform teams with different priorities.
 - Hardware integration happens late — the first time a new power stage meets production
   firmware is on the system rig, not before.
 
 ## Key Resources
 
-- Six teams: [[Wallbox]], [[DC Charger]], [[Connectivity]], [[HW Base]],
-  [[Firmware Platform]], [[System Integration]]; the ART roles [[Release Train Engineer]],
+- Three product lines ([[Wallbox]], [[DC Charger]], [[Connectivity]], each with two
+  teams) and three FL1 work systems ([[HW Base]], [[Firmware Platform]],
+  [[System Integration]]); the ART roles [[Release Train Engineer]],
   [[Product Management]], [[System Architect]]; the HIL and system test rigs.
 
 ## Delegator Responsibilities

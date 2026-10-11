@@ -53,7 +53,7 @@ Depends on [[HW Base]] for control-board revisions and test hardware, and on
 
 ## Key Challenges
 
-- Three customers: the product teams want features, Connectivity wants protocol stability,
+- Three customers: the product lines want features, Connectivity wants protocol stability,
   and a security fix has to reach all of them in one OTA wave.
 
 ## Key Metrics and Monitoring

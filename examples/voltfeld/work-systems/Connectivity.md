@@ -1,7 +1,7 @@
 ---
 type: unit
-unit-type: [team, work-system]
-flightlevel: 1
+unit-type: [product-line, work-system]
+flightlevel: 2
 member-of: "[[Charger ART]]"
 contributes-to: "[[Charger ART]]"
 delegator: "[[Marit Solberg]]"
@@ -29,6 +29,10 @@ radius: { up: 1, down: inf }
 Build and run the cloud side of every Voltfeld charger: the fleet backend, the OCPP
 connection to charge-point operators, the operator and end-user apps, and over-the-air
 updates.
+
+An FL2 **product line**: it coordinates two teams, [[Charge Point Backend]] and [[Driver App]], at PI planning and the [[ART Sync]] — the example draws no board for it,
+and contributes to the [[Charger ART]], which coordinates across all three product lines
+on the same level.
 
 ## Key Responsibilities
 
