@@ -40,7 +40,7 @@ renders it live; in plain Markdown the same block still reads as a YAML document
 | `interactions` | string \| string list | Meeting / interaction pointers |
 | `columns` | list | The columns (see below) |
 | `lanes` | list | The swimlanes (see below) |
-| `groups` | list | Group blocks banding columns together |
+| `groups` | list | Group blocks banding columns together (see below) |
 
 **Columns** — each entry is a bare name (`- Backlog`) or an object:
 
@@ -59,6 +59,21 @@ renders it live; in plain Markdown the same block still reads as a YAML document
 **both** min and max), `status-category`, `tags`, `agreements`, `interactions`, and
 lane-local `columns` / `groups`. Lanes are **not** bound to a flight-item-type; a
 "swimlane per item type" is just a `named` lane named after the type.
+
+**Groups** — each entry is an object with a required `name` and any of `columns`,
+`lanes` and `groups` (its children, by kind), plus optional `agreements`, `interactions`,
+`tags` and `status-category` (a lozenge on the group band, from the same closed set as
+columns). Groups nest at most **three** deep. The word `groups:` means something different
+at each scope: at **board level** it bands board columns; at **lane level** it is part of
+the lane's children; inside a **group** it holds sub-groups.
+
+**Locators into a group.** A group that only bands columns is flattened: its columns
+become board columns that remember their group, so `col:Name` reaches them directly. A
+group that hosts lanes is a real container and appears in the path, e.g.
+`group:Delivery/lane:Bob/col:Review`. Inside a lane the same holds:
+`lane:Feature/group:Preparation/col:Program Backlog`. A `lane:L/col:C` path that meets a
+board-wide column resolves to that lane × column cell — write the path, the cell is what
+the resolver returns.
 
 **Inside-out / outside-in.** A board node can reach *outward* with inline `agreements:` /
 `interactions:` (the **inside-out** direction — terse relationships that live and die with

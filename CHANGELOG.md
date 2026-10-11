@@ -35,7 +35,12 @@ commit onward**. The current model is described by the reference itself — `REA
   carry no `member-of`. People are `member-of` their site and their work system (a list).
   `conventions.md` (Structure vs. flow) now says it outright: the unit tree need not mirror
   the topology; cut it by the dimension the organization actually groups by.
-- **Plugin `dwsd-md` 0.4.1.**
+- **Board groups documented on the spec page.** `types/visualization.md` now lists the
+  group fields (`name`, `columns` / `lanes` / `groups`, `agreements`, `interactions`,
+  `tags`, `status-category`), the three-deep limit, what `groups:` means at board, lane
+  and group scope, and how locators reach into a group (flattened column-only groups vs.
+  lane-hosting groups, and the lane × column cell). No change to the DSL itself.
+- **Plugin `dwsd-md` 0.4.2.**
 
 ## 2026-10-10
 
