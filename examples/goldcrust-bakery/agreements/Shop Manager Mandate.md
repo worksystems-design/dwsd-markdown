@@ -31,9 +31,12 @@ Each shop manager — [[Lena Frei]] as [[Market Street Shop Manager]], [[Selin A
 agreed band, and next-day replenishment quantities without prior sign-off. Range and
 pricing sit outside the mandate: the [[Head Baker]] curates the range, and changing it
 is a [[Bakery Strategy]] decision under the [[Daily Range Cap]]. One mandate, two roles:
-the agreement governs both location roles at once — its `for-domain` names the domain
-([[Bakery Operations]]) **and** the two roles, so it also shows on the box of whoever
-keeps each role: today Lena and Selin.
+the agreement governs both location roles at once.
+
+> [!NOTE]
+> **Modeling note.** The agreement's `for-domain` names the domain ([[Bakery Operations]])
+> **and** the two roles, so it also shows on the box of whoever keeps each role: today
+> Lena and Selin.
 
 ## Evaluation Criteria
 

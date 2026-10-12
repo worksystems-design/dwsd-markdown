@@ -4,9 +4,8 @@ unit-type: company
 created_at: "2026-10-10"
 ---
 
-Voltfeld is the company as a whole — the structural root everything else belongs to. Its
-`unit-type` is just `company`: no `work-system`, no `flightlevel`. It groups; it does not
-coordinate a flow of work.
+Voltfeld is the company as a whole — the structural root everything else belongs to. It
+groups; it does not coordinate a flow of work.
 
 Voltfeld builds EV charging hardware: an AC [[Wallbox]] line for homes and workplaces and a
 [[DC Charger]] line for depots and public sites, both connected to a fleet backend. About
@@ -16,16 +15,21 @@ SAFe without adopting the whole framework.
 
 Two trees hang off this root, and they are **not the same tree**:
 
-- **The line** (`reports-to`, drawn by the org chart): [[Henrik Dahl]] at the top, four
-  C-level leaders under him, and the engineers reporting to the heads of
-  [[Hardware Engineering]] and [[Software Engineering]].
-- **The work** (`member-of`, drawn by the units view): the [[Portfolio]] (FL3), the
-  [[Charger ART]] (FL2) with its three product lines (FL2, two teams each) and three FL1 work systems, and [[Operations]] and [[Commercial]]
-  with their teams.
+- **The line**: [[Henrik Dahl]] at the top, four C-level leaders under him, and the
+  engineers reporting to the heads of [[Hardware Engineering]] and
+  [[Software Engineering]].
+- **The work**: the [[Portfolio]] (FL3), the [[Charger ART]] (FL2) with its three product
+  lines (FL2, two teams each) and three FL1 work systems, and [[Operations]] and
+  [[Commercial]] with their teams.
 
 The same engineer appears in both — reporting to a department head in one picture, a
-member of a cross-functional team in the other. The standalone views are
-`Voltfeld Org Chart.dwsd-orgchart` and `Voltfeld Units.dwsd-units` at the org root.
+member of a cross-functional team in the other.
+
+> [!NOTE]
+> **Modeling note.** Its `unit-type` is just `company`: no `work-system`, no `flightlevel`.
+> The line is the `reports-to` tree, drawn by the org chart; the work is the `member-of`
+> tree, drawn by the units view. The standalone views are
+> `Voltfeld Org Chart.dwsd-orgchart` and `Voltfeld Units.dwsd-units` at the org root.
 
 ## In context
 

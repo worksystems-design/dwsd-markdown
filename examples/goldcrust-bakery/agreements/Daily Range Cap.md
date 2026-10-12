@@ -28,7 +28,11 @@ stretches the [[Bakehouse]] thinner. The range needs a WIP limit like any other 
 The standing daily range holds **at most twelve products**. A [[New Product Introduction]]
 enters only by replacing an existing product, or explicitly time-boxed as a seasonal
 special. The check happens *before* a range bet is `Decided` on the
-[[Bakery Strategy Board]] — which is exactly where this agreement anchors.
+[[Bakery Strategy Board]].
+
+> [!NOTE]
+> **Modeling note.** The agreement anchors exactly there: `::before` the `Decided` column
+> of the [[Bakery Strategy Board]].
 
 ## Evaluation Criteria
 

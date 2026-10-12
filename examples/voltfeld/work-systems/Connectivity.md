@@ -30,9 +30,12 @@ Build and run the cloud side of every Voltfeld charger: the fleet backend, the O
 connection to charge-point operators, the operator and end-user apps, and over-the-air
 updates.
 
-An FL2 **product line**: it coordinates two teams, [[Charge Point Backend]] and [[Driver App]], at PI planning and the [[ART Sync]] — the example draws no board for it,
-and contributes to the [[Charger ART]], which coordinates across all three product lines
-on the same level.
+An FL2 **product line**: it coordinates two teams, [[Charge Point Backend]] and
+[[Driver App]], at PI planning and the [[ART Sync]], and contributes to the
+[[Charger ART]], which coordinates across all three product lines on the same level.
+
+> [!NOTE]
+> **Modeling note.** The example draws no board for Connectivity.
 
 ## Key Responsibilities
 

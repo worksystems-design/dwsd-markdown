@@ -33,9 +33,12 @@ falls out. This work system exists for those: a defined trigger (the
 out. That part is **studio mode**. Neither the ERP nor the line organization describes it;
 here it is a work system of its own.
 
-It has no `member-of`: its people come from three departments — [[Sales]],
-[[Manufacturing]] and [[Supply Chain]] — and stay there. The work system is the flow they
-share, not a unit they belong to.
+Its people come from three departments — [[Sales]], [[Manufacturing]] and
+[[Supply Chain]] — and stay there. The work system is the flow they share, not a unit they
+belong to.
+
+> [!NOTE]
+> **Modeling note.** The work system has no `member-of`.
 
 ## Key Responsibilities
 

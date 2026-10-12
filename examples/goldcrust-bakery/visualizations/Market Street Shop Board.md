@@ -8,9 +8,7 @@ created_at: "2026-06-28"
 
 The FL1 retail board for the [[Market Street Shop]] — the morning dispatch arrives, sells
 through the day, and the closing count becomes tomorrow's [[Daily Replenishment Order]]. The
-`Sold-Out` column is where the [[Sourdough Sold Out Before 9am]] signal shows up. `Incoming`
-carries an inline (inside-out) pointer to the [[Counter Handover]], which also anchors here
-from its own file (outside-in).
+`Sold-Out` column is where the [[Sourdough Sold Out Before 9am]] signal shows up.
 
 ```dwsd.board
 title: Market Street Shop
@@ -29,3 +27,7 @@ columns:
   - name: Reorder
     status-category: done
 ```
+
+> [!NOTE]
+> **Modeling note.** `Incoming` carries an inline (inside-out) pointer to the
+> [[Counter Handover]], which also anchors here from its own file (outside-in).

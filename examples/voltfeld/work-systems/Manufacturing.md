@@ -30,9 +30,9 @@ Build, test and ship every Voltfeld charger at the plant, and ramp production fo
 variant the [[Charger ART]] releases. Manufacturing is a work system of its own — it
 coordinates a flow of work daily — but it is **not** part of the ART.
 
-Note where it sits in the two trees: structurally it belongs to [[Operations]]
-(`member-of`), while its output goes to customers and is steered from the [[Portfolio]]
-(`contributes-to`) — FL1 straight to FL3. Development and production have no shared FL2.
+Structurally it belongs to [[Operations]], while its output goes to customers and is
+steered from the [[Portfolio]] — FL1 straight to FL3. Development and production have no
+shared FL2.
 The ART coordinates development; the plant is coordinated by the COO.
 
 ## Key Responsibilities
@@ -63,7 +63,7 @@ the system demo.
 ## Key Resources
 
 - [[Bastian Lorenz]] (lead) and [[Leyla Demir]] (planning); the line, the end-of-line
-  testers, about forty operators not modeled individually here.
+  testers, about forty operators.
 
 ## Key Metrics and Monitoring
 
@@ -73,3 +73,8 @@ the system demo.
 ## Evaluation Schedule
 
 Reviewed yearly; next review 2026-11-02.
+
+> [!NOTE]
+> **Modeling note.** Note where it sits in the two trees: `member-of` [[Operations]],
+> `contributes-to` the [[Portfolio]]. The forty operators are not modeled individually
+> here.

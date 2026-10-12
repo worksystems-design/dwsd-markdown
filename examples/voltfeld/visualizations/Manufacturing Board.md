@@ -9,9 +9,8 @@ created_at: "2026-10-10"
 The FL1 board of [[Manufacturing]] — not the daily line (that runs on the plant's own
 system) but the **ramp** of each new variant the [[Charger ART]] releases: from the release
 arriving to stable production. `Release Received` is the column where the
-[[Feature Route]] ends for the train and begins for the plant; nothing on this board points
-back at the ART board, and no ART board column points here. Two boards, one hand-over, no
-loop — the picture the change ladder starts from.
+[[Feature Route]] ends for the train and begins for the plant. Two boards, one hand-over,
+no loop — the picture the change ladder starts from.
 
 ```dwsd.board
 title: Manufacturing
@@ -32,3 +31,7 @@ columns:
   - name: Stable Production
     status-category: done
 ```
+
+> [!NOTE]
+> **Modeling note.** Nothing on this board points back at the ART board, and no ART board
+> column points here.

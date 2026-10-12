@@ -7,8 +7,7 @@ created_at: "2026-05-24"
 ---
 
 The daily production board for the [[Bakehouse]] — one column per stage from order to
-dispatch. `Mixing-Proofing` carries both an inline (inside-out) agreement and an external
-(outside-in) one — [[Mixing-Proofing WIP Limit]] anchors to the same column.
+dispatch.
 
 ```dwsd.board
 title: Bakehouse Production
@@ -32,3 +31,7 @@ columns:
   - name: Ready-for-Dispatch
     status-category: done
 ```
+
+> [!NOTE]
+> **Modeling note.** `Mixing-Proofing` carries both an inline (inside-out) agreement and an
+> external (outside-in) one — [[Mixing-Proofing WIP Limit]] anchors to the same column.

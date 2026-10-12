@@ -24,7 +24,8 @@ submits the order under the standing authority of the [[Shop Manager Mandate]]. 
 afternoon [[Daily Production Sync]] has already set the frame — priorities and capacity;
 the count fixes tonight's final quantities within it.
 
-Besides the two board positions, this interaction also anchors to the
-[[Daily Replenishment Flow]] itself — `::before` the `order @ Shops` stage, since the
-count is what brings tomorrow's order into existence (a route-stage locator, see
-`conventions.md`).
+> [!NOTE]
+> **Modeling note.** Besides the two board positions, this interaction also anchors to the
+> [[Daily Replenishment Flow]] itself — `::before` the `order @ Shops` stage, since the
+> count is what brings tomorrow's order into existence (a route-stage locator, see
+> `conventions.md`).

@@ -11,10 +11,9 @@ the features bundle into one system **release**, a second item type the route ge
 The release is then **copied to the plant**: drawings, BOM and production test firmware land
 at [[Manufacturing]], which builds the chargers that ship.
 
-Read the `Plant` band carefully: the release arrives, the chargers leave — and **no edge
-carries anything back**. Ramp status, fixture problems, a drawing the line cannot build —
-none of it has a path into the train today. The feedback edges stop at the teams. That
-missing edge is the as-is this example's change ladder starts from.
+At the plant, the release arrives, the chargers leave — and **nothing goes back**. Ramp
+status, fixture problems, a drawing the line cannot build — none of it has a path into the
+train today.
 
 ```dwsd.flightroute
 title: Feature Route
@@ -72,3 +71,8 @@ bound-to:
         stages:
           - release: "col:Release Received"
 ```
+
+> [!NOTE]
+> **Modeling note.** Read the `Plant` band carefully: **no edge carries anything back**.
+> The feedback edges stop at the teams. That missing edge is the as-is this example's
+> change ladder starts from.

@@ -22,7 +22,9 @@ Thirty minutes every Tuesday: [[Mateo Ruiz]] brings the week's [[Field Issue]]s 
 program backlog for the next PI planning. That call is the fork in the
 [[Field Issue Route]], and this is where it is made.
 
-Anchored three ways: on the `Triage` column of the expedite lane, on the route's
-`issue @ Train` stage, and on [[Field Service]] itself — a plain team with no board, so the
-marker sits on its box in the units view. Field Service is not in the ART; this half hour
-is its door into the train.
+[[Field Service]] is not in the ART; this half hour is its door into the train.
+
+> [!NOTE]
+> **Modeling note.** Anchored three ways: on the `Triage` column of the expedite lane, on
+> the route's `issue @ Train` stage, and on [[Field Service]] itself — a plain team with no
+> board, so the marker sits on its box in the units view.

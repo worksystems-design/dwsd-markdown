@@ -19,6 +19,9 @@ what customers actually ask for at the counter, and
 [[Mara Holt]] holds the range decision. The outcome is a clear call — into the range,
 another trial round with changes, or dropped.
 
-This interaction carries the [[New Product Introduction Route]]'s feedback edge: trial
-results flow back into the range decision at [[Bakery Strategy]], anchored `::after` the
-route's `new-product @ Bakehouse` stage and on the `Trial-Bakes` column of the FL2 lane.
+Here trial results flow back into the range decision at [[Bakery Strategy]].
+
+> [!NOTE]
+> **Modeling note.** This interaction carries the [[New Product Introduction Route]]'s
+> feedback edge, anchored `::after` the route's `new-product @ Bakehouse` stage and on the
+> `Trial-Bakes` column of the FL2 lane.

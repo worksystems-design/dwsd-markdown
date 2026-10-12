@@ -17,8 +17,11 @@ fastener count, tolerances the end-of-line test can hold. [[Wen Zhao]] joins whe
 supplier change is involved. The outcome is a drawing set the plant can build, or a list of
 changes before the mold is ordered.
 
-Not scheduled — called by Ole when a tooling release approaches, so there is no `.mw`
-sibling. In practice that is late: the plant's first look at a new enclosure is a few days
-before fourteen weeks of tooling lead time begin. Anchored on the `DFM Check` column inside
-the `Verification` group, and on [[Manufacturing]] — the work system whose people sit on
-the other side of the table.
+Ole calls it when a tooling release approaches. In practice that is late: the plant's
+first look at a new enclosure is a few days before fourteen weeks of tooling lead time
+begin.
+
+> [!NOTE]
+> **Modeling note.** Not scheduled, so there is no `.mw` sibling. Anchored on the
+> `DFM Check` column inside the `Verification` group, and on [[Manufacturing]] — the work
+> system whose people sit on the other side of the table.

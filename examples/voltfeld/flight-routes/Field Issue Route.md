@@ -4,8 +4,7 @@ created_at: "2026-10-10"
 ---
 
 How a [[Field Issue]] travels bottom-up — the mirror of the [[Epic Route]]. It starts
-outside the flight levels: `Field` is a **custom band without a flight level**, because
-[[Field Service]] is a plain team, not a work system. The week's issues are brought to the
+outside the flight levels, at [[Field Service]]. The week's issues are brought to the
 [[Field Issue Triage]], where the route **forks**: a safety or fleet-down issue becomes a
 **hotfix** in the ART board's expedite lane, goes to the expedite lane of the product line
 concerned, and bypasses the PI; everything else becomes a
@@ -63,3 +62,7 @@ bound-to:
         stages:
           - hotfix: "lane:Hotfix/col:In Progress"
 ```
+
+> [!NOTE]
+> **Modeling note.** `Field` is a **custom band without a flight level**, because
+> [[Field Service]] is a plain team, not a work system.

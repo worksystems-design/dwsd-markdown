@@ -39,10 +39,13 @@ going while the release is still in its hands.
 Two columns, one loop. On the [[Manufacturing Board]], `Fixtures and Instructions` is
 entered at the demo of the feature, from the demo material and the drawings as they
 stand. On the [[Charger ART Board]], a feature leaves `Certified` only with the plant's
-producibility acceptance. The ramp-readiness check at every [[System Demo]] is the
-feedback edge the [[Feature Route]] has been missing: ramp status flows from the plant back
-into the train while the feature is still in the `Release` group. In force from the PI 27.1
-planning on 2026-12-03.
+producibility acceptance. With the ramp-readiness check at every [[System Demo]], ramp
+status flows from the plant back into the train while the feature is still in the
+`Release` group. In force from the PI 27.1 planning on 2026-12-03.
+
+> [!NOTE]
+> **Modeling note.** The ramp-readiness check is the feedback edge the [[Feature Route]]
+> has been missing.
 
 ## Evaluation Criteria
 

@@ -7,12 +7,11 @@ How a [[New Product Introduction]] travels bottom-up: an idea starts on the floo
 customer request at the counter, a baker's experiment in the [[Bakehouse]] — is pitched
 up to [[Bakery Strategy]] as a range bet (the strategy board only takes bets that change
 the product range or footprint), and the decided product comes back down through
-[[Bakery Operations]] for rollout and into the Bakehouse for trial bakes. The
-introduction itself is delivered from the coordination band — the Bakehouse bakes, but
-"the product stands in the daily range" is tracked where the flight item lives, on the
-FL2 board's `New Product Introduction` lane. The trial-results feedback edge is carried
-by the [[Trial Bake Tasting]], and the [[Daily Range Cap]] guards what may enter the
-range at all. The mirror image of the [[New Shop Launch Route]]: FL1 → FL3 → FL2 → FL1.
+[[Bakery Operations]] for rollout and into the Bakehouse for trial bakes. The Bakehouse
+bakes, but "the product stands in the daily range" is tracked where the flight item lives,
+on the FL2 board's `New Product Introduction` lane. Trial results come back through the
+[[Trial Bake Tasting]], and the [[Daily Range Cap]] guards what may enter the range at
+all. The mirror image of the [[New Shop Launch Route]]: FL1 → FL3 → FL2 → FL1.
 
 ```dwsd.flightroute
 title: New Product Introduction Route
@@ -58,3 +57,7 @@ bound-to:
     boards:
       - board: "[[Bakehouse Production Board]]"
 ```
+
+> [!NOTE]
+> **Modeling note.** The introduction itself is delivered from the coordination band. The
+> trial-results feedback edge is carried by the [[Trial Bake Tasting]].

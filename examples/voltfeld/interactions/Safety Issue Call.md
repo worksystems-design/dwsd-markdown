@@ -22,6 +22,7 @@ late for that, so the report itself is the trigger.
 into `Fix-in-Progress` under the [[Expedite Lane Policy]]; the issue card notes who decided
 and when. The next triage reviews the call, not the issue.
 
-Anchored on the [[Field Issue Route]] *before* the issue reaches the train
-(`issue @ Train::before`), where the weekly triage sits *in* the same stage — one by the
-calendar, one by the event. And on [[Field Service]], which starts it.
+> [!NOTE]
+> **Modeling note.** Anchored on the [[Field Issue Route]] *before* the issue reaches the
+> train (`issue @ Train::before`), where the weekly triage sits *in* the same stage — one
+> by the calendar, one by the event. And on [[Field Service]], which starts it.

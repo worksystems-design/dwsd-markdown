@@ -31,8 +31,10 @@ reserved for the release candidate and certification pre-tests; product and plat
 on the rig stops there. A hotfix under the [[Expedite Lane Policy]] may take a slot at any
 time and displaces platform work first.
 
-Anchored on [[System Integration]] as an entity — the team has no board of its own in this
-example, so the agreement shows on its topology node and its unit box.
+> [!NOTE]
+> **Modeling note.** Anchored on [[System Integration]] as an entity — the team has no
+> board of its own in this example, so the agreement shows on its topology node and its
+> unit box.
 
 ## Evaluation Criteria
 

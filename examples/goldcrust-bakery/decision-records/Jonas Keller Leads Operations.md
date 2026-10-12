@@ -21,10 +21,11 @@ managers, [[Deliveries]] and [[Wholesale]] report to him; he chairs the
 [[Daily Production Sync]] whenever Mara is in the [[Bakehouse]]. Mara keeps range, brand
 and the final call on capacity.
 
-This record is about a person, but it is anchored through the **role**: `for-domain`
-names [[Head of Operations]], not Jonas. The decision lands on the box of whoever keeps
-that role — today Jonas — and the org chart says through which role it arrived. The
-role's own domain ([[Bakery Operations]]) learns nothing new from it.
+> [!NOTE]
+> **Modeling note.** This record is about a person, but it is anchored through the
+> **role**: `for-domain` names [[Head of Operations]], not Jonas. The decision lands on the
+> box of whoever keeps that role — today Jonas — and the org chart says through which role
+> it arrived. The role's own domain ([[Bakery Operations]]) learns nothing new from it.
 
 ## Consequences
 

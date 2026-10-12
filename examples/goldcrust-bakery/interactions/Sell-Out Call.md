@@ -20,7 +20,8 @@ decides on the spot: either what is left on the cooling racks goes out with a mi
 by [[Deliveries]], or the gap waits, and the shop writes it into tonight's
 [[Evening Stock Count]] so tomorrow's order grows. Five minutes, standing up.
 
-Anchored on the [[Daily Replenishment Flow]] where the dispatch stands on the shelf
-(`dispatch @ Shops::in`), and on the [[Bakehouse]], the work system that picks up the
-phone. Compare the [[Evening Stock Count]] on the same route: that one runs at 18:30 every
-day; this one runs when something happens.
+> [!NOTE]
+> **Modeling note.** Anchored on the [[Daily Replenishment Flow]] where the dispatch
+> stands on the shelf (`dispatch @ Shops::in`), and on the [[Bakehouse]], the work system
+> that picks up the phone. Compare the [[Evening Stock Count]] on the same route: that one
+> runs at 18:30 every day; this one runs when something happens.

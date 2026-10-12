@@ -7,17 +7,16 @@ created_at: "2026-06-28"
 ---
 
 The FL2 end-to-end coordination board for [[Bakery Operations]] — one **swimlane per
-flight-item-type**. Lanes are plain `named` lanes named after the item type (the board DSL
-has no typed item-type binding), one per type currently in motion. The types flow
-differently, so **each lane carries its own columns** (lane-local `columns:`): the daily
+flight-item-type** currently in motion. The types flow differently, so **each lane carries
+its own columns**: the daily
 [[Daily Replenishment Order]] runs the demand–plan–produce–deliver cycle, a
 [[Wholesale Contract]] goes from enquiry to a running account, a [[New Shop Launch]] is
 accepted, prepared, and opened, and a [[New Product Introduction]] rolls out via trial
 bakes into the range.
 
-Status categories read from FL2's perspective: in the replenishment lane, `Planned` is
-`done` (the coordination work on the order is finished) while `In-Production` is
-`waiting` — the order sits with the [[Bakehouse]] at FL1, and FL2 is waiting on it.
+In the replenishment lane, once an order is `Planned` the coordination work on it is
+finished; while it is `In-Production` the order sits with the [[Bakehouse]] at FL1, and
+FL2 is waiting on it.
 
 ```dwsd.board
 title: Bakery Operations Coordination
@@ -65,3 +64,9 @@ lanes:
       - name: In-Range
         status-category: done
 ```
+
+> [!NOTE]
+> **Modeling note.** Lanes are plain `named` lanes named after the item type (the board DSL
+> has no typed item-type binding); each lane's columns are lane-local `columns:`. Status
+> categories read from FL2's perspective: in the replenishment lane, `Planned` is `done`
+> while `In-Production` is `waiting`.

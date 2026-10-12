@@ -14,6 +14,10 @@ commit onward**. The current model is described by the reference itself — `REA
   the event and whose route-stage anchor names the place. `types/interaction.md` notes that
   an interaction may be triggered rather than scheduled; it and `types/agreement.md` now
   mention the route-stage locator. No new field.
+- **Modeling notes as callouts.** Entity bodies tell the organization's story; text that
+  explains how an entity is modeled (anchors, locators, fields set or left out) now sits in
+  one `> [!NOTE]` callout headed `**Modeling note.**` at the end of the body.
+  `conventions.md` gains the rule; both examples mark their modeling explanations this way.
 
 ## 2026-10-11
 

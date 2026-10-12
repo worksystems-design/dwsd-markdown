@@ -26,9 +26,12 @@ The Market Street Shop Manager runs the [[Market Street Shop]] end to end: staff
 counter, selling the range, counting closing stock, and placing the
 [[Daily Replenishment Order]].
 
-A standalone role, deliberately separate from the [[Station Road Shop Manager]] — roles
-are individual in DWSD, so each location's role evolves on its own. (A role *shared* by
-several people would instead list them all as `role-keeper`s.)
+A standalone role, deliberately separate from the [[Station Road Shop Manager]], so each
+location's role evolves on its own.
+
+> [!NOTE]
+> **Modeling note.** Roles are individual in DWSD. A role *shared* by several people would
+> instead list them all as `role-keeper`s.
 
 ## Concerns
 

@@ -42,8 +42,11 @@ The `Preparation` group of the [[Charger ART Board]] gains a standing question f
 feature: *does it need tooling or a long-lead part?* If yes, the item is named at the PI
 planning **before** the PI the feature is planned for, and Supply Chain orders it. On the
 [[HW Base Board]] nothing enters `Tooling Released` without an order date already on the
-dependency board — the agreement sits `::before` that column. In force from the PI 27.1
-planning on 2026-12-03.
+dependency board. In force from the PI 27.1 planning on 2026-12-03.
+
+> [!NOTE]
+> **Modeling note.** On the [[HW Base Board]] the agreement sits `::before` the
+> `Tooling Released` column.
 
 ## Evaluation Criteria
 

@@ -260,6 +260,21 @@ sources:
 Some synced entities instead carry flat `atlassian_id` / `atlassian_url` fields — both
 patterns are valid.
 
+## Modeling notes in the body
+
+Body text tells the organization's story. Where a file explains how it is **modeled** — why
+it is anchored here, why a field is set or left out, which locator it uses — put that in
+**one callout at the end of the body**, as a GitHub alert:
+
+```markdown
+> [!NOTE]
+> **Modeling note.** Anchored on the [[Daily Replenishment Flow]] where the dispatch
+> stands on the shelf (`dispatch @ Shops::in`).
+```
+
+Readers can skip it; tools can tell it apart from content. Wikilinks inside the callout
+are ordinary wikilinks. A file with nothing to explain about its modeling has no callout.
+
 ## Embedded DSL fences
 
 Five fence tags are parsed and rendered by the app. All five DSLs are **plain YAML**,

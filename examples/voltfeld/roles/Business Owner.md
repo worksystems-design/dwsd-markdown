@@ -26,11 +26,14 @@ planning and the system demo.
 
 ## Description
 
-Business Owner is a **shared role**: four keepers, listed above. Together they represent the
+Business Owner is a **shared role** with four keepers. Together they represent the
 [[Portfolio]] to the ART — [[Henrik Dahl]] for the company, [[Ingrid Halvorsen]] for
 producibility and the plant, [[Niamh Byrne]] for the product, [[Rolf Steinbach]] for the
-market and the field. Borrowed from SAFe. Anything scoped to this role with `for-domain`
-lands on all four of them in the org chart.
+market and the field. Borrowed from SAFe.
+
+> [!NOTE]
+> **Modeling note.** The four keepers are listed above, in `role-keeper`. Anything scoped
+> to this role with `for-domain` lands on all four of them in the org chart.
 
 ## Concerns
 

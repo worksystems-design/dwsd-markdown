@@ -4,9 +4,8 @@ unit-type: company
 created_at: "2026-05-24"
 ---
 
-Goldcrust Bakery is the company as a whole — the structural root of its units. Its `unit-type` is just `company` — it does **not** include `work-system`
-(and it has no `flightlevel`), so it is a plain structural `unit`, not a work system: it
-groups, it does not itself coordinate a flow of work.
+Goldcrust Bakery is the company as a whole — the structural root of its units. It groups;
+it does not itself coordinate a flow of work.
 
 Its units are cut by **site** — where people work:
 
@@ -14,18 +13,27 @@ Its units are cut by **site** — where people work:
   [[Deliveries]] (the morning dispatch) and [[Wholesale]] (the standing daily orders).
 - [[Market Street]] and [[Station Road]] — the two shops.
 
-How the work *flows* is a different picture, drawn by the work systems and their
-`contributes-to` in the flight-level map:
+How the work *flows* is a different picture, drawn by the work systems:
 
 - [[Bakery Strategy]] — FL3, sets direction.
 - [[Bakery Operations]] — FL2, coordinates production and retail.
 - [[Bakehouse]] — FL1, production.
 - [[Market Street Shop]] and [[Station Road Shop]] — FL1, retail.
 
-The work systems carry no `member-of`, so the unit tree does not draw them a second time:
-the units show where people sit, the topology shows how the work moves. People belong to
-both — a shop assistant is `member-of` the shop's site and its work system. The org chart of the people who work in them is the standalone
-`Goldcrust Org Chart.dwsd-orgchart` at the org root; the unit tree is `Goldcrust Units.dwsd-units`.
+The units show where people sit, the work systems show how the work moves. People belong
+to both — a shop assistant works at the shop's site and in its work system.
+
+> [!NOTE]
+> **Modeling note.** Its `unit-type` is just `company` — it does **not** include
+> `work-system` (and it has no `flightlevel`), so it is a plain structural `unit`, not a
+> work system. The flow picture is drawn by the work systems and their `contributes-to` in
+> the flight-level map. The work systems carry no `member-of`, so the unit tree does not
+> draw them a second time; the topology shows how the work moves. A shop assistant is
+> `member-of` the shop's site and its work system.
+>
+> The org chart of the people who work in them is the standalone
+> `Goldcrust Org Chart.dwsd-orgchart` at the org root; the unit tree is
+> `Goldcrust Units.dwsd-units`.
 
 ## In context
 

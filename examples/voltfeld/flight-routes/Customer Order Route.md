@@ -11,19 +11,17 @@ How a [[Customer Order]] travels — and what happens to the ones that do not go
 route has two bands without a flight level, and they are not places but **modes**:
 
 - `ERP` is **factory mode**. Order entry, scheduling, the production order and the invoice
-  are defined and run in the system of record; the `sources:` block above points at that
-  process. Nobody touches an order here, and the band is bound to **no board** on purpose:
-  the ERP is where its state lives.
+  are defined and run in the system of record. Nobody touches an order here: the ERP is
+  where its state lives.
 - `Studio` is **studio mode**. When the [[Order Exception Agent]] flags an order — a
   configuration the ERP cannot price, a date the plant cannot make, a credit block — the
   order leaves the factory as a **case**. People work it together with the agent on the
   [[Order Studio Board]], and the clarified order flows back into the ERP.
 
 The edge from `ERP` to `Studio` is the **andon**: the defined trigger that stops one order,
-not the line. The [[Order Andon]] agreement sits on it and says who answers within what
-time. The edge back is the part most order processes forget: a case is done when the order
-is back in the factory, with a reason code that the [[Order Exceptions Review]] reads each
-month.
+not the line. The [[Order Andon]] agreement says who answers within what time. The edge
+back is the part most order processes forget: a case is done when the order is back in
+the factory, with a reason code that the [[Order Exceptions Review]] reads each month.
 
 ```dwsd.flightroute
 title: Customer Order Route
@@ -65,3 +63,8 @@ bound-to:
         stages:
           - job: "col:Stable Production"
 ```
+
+> [!NOTE]
+> **Modeling note.** The `sources:` block above points at the ERP process. The `ERP` band
+> is bound to **no board** on purpose: the ERP is where its state lives. The
+> [[Order Andon]] agreement sits on the edge from `ERP` to `Studio`.

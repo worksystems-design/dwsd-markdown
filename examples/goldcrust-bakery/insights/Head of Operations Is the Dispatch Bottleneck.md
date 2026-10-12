@@ -17,8 +17,10 @@ bottleneck of the dispatch window, not because of the volume but because of the 
 - Wholesale calls cluster between 06:00 and 07:00, exactly the loading window (see
   [[Dispatch Mornings Double-Booked]]).
 - The open Delivery Coordinator seat ([[NA1]]) is the role that would own the loading.
-- The insight observes the **person**, not [[Bakery Operations]]: the domain works, the
-  seat is overloaded.
+- [[Bakery Operations]] as a domain works; the seat is overloaded.
+
+> [!NOTE]
+> **Modeling note.** The insight observes the **person**, not [[Bakery Operations]].
 
 ## Suggested Actions
 

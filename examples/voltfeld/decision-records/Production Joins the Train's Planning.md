@@ -40,8 +40,11 @@ Explicitly **not** decided: no change to the units. Manufacturing stays in
 [[Operations]], the plant does not join the ART board, and the question of a shared FL2
 for development and production is deferred until two PIs have run under this decision.
 
-The decision concerns two domains and is anchored on both: the [[Charger ART]], whose
-planning gains two participants, and [[Manufacturing]], whose ramp now starts earlier.
+The decision concerns two domains: the [[Charger ART]], whose planning gains two
+participants, and [[Manufacturing]], whose ramp now starts earlier.
+
+> [!NOTE]
+> **Modeling note.** The decision is anchored on both domains.
 
 ## Consequences
 

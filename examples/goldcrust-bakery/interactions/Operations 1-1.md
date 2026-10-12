@@ -18,5 +18,7 @@ enquiries are waiting at the [[Wholesale Capacity Cap]], and where Mara's call i
 needed. Not a status meeting — the numbers live on the boards. This is where the owner and
 the Head of Operations sort out who decides what.
 
-A bilateral interaction between two people: `interaction-of` names both persons with bare
-wikilinks, so the marker sits on both boxes in the org chart and nowhere else.
+> [!NOTE]
+> **Modeling note.** A bilateral interaction between two people: `interaction-of` names
+> both persons with bare wikilinks, so the marker sits on both boxes in the org chart and
+> nowhere else.

@@ -18,7 +18,10 @@ The weekly check-in while a launch is in prep: [[Bakery Operations]] and the lau
 walk the open launch tasks — site, fit-out, hiring, range planning — and clear blockers.
 [[Mara Holt]] joins for anything that moves the opening date.
 
-This interaction is what carries the [[New Shop Launch Route]]'s feedback edge: it lifts
-launch progress out of the task world and back into the strategic bet on the
-[[Bakery Strategy Board]] (`In-Flight`), so the strategy level always sees where the
-launch really stands.
+The check-in lifts launch progress out of the task world and back into the strategic bet
+on the [[Bakery Strategy Board]] (`In-Flight`), so the strategy level always sees where
+the launch really stands.
+
+> [!NOTE]
+> **Modeling note.** This interaction is what carries the [[New Shop Launch Route]]'s
+> feedback edge.

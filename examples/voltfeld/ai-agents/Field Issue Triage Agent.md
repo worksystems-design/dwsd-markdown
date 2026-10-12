@@ -10,16 +10,17 @@ description: Clusters incoming field reports and telemetry into candidate issues
 created_at: "2026-10-10"
 ---
 
-The Field Issue Triage Agent works **before** the people do: it is bound `::before` the
-`Triage` column of the expedite lane on the [[Charger ART Board]]. Through the week it
-reads service tickets from [[Field Service]] and the fleet telemetry [[Connectivity]]
-collects, clusters them into candidate [[Field Issue]]s, and proposes a severity and a
-suspected subsystem — power stage, firmware, backend. The [[Field Issue Triage]] on Tuesday
-starts from that list and makes the call the [[Field Issue Route]] forks on: hotfix, or
-feature for the next PI.
+The Field Issue Triage Agent works **before** the people do. Through the week it reads
+service tickets from [[Field Service]] and the fleet telemetry [[Connectivity]] collects,
+clusters them into candidate [[Field Issue]]s, and proposes a severity and a suspected
+subsystem — power stage, firmware, backend. The [[Field Issue Triage]] on Tuesday starts
+from that list and makes the call the [[Field Issue Route]] forks on: hotfix, or feature
+for the next PI.
 
-The `::before` slot is the point: the agent's surface is the queue *in front of* the
-column, not the column itself. The second anchor, [[Field Service]], is a plain team — the
-agent marker shows on its box in the units view.
-
+> [!NOTE]
+> **Modeling note.** The agent is bound `::before` the `Triage` column of the expedite lane
+> on the [[Charger ART Board]]. The `::before` slot is the point: the agent's surface is
+> the queue *in front of* the column, not the column itself. The second anchor,
+> [[Field Service]], is a plain team — the agent marker shows on its box in the units view.
+>
 > `ai-agent` is a preliminary type and the `bound-to` anchor convention may still change.

@@ -19,8 +19,10 @@ punctuality, complaints, and whether the standing order still fits the [[Bakehou
 nightly capacity. Standing orders get adjusted here; contracts that drift get flagged for
 renegotiation.
 
-This is where delivery experience flows back into the contract world — the review anchors
-both to the `Running` column of the wholesale lane and to the
-[[Wholesale Contract Route]]'s `standing-order @ Coordination` stage — and, with a bare
-wikilink, to the [[Wholesale]] team whose accounts it reviews. [[Bakery Operations]]
+This is where delivery experience flows back into the contract world. [[Bakery Operations]]
 runs it; the [[Head Baker]] joins when capacity is the question.
+
+> [!NOTE]
+> **Modeling note.** The review anchors both to the `Running` column of the wholesale lane
+> and to the [[Wholesale Contract Route]]'s `standing-order @ Coordination` stage — and,
+> with a bare wikilink, to the [[Wholesale]] team whose accounts it reviews.

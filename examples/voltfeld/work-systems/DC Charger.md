@@ -30,9 +30,12 @@ Develop the DC fast-charger product line — 50 to 150 kW systems for depots and
 sites — including the power cabinet, the dispenser and the product firmware on top of the
 shared platforms.
 
-An FL2 **product line**: it coordinates two teams, [[DC Power Stage]] and [[DC Site Controller]], at PI planning and the [[ART Sync]] — the example draws no board for it,
-and contributes to the [[Charger ART]], which coordinates across all three product lines
-on the same level.
+An FL2 **product line**: it coordinates two teams, [[DC Power Stage]] and
+[[DC Site Controller]], at PI planning and the [[ART Sync]], and contributes to the
+[[Charger ART]], which coordinates across all three product lines on the same level.
+
+> [!NOTE]
+> **Modeling note.** The example draws no board for DC Charger.
 
 ## Key Responsibilities
 

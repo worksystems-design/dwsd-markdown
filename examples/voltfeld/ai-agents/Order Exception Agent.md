@@ -11,16 +11,19 @@ tags: [factory-studio]
 created_at: "2026-10-11"
 ---
 
-The Order Exception Agent sits **in the factory**: it is bound to the `order @ ERP` stage of
-the [[Customer Order Route]], where it reads every order as the ERP processes it. When an
-order will not go through — a configuration with no price, a date the plant's schedule
-cannot meet, a credit limit — it pulls the [[Order Andon]]: the order appears in `Flagged`
-on the [[Order Studio Board]] (its second anchor, the slot `::before` that column), with
-the case already prepared.
+The Order Exception Agent sits **in the factory**: it reads every order as the ERP
+processes it. When an order will not go through — a configuration with no price, a date
+the plant's schedule cannot meet, a credit limit — it pulls the [[Order Andon]]: the order
+appears in `Flagged` on the [[Order Studio Board]], with the case already prepared.
 
 It does not decide. [[Paula Weiss]] and the people she pulls in do. What the agent adds at
 the end is the memory: it groups the month's reason codes for the
 [[Order Exceptions Review]], so the loop starts from data instead of from whoever shouts
 loudest.
 
+> [!NOTE]
+> **Modeling note.** The agent is bound to the `order @ ERP` stage of the
+> [[Customer Order Route]]; its second anchor is the slot `::before` the `Flagged` column
+> on the [[Order Studio Board]].
+>
 > `ai-agent` is a preliminary type and the `bound-to` anchor convention may still change.

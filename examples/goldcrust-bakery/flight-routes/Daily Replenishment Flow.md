@@ -12,13 +12,8 @@ to both shops, where fresh stock reaches the customers. This is the bakery's ope
 heartbeat — it runs every day, entirely between FL1 and FL2, and never touches strategy.
 
 The order → dispatch transition happens operationally in the Bakehouse, but the *order*
-stays a coordination object: the dotted feedback edge is what lifts dispatch status back
-into the order world at FL2, and the interaction that carries it is the
-[[Daily Production Sync]] — its afternoon "check the morning dispatch cleared" step
-anchors both to the Bakehouse board and to this route's `dispatch @ Bakehouse` stage.
-The `bound-to:` layer maps the three bands onto [[Market Street Shop Board]],
-[[Station Road Shop Board]], [[Bakery Operations Coordination Board]] and
-[[Bakehouse Production Board]].
+stays a coordination object: dispatch status is lifted back into the order world at FL2,
+in the afternoon [[Daily Production Sync]].
 
 ```dwsd.flightroute
 title: Daily Replenishment Flow
@@ -72,3 +67,11 @@ bound-to:
           - order: "col:Backlog"
           - dispatch: "col:Ready-for-Dispatch"
 ```
+
+> [!NOTE]
+> **Modeling note.** The dotted feedback edge is what lifts dispatch status back into the
+> order world, and the interaction that carries it is the [[Daily Production Sync]] — its
+> afternoon "check the morning dispatch cleared" step anchors both to the Bakehouse board
+> and to this route's `dispatch @ Bakehouse` stage. The `bound-to:` layer maps the three
+> bands onto [[Market Street Shop Board]], [[Station Road Shop Board]],
+> [[Bakery Operations Coordination Board]] and [[Bakehouse Production Board]].
