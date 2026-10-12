@@ -4,6 +4,17 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-12
+
+- **Agreements and interactions on flight routes; interactions without a schedule.** Both
+  examples now anchor agreements on route stages, not only on board positions (Goldcrust:
+  Station Road Early Dispatch, Wholesale Capacity Cap; Voltfeld: Expedite Lane Policy, Ramp
+  Readiness Review). Each gains an event-triggered interaction with no `rrule` and no `.mw`
+  sibling — the Sell-Out Call and the Safety Issue Call — whose `## Trigger` section names
+  the event and whose route-stage anchor names the place. `types/interaction.md` notes that
+  an interaction may be triggered rather than scheduled; it and `types/agreement.md` now
+  mention the route-stage locator. No new field.
+
 ## 2026-10-11
 
 - **Voltfeld: an order process with a factory and a studio.** A new FL2 work system,

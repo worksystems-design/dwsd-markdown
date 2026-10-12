@@ -217,15 +217,18 @@ where the people meet when it does not work.
   [ART Sync](interactions/ART%20Sync.md), [System Demo](interactions/System%20Demo.md),
   [Inspect and Adapt](interactions/Inspect%20and%20Adapt.md) — the monthly
   [Portfolio Sync](interactions/Portfolio%20Sync.md), the weekly
-  [Field Issue Triage](interactions/Field%20Issue%20Triage.md), the unscheduled
-  [DFM Review](interactions/DFM%20Review.md), the daily
+  [Field Issue Triage](interactions/Field%20Issue%20Triage.md), two unscheduled ones — the
+  [DFM Review](interactions/DFM%20Review.md), called when a tooling release approaches, and
+  the [Safety Issue Call](interactions/Safety%20Issue%20Call.md), triggered by a field report
+  with a safety risk and anchored on a route stage — the daily
   [Order Studio Huddle](interactions/Order%20Studio%20Huddle.md), the monthly
   [Order Exceptions Review](interactions/Order%20Exceptions%20Review.md) and a 1-1; each scheduled one has a `.mw`
   sibling, aggregated in [operating-rhythm.mw](operating-rhythm.mw).
   [`agreements/`](agreements/) holds five standing agreements, anchored on board positions
-  ([PI Commitment](agreements/PI%20Commitment.md) on a column group,
-  [Expedite Lane Policy](agreements/Expedite%20Lane%20Policy.md) on a lane), on a column and
-  a route stage at once ([Order Andon](agreements/Order%20Andon.md)) or on entities
+  ([PI Commitment](agreements/PI%20Commitment.md) on a column group), on a board position
+  and a route stage at once ([Expedite Lane Policy](agreements/Expedite%20Lane%20Policy.md)
+  on a lane and before the hotfix fork, [Order Andon](agreements/Order%20Andon.md) on a
+  column and before the studio) or on entities
   ([Platform Variant Rule](agreements/Platform%20Variant%20Rule.md) on the two platforms and
   the System Architect role, [DC Rig Booking](agreements/DC%20Rig%20Booking.md) on a team
   without a board).

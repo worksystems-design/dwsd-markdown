@@ -2,7 +2,9 @@
 type: agreement
 agreement-type: work
 for-domain: "[[Bakehouse]]"
-agreement-of: "[[Bakehouse Production Board]]#Bakehouse Production/col:Ready-for-Dispatch::in"
+agreement-of:
+  - "[[Bakehouse Production Board]]#Bakehouse Production/col:Ready-for-Dispatch::in"
+  - "[[Daily Replenishment Flow]]/stage:dispatch @ Bakehouse::after"
 version: "1.0"
 decision_date: "2026-05-26"
 review_date: "2026-08-26"
@@ -28,6 +30,11 @@ first.
 In the morning `Ready-for-Dispatch` queue, the [[Station Road Shop]] order is sequenced
 first so the early delivery leaves in time for the commuter rush. The [[Market Street Shop]]
 follows on the standard run.
+
+The agreement is anchored twice: on the `Ready-for-Dispatch` column, where the bakers see
+it, and on the [[Daily Replenishment Flow]] where the dispatch leaves the Bakehouse
+(`dispatch @ Bakehouse::after`). On the route it marks the one hand-off it changes: the
+order in which the morning dispatch crosses from the Bakehouse to the shops.
 
 ## Evaluation Criteria
 

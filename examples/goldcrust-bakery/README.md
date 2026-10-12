@@ -89,7 +89,13 @@ carries a `flightlevel`). This example shows the shapes of `unit`:
   [`interactions/`](interactions/) holds the `Daily Production Sync` meeting + its `.mw`
   sibling, and a review interaction per item type (`Wholesale Account Review`,
   `Launch Check-in`, `Trial Bake Tasting`) — each anchored to both a board position and
-  a route stage.
+  a route stage. Not every interaction has a time slot: the
+  [Sell-Out Call](interactions/Sell-Out%20Call.md) has no `rrule` and no `.mw` sibling — it
+  happens when a shop runs out, and its `## Trigger` says so. Agreements anchor on routes
+  too: [Station Road Early Dispatch](agreements/Station%20Road%20Early%20Dispatch.md) sits
+  where the dispatch leaves the Bakehouse, the
+  [Wholesale Capacity Cap](agreements/Wholesale%20Capacity%20Cap.md) before a signed
+  contract becomes a standing order.
 - **Navigation ladder** — follow the morning-sourdough thread:
   [`signals/`](signals/) → [`insights/`](insights/) → [`drivers/`](drivers/) →
   [`proposals/`](proposals/) → [`agreements/`](agreements/).

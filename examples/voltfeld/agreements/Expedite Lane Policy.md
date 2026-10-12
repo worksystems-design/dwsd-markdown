@@ -2,7 +2,9 @@
 type: agreement
 agreement-type: work
 for-domain: "[[Charger ART]]"
-agreement-of: "[[Charger ART Board]]#Charger ART/lane:Field Issue::in"
+agreement-of:
+  - "[[Charger ART Board]]#Charger ART/lane:Field Issue::in"
+  - "[[Field Issue Route]]/stage:hotfix @ Train::before"
 version: "1.0"
 decision_date: "2026-04-07"
 review_date: "2027-04-06"
@@ -20,7 +22,8 @@ the lane becomes the way everything gets done.
 
 - [[Field Service]] — reports every issue with its observed impact; does not rank.
 - The [[Field Issue Triage]] (product owners with [[Mateo Ruiz]] and [[Ravi Anand]]) —
-  decides hotfix or feature, weekly; a safety issue is decided the same day.
+  decides hotfix or feature, weekly; a safety issue is decided the same day, in a
+  [[Safety Issue Call]].
 - The team that owns the affected component — takes the hotfix immediately, at most one at
   a time.
 - [[Connectivity]] — ships the hotfix to the fleet over the air and confirms rollout.

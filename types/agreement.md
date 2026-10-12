@@ -45,7 +45,9 @@ Both kinds share the body structure below.
   `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board).
   Points *into the detail*. Value-polymorphic: a bare `[[entity]]` — a work system, a unit
   or a person (a personal working agreement) — anchors to that entity instead, wherever it
-  is drawn. Coexists with `for-domain` (board ≠ work system); the work system is
+  is drawn. It may also name a **route stage**
+  (`[[Route]]/stage:<itemType> @ <Band>::before|in|after`): `::before` a stage reads as a
+  gate an item passes on the way in. Coexists with `for-domain` (board ≠ work system); the work system is
   inferable from the board, so `for-domain` is optional but clearer. See
   [conventions](../conventions.md).
 - **`derived-from`** — the decision this agreement carries out, normally an

@@ -5,6 +5,7 @@ for-domain: "[[Bakery Operations]]"
 agreement-of:
   - "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination/lane:Wholesale Contract::in"
   - "[[Wholesale]]"
+  - "[[Wholesale Contract Route]]/stage:standing-order @ Coordination::before"
 version: "1.0"
 decision_date: "2026-07-19"
 review_date: "2027-01-19"
@@ -31,6 +32,10 @@ range. The wholesale book needs a cap that protects the [[Daily Replenishment Fl
 Standing wholesale volume stays at or below **40% of nightly bake capacity**. Each new
 contract counts its standing order against the cap at signing. At the cap, new enquiries
 wait, or an existing account is renegotiated first.
+
+On the [[Wholesale Contract Route]] the cap sits `::before` the `standing-order` stage: it is
+the gate a signed contract passes before it may spawn its standing daily order and claim
+nightly capacity.
 
 ## Evaluation Criteria
 

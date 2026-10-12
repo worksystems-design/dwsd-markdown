@@ -8,6 +8,7 @@ for-domain:
 agreement-of:
   - "[[Manufacturing Board]]#Manufacturing/col:Fixtures and Instructions::in"
   - "[[Charger ART Board]]#Charger ART/lane:Feature/group:Release/col:Certified::in"
+  - "[[Feature Route]]/stage:release @ Plant::before"
 derived-from: "[[Production Joins the Train's Planning]]"
 version: "1.0"
 decision_date: "2026-10-06"

@@ -29,6 +29,9 @@ kind adds a **list of interactions** it bundles — see [`meeting.md`](meeting.m
   whole board). Value-polymorphic: a bare `[[entity]]` — a work system, a unit or a person —
   anchors to that entity instead, wherever it is drawn; a list of two persons is a 1:1.
   Points *into the detail*.
+- **`interaction-of`** may also name a **route stage**:
+  `[[Route]]/stage:<itemType> @ <Band>::before|in|after` — see
+  [conventions](../conventions.md).
 - **`for-domain`** — the **domain** — a work system or a role — the interaction is scoped to.
   Points *up*. Optional —
   inferable from the board, but clearer when stated (board ≠ work system). See
@@ -60,4 +63,9 @@ Ad-hoc alignment between [[Head of 3P]] and [[Head of Assembly]] on the next han
 
 ## Notes
 
+- **Not every interaction is scheduled.** Without `start` / `rrule` an interaction happens
+  when something triggers it: an item reaching a route stage or a board column, a threshold
+  (a WIP limit hit, a card aging past its limit), a call for help. Say what triggers it in
+  the body — a `## Trigger` section works — and let the anchor say *where*: an interaction
+  anchored `::before` a route stage reads as "when an item arrives here". No `.mw` sibling.
 - Influence: Flight Levels' *agile interactions*.
