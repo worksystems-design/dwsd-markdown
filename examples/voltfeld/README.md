@@ -28,7 +28,7 @@ rest of the company — the plant, the supply base, sales, field service — wor
 train, and that seam is where this example is interesting.
 
 DWSD describes this the way it describes any organization: the ART is a `unit` with
-`unit-type: [art, work-system]` at FL2; its three product lines are work systems at FL2 beside it, each
+`unit-type: [ART, work-system]` at FL2; its three product lines are work systems at FL2 beside it, each
 coordinating two teams that are plain units without a flightlevel; the portfolio is the FL3
 work system above. SAFe terms appear where Voltfeld uses them; nothing in the format depends
 on them.

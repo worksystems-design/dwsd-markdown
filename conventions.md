@@ -215,6 +215,23 @@ teams, or a team can have none — was considered and dropped for simplicity.
 
 > **`flightlevel`** is written as one word — no underscore, no hyphen.
 
+### Reserved and descriptive `unit-type` values
+
+`unit-type` holds two kinds of value, and they behave differently:
+
+- **Reserved** — today only **`work-system`**. It carries meaning in the model: it makes the
+  unit a work system, with everything that follows (flight level, topology,
+  `contributes-to`, validation). A reserved value is part of the format, like a field
+  name: it is always written in English, and tools match it without regard to case. A
+  view may draw it as a mark of its own and may label it in the reader's language.
+- **Descriptive** — every other value: `team`, `site`, `department`, `ART`, `Werk`, …
+  An open vocabulary in the author's words and language. No tool derives anything from
+  it. Views show it **exactly as written** — no capitalization, no label lookup — so an
+  acronym is spelled the way the author spelled it (`ART`, not `art`).
+
+A descriptive value becomes reserved only by a change to this spec, when the model gives
+it a meaning (a mark in a view, a rule in validation). Until then it is description.
+
 ## Subtypes and kinds — the `<base>-type` key
 
 Where a type has subtypes or kinds, the discriminator key is **named after the

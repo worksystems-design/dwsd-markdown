@@ -1,6 +1,6 @@
 ---
 type: unit
-unit-type: [art, work-system]
+unit-type: [ART, work-system]
 flightlevel: 2
 member-of: "[[Voltfeld]]"
 contributes-to: "[[Portfolio]]"

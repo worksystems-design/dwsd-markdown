@@ -6,6 +6,12 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-12
 
+- **`unit-type`: one reserved value, the rest is description.** `work-system` is the only
+  value with meaning in the model; it stays English in the data, matches without regard to
+  case, and a view may label it in any language. Every other value is descriptive — the
+  author's words and language, shown exactly as written, never interpreted. Voltfeld's
+  Charger ART now reads `unit-type: [ART, work-system]`. More values may become reserved
+  later, by a spec change, once the model gives them a meaning.
 - **Modeling notes go at the end of the file.** 36 notes that sat mid-body (before
   `## Evaluation Criteria`, `## Consequences`, `## Concerns`, `## Key Responsibilities` or
   `## In context`) moved to the end; none explained a single passage. conventions.md says

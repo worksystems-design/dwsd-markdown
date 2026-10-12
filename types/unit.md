@@ -27,7 +27,7 @@ carry more than one value. On top of the bare unit:
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `unit` | Entity type (base) |
-| `unit-type` | no | token **or** list — `team` \| `art` \| `[team, work-system]` \| … | Kind(s) of unit (open vocabulary). Include `work-system` to mark it a **work system** |
+| `unit-type` | no | token **or** list — `team` \| `ART` \| `[team, work-system]` \| … | Kind(s) of unit (open vocabulary). Include `work-system` to mark it a **work system** |
 | `flightlevel` | no | `1` \| `2` \| `3` | Required **when `unit-type` includes `work-system`**; the work system's flight level |
 | `member-of` | no | wikilink | The parent unit / work system this one belongs to → **flow** |
 | `contributes-to` | no | wikilink | The higher work system this unit feeds |
@@ -66,6 +66,8 @@ A unit that is *also* a work system carries `unit-type: [team, work-system]` (or
 
 - A unit becomes a work system by including `work-system` in its `unit-type` — not by its
   folder. The folder (`units/` vs `work-systems/`) is organizational only.
-- `unit-type` is an open vocabulary (`team`, `art`, `department`, …) and may hold several
+- `unit-type` is an open vocabulary (`team`, `ART`, `department`, …) and may hold several
   values. Alongside the *kind*, the reserved value **`work-system`** is what marks the unit
-  as a work system; `flightlevel` is then required but is not itself the marker.
+  as a work system; `flightlevel` is then required but is not itself the marker. All other
+  values are descriptive: shown exactly as written, never interpreted — see
+  [conventions](../conventions.md#reserved-and-descriptive-unit-type-values).

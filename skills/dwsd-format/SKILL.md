@@ -41,6 +41,9 @@ by the **conceptual** type, not the bare `type:`:
   `unit-type: [team, work-system]`); it also carries a `flightlevel: 1|2|3`. Lives in
   `work-systems/` and carries the full domain description. A unit *without* `work-system` in
   its `unit-type` is just a structural unit (e.g. `unit-type: team`) and lives in `units/`.
+  `work-system` is the only **reserved** `unit-type` value (English, matched without regard
+  to case); every other value is **descriptive** — write it the way the organization
+  spells it (`ART`, `Werk`), show it exactly as written, and never infer anything from it.
 - **meeting** = `type: interaction` **with** `interaction-type: meeting`. Lives in
   `interactions/`, alongside non-meeting interactions.
 
