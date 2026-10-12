@@ -23,6 +23,14 @@ How the work *flows* is a different picture, drawn by the work systems:
 The units show where people sit, the work systems show how the work moves. People belong
 to both — a shop assistant works at the shop's site and in its work system.
 
+## In context
+
+```dwsd.units
+mode: infer
+focus: self
+radius: { up: 1, down: inf }
+```
+
 > [!NOTE]
 > **Modeling note.** Its `unit-type` is just `company` — it does **not** include
 > `work-system` (and it has no `flightlevel`), so it is a plain structural `unit`, not a
@@ -34,11 +42,3 @@ to both — a shop assistant works at the shop's site and in its work system.
 > The org chart of the people who work in them is the standalone
 > `Goldcrust Org Chart.dwsd-orgchart` at the org root; the unit tree is
 > `Goldcrust Units.dwsd-units`.
-
-## In context
-
-```dwsd.units
-mode: infer
-focus: self
-radius: { up: 1, down: inf }
-```

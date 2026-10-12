@@ -44,10 +44,6 @@ planning **before** the PI the feature is planned for, and Supply Chain orders i
 [[HW Base Board]] nothing enters `Tooling Released` without an order date already on the
 dependency board. In force from the PI 27.1 planning on 2026-12-03.
 
-> [!NOTE]
-> **Modeling note.** On the [[HW Base Board]] the agreement sits `::before` the
-> `Tooling Released` column.
-
 ## Evaluation Criteria
 
 - No PI objective moved for a tooling date in PI 27.1 and 27.2.
@@ -58,3 +54,7 @@ dependency board. In force from the PI 27.1 planning on 2026-12-03.
 Ordering a PI ahead means some molds are ordered for features the Business Owners later
 cut — the cost of a cancelled mold is the price of predictability, and the review in
 February looks at how often it was paid.
+
+> [!NOTE]
+> **Modeling note.** On the [[HW Base Board]] the agreement sits `::before` the
+> `Tooling Released` column.

@@ -31,10 +31,6 @@ Business Owner is a **shared role** with four keepers. Together they represent t
 producibility and the plant, [[Niamh Byrne]] for the product, [[Rolf Steinbach]] for the
 market and the field. Borrowed from SAFe.
 
-> [!NOTE]
-> **Modeling note.** The four keepers are listed above, in `role-keeper`. Anything scoped
-> to this role with `for-domain` lands on all four of them in the org chart.
-
 ## Concerns
 
 That the ART's PI objectives are the right ones for the business; that a release can be
@@ -57,3 +53,7 @@ built, sold and serviced — not only demonstrated.
 ### Metrics and Monitoring
 
 - Business value achieved per PI objective; escalations resolved within the PI.
+
+> [!NOTE]
+> **Modeling note.** The four keepers are listed above, in `role-keeper`. Anything scoped
+> to this role with `for-domain` lands on all four of them in the org chart.

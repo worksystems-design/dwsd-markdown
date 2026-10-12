@@ -19,10 +19,10 @@ bottleneck of the dispatch window, not because of the volume but because of the 
 - The open Delivery Coordinator seat ([[NA1]]) is the role that would own the loading.
 - [[Bakery Operations]] as a domain works; the seat is overloaded.
 
-> [!NOTE]
-> **Modeling note.** The insight observes the **person**, not [[Bakery Operations]].
-
 ## Suggested Actions
 
 - Fill the Delivery Coordinator seat before the third van arrives.
 - Move wholesale calls to the afternoon, after the [[Daily Production Sync]].
+
+> [!NOTE]
+> **Modeling note.** The insight observes the **person**, not [[Bakery Operations]].

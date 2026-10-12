@@ -34,12 +34,12 @@ wait, or an existing account is renegotiated first.
 The cap is the gate a signed contract passes before it may spawn its standing daily order
 and claim nightly capacity.
 
-> [!NOTE]
-> **Modeling note.** On the [[Wholesale Contract Route]] the cap sits `::before` the
-> `standing-order` stage. The agreement is also anchored to the team itself
-> (`agreement-of: [[Wholesale]]`), so it shows on the team's box in the units view.
-
 ## Evaluation Criteria
 
 - No shop replenishment order is cut short in favor of a wholesale delivery.
 - Morning dispatch on-time rate holds as the wholesale book grows.
+
+> [!NOTE]
+> **Modeling note.** On the [[Wholesale Contract Route]] the cap sits `::before` the
+> `standing-order` stage. The agreement is also anchored to the team itself
+> (`agreement-of: [[Wholesale]]`), so it shows on the team's box in the units view.

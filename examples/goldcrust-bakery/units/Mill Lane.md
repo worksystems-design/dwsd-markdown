@@ -10,10 +10,6 @@ yard the delivery van leaves from at five. It is a **site** — a unit cut by *w
 work*, not by how the work flows. The [[Bakehouse]] work system, [[Bakery Operations]]
 and the two plain teams [[Deliveries]] and [[Wholesale]] all have their people here.
 
-> [!NOTE]
-> **Modeling note.** Only the two teams are units *inside* the site; the work systems are
-> drawn in the flight-level map, not in this tree.
-
 ## In context
 
 ```dwsd.units
@@ -21,3 +17,7 @@ mode: infer
 focus: self
 radius: { up: 1, down: inf }
 ```
+
+> [!NOTE]
+> **Modeling note.** Only the two teams are units *inside* the site; the work systems are
+> drawn in the flight-level map, not in this tree.

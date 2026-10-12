@@ -31,13 +31,6 @@ In the morning `Ready-for-Dispatch` queue, the [[Station Road Shop]] order is se
 first so the early delivery leaves in time for the commuter rush. The [[Market Street Shop]]
 follows on the standard run.
 
-> [!NOTE]
-> **Modeling note.** The agreement is anchored twice: on the `Ready-for-Dispatch` column,
-> where the bakers see it, and on the [[Daily Replenishment Flow]] where the dispatch
-> leaves the Bakehouse (`dispatch @ Bakehouse::after`). On the route it marks the one
-> hand-off it changes: the order in which the morning dispatch crosses from the Bakehouse
-> to the shops.
-
 ## Evaluation Criteria
 
 - Station Road shelves are stocked before the commuter peak begins.
@@ -48,3 +41,10 @@ follows on the standard run.
 The sourdough quota for [[Market Street Shop]] (see [[Morning Sourdough Replenishment]])
 must still be honored despite Station Road leaving first — both promises share the same
 first-dispatch window.
+
+> [!NOTE]
+> **Modeling note.** The agreement is anchored twice: on the `Ready-for-Dispatch` column,
+> where the bakers see it, and on the [[Daily Replenishment Flow]] where the dispatch
+> leaves the Bakehouse (`dispatch @ Bakehouse::after`). On the route it marks the one
+> hand-off it changes: the order in which the morning dispatch crosses from the Bakehouse
+> to the shops.

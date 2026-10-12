@@ -34,9 +34,6 @@ An FL2 **product line**: it coordinates two teams, [[DC Power Stage]] and
 [[DC Site Controller]], at PI planning and the [[ART Sync]], and contributes to the
 [[Charger ART]], which coordinates across all three product lines on the same level.
 
-> [!NOTE]
-> **Modeling note.** The example draws no board for DC Charger.
-
 ## Key Responsibilities
 
 - Own the DC Charger variants and their certification scope.
@@ -59,3 +56,6 @@ resource.
 
 - Features delivered per PI; certification findings per release; commissioning time per
   site.
+
+> [!NOTE]
+> **Modeling note.** The example draws no board for DC Charger.

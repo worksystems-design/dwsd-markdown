@@ -40,15 +40,15 @@ the platform team; the [[System Architect]] decides within one iteration whether
 a platform variant, a product-side addition on top, or is declined. No product line
 maintains a copy of a platform component.
 
+## Evaluation Criteria
+
+- No forked platform component in any product repository or BOM.
+- Variant requests decided within one iteration.
+- Platform share of each product's BOM rising, not falling.
+
 > [!NOTE]
 > **Modeling note.** This agreement is **organizational** — it is about domains, not about
 > a board column. It is anchored on the two platform work systems themselves
 > (`agreement-of` names them as entities, so it shows on their nodes and unit boxes), and
 > its `for-domain` names the [[System Architect]] role as well — so it also lands on
 > [[Elias Moreau]]'s box in the org chart, the person who has to hold the line.
-
-## Evaluation Criteria
-
-- No forked platform component in any product repository or BOM.
-- Variant requests decided within one iteration.
-- Platform share of each product's BOM rising, not falling.

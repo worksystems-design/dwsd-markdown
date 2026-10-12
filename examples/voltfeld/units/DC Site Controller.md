@@ -12,10 +12,6 @@ A team, not a work system, with no board of its own. It belongs to the [[DC Char
 product line and contributes to it; the product line coordinates it at FL2, at PI planning
 and the [[ART Sync]].
 
-> [!NOTE]
-> **Modeling note.** The team has no `flightlevel`. The example draws no board for the
-> DC Charger product line.
-
 ## In context
 
 ```dwsd.units
@@ -23,3 +19,7 @@ mode: infer
 focus: self
 radius: { up: 1, down: inf }
 ```
+
+> [!NOTE]
+> **Modeling note.** The team has no `flightlevel`. The example draws no board for the
+> DC Charger product line.

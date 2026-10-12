@@ -37,9 +37,6 @@ Its people come from three departments — [[Sales]], [[Manufacturing]] and
 [[Supply Chain]] — and stay there. The work system is the flow they share, not a unit they
 belong to.
 
-> [!NOTE]
-> **Modeling note.** The work system has no `member-of`.
-
 ## Key Responsibilities
 
 - Own the [[Customer Order Route]]: the factory stages in the ERP and the studio around
@@ -80,3 +77,6 @@ the [[Platform Variant Rule]] for which configurations exist at all.
 ## Evaluation Schedule
 
 Reviewed yearly; next review 2027-05-31.
+
+> [!NOTE]
+> **Modeling note.** The work system has no `member-of`.

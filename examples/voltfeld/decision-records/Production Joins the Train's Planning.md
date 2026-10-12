@@ -43,9 +43,6 @@ for development and production is deferred until two PIs have run under this dec
 The decision concerns two domains: the [[Charger ART]], whose planning gains two
 participants, and [[Manufacturing]], whose ramp now starts earlier.
 
-> [!NOTE]
-> **Modeling note.** The decision is anchored on both domains.
-
 ## Consequences
 
 - The train commits to objectives whose tooling is already ordered — predictability
@@ -57,3 +54,6 @@ participants, and [[Manufacturing]], whose ramp now starts earlier.
 - Trade-off: molds are committed a PI earlier, on designs frozen at the DFM review rather
   than fully integrated. [[Supply Chain]] carries that risk and said so.
 - PI planning grows by two parties and about half a day.
+
+> [!NOTE]
+> **Modeling note.** The decision is anchored on both domains.

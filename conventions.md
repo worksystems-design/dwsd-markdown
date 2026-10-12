@@ -264,7 +264,7 @@ patterns are valid.
 
 Body text tells the organization's story. Where a file explains how it is **modeled** — why
 it is anchored here, why a field is set or left out, which locator it uses — put that in
-**one callout at the end of the body**, as a GitHub alert:
+**one callout at the end of the file** (after any `## In context` view), as a GitHub alert:
 
 ```markdown
 > [!NOTE]
@@ -272,7 +272,8 @@ it is anchored here, why a field is set or left out, which locator it uses — p
 > stands on the shelf (`dispatch @ Shops::in`).
 ```
 
-Readers can skip it; tools can tell it apart from content. Wikilinks inside the callout
+Readers can skip it; tools can tell it apart from content. Place it next to a passage only
+when it explains that one passage and would lose its meaning at the end. Wikilinks inside the callout
 are ordinary wikilinks. A file with nothing to explain about its modeling has no callout.
 
 ## Embedded DSL fences

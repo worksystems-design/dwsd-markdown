@@ -30,11 +30,11 @@ enters only by replacing an existing product, or explicitly time-boxed as a seas
 special. The check happens *before* a range bet is `Decided` on the
 [[Bakery Strategy Board]].
 
-> [!NOTE]
-> **Modeling note.** The agreement anchors exactly there: `::before` the `Decided` column
-> of the [[Bakery Strategy Board]].
-
 ## Evaluation Criteria
 
 - The range never exceeds twelve standing products.
 - Waste rate and morning bake window hold steady as products rotate.
+
+> [!NOTE]
+> **Modeling note.** The agreement anchors exactly there: `::before` the `Decided` column
+> of the [[Bakery Strategy Board]].

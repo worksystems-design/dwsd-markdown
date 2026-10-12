@@ -25,10 +25,6 @@ installers and home owners.
 The Product Owner of the [[Wallbox]] team splits the features [[Product Management]] ranks
 into stories, orders the team backlog, and accepts the result. Kept by [[Lukas Weber]].
 
-> [!NOTE]
-> **Modeling note.** Roles are individual in DWSD — the [[Product Owner DC Charger]] is a
-> separate file with the same shape, not an instance of a template.
-
 ## Concerns
 
 Installer feedback; the enclosure variants the channel asks for versus the platform the
@@ -49,3 +45,7 @@ team builds on.
 ### Metrics and Monitoring
 
 - Stories accepted per iteration; features delivered as planned at PI planning.
+
+> [!NOTE]
+> **Modeling note.** Roles are individual in DWSD — the [[Product Owner DC Charger]] is a
+> separate file with the same shape, not an instance of a template.

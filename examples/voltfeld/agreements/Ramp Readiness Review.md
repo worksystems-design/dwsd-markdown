@@ -43,10 +43,6 @@ producibility acceptance. With the ramp-readiness check at every [[System Demo]]
 status flows from the plant back into the train while the feature is still in the
 `Release` group. In force from the PI 27.1 planning on 2026-12-03.
 
-> [!NOTE]
-> **Modeling note.** The ramp-readiness check is the feedback edge the [[Feature Route]]
-> has been missing.
-
 ## Evaluation Criteria
 
 - Time from release date to first customer shipment under two weeks (today: five).
@@ -56,3 +52,7 @@ status flows from the plant back into the train while the feature is still in th
 
 Fixtures started at the demo may need rework when certification forces a design change —
 accepted; rework on a fixture is cheaper than five weeks of waiting.
+
+> [!NOTE]
+> **Modeling note.** The ramp-readiness check is the feedback edge the [[Feature Route]]
+> has been missing.

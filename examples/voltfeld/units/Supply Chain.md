@@ -13,10 +13,6 @@ Its longest lead item is enclosure tooling: an injection mold takes about fourte
 longer than one PI of the [[Charger ART]]. Supply Chain is not part of the ART and does not
 attend PI planning — it learns about new enclosure variants when the first drawings arrive.
 
-> [!NOTE]
-> **Modeling note.** `unit-type: team`, no `flightlevel`. The open seat is modeled as the
-> vacancy [[NA1]].
-
 ## In context
 
 ```dwsd.units
@@ -24,3 +20,7 @@ mode: infer
 focus: self
 radius: { up: 1, down: inf }
 ```
+
+> [!NOTE]
+> **Modeling note.** `unit-type: team`, no `flightlevel`. The open seat is modeled as the
+> vacancy [[NA1]].

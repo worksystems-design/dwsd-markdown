@@ -12,9 +12,6 @@ A team, not a work system, with no board of its own. It belongs to the [[Wallbox
 line and contributes to it; the product line coordinates it at FL2. Its features live on
 the [[Wallbox Board]], in the lane of the same name.
 
-> [!NOTE]
-> **Modeling note.** The team has no `flightlevel`.
-
 ## In context
 
 ```dwsd.units
@@ -22,3 +19,6 @@ mode: infer
 focus: self
 radius: { up: 1, down: inf }
 ```
+
+> [!NOTE]
+> **Modeling note.** The team has no `flightlevel`.

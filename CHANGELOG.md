@@ -6,6 +6,10 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-12
 
+- **Modeling notes go at the end of the file.** 36 notes that sat mid-body (before
+  `## Evaluation Criteria`, `## Consequences`, `## Concerns`, `## Key Responsibilities` or
+  `## In context`) moved to the end; none explained a single passage. conventions.md says
+  so, with the exception for a note that only makes sense next to its passage.
 - **Agreements and interactions on flight routes; interactions without a schedule.** Both
   examples now anchor agreements on route stages, not only on board positions (Goldcrust:
   Station Road Early Dispatch, Wholesale Capacity Cap; Voltfeld: Expedite Lane Policy, Ramp

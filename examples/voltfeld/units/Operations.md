@@ -13,10 +13,6 @@ Unlike the engineering departments, Operations *is* where its people work. Manuf
 output, though, goes to customers and is steered from the [[Portfolio]], not from the
 [[Charger ART]].
 
-> [!NOTE]
-> **Modeling note.** The `member-of` and `reports-to` trees agree here. What does **not**
-> agree is the flow — see the topology map in the [README](../README.md).
-
 ## In context
 
 ```dwsd.units
@@ -24,3 +20,7 @@ mode: infer
 focus: self
 radius: { up: 1, down: inf }
 ```
+
+> [!NOTE]
+> **Modeling note.** The `member-of` and `reports-to` trees agree here. What does **not**
+> agree is the flow — see the topology map in the [README](../README.md).

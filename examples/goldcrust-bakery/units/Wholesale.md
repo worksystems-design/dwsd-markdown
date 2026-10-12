@@ -13,10 +13,6 @@ system. It sits at the [[Mill Lane]] site, next to the bakehouse that bakes its 
 A contract *generates* a standing order that the [[Bakehouse]] then bakes into every
 morning's dispatch.
 
-> [!NOTE]
-> **Modeling note.** `unit-type: team`, no `flightlevel`, no `work-system`. The wholesale
-> flow itself is modeled as a route, the [[Wholesale Contract Route]].
-
 ## In context
 
 ```dwsd.units
@@ -24,3 +20,7 @@ mode: infer
 focus: self
 radius: { up: 1, down: inf }
 ```
+
+> [!NOTE]
+> **Modeling note.** `unit-type: team`, no `flightlevel`, no `work-system`. The wholesale
+> flow itself is modeled as a route, the [[Wholesale Contract Route]].

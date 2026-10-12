@@ -25,12 +25,6 @@ Two trees hang off this root, and they are **not the same tree**:
 The same engineer appears in both — reporting to a department head in one picture, a
 member of a cross-functional team in the other.
 
-> [!NOTE]
-> **Modeling note.** Its `unit-type` is just `company`: no `work-system`, no `flightlevel`.
-> The line is the `reports-to` tree, drawn by the org chart; the work is the `member-of`
-> tree, drawn by the units view. The standalone views are
-> `Voltfeld Org Chart.dwsd-orgchart` and `Voltfeld Units.dwsd-units` at the org root.
-
 ## In context
 
 ```dwsd.units
@@ -38,3 +32,9 @@ mode: infer
 focus: self
 radius: { up: 1, down: inf }
 ```
+
+> [!NOTE]
+> **Modeling note.** Its `unit-type` is just `company`: no `work-system`, no `flightlevel`.
+> The line is the `reports-to` tree, drawn by the org chart; the work is the `member-of`
+> tree, drawn by the units view. The standalone views are
+> `Voltfeld Org Chart.dwsd-orgchart` and `Voltfeld Units.dwsd-units` at the org root.

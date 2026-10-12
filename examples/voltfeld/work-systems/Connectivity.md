@@ -34,9 +34,6 @@ An FL2 **product line**: it coordinates two teams, [[Charge Point Backend]] and
 [[Driver App]], at PI planning and the [[ART Sync]], and contributes to the
 [[Charger ART]], which coordinates across all three product lines on the same level.
 
-> [!NOTE]
-> **Modeling note.** The example draws no board for Connectivity.
-
 ## Key Responsibilities
 
 - Develop and operate the backend and apps; keep the OCPP integration certified.
@@ -58,3 +55,6 @@ Depends on the [[Firmware Platform]] for the device protocol and OTA client, and
 ## Key Metrics and Monitoring
 
 - Backend availability; OTA success rate; time from device release to fleet rollout.
+
+> [!NOTE]
+> **Modeling note.** The example draws no board for Connectivity.

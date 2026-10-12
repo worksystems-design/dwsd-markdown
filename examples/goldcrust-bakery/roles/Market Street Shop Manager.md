@@ -29,10 +29,6 @@ counter, selling the range, counting closing stock, and placing the
 A standalone role, deliberately separate from the [[Station Road Shop Manager]], so each
 location's role evolves on its own.
 
-> [!NOTE]
-> **Modeling note.** Roles are individual in DWSD. A role *shared* by several people would
-> instead list them all as `role-keeper`s.
-
 ## Concerns
 
 Morning availability — sourdough through the morning peak in particular (see
@@ -55,3 +51,7 @@ accuracy.
 ### Metrics and Monitoring
 
 - Morning stockout incidents; sell-through rate; replenishment accuracy.
+
+> [!NOTE]
+> **Modeling note.** Roles are individual in DWSD. A role *shared* by several people would
+> instead list them all as `role-keeper`s.
