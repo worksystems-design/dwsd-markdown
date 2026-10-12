@@ -33,8 +33,9 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
 3. **DSL fence & locator integrity** — three checks:
    - **Route fences** (` ```dwsd.flightroute `) — only the closed key set `title:` /
      `tags:` / `for:` / `for-domain:` / `bands:` / `triggers:` / `path:` / `bound-to:`.
-     Flag retired forms: a `route "…"` header or a root `route:` key (→ `title:`), a
-     `flow:` section, `@`-handle references, a `deliver` edge (→ `..> ()`), a bare
+     Flag retired forms: a `route "…"` header or a root `route:` key (→ `title:`), the
+     legacy keys `fl-path:` (→ `path:`), `fl-triggers:` (→ `triggers:`), `fl-bands:`
+     (→ `bands:`) and a `flow:` section (→ `bound-to:`), `@`-handle references, a `deliver` edge (→ `..> ()`), a bare
      `flightroute` fence tag. Confirm `for:` resolves to a flight-item-type file.
      `for-domain:` (a quoted wikilink or a list of them) must resolve to a **work system
      or a role** — **warn** otherwise, including when it names a person or a plain unit

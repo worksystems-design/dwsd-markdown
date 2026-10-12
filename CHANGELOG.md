@@ -6,6 +6,9 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-12
 
+- **org-validate names the retired route keys.** `fl-path:`, `fl-triggers:`, `fl-bands:`
+  and `flow:` in a route fence are flagged as retired forms, matching renderers that now
+  reject them.
 - **`unit-type`: one reserved value, the rest is description.** `work-system` is the only
   value with meaning in the model; it stays English in the data, matches without regard to
   case, and a view may label it in any language. Every other value is descriptive — the
