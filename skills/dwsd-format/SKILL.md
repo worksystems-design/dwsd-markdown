@@ -70,7 +70,13 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   `bound-to`: `[[Board]]#BoardName/col:Column::in`, a column group
   `[[Board]]#BoardName/lane:Lane/group:Group::in`, the `::before` / `::after` slot of a
   position, or `[[Route]]/stage:itemType @ Band::in`); a bare `[[Entity]]` anchors to a work
-  system, unit or person instead. See `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
+  system, unit or person instead. A locator without `#BoardName` (`[[Board]]/col:Column::in`)
+  lands on the column of a titled board, just as a route locator lands on a titled route;
+  in a file with several titled board fences it lands on every fence that has the unit.
+  `[[Board]]#BoardName::in` addresses the whole board and shows in the board header; a bare
+  `[[Board]]::in` is an entity anchor, not a board anchor. A meeting's `## Interactions`
+  table row may name a standalone interaction with `[[…]]` — the file is then the source
+  for outcome and anchor (conventions.md › Reading guide). See `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
   `${CLAUDE_PLUGIN_ROOT}/types/flight-route.md`.
 - **Three more fences are inferred views any entity may host** (or standalone files at the
   org root): ` ```dwsd.topology ` (flight-level context over `contributes-to`),

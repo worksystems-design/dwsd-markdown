@@ -293,6 +293,38 @@ Readers can skip it; tools can tell it apart from content. Place it next to a pa
 when it explains that one passage and would lose its meaning at the end. Wikilinks inside the callout
 are ordinary wikilinks. A file with nothing to explain about its modeling has no callout.
 
+## Reading guide
+
+How the model is meant to be used and read — by people and by agents. Nothing here adds a
+field; it settles how existing structure is interpreted.
+
+### How do I refer to an interaction from a meeting table?
+
+A meeting's `## Interactions` table names small interactions inline, one per row. When one
+of them gains weight — it needs its own description, someone wants to anchor something to
+it or link to it — **pull it out into its own interaction file** and name that file in the
+row's `Name` column:
+
+```markdown
+| Name                       | Outcome | Interaction of |
+|----------------------------|---------|----------------|
+| [[Where is each feature]]  |         |                |
+```
+
+- **There is no locator for a table row.** Locators say *where something hangs* (a board
+  position, a route stage, an entity); they never point at a line in a document. To make
+  a row addressable, give it its own file.
+- **The file is the source.** For a `[[…]]` row, `Outcome` and `Interaction of` stay empty;
+  the outcome is in the file's body, the anchor in its `interaction-of`. If a cell is
+  filled anyway, it is a copy: the file wins, and a validator reports any difference.
+  Values from row and file are never merged and never silently dropped.
+- **The way back needs no field.** The table links the file, so its backlinks name the
+  meeting that embeds it.
+- **Readers read the table in reverse:** meeting → row → anchor. For a `[[…]]` row they
+  take outcome and anchor from the file.
+- The same holds for an agreement container: `## Agreements` with its `Agreement of`
+  column.
+
 ## Embedded DSL fences
 
 Five fence tags are parsed and rendered by the app. All five DSLs are **plain YAML**,

@@ -63,6 +63,11 @@ it then inherits the meeting's frontmatter `interaction-of` head. For an
 agreement container the heading is `## Agreements` and the column is `Agreement of`, read
 the same way.
 
+Like the list form, the table form may name a **standalone interaction** (or meeting) in
+the `Name` column with `[[…]]`. That file is then the source for the row: leave `Outcome`
+and `Interaction of` empty — see
+[conventions](../conventions.md#how-do-i-refer-to-an-interaction-from-a-meeting-table).
+
 ## Markwhen sibling (`.mw`)
 
 A recurring meeting usually has a `.mw` sibling (same basename) with one

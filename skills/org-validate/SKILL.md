@@ -60,8 +60,17 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      `[[Route]]/stage:itemType @ Band::in` for a **route stage**). Confirm the target
      file exists (a bare entity anchor that names a plain unit or a person is valid —
      never flag it); any `col:` / `lane:` / `group:` / `split:` segment names a unit present
-     in that board's YAML; a `stage:` segment names an `itemType @ Band` pair the route's
+     in that board's YAML — a board locator that lands nowhere is reported with one of three
+     reasons: `document-not-indexed` (the board file is not in the org), `board-not-found`
+     (no board of that title in the file, or a wrong `#BoardName`), `unit-not-found` (the
+     board exists but has no unit at that path); a `stage:` segment names an `itemType @ Band` pair the route's
      `path:` (or a trigger's `generates:`) actually places in that band.
+   - **Meeting tables** — in a meeting's `## Interactions` (or `## Agreements`) table, a
+     row whose `Name` is a `[[…]]` link must resolve to an interaction (or meeting /
+     agreement) file. Its `Outcome` and `Interaction of` (`Agreement of`) cells should be
+     empty; if filled, they are a copy — **warn** when the anchor cell differs from the
+     file's `interaction-of` (`agreement-of`), and note a differing outcome. The file wins;
+     never merge the two.
    - **`for-domain`** on any entity names a **work system or a role** (a list may mix
      them) — both are valid; **warn** only when it names a person or a plain unit.
    - **Board-binding consistency (informational):** when an entity carries both

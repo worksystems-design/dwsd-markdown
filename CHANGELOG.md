@@ -4,6 +4,20 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-14
+
+- **Reading guide: interactions from meeting tables.** A new `conventions.md` section says
+  how existing structure is read. First entry: there is no locator for a table row; an
+  interaction in a meeting table that gains weight moves into its own file and is named in
+  the row's `Name` column with `[[…]]`. The file is the source for outcome and anchor;
+  filled cells are copies, the file wins, a validator reports differences. Same for
+  `## Agreements`. `types/meeting.md` allows `[[…]]` in the table form.
+- **Skills follow the board-locator rules of the shared host data layer.** `dwsd-format`:
+  a locator without `#BoardName` lands on a titled board; `#BoardName::in` is the whole
+  board; a bare `[[Board]]::in` is an entity anchor. `org-validate`: three miss reasons
+  (`document-not-indexed`, `board-not-found`, `unit-not-found`) and the meeting-table copy
+  check.
+
 ## 2026-10-12
 
 - **org-validate names the retired route keys.** `fl-path:`, `fl-triggers:`, `fl-bands:`
