@@ -39,13 +39,15 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      Flag retired forms: a `route "…"` header or a root `route:` key (→ `title:`), the
      legacy keys `fl-path:` (→ `path:`), `fl-triggers:` (→ `triggers:`), `fl-bands:`
      (→ `bands:`) and a `flow:` section (→ `bound-to:`), `@`-handle references, a `deliver` edge (→ `..> ()`), a bare
-     `flightroute` fence tag. A wikilink `for:` must resolve to a flight-item-type file
-     (broken link otherwise); a plain-text `for:` is a description and is not checked.
+     `flightroute` fence tag. A wikilink `for:` resolves like any wikilink (broken link
+     otherwise) and should name a flight-item-type file — **warn** when it names another
+     type; a plain-text `for:` is a description and is not checked.
      `for-domain:` (a quoted wikilink or a list of them) must resolve to a **work system
      or a role** — **warn** otherwise, including when it names a person or a plain unit
      (see `conventions.md` › Up vs. into the detail). A stage item type is text or a wikilink:
      text is **never** looked up or flagged, even when a file of that name exists; a
-     wikilink stage must resolve to a flight-item-type file (broken link otherwise). Flag
+     wikilink stage resolves like any wikilink (broken link otherwise) and should name a
+     flight-item-type file — **warn** when it names another type. Flag
      an unquoted path / `generates:` line that contains `[[` (YAML reads it as a list).
      **Warn** when one band holds two stages whose names differ only by case or by
      link-vs-text (`[[Feature]] @ Train` and `feature @ Train`). Every band named in a `path:`

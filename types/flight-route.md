@@ -59,6 +59,7 @@ endpoints and trigger targets.
 locally to the route: it is never looked up and never flagged. A wikilink
 (`[[Feature]] @ Train`) is a real connection to a [flight-item-type](flight-item-type.md)
 entity — it resolves like any wikilink, and one that resolves to nothing is a broken link.
+A link that resolves to an entity of another type is still a link; a validator warns.
 An alias keeps a short label (`[[Customer Order|order]] @ ERP`). Both forms mix freely,
 also on one line. A line that holds a wikilink is **quoted**, as everywhere in YAML:
 
