@@ -68,6 +68,8 @@ A unit that is *also* a work system carries `unit-type: [team, work-system]` (or
   folder. The folder (`units/` vs `work-systems/`) is organizational only.
 - `unit-type` is an open vocabulary (`team`, `ART`, `department`, …) and may hold several
   values. Alongside the *kind*, the reserved value **`work-system`** is what marks the unit
-  as a work system; `flightlevel` is then required but is not itself the marker. All other
-  values are descriptive: shown exactly as written, never interpreted — see
+  as a work system; `flightlevel` is then required but is not itself the marker. The
+  reserved value **`team`** marks a stable group of people; its members are the
+  individuals whose `member-of` names it, and a view may show their number as the team's
+  size. All other values are descriptive: shown exactly as written, never interpreted — see
   [conventions](../conventions.md#reserved-and-descriptive-unit-type-values).

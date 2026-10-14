@@ -219,12 +219,19 @@ teams, or a team can have none — was considered and dropped for simplicity.
 
 `unit-type` holds two kinds of value, and they behave differently:
 
-- **Reserved** — today only **`work-system`**. It carries meaning in the model: it makes the
-  unit a work system, with everything that follows (flight level, topology,
-  `contributes-to`, validation). A reserved value is part of the format, like a field
-  name: it is always written in English, and tools match it without regard to case. A
-  view may draw it as a mark of its own and may label it in the reader's language.
-- **Descriptive** — every other value: `team`, `site`, `department`, `ART`, `Werk`, …
+- **Reserved** — today **`work-system`** and **`team`**. A reserved value carries meaning
+  in the model. It is part of the format, like a field name: it is always written in
+  English, and tools match it without regard to case. A view may draw it as a mark of its
+  own and may label it in the reader's language.
+  - **`work-system`** makes the unit a work system, with everything that follows (flight
+    level, topology, `contributes-to`, validation).
+  - **`team`** marks a stable group of people who work together. Its **members** are the
+    individuals whose `member-of` names it, and a view may show the team's size as their
+    number — the members the org folder models, which can be fewer than the real
+    headcount. Units that are `member-of` a team are not counted. `team` and
+    `work-system` combine freely: `[team, work-system]` is a team that is also a work
+    system; a plain `team` is not.
+- **Descriptive** — every other value: `site`, `department`, `company`, `ART`, `Werk`, …
   An open vocabulary in the author's words and language. No tool derives anything from
   it. Views show it **exactly as written** — no capitalization, no label lookup — so an
   acronym is spelled the way the author spelled it (`ART`, not `art`).

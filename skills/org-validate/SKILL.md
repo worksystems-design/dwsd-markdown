@@ -24,6 +24,9 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
    - every other type → its plural folder (`signal` → `signals/`, …).
    Flag a `visualization` missing `visualization-type`, an `agreement` missing
    `agreement-type`, or an `interaction` missing `interaction-type`.
+   - **Team integrity:** a unit whose `unit-type` includes `team` should have at least one
+     individual with `member-of` naming it — **note** a team without members (its size
+     would read as zero).
    - **Work-system integrity:** a unit whose `unit-type` includes `work-system` **must**
      have a `flightlevel` (flag if missing). Conversely, **warn** on a unit that has a
      `flightlevel` but does *not* list `work-system` in `unit-type` — `flightlevel` no

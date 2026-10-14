@@ -6,6 +6,14 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-14
 
+- **`team` becomes the second reserved `unit-type` value.** Like `work-system`, it is
+  English in the data and matched without regard to case. It marks a stable group of
+  people who work together; its members are the individuals whose `member-of` names it,
+  and a view may show their number as the team's size (the modeled members, not
+  necessarily the headcount). It combines with `work-system` or stands alone. No example
+  data changes: both examples already use `team` this way. `org-validate` notes a team
+  without members.
+
 - **Reading guide: interactions from meeting tables.** A new `conventions.md` section says
   how existing structure is read. First entry: there is no locator for a table row; an
   interaction in a meeting table that gains weight moves into its own file and is named in
