@@ -66,7 +66,9 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   `visualization` → ` ```dwsd.board ` (`title:`, `columns:` / `lanes:` / `groups:`, with
   inline inside-out `agreements:` / `interactions:` on any node — no inline sugar like
   `#status` or `[wip]`); `flight-route` → ` ```dwsd.flightroute ` (`title:`, `for:` as a
-  wikilink, `for-domain:` naming the work system or role responsible for the route, `bands:`, `triggers:`, glyph-typed `path:` edges `->` / `-->` / `..>` /
+  wikilink or plain text, stage item types as text (`order @ Shops`) or a quoted wikilink
+  (`"[[Feature]] @ Train"`) — never matched by name; a linked stage is named by its target
+  in locators and `bound-to` keys (`stage:Feature @ Train`), `for-domain:` naming the work system or role responsible for the route, `bands:`, `triggers:`, glyph-typed `path:` edges `->` / `-->` / `..>` /
   `..> ()`, and a `bound-to:` layer binding bands to boards). External entities anchor
   **into** a board or route via a **locator** (`interaction-of` / `agreement-of` /
   `bound-to`: `[[Board]]#BoardName/col:Column::in`, a column group

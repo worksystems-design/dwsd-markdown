@@ -40,6 +40,6 @@ yield and ramp status from the [[Manufacturing Board]]; pipeline from [[Sales]].
 | Name                                 | Outcome                                       | Interaction of                                                   |
 |--------------------------------------|-----------------------------------------------|------------------------------------------------------------------|
 | Epic review                          | status and decisions per epic in flight       | [[Portfolio Board]]#Portfolio/col:Implementing::in               |
-| PI results from the train            | predictability and scope changes understood   | [[Epic Route]]/stage:feature @ Train::after                      |
+| PI results from the train            | predictability and scope changes understood   | [[Epic Route]]/stage:Feature @ Train::after                      |
 | Volume and ramp plan with the plant  | ramp dates set for the next release           | [[Manufacturing Board]]#Manufacturing/col:Ramp::in               |
 | Funnel review                        | epics into Reviewing, or dropped              | [[Portfolio Board]]#Portfolio/col:Funnel::in                     |

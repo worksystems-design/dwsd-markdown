@@ -127,7 +127,9 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 > stage**: `[[Route]]/stage:<itemType> @ <Band>::before|in|after`, where the name after
 > `stage:` is the full `itemType @ Band` pair (single space each side of `@`), e.g.
 > `[[Daily Replenishment Flow]]/stage:order @ Shops::before`. A `#Route Name` fragment
-> disambiguates when one file hosts several routes.
+> disambiguates when one file hosts several routes. A stage whose item type is a wikilink
+> is named by its link target, without brackets: `[[Feature Route]]/stage:Feature @ Train::in`
+> for the stage `[[Feature]] @ Train`.
 
 ### `derived-from` — the shared emergence key
 

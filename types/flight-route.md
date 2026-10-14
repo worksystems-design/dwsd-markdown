@@ -44,7 +44,7 @@ boards. In plain Markdown the block still reads as a YAML document.
 |---|---|---|
 | `title` | string | The route name (shared document header; the old `route:` key is retired) |
 | `tags` | string list | Descriptive chips, document scope only |
-| `for` | wikilink or string | The primary flight-item-type the route describes |
+| `for` | wikilink or string | The primary flight-item-type the route describes — a wikilink to its file, or plain text when it has none |
 | `for-domain` | wikilink or list of wikilinks | The **domain** — a work system or a role — **responsible** for the route: who has to take care when it changes. Points *up*. An unresolved target is a warning, never an error |
 | `bands` | list of `{ name, fl }` | The named bands work moves through; `fl` is `1`/`2`/`3` or a span like `[1, 2]`; omit `fl` for a pure custom band |
 | `triggers` | list of `{ name, generates }` | External start events outside the bands; `generates` is one stage or a list (fan-out) |
@@ -54,6 +54,24 @@ boards. In plain Markdown the block still reads as a YAML document.
 **Stages** are never declared — a stage is an `itemType @ Band` pair (single space each
 side of `@`, e.g. `order @ Shops`), and the parser infers the set of stages from the edge
 endpoints and trigger targets.
+
+**A stage's item type is text or a wikilink.** Text (`order @ Shops`) describes the item
+locally to the route: it is never looked up and never flagged. A wikilink
+(`[[Feature]] @ Train`) is a real connection to a [flight-item-type](flight-item-type.md)
+entity — it resolves like any wikilink, and one that resolves to nothing is a broken link.
+An alias keeps a short label (`[[Customer Order|order]] @ ERP`). Both forms mix freely,
+also on one line. A line that holds a wikilink is **quoted**, as everywhere in YAML:
+
+```yaml
+path:
+  - "[[Epic]] @ Train -> [[Feature]] @ Train"
+  - "[[Feature]] @ Train -> story @ Teams"
+```
+
+A stage is **named** by its token, or for a wikilink by its link target (not the alias):
+`stage:Feature @ Train` in a locator, `Feature:` as a `bound-to` key. The match is exact
+within the route; a locator never nests `[[…]]`. Switching a stage from text to a wikilink
+therefore changes its name (`feature` → `Feature`) — update the locators and keys with it.
 
 **Edges** — each `path:` line is one hop, `LEFT <glyph> RIGHT`; the glyph selects the
 kind:
@@ -72,7 +90,7 @@ line holds exactly one hop. Every edge also has an expanded object form
 
 **Binding — `bound-to:`.** Each entry names one `band` (which must be declared in
 `bands:`) and a list of `boards`. A **coarse** binding is a bare `board:` wikilink; a
-**fine** binding adds `stages:` — a list of `{ <itemType>: <locator> }` pinning a stage
+**fine** binding adds `stages:` — a list of `{ <stage name>: <locator> }` pinning a stage
 to a board position (`lane:Name/col:Name`). The relation is N:M — one band may bind to
 several boards and vice versa; an entirely unbound route is valid. The one hard rule is
 **Flow ⊆ Path**: every bound band must exist in `bands:`, and every pinned item type must
@@ -122,13 +140,10 @@ to the order (dotted `..>`); the finished component is *delivered* to the custom
 
 ## Notes
 
-- `for:`, `for-domain:` and `bound-to: … board:` take wikilinks — the target entity's
-  name, like every other relationship in the model.
-- Stage item types (`order`, `contract`, …) are short tokens. A stage's item type
-  **resolves** to a [flight-item-type](flight-item-type.md) entity when one of that name
-  exists — the exact name first, otherwise a case-insensitive match when exactly one
-  entity matches (`epic` → `Epic.md`). A resolved stage is a reference a renderer can make
-  navigable; an unresolved one stays a local token — never an error, so a route stays
+- `for-domain:` and `bound-to: … board:` take wikilinks — the target entity's name, like
+  every other relationship in the model. `for:` and a stage's item type take a wikilink
+  **or** plain text: the wikilink is a connection, the text a description. Nothing is
+  matched by name — `epic` stays text even when an `Epic` file exists — so a route stays
   authorable without any org model.
 - Retired forms (all hard errors or rejected): the `route "Name"` header and the root
   `route:` key (→ `title:`), the `flow:` section and `@`-handle column references

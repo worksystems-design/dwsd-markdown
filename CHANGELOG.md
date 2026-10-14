@@ -6,6 +6,18 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-14
 
+- **Route item types: text or wikilink, never matched by name.** A stage's item type and a
+  route's `for:` are either plain text — a description local to the route, never looked
+  up, never flagged — or a wikilink, a real connection to a flight-item-type file that
+  resolves or is a broken link. The old lookup (`epic` finds `Epic.md`, exact name first,
+  then case-insensitive) is gone. Lines holding a wikilink are quoted; aliases
+  (`[[Customer Order|order]]`) keep a short label. A linked stage is named by its link
+  target in locators and `bound-to` keys (`stage:Feature @ Train`, `Feature:`), so
+  switching `feature` to `[[Feature]]` changes those spellings. Voltfeld's `epic` and
+  `feature` stages — the only ones with item-type files — are now wikilinks; every other
+  stage in both examples stays text. `org-validate` checks wikilink stages and `for:`,
+  quoting, and stages in one band that differ only by case or link-vs-text.
+
 - **`team` becomes the second reserved `unit-type` value.** Like `work-system`, it is
   English in the data and matched without regard to case. It marks a stable group of
   people who work together; its members are the individuals whose `member-of` names it,

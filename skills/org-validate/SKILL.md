@@ -39,12 +39,16 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      Flag retired forms: a `route "…"` header or a root `route:` key (→ `title:`), the
      legacy keys `fl-path:` (→ `path:`), `fl-triggers:` (→ `triggers:`), `fl-bands:`
      (→ `bands:`) and a `flow:` section (→ `bound-to:`), `@`-handle references, a `deliver` edge (→ `..> ()`), a bare
-     `flightroute` fence tag. Confirm `for:` resolves to a flight-item-type file.
+     `flightroute` fence tag. A wikilink `for:` must resolve to a flight-item-type file
+     (broken link otherwise); a plain-text `for:` is a description and is not checked.
      `for-domain:` (a quoted wikilink or a list of them) must resolve to a **work system
      or a role** — **warn** otherwise, including when it names a person or a plain unit
-     (see `conventions.md` › Up vs. into the detail). A stage item-type token that matches
-     no flight-item-type file is fine and is **never** flagged — it stays a local token
-     (the resolution rule on the flight-route page). Every band named in a `path:`
+     (see `conventions.md` › Up vs. into the detail). A stage item type is text or a wikilink:
+     text is **never** looked up or flagged, even when a file of that name exists; a
+     wikilink stage must resolve to a flight-item-type file (broken link otherwise). Flag
+     an unquoted path / `generates:` line that contains `[[` (YAML reads it as a list).
+     **Warn** when one band holds two stages whose names differ only by case or by
+     link-vs-text (`[[Feature]] @ Train` and `feature @ Train`). Every band named in a `path:`
      edge or a trigger's `generates:` must be declared in `bands:` (`fl` ∈ 1..3 or a
      numeric span). Edge sanity: one hop per line; `()` reached only via `..>`; `->`
      stays inside one band, `-->` crosses bands (warn otherwise). **Flow ⊆ Path:** every
@@ -66,7 +70,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      in that board's YAML — a board locator that lands nowhere is reported with one of three
      reasons: `document-not-indexed` (the board file is not in the org), `board-not-found`
      (no board of that title in the file, or a wrong `#BoardName`), `unit-not-found` (the
-     board exists but has no unit at that path); a `stage:` segment names an `itemType @ Band` pair the route's
+     board exists but has no unit at that path); a `stage:` segment names an `itemType @ Band` pair — the token, or a linked stage's
+     target without brackets, matched exactly — the route's
      `path:` (or a trigger's `generates:`) actually places in that band.
    - **Meeting tables** — in a meeting's `## Interactions` (or `## Agreements`) table, a
      row whose `Name` is a `[[…]]` link must resolve to an interaction (or meeting /

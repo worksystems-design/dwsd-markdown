@@ -15,6 +15,7 @@ triggers:
     generates:
       - <item-type> @ <Band>
 path:
+  # item type: plain text, or a quoted wikilink — "[[<Flight Item Type>]] @ <Band> -> …"
   - <item-type> @ <Band> -> <item-type> @ <Band>
   - <item-type> @ <Band> --> <item-type> @ <Band>
   - <item-type> @ <Band> ..> ()

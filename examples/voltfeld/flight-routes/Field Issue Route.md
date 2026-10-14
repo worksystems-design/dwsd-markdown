@@ -37,7 +37,7 @@ path:
   # safety or fleet-down: the issue becomes a hotfix in the expedite lane
   - issue @ Train -> hotfix @ Train
   # everything else becomes a feature for the next PI
-  - issue @ Train -> feature @ Train
+  - "issue @ Train -> [[Feature]] @ Train"
   # the product line takes the hotfix into its expedite lane
   - hotfix @ Train --> hotfix @ Product Lines
   # one of its teams fixes it immediately
@@ -55,7 +55,7 @@ bound-to:
         stages:
           - issue: "lane:Field Issue/col:Triage"
           - hotfix: "lane:Field Issue/col:Fix-in-Progress"
-          - feature: "lane:Feature/group:Preparation/col:Program Backlog"
+          - Feature: "lane:Feature/group:Preparation/col:Program Backlog"
   - band: Product Lines
     boards:
       - board: "[[Wallbox Board]]"

@@ -48,4 +48,4 @@ times for long-lead parts and tooling — [[Supply Chain]] is not in the room, a
 | Team breakouts: features into stories         | draft PI objectives per team                        | [[Wallbox Board]]#Wallbox/col:PI Backlog::in                                         |
 | Dependency board                              | cross-team dependencies with owners and dates       | [[Charger ART Board]]#Charger ART/lane:Feature/group:In PI/col:Implementing::before         |
 | Management review and problem solving         | scope adjusted overnight                            | [[Charger ART Board]]#Charger ART::in                                                       |
-| Business value and confidence vote            | committed PI objectives                             | [[Epic Route]]/stage:epic @ Train::in                                                       |
+| Business value and confidence vote            | committed PI objectives                             | [[Epic Route]]/stage:Epic @ Train::in                                                       |

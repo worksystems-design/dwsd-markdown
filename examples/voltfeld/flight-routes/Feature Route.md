@@ -31,20 +31,20 @@ bands:
 triggers:
   - name: epic split by Product Management, or a market request
     generates:
-      - feature @ Train
+      - "[[Feature]] @ Train"
 path:
   # a product line takes the feature at PI planning
-  - feature @ Train --> feature @ Product Lines
+  - "[[Feature]] @ Train --> [[Feature]] @ Product Lines"
   # the product line gives it to one of its teams
-  - feature @ Product Lines --> feature @ Teams
+  - "[[Feature]] @ Product Lines --> [[Feature]] @ Teams"
   # the team breaks it into stories
-  - feature @ Teams -> story @ Teams
+  - "[[Feature]] @ Teams -> story @ Teams"
   # story progress flows back into the product line's feature
-  - story @ Teams ..> feature @ Product Lines
+  - "story @ Teams ..> [[Feature]] @ Product Lines"
   # feature progress and demo results flow back to the train (ART Sync, System Demo)
-  - feature @ Product Lines ..> feature @ Train
+  - "[[Feature]] @ Product Lines ..> [[Feature]] @ Train"
   # the PI's features bundle into one system release
-  - feature @ Train -> release @ Train
+  - "[[Feature]] @ Train -> release @ Train"
   # the release lands at the plant as drawings, BOM and production test firmware
   - release @ Train --> release @ Plant
   # built chargers ship to customers
@@ -55,13 +55,13 @@ bound-to:
     boards:
       - board: "[[Charger ART Board]]"
         stages:
-          - feature: "lane:Feature/group:In PI/col:Implementing"
+          - Feature: "lane:Feature/group:In PI/col:Implementing"
           - release: "lane:Feature/group:Release/col:Released"
   - band: Product Lines
     boards:
       - board: "[[Wallbox Board]]"
         stages:
-          - feature: "lane:Wallbox Home/col:In Progress"
+          - Feature: "lane:Wallbox Home/col:In Progress"
   - band: Teams
     boards:
       - board: "[[HW Base Board]]"
