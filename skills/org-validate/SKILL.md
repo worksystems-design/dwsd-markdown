@@ -47,7 +47,10 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      (see `conventions.md` › Up vs. into the detail). A stage item type is text or a wikilink:
      text is **never** looked up or flagged, even when a file of that name exists; a
      wikilink stage resolves like any wikilink (broken link otherwise) and should name a
-     flight-item-type file — **warn** when it names another type. Flag
+     flight-item-type file — **warn** when it names another type. (The DSL package
+     reports the same cases as `route.unresolved-item-type-ref` and
+     `route.item-type-ref-kind`, both warnings: "'[[X]]' is a <kind>, not a
+     flight-item-type — link a flight-item-type or write the stage as plain text".) Flag
      an unquoted path / `generates:` line that contains `[[` (YAML reads it as a list).
      **Warn** when one band holds two stages whose names differ only by case or by
      link-vs-text (`[[Feature]] @ Train` and `feature @ Train`). Every band named in a `path:`
