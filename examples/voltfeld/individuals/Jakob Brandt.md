@@ -11,7 +11,7 @@ dispensers and the payment terminal. Reports to [[Lior Katz]].
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

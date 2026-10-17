@@ -12,7 +12,7 @@ of signals in the company and the starting point of the field-issue flow.
 
 ## In context
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: self
 radius: { up: 1, down: inf }

@@ -12,7 +12,7 @@ Niamh owns the product roadmap. She keeps the [[Product Management]] role of the
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

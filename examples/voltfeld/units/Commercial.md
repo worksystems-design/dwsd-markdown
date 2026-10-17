@@ -11,7 +11,7 @@ Service is where most field issues enter the company.
 
 ## In context
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: self
 radius: { up: 1, down: inf }

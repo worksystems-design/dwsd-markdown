@@ -18,7 +18,7 @@ In the replenishment lane, once an order is `Planned` the coordination work on i
 finished; while it is `In-Production` the order sits with the [[Bakehouse]] at FL1, and
 FL2 is waiting on it.
 
-```dwsd.board
+```dwsd.board id=bakery-operations-coordination
 title: Bakery Operations Coordination
 flightlevel: FL2
 lanes:

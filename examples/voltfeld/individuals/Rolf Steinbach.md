@@ -12,7 +12,7 @@ market and the field into the [[Portfolio]] and is the fourth [[Business Owner]]
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

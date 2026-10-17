@@ -13,7 +13,7 @@ report to [[Lior Katz]]. Like [[Hardware Engineering]] it holds reporting lines,
 
 ## In context
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: self
 radius: { up: 1, down: inf }

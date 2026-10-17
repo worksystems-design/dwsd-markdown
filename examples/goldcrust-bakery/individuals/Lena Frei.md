@@ -11,7 +11,7 @@ next-day [[Daily Replenishment Order]]. She holds the [[Market Street Shop Manag
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

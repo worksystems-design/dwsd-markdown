@@ -12,7 +12,7 @@ product line — product-specific boards and the enclosure fit on top of the [[H
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

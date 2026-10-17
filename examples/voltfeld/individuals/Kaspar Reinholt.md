@@ -12,7 +12,7 @@ works *in* his department: they are members of [[Wallbox]], [[DC Charger]], [[HW
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

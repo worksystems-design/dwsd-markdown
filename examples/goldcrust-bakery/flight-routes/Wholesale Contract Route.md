@@ -13,7 +13,7 @@ on the standing order at FL2. Delivery experience feeds the contract world throu
 weekly [[Wholesale Account Review]], and the [[Wholesale Capacity Cap]] limits how much
 of the Bakehouse's night a growing wholesale book may claim.
 
-```dwsd.flightroute
+```dwsd.flightroute id=wholesale-contract-route
 title: Wholesale Contract Route
 for: "[[Wholesale Contract]]"
 for-domain: "[[Bakery Operations]]"

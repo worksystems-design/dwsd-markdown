@@ -12,7 +12,7 @@ board, through the weekly [[Launch Check-in]]. This is the
 top-down strategic route: months, not days, and the delivery is a new work system — from
 its first trading day the shop joins the [[Daily Replenishment Flow]].
 
-```dwsd.flightroute
+```dwsd.flightroute id=new-shop-launch-route
 title: New Shop Launch Route
 for: "[[New Shop Launch]]"
 for-domain: "[[Bakery Strategy]]"

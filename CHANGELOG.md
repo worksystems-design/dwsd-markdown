@@ -17,7 +17,9 @@ commit onward**. The current model is described by the reference itself — `REA
   changes, so marks and addresses that point at a diagram survive edits that insert, move
   or remove other diagrams on the page. Optional; tools that create a fence should assign
   one. Readers recognize a fence by its tag alone. `org-validate` flags duplicate ids in a
-  file and warns on a malformed one. No example uses ids yet.
+  file and warns on a malformed one. Every fence in the Goldcrust and Voltfeld examples carries one —
+  the title as a slug for boards and routes (`id=epic-route`), the tag for the inferred
+  views (`id=orgchart`).
 
 ## 2026-10-14
 

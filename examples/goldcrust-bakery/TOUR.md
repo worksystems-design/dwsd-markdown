@@ -88,7 +88,7 @@ the `reports-to` line in each person's file, the `member-of` line in each unit's
 The org chart of the fourteen people — one fence, and the only thing it says is where to
 look:
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: "[[Mara Holt]]"
 radius: { up: 0, down: inf }
@@ -101,7 +101,7 @@ same chart lives as a standalone file, [Goldcrust Org Chart.dwsd-orgchart](Goldc
 
 The units, cut by site:
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 layout: nested
 focus: "[[Goldcrust Bakery]]"

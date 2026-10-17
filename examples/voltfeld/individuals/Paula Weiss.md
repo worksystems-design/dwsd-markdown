@@ -12,7 +12,7 @@ the ERP do its work; the rest of the time she runs the studio — the cases the
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

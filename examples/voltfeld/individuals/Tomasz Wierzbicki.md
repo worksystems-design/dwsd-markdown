@@ -11,7 +11,7 @@ terminal integration — on the [[Firmware Platform]] base. Reports to [[Lior Ka
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

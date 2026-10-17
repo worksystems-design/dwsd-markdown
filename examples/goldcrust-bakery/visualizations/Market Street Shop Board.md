@@ -10,7 +10,7 @@ The FL1 retail board for the [[Market Street Shop]] — the morning dispatch arr
 through the day, and the closing count becomes tomorrow's [[Daily Replenishment Order]]. The
 `Sold-Out` column is where the [[Sourdough Sold Out Before 9am]] signal shows up.
 
-```dwsd.board
+```dwsd.board id=market-street-shop
 title: Market Street Shop
 flightlevel: FL1
 columns:

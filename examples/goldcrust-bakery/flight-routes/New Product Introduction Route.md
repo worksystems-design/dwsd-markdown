@@ -13,7 +13,7 @@ on the FL2 board's `New Product Introduction` lane. Trial results come back thro
 [[Trial Bake Tasting]], and the [[Daily Range Cap]] guards what may enter the range at
 all. The mirror image of the [[New Shop Launch Route]]: FL1 → FL3 → FL2 → FL1.
 
-```dwsd.flightroute
+```dwsd.flightroute id=new-product-introduction-route
 title: New Product Introduction Route
 for: "[[New Product Introduction]]"
 for-domain: ["[[Bakery Strategy]]", "[[Head Baker]]"]

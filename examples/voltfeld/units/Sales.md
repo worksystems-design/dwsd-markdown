@@ -12,7 +12,7 @@ feeds market demand into the [[Portfolio]] and commits delivery dates against th
 
 ## In context
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: self
 radius: { up: 1, down: inf }

@@ -11,7 +11,7 @@ motion at once (e.g. a [[New Shop Launch]]). A bet moves from `Discovery` throug
 understood and decided, to `Ready-for-Flight`, `In-Flight`, and finally `Landed`. Kept
 deliberately small: this is where the bakery looks at *what to take on*, not how to run it.
 
-```dwsd.board
+```dwsd.board id=bakery-strategy
 title: Bakery Strategy
 flightlevel: FL3
 agreements:

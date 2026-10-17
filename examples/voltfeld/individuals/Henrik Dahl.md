@@ -12,7 +12,7 @@ Henrik founded Voltfeld in 2019 and runs it. He chairs the [[Portfolio]], charte
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

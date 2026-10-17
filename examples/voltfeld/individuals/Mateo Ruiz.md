@@ -11,7 +11,7 @@ Mateo leads [[Field Service]]: commissioning, repairs, firmware recoveries. Repo
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

@@ -20,7 +20,7 @@ per flight-item-type in motion at FL2:
 In `Certified` the train waits on an external test house; `Implementing` is where the
 teams are, and the train's own work there is coordination.
 
-```dwsd.board
+```dwsd.board id=charger-art
 title: Charger ART
 flightlevel: FL2
 timebox: 10w

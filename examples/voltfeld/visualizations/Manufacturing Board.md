@@ -12,7 +12,7 @@ arriving to stable production. `Release Received` is the column where the
 [[Feature Route]] ends for the train and begins for the plant. Two boards, one hand-over,
 no loop — the picture the change ladder starts from.
 
-```dwsd.board
+```dwsd.board id=manufacturing
 title: Manufacturing
 flightlevel: FL1
 columns:

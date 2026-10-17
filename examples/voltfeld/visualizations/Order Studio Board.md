@@ -12,7 +12,7 @@ their state is in the ERP. What appears here are the cases: flagged, worked, wai
 the customer, back in the factory. It is small on purpose, and it is the one place where
 the people of [[Order to Delivery]] meet every morning ([[Order Studio Huddle]]).
 
-```dwsd.board
+```dwsd.board id=order-studio
 title: Order Studio
 flightlevel: FL2
 aging: 2d

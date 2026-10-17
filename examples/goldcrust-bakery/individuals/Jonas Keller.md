@@ -14,7 +14,7 @@ mornings. He chairs the [[Daily Production Sync]] when Mara is baking. He keeps 
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

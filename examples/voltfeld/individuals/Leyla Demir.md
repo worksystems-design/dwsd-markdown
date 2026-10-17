@@ -11,7 +11,7 @@ Leyla plans production against the volume targets from the [[Portfolio]] and the
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

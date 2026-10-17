@@ -20,7 +20,7 @@ Open [Daria Novak](individuals/Daria%20Novak.md). Two lines matter: she **report
 
 Those two lines draw two different pictures. Her reporting line, two levels up:
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: "[[Daria Novak]]"
 radius: { up: 2, down: 0 }
@@ -28,7 +28,7 @@ radius: { up: 2, down: 0 }
 
 And the team she works in, inside the train:
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: "[[Wallbox Fleet]]"
 radius: { up: 2, down: 0 }
@@ -49,7 +49,7 @@ base — one hardware platform that both product lines are built on. Look at its
 [DC Charger](work-systems/DC%20Charger.md). The same for the
 [Firmware Platform](work-systems/Firmware%20Platform.md), which serves three.
 
-```dwsd.topology
+```dwsd.topology id=topology
 mode: infer
 focus: "[[HW Base]]"
 radius: 1

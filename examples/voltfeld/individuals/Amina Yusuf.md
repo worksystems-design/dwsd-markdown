@@ -11,7 +11,7 @@ Amina writes the residential [[Wallbox]] firmware in [[Wallbox Home]], on top of
 
 ## In context
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: self
 radius: { up: 1, down: 1 }

@@ -9,7 +9,7 @@ created_at: "2026-05-24"
 The daily production board for the [[Bakehouse]] — one column per stage from order to
 dispatch.
 
-```dwsd.board
+```dwsd.board id=bakehouse-production
 title: Bakehouse Production
 flightlevel: FL1
 columns:

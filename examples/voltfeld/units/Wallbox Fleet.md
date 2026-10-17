@@ -14,7 +14,7 @@ the [[Wallbox Board]], in the lane of the same name.
 
 ## In context
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: self
 radius: { up: 1, down: inf }

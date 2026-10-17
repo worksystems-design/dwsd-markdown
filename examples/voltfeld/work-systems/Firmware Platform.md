@@ -17,12 +17,12 @@ created_at: "2026-10-10"
 
 ## In context
 
-```dwsd.topology
+```dwsd.topology id=topology
 mode: infer
 radius: 2
 ```
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: self
 radius: { up: 1, down: inf }

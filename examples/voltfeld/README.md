@@ -37,7 +37,7 @@ on them.
 
 ## Flight-level map
 
-```dwsd.topology
+```dwsd.topology id=topology
 mode: infer
 focus: "[[Portfolio]]"
 radius: { up: 0, down: inf }
@@ -97,7 +97,7 @@ keys of the same files.
 [Hardware Engineering](units/Hardware%20Engineering.md) and
 [Software Engineering](units/Software%20Engineering.md), who hire, develop and review them:
 
-```dwsd.orgchart
+```dwsd.orgchart id=orgchart
 mode: infer
 focus: "[[Henrik Dahl]]"
 radius: { up: 0, down: inf }
@@ -107,7 +107,7 @@ radius: { up: 0, down: inf }
 cross-functional teams inside the train's product lines; the two engineering departments appear as boxes with no team
 inside them, because nobody *works* there — their `line` chip says so:
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 layout: nested
 focus: "[[Voltfeld]]"

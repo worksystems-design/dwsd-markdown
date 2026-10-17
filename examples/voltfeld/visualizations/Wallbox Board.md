@@ -16,7 +16,7 @@ The one rule worth writing on the board concerns the platforms: a feature that d
 has a named owner on the ART board. The [[DC Charger]] and [[Connectivity]] product lines
 coordinate the same way.
 
-```dwsd.board
+```dwsd.board id=wallbox
 title: Wallbox
 flightlevel: FL2
 timebox: 10w

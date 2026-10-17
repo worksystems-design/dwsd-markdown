@@ -15,7 +15,7 @@ At the plant, the release arrives, the chargers leave — and **nothing goes bac
 status, fixture problems, a drawing the line cannot build — none of it has a path into the
 train today.
 
-```dwsd.flightroute
+```dwsd.flightroute id=feature-route
 title: Feature Route
 for: "[[Feature]]"
 for-domain: "[[Charger ART]]"

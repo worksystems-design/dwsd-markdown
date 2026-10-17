@@ -25,7 +25,7 @@ to both — a shop assistant works at the shop's site and in its work system.
 
 ## In context
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: self
 radius: { up: 1, down: inf }

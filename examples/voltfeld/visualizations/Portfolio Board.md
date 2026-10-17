@@ -11,7 +11,7 @@ Two **column groups** band the columns: `Exploring` (an epic is understood befor
 decided) and `Committed` (decided, funded, in flight). Kept deliberately small: three
 epics implementing at once is the limit for a company with one ART and one plant.
 
-```dwsd.board
+```dwsd.board id=portfolio
 title: Portfolio
 flightlevel: FL3
 agreements:

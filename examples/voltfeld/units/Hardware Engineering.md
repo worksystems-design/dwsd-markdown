@@ -14,7 +14,7 @@ reporting lines go, not where the work goes.
 
 ## In context
 
-```dwsd.units
+```dwsd.units id=units
 mode: infer
 focus: self
 radius: { up: 1, down: inf }

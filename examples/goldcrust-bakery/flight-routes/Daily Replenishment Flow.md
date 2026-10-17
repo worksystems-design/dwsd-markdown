@@ -15,7 +15,7 @@ The order → dispatch transition happens operationally in the Bakehouse, but th
 stays a coordination object: dispatch status is lifted back into the order world at FL2,
 in the afternoon [[Daily Production Sync]].
 
-```dwsd.flightroute
+```dwsd.flightroute id=daily-replenishment-flow
 title: Daily Replenishment Flow
 for: "[[Daily Replenishment Order]]"
 for-domain: "[[Bakery Operations]]"

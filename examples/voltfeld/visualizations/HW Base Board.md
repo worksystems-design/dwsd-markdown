@@ -16,7 +16,7 @@ findings.
 A card sitting in `Tooling Released` is not stuck: it is waiting out the fourteen weeks a
 mold takes — the lead time this whole example turns on.
 
-```dwsd.board
+```dwsd.board id=hw-base
 title: HW Base
 flightlevel: FL1
 timebox: 2w
