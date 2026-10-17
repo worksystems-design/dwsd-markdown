@@ -9,6 +9,3 @@
 .vscode/
 .DS_Store
 Thumbs.db
-
-# Serena tool config — local only.
-.serena/
