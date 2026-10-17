@@ -49,6 +49,11 @@ type: individual
 A file with **no frontmatter**, or with an **unknown/missing `type`**, is silently
 skipped by the parser. It is not an entity.
 
+**The org's README.** A `README.md` at the org root is such a file. For lack of anything
+better, its first `#` heading serves as the organization's name and its first paragraph
+as its description — a tool that shows the org reads them from there, as written. There
+is no frontmatter and no extra key for this, and nothing else in the README is read.
+
 ## Filename = label = slug
 
 The filename without extension is both the **display label** and the source of the

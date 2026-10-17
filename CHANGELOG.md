@@ -6,6 +6,11 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-17
 
+- **The org's README names the organization.** The first `#` heading of `README.md` at the
+  org root serves as the organization's name, its first paragraph as its description — for
+  lack of anything better, and without a new key. The README stays a non-entity; nothing
+  else in it is read.
+
 - **Fences may carry an id.** Any of the five DSL fences may name itself in the info
   string after its tag: ` ```dwsd.board id=intake `. The id is kebab-case, unquoted and
   unique within the file, and it stays put when the title or the enclosing heading
