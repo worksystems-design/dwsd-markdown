@@ -55,7 +55,7 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      **Warn** when one band holds two stages whose names differ only by case or by
      link-vs-text (`[[Feature]] @ Train` and `feature @ Train`). Every band named in a `path:`
      edge or a trigger's `generates:` must be declared in `bands:` (`fl` ∈ 1..3 or a
-     numeric span). Edge sanity: one hop per line; `()` reached only via `..>`; `->`
+     numeric span; a pure custom band omits `fl` — never flag that). Edge sanity: one hop per line; `()` reached only via `..>`; `->`
      stays inside one band, `-->` crosses bands (warn otherwise). **Flow ⊆ Path:** every
      `bound-to:` `band` is declared in `bands:`, and every pinned item type lives in that
      band per `path:`; each `board:` wikilink resolves to a visualization file, and each
