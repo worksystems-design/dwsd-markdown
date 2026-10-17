@@ -65,6 +65,10 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      key is retired); flag a hyphenated `dwsd-board` fence tag (it highlights but does
      not render). Inline inside-out `agreements:` / `interactions:` keys on a
      column/lane/group are valid board content, not references to resolve.
+   - **Fence ids** (any of the five fences, e.g. ` ```dwsd.board id=intake `) — optional,
+     never flag a fence without one. Flag two fences in one file with the same id; **warn**
+     when the value is not kebab-case (`[a-z0-9][a-z0-9-]*`), is quoted, or follows another
+     attribute. Match a fence by its tag only — text after the tag never hides a fence.
    - **Locator** — `interaction-of` / `agreement-of` carry a locator
      `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole
      board, a bare `[[entity]]` — a work system, a **unit** or a **person** (two persons

@@ -378,6 +378,18 @@ system shows the marker on its unit box *and* its topology node); an entity scop
 no relationships and are never part of a type's required body structure. ⚠ **Preliminary**
 — the key sets of the three inferred views may still change.
 
+**Fence ids.** Any of the five fences may carry an id after its tag:
+```` ```dwsd.board id=intake ````. The id names the diagram within its file, so a mark or an
+address that points at it survives when other diagrams are inserted, moved or removed
+around it. `id=` is the first and so far only attribute after the tag; the value is
+kebab-case (`[a-z0-9][a-z0-9-]*`), unquoted, unique within the file, and stays as it is
+when the fence's `title:` or the enclosing heading changes. The id is optional — a fence
+without one is valid — and tools that create a fence should assign one. It is a plain
+name, not a wikilink, and not part of the YAML, so the key sets above are unaffected; a
+board's `title:` still names it in locators (`#BoardName`). Readers recognize a fence by
+its tag, the first word of the info string, and ignore attributes they do not know. A
+standalone view file (below) has no fence and no id; its filename names it.
+
 **Standalone view files.** Each inferred view may also live as a standalone file at the
 org root — `.dwsd-topology`, `.dwsd-orgchart`, `.dwsd-units` — holding the same YAML
 without a fence (the examples keep one org chart and one units file each, e.g.

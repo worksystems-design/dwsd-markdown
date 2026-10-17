@@ -4,6 +4,16 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-17
+
+- **Fences may carry an id.** Any of the five DSL fences may name itself in the info
+  string after its tag: ` ```dwsd.board id=intake `. The id is kebab-case, unquoted and
+  unique within the file, and it stays put when the title or the enclosing heading
+  changes, so marks and addresses that point at a diagram survive edits that insert, move
+  or remove other diagrams on the page. Optional; tools that create a fence should assign
+  one. Readers recognize a fence by its tag alone. `org-validate` flags duplicate ids in a
+  file and warns on a malformed one. No example uses ids yet.
+
 ## 2026-10-14
 
 - **Route item types: text or wikilink, never matched by name.** A stage's item type and a
