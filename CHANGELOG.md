@@ -6,6 +6,17 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-17
 
+- **One graph: what a relationship is, what a meeting is, how a link finds its file.** Every
+  wikilink in the frontmatter is a relationship; the keys in conventions › Relationship
+  fields carry a meaning, any other key (`derived-from`, `delegator`, `decision-makers`, an
+  author's own) is a plain link named by its key, with no marker. A meeting is an
+  interaction whose `interaction-type` holds `meeting` (single or list, any case);
+  `type: meeting` is an old spelling and warns. A wikilink — frontmatter or body — matches
+  a file by label: NFC, plain lowercase, nothing dropped or transliterated (`café` finds
+  `Café`, `STRASSE` does not find `Straße`); the slug is never used to match. Two labels with
+  the same key are an error. Files without `type:` are notes: links may reach them, but they
+  are not part of the graph. `org-validate` follows.
+
 - **The org's README names the organization.** The first `#` heading of `README.md` at the
   org root serves as the organization's name, its first paragraph as its description — for
   lack of anything better, and without a new key. The README stays a non-entity; nothing

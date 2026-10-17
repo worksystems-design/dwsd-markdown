@@ -23,7 +23,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
    - `type: interaction` (including `interaction-type: meeting`) → `interactions/`.
    - every other type → its plural folder (`signal` → `signals/`, …).
    Flag a `visualization` missing `visualization-type`, an `agreement` missing
-   `agreement-type`, or an `interaction` missing `interaction-type`.
+   `agreement-type`, or an `interaction` missing `interaction-type`. **Warn** on
+   `type: meeting` (→ `type: interaction` + `interaction-type: meeting`).
    - **Team integrity:** a unit whose `unit-type` includes `team` should have at least one
      individual with `member-of` naming it — **note** a team without members (its size
      would read as zero).
@@ -32,7 +33,10 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      `flightlevel` but does *not* list `work-system` in `unit-type` — `flightlevel` no
      longer makes a unit a work system, so this is likely an authoring slip.
 2. **Wikilink integrity** — collect every `[[Target]]` (frontmatter and body) and confirm a
-   file `Target.md` exists somewhere in the org (labels are unique). Report danglers.
+   file whose label matches it exists somewhere in the org, by key: cut at `|`, trim,
+   `NFC(lowercase(NFC(label)))` — no `ß`→`ss`, no transliteration, never by slug (see
+   `conventions.md` › Filename = label = slug). A note (a file without `type:`) is a valid
+   target. Report danglers. Flag two files in one org whose labels share a key.
 3. **DSL fence & locator integrity** — three checks:
    - **Route fences** (` ```dwsd.flightroute `) — only the closed key set `title:` /
      `tags:` / `for:` / `for-domain:` / `bands:` / `triggers:` / `path:` / `bound-to:`.

@@ -54,6 +54,10 @@ better, its first `#` heading serves as the organization's name and its first pa
 as its description — a tool that shows the org reads them from there, as written. There
 is no frontmatter and no extra key for this, and nothing else in the README is read.
 
+**Notes.** Such files — a README, a tour, any page without a `type:` — are **notes**. A
+wikilink may point at a note and then resolves (it is not broken), but a note is not a node
+in the organization's graph, and the wikilinks inside it are not relationships.
+
 ## Filename = label = slug
 
 The filename without extension is both the **display label** and the source of the
@@ -61,6 +65,24 @@ The filename without extension is both the **display label** and the source of t
 
 - `individuals/Aaron Turner.md` → label `Aaron Turner`, slug `aaron-turner`
 - Spaces and non-ASCII are allowed in filenames; the slug is normalized.
+
+**A wikilink finds its target by label, never by slug.** Cut the target at `|`, trim the
+surrounding whitespace, and compare **keys**: `key = NFC(lowercase(NFC(label)))`, with
+plain Unicode lowercasing (no locale rules, no full case folding), and no character
+dropped or transliterated. The same rule holds for every wikilink — frontmatter and body.
+
+| Target | File | Match? |
+|---|---|---|
+| `[[café]]` | `Café.md` | yes — case |
+| `[[Café]]` (`e` + combining accent) | `Café.md` (`é`) | yes — NFC |
+| `[[STRAẞE]]` | `Straße.md` | yes — `ẞ` lowercases to `ß` |
+| `[[STRASSE]]` | `Straße.md` | **no** — `ß` is not folded to `ss` |
+| `[[Mueller]]` | `Müller.md` | **no** — no transliteration |
+| `[[Bakery  Ops]]` (two spaces) | `Bakery Ops.md` | **no** |
+
+Two files with the same key in one organization are an error — labels are unique. The slug
+(`aaron-turner`, umlauts spelled out) serves URLs and internal ids only; it is lossy, so it
+is never used to match a link.
 
 Because the filename is the identity, **renaming a file renames the entity** — update
 the wikilinks that point at it.
@@ -79,8 +101,14 @@ role-keeper:                          # or a list
 
 - `[[Target]]` and `[[Target|Alias]]` both resolve to `Target`.
 - A field can hold a single wikilink or a list of them.
-- The target is a label; the parser resolves it to a slug. An unresolved target is
-  kept as a dangling reference.
+- The target is a label, matched as above. An unresolved target is kept as a dangling
+  reference.
+- **Every wikilink in the frontmatter is a relationship** — under any key, single or in a
+  list. The keys in the table below carry a defined meaning (structure or flow, up or into
+  the detail, a locator). Any other key — `derived-from`, `delegator`, `decision-makers`,
+  or a key of the author's own like `mentor:` — is a plain **link** named by its key: it
+  connects the two entities, but no view draws a marker from it. Wikilinks in the body
+  are references, not relationships.
 
 ### Relationship fields
 
@@ -262,6 +290,10 @@ entity is several kinds at once. This is what lets a unit wear two hats:
 
 Every `<base>-type` (`unit-type`, `visualization-type`, `agreement-type`,
 `interaction-type`) accepts a list; in practice only `unit-type` uses it today.
+
+**A meeting is an interaction** whose `interaction-type` holds the token `meeting` (alone
+or in a list, matched without regard to case). There is no `type: meeting`; a reader may
+accept it as an old spelling of the same thing, and a validator warns.
 
 ## Tracking fields
 
