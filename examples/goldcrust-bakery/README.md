@@ -1,4 +1,4 @@
-# Goldcrust Bakery — example organization
+# Goldcrust Bakery
 
 A small, fictional bakery described in DWSD: a production **Bakehouse**, two retail shops,
 a delivery team, a coordination layer, and a strategy layer. It is a **worked example** —

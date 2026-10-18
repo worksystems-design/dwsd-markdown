@@ -1,4 +1,4 @@
-# Voltfeld — example organization
+# Voltfeld
 
 A fictional maker of EV charging hardware, described in DWSD: an AC **Wallbox** line and a
 **DC Charger** line, developed by one Agile Release Train of three product lines, built in a plant,
