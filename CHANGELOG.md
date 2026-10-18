@@ -6,6 +6,14 @@ commit onward**. The current model is described by the reference itself — `REA
 
 ## 2026-10-18
 
+- **Voltfeld: a second change chain, from the field.** Two field signals ("not charging
+  after the firmware update", the same pattern eleven times in September) → the insight that
+  a known pattern is decided again every week → driver → proposal → decision record
+  *Known Failure Patterns Skip the Weekly Triage* → version 2.0 of the Expedite Lane Policy,
+  where the triage agent routes known patterns itself. Two open ends sit beside it: a
+  second insight on one firmware build, and a signal about a frozen cable lock that nobody
+  has interpreted yet.
+
 - **A fourth inferred view: the change trail.** ` ```dwsd.change-trail ` draws the change
   entities as one network — signal → insight → driver → proposal → decision record →
   agreement along `derived-from`, landing in the units and work systems an agreement names

@@ -40,8 +40,11 @@ radius: { up: 1, down: inf }
 
 Every change entity of Voltfeld in one picture. Two signals from the train and the plant
 become one insight, one driver, one proposal and one decision, which lands in two
-agreements; the studio's configuration cases and the declined variant requests are still
-open.
+agreements. Two reports from the field — a wallbox that stops charging after an update, and
+the same pattern eleven times in a month — end in version 2.0 of the
+[[Expedite Lane Policy]]; one of them also opened a question about a firmware build that
+nobody has taken up. The frozen cable lock, the studio's configuration cases and the
+declined variant requests are still open.
 
 > [!NOTE]
 > **Modeling note.** Its `unit-type` is just `company`: no `work-system`, no `flightlevel`.

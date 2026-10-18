@@ -17,6 +17,10 @@ subsystem — power stage, firmware, backend. The [[Field Issue Triage]] on Tues
 from that list and makes the call the [[Field Issue Route]] forks on: hotfix, or feature
 for the next PI.
 
+Since version 2.0 of the [[Expedite Lane Policy]] the agent also routes **known
+patterns** — calls the triage has made the same way three times — straight to the owning
+team's backlog, and reports them to the triage as one weekly count.
+
 > [!NOTE]
 > **Modeling note.** The agent is bound `::before` the `Triage` column of the expedite lane
 > on the [[Charger ART Board]]. The `::before` slot is the point: the agent's surface is

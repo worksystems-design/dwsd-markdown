@@ -5,8 +5,9 @@ for-domain: "[[Charger ART]]"
 agreement-of:
   - "[[Charger ART Board]]#Charger ART/lane:Field Issue::in"
   - "[[Field Issue Route]]/stage:hotfix @ Train::before"
-version: "1.0"
-decision_date: "2026-04-07"
+derived-from: "[[Known Failure Patterns Skip the Weekly Triage]]"
+version: "2.0"
+decision_date: "2026-10-06"
 review_date: "2027-04-06"
 created_at: "2026-10-10"
 ---
@@ -36,8 +37,25 @@ The `Field Issue` lane of the [[Charger ART Board]] is an **expedite lane**. An 
 per team: a second hotfix for the same team waits or is re-decided. Every hotfix is reported
 at the next [[System Demo]].
 
+**Known patterns** (since version 2.0). A failure pattern the triage has decided the same
+way three times is a known pattern. The [[Field Issue Triage Agent]] routes a report that
+matches one itself: the cause goes as a [[Feature]] to the backlog of the owning team, the
+customer gets the known workaround the same day. The triage sees known patterns as one
+weekly count and takes a pattern back when it changes — a new serial range, a safety
+impact, a fleet down. The agent never opens a hotfix.
+
 ## Evaluation Criteria
 
 - Safety or fleet-down issues fixed in the fleet within five working days.
 - Fewer than one in five triaged issues enters the expedite lane — the rest travels as
   features.
+- Customers with a known pattern hear back the same day; no triage slot goes to a repeat
+  call.
+
+## Appendix
+
+### Previous Versions
+
+- **2.0** (2026-10-06) — known patterns skip the weekly triage, from
+  [[Known Failure Patterns Skip the Weekly Triage]].
+- **1.0** (2026-04-07) — the expedite lane, its gate and its WIP limit.
