@@ -25,6 +25,8 @@ the lane becomes the way everything gets done.
 - The [[Field Issue Triage]] (product owners with [[Mateo Ruiz]] and [[Ravi Anand]]) —
   decides hotfix or feature, weekly; a safety issue is decided the same day, in a
   [[Safety Issue Call]].
+- The [[Failure Pattern Review]] — once a month, looks at what the issues have in common
+  and raises the patterns that call for a change to this agreement.
 - The team that owns the affected component — takes the hotfix immediately, at most one at
   a time.
 - [[Connectivity]] — ships the hotfix to the fleet over the air and confirms rollout.

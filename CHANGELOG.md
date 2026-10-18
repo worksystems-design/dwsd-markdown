@@ -10,7 +10,9 @@ commit onward**. The current model is described by the reference itself — `REA
   after the firmware update", the same pattern eleven times in September) → the insight that
   a known pattern is decided again every week → driver → proposal → decision record
   *Known Failure Patterns Skip the Weekly Triage* → version 2.0 of the Expedite Lane Policy,
-  where the triage agent routes known patterns itself. Two open ends sit beside it: a
+  where the triage agent routes known patterns itself. A new monthly interaction, the
+  *Failure Pattern Review*, is where the eleven-times signal came from. Two open ends sit
+  beside it: a
   second insight on one firmware build, and a signal about a frozen cable lock that nobody
   has interpreted yet.
 

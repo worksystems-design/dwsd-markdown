@@ -14,8 +14,9 @@ created_at: "2026-10-06"
 ## Context
 
 Every field issue of the [[Charger ART]] has gone through the weekly
-[[Field Issue Triage]] since the [[Expedite Lane Policy]] came into force in April 2026. In
-September one pattern came in eleven times and was decided the same way each time
+[[Field Issue Triage]] since the [[Expedite Lane Policy]] came into force in April 2026. The
+[[Failure Pattern Review]] at the end of September found one pattern that came in eleven
+times and was decided the same way each time
 ([[Same Failure Pattern Eleven Times in September]]). The insight
 [[A Known Failure Pattern Is Decided Again Every Week]] named the cost; the driver
 [[Triage Time Goes to Calls Already Made]] named the need.
