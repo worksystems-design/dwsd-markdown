@@ -31,6 +31,17 @@ focus: self
 radius: { up: 1, down: inf }
 ```
 
+## Change trail
+
+```dwsd.change-trail id=change-trail
+```
+
+Every change entity of the bakery in one picture, from what was seen to where the
+agreement landed. The sourdough shortfall runs from the sold-out shelf to an agreement in
+the [[Bakehouse]]. The dispatch insight looks back at the decision that made
+[[Jonas Keller]] Head of Operations and, like the van and the wholesale enquiries, is
+still open.
+
 > [!NOTE]
 > **Modeling note.** Its `unit-type` is just `company` — it does **not** include
 > `work-system` (and it has no `flightlevel`), so it is a plain structural `unit`, not a

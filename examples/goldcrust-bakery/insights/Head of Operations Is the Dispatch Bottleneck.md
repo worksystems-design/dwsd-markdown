@@ -1,6 +1,8 @@
 ---
 type: insight
-observes: "[[Jonas Keller]]"
+observes:
+  - "[[Jonas Keller]]"
+  - "[[Jonas Keller Leads Operations]]"
 derived-from: "[[Dispatch Mornings Double-Booked]]"
 status: acknowledged
 created_at: "2026-09-16"

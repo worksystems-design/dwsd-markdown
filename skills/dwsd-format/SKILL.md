@@ -87,7 +87,11 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   ` ```dwsd.orgchart ` (individuals over `reports-to`), ` ```dwsd.units ` (units over their
   first `member-of`, `layout: nested | tree`). `mode: infer` lists nothing — the pictures
   follow the entity files. See `${CLAUDE_PLUGIN_ROOT}/conventions.md` › Embedded DSL fences.
-- **Fence ids:** any of the five fences may name itself after the tag
+- **A fourth inferred view, ` ```dwsd.change-trail `,** draws the change ladder as one
+  network (along `derived-from`, landing via `for-domain` / bare `agreement-of`, loop-backs
+  via `observes`); keys `focus:`, `show: all | open | recent`, `radius:`, an empty body is
+  the whole trail. No standalone file.
+- **Fence ids:** any of the six fences may name itself after the tag
   (` ```dwsd.board id=intake `) — kebab-case, unique within the file, kept when the title
   or heading changes. Optional; when you create a fence, give it one.
 - **Change ladder:** `signal` → `insight` → `driver` → `proposal` →

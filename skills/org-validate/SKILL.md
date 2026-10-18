@@ -69,7 +69,10 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      key is retired); flag a hyphenated `dwsd-board` fence tag (it highlights but does
      not render). Inline inside-out `agreements:` / `interactions:` keys on a
      column/lane/group are valid board content, not references to resolve.
-   - **Fence ids** (any of the five fences, e.g. ` ```dwsd.board id=intake `) — optional,
+   - **Change trail fences** (` ```dwsd.change-trail `) — the body may be empty; the only
+     keys are `focus:` (a wikilink that must resolve), `show:` (`all` | `open` | `recent`)
+     and `radius:` (a whole number or `inf`). **Warn** on any other key or value.
+   - **Fence ids** (any of the six fences, e.g. ` ```dwsd.board id=intake `) — optional,
      never flag a fence without one. Flag two fences in one file with the same id; **warn**
      when the value is not kebab-case (`[a-z0-9][a-z0-9-]*`), is quoted, or follows another
      attribute. Match a fence by its tag only — text after the tag never hides a fence.

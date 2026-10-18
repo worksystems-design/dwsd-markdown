@@ -373,10 +373,10 @@ row's `Name` column:
 
 ## Embedded DSL fences
 
-Five fence tags are parsed and rendered by the app. All five DSLs are **plain YAML**,
+Six fence tags are parsed and rendered by the app. All six DSLs are **plain YAML**,
 and all fence tags use the dot form. The first two are tied to a type and are **authored**;
-the other three are **inferred views** that may appear in any entity body — or stand alone
-as a file (see below):
+the other four are **inferred views** that may appear in any entity body — the topology,
+org chart and units view may also stand alone as a file (see below):
 
 - `visualization` (boards) → ```` ```dwsd.board ```` — columns, lanes, groups, and inline
   inside-out `agreements:` / `interactions:`; no inline sugar; the board name is the
@@ -406,16 +406,28 @@ as a file (see below):
   chips, so a `[team, work-system]` is told from a plain `team` at a glance. Units only —
   no people (that is the org chart), no flow between work systems (that is the topology).
   Same `mode:` / `focus:` / `radius:` / `notes:` keys as the org chart.
+- **any entity** (optional) → ```` ```dwsd.change-trail ```` — the **change trail**: the
+  org's change entities as one network, left to right — signal → insight → driver →
+  proposal → decision record → agreement, one rung back along `derived-from` (an agreement
+  may derive from the proposal directly) — and where each agreement **lands**: the units
+  and work systems it names in `for-domain` or in a bare `agreement-of` (a board position
+  or a role does not count). A signal or insight that `observes` a decision record or an
+  agreement draws a **loop-back**. An entity nothing derives from yet is an **open end**
+  and shows its next step; agreements are never open, and a `status` of `declined`,
+  `rejected`, `withdrawn` or `superseded` closes an entity. `created_at` (fallback `date:`)
+  dates each entry. Keys: `focus:` (a wikilink), `show:` (`all`, the default, `open` or
+  `recent`) and `radius:` (a number or `inf`); an empty body is the whole trail.
 
-The three inferred views are **annotated from the entity files**, never from the fence: a
+The topology, org chart and units view are **annotated from the entity files**, never
+from the fence: a
 signal or insight that `observes` a person or unit pins on that box; an interaction,
 agreement or AI agent whose locator names an entity shows on it (a unit that is also a work
 system shows the marker on its unit box *and* its topology node); an entity scoped
 `for-domain` to a role reaches the box of every keeper of that role — one hop. They declare
 no relationships and are never part of a type's required body structure. ⚠ **Preliminary**
-— the key sets of the three inferred views may still change.
+— the key sets of the four inferred views may still change.
 
-**Fence ids.** Any of the five fences may carry an id after its tag:
+**Fence ids.** Any of the six fences may carry an id after its tag:
 ```` ```dwsd.board id=intake ````. The id names the diagram within its file, so a mark or an
 address that points at it survives when other diagrams are inserted, moved or removed
 around it. `id=` is the first and so far only attribute after the tag; the value is
@@ -427,8 +439,8 @@ board's `title:` still names it in locators (`#BoardName`). Readers recognize a 
 its tag, the first word of the info string, and ignore attributes they do not know. A
 standalone view file (below) has no fence and no id; its filename names it.
 
-**Standalone view files.** Each inferred view may also live as a standalone file at the
-org root — `.dwsd-topology`, `.dwsd-orgchart`, `.dwsd-units` — holding the same YAML
+**Standalone view files.** The topology, org chart and units view may also live as a
+standalone file at the org root — `.dwsd-topology`, `.dwsd-orgchart`, `.dwsd-units` — holding the same YAML
 without a fence (the examples keep one org chart and one units file each, e.g.
 `Goldcrust Org Chart.dwsd-orgchart`). Such a file is **not an entity**: no frontmatter, no
 `type:`, skipped by the entity parser — a picture of the organization, not a part of it.

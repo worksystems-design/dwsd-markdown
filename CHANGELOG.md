@@ -4,6 +4,17 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-18
+
+- **A fourth inferred view: the change trail.** ` ```dwsd.change-trail ` draws the change
+  entities as one network — signal → insight → driver → proposal → decision record →
+  agreement along `derived-from`, landing in the units and work systems an agreement names
+  in `for-domain` or a bare `agreement-of`, with loop-backs where a signal or insight
+  `observes` a decision or an agreement. Open ends show their next step. Keys `focus:`,
+  `show:`, `radius:`; an empty body is the whole trail. No standalone file. Both example
+  orgs carry one on their company unit; Goldcrust's dispatch insight now also observes the
+  decision it questions. `org-validate` checks the keys.
+
 ## 2026-10-17
 
 - **One graph: what a relationship is, what a meeting is, how a link finds its file.** Every

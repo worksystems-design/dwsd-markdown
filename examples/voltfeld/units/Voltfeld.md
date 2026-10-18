@@ -33,6 +33,16 @@ focus: self
 radius: { up: 1, down: inf }
 ```
 
+## Change trail
+
+```dwsd.change-trail id=change-trail
+```
+
+Every change entity of Voltfeld in one picture. Two signals from the train and the plant
+become one insight, one driver, one proposal and one decision, which lands in two
+agreements; the studio's configuration cases and the declined variant requests are still
+open.
+
 > [!NOTE]
 > **Modeling note.** Its `unit-type` is just `company`: no `work-system`, no `flightlevel`.
 > The line is the `reports-to` tree, drawn by the org chart; the work is the `member-of`
