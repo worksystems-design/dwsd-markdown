@@ -4,6 +4,7 @@ status: accepted
 date: "2026-09-10"
 decision-makers: "[[Mara Holt]]"
 for-domain: "[[Head of Operations]]"
+derived-from: "[[A Head of Operations for the Day-to-Day]]"
 created_at: "2026-09-17"
 ---
 

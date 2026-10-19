@@ -4,6 +4,7 @@ status: accepted
 date: "2026-05-20"
 decision-makers: "[[Mara Holt]]"
 for-domain: "[[Bakery Operations]]"
+derived-from: "[[One Afternoon Sync for Shops and Bakehouse]]"
 ---
 
 ## Context

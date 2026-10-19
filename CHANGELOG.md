@@ -11,6 +11,10 @@ commit onward**. The current model is described by the reference itself — `REA
   carries one in an optional `## Change trail` section: back to the signals it came from,
   forward to its agreements and where they land. Added to the type page, the template, and
   all four decision records in the example orgs; `org-validate` accepts `self`.
+- **Goldcrust: both decision records have an origin.** Two short chains — signal, insight,
+  driver, proposal — now lead to *Single Daily Production Sync* (separate shop calls) and
+  to *Jonas Keller Leads Operations* (the owner as bottleneck of the day-to-day), so each
+  record's change trail runs back to what was first seen.
 
 ## 2026-10-18
 
