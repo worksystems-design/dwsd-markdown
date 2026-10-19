@@ -23,3 +23,9 @@ plan together.
 - One shared demand picture; the bake plan is set against real numbers.
 - A fixed 15-minute slot adds a small daily commitment for everyone.
 - Makes [[Bakery Operations]] the clear home for cross-team coordination.
+
+## Change trail
+
+```dwsd.change-trail id=change-trail
+focus: self
+```

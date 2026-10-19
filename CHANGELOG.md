@@ -4,6 +4,14 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-19
+
+- **A decision record shows its own change trail.** `focus:` in a ` ```dwsd.change-trail `
+  fence now also takes `self` — the entity whose file hosts the fence. A decision record
+  carries one in an optional `## Change trail` section: back to the signals it came from,
+  forward to its agreements and where they land. Added to the type page, the template, and
+  all four decision records in the example orgs; `org-validate` accepts `self`.
+
 ## 2026-10-18
 
 - **Voltfeld: a second change chain, from the field.** Two field signals ("not charging
@@ -12,9 +20,8 @@ commit onward**. The current model is described by the reference itself — `REA
   *Known Failure Patterns Skip the Weekly Triage* → version 2.0 of the Expedite Lane Policy,
   where the triage agent routes known patterns itself. A new monthly interaction, the
   *Failure Pattern Review*, is where the eleven-times signal came from. Two open ends sit
-  beside it: a
-  second insight on one firmware build, and a signal about a frozen cable lock that nobody
-  has interpreted yet.
+  beside it: a second insight on one firmware build, and a signal about a frozen cable lock
+  that nobody has interpreted yet.
 
 - **A fourth inferred view: the change trail.** ` ```dwsd.change-trail ` draws the change
   entities as one network — signal → insight → driver → proposal → decision record →

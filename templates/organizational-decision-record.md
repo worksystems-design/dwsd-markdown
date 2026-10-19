@@ -14,3 +14,9 @@ decision-makers:
 
 ## Consequences
 <What we expect to follow — benefits and trade-offs.>
+
+## Change trail
+
+```dwsd.change-trail id=change-trail
+focus: self
+```

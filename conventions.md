@@ -415,8 +415,12 @@ org chart and units view may also stand alone as a file (see below):
   agreement draws a **loop-back**. An entity nothing derives from yet is an **open end**
   and shows its next step; agreements are never open, and a `status` of `declined`,
   `rejected`, `withdrawn` or `superseded` closes an entity. `created_at` (fallback `date:`)
-  dates each entry. Keys: `focus:` (a wikilink), `show:` (`all`, the default, `open` or
-  `recent`) and `radius:` (a number or `inf`); an empty body is the whole trail.
+  dates each entry. Keys: `focus:` (a wikilink, or `self` — the entity whose file hosts
+  the fence), `show:` (`all`, the default, `open` or `recent`) and `radius:` (a number or
+  `inf`); an empty body is the whole trail. With a focus the trail keeps that entity's own
+  line: back along `derived-from` to the signals, forward to what derives from it and where
+  that lands. A decision record carries one this way (`focus: self`), so its file shows
+  where the decision came from and where its agreements apply.
 
 The topology, org chart and units view are **annotated from the entity files**, never
 from the fence: a

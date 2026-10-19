@@ -57,3 +57,9 @@ participants, and [[Manufacturing]], whose ramp now starts earlier.
 
 > [!NOTE]
 > **Modeling note.** The decision is anchored on both domains.
+
+## Change trail
+
+```dwsd.change-trail id=change-trail
+focus: self
+```

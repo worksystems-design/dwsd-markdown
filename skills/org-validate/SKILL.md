@@ -70,7 +70,7 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      not render). Inline inside-out `agreements:` / `interactions:` keys on a
      column/lane/group are valid board content, not references to resolve.
    - **Change trail fences** (` ```dwsd.change-trail `) — the body may be empty; the only
-     keys are `focus:` (a wikilink that must resolve), `show:` (`all` | `open` | `recent`)
+     keys are `focus:` (a wikilink that must resolve, or `self`), `show:` (`all` | `open` | `recent`)
      and `radius:` (a whole number or `inf`). **Warn** on any other key or value.
    - **Fence ids** (any of the six fences, e.g. ` ```dwsd.board id=intake `) — optional,
      never flag a fence without one. Flag two fences in one file with the same id; **warn**

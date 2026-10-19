@@ -89,8 +89,9 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   follow the entity files. See `${CLAUDE_PLUGIN_ROOT}/conventions.md` › Embedded DSL fences.
 - **A fourth inferred view, ` ```dwsd.change-trail `,** draws the change ladder as one
   network (along `derived-from`, landing via `for-domain` / bare `agreement-of`, loop-backs
-  via `observes`); keys `focus:`, `show: all | open | recent`, `radius:`, an empty body is
-  the whole trail. No standalone file.
+  via `observes`); keys `focus:` (a wikilink or `self`), `show: all | open | recent`,
+  `radius:`, an empty body is the whole trail. No standalone file. A decision record carries
+  one under `## Change trail` with `focus: self`.
 - **Fence ids:** any of the six fences may name itself after the tag
   (` ```dwsd.board id=intake `) — kebab-case, unique within the file, kept when the title
   or heading changes. Optional; when you create a fence, give it one.
