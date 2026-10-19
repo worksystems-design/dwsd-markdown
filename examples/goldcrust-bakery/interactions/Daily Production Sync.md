@@ -8,6 +8,7 @@ interaction-of:
 start: "2026-05-25T13:30:00"
 end: "2026-05-25T13:45:00"
 rrule: "RRULE:FREQ=DAILY"
+derived-from: "[[Single Daily Production Sync]]"
 version: "1.0"
 created_at: "2026-05-24"
 ---

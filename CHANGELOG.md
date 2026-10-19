@@ -15,6 +15,11 @@ commit onward**. The current model is described by the reference itself — `REA
   driver, proposal — now lead to *Single Daily Production Sync* (separate shop calls) and
   to *Jonas Keller Leads Operations* (the owner as bottleneck of the day-to-day), so each
   record's change trail runs back to what was first seen.
+- **What a decision produced, beyond agreements.** The role *Head of Operations* and the
+  interaction *Daily Production Sync* now name the decision record they came from in
+  `derived-from`, as Voltfeld's *Production Liaison* already does. `derived-from` was always
+  open to every type; this makes the examples use it where a decision's result is a role or
+  an interaction rather than an agreement.
 
 ## 2026-10-18
 

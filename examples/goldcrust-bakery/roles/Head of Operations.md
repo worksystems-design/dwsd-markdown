@@ -2,6 +2,7 @@
 type: role
 role-keeper: "[[Jonas Keller]]"
 for-domain: "[[Bakery Operations]]"
+derived-from: "[[Jonas Keller Leads Operations]]"
 version: "1.0"
 decision_date: "2026-09-10"
 review_date: "2027-03-10"
