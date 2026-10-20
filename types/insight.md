@@ -65,3 +65,16 @@ Product Development and Platform Engineering have diverging priorities causing f
 - Joint planning sessions
 - Shared success metrics
 ```
+
+## Reading it
+
+- **The question:** what does it mean, and which signals is the interpretation built on?
+- **Look first:** the interpretation that opens the body, and the optional
+  `**Category:** … | **Severity:** …` line; `status` says whether it was acknowledged.
+- **Go next:** back along `derived-from` to the signals; via `observes` to the entity the
+  insight is about.
+- **Backlinks:** the drivers whose `derived-from` names it.
+- **Pictured in:** pinned on the box of the observed person or unit (topology, org chart,
+  units view). In the change trail it is the second rung, read along `derived-from`; one
+  that `observes` a decision record or an agreement draws a loop-back. A
+  `dwsd.change-trail` fence with `around: self` keeps its own line.

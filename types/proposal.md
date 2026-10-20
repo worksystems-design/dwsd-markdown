@@ -45,6 +45,20 @@ Capacity contention with custom orders may break the slot promise in peak weeks.
 Consented 2026-05-11 → [[Standard Order Fulfillment Protocol]].
 ```
 
+## Reading it
+
+- **The question:** what response is proposed to which driver, and where is it in its
+  decision?
+- **Look first:** `status`, then `## Proposal`; `## Outcome` records the result and links
+  the agreement that followed.
+- **Go next:** back along `derived-from` to the driver and the rungs below it; up via
+  `for-domain` to the domain the proposal concerns.
+- **Backlinks:** the decision record whose `derived-from` names it, or the agreements
+  consented directly from it.
+- **Pictured in:** the change trail, between driver and decision record; `declined` closes
+  it, and one nothing derives from yet is an open end. A `dwsd.change-trail` fence with
+  `around: self` keeps its own line.
+
 ## Notes
 
 - `derived-from` is metadata (the parser has no such relationship type yet), as on

@@ -135,6 +135,20 @@ interaction-of: "[[Sprint Board]]#Sprint Board::in"
 May 12 2026 10:00-11:00 every week on Tuesday: 3P Coordination
 ```
 
+## Reading it
+
+- **The question:** when do people meet, and which interactions do they run there, with what
+  outcome?
+- **Look first:** the four framing sections, then `## Interactions`; `rrule` and the `.mw`
+  sibling give the rhythm.
+- **Go next:** read the `## Interactions` table in reverse, meeting → row → anchor; a
+  relative locator inherits the frontmatter `interaction-of` head, and for a `[[…]]` row the
+  outcome and anchor come from the linked file. Up via `for-domain` to the domain.
+- **Backlinks:** a larger meeting that names this one in its `## Interactions`; a board that
+  names it inline in `interactions:`.
+- **Pictured in:** the meeting at its `interaction-of`, and each table row at its own
+  anchor, so one meeting can appear at several board positions and route stages at once.
+
 ## Notes
 
 - A meeting **bundles interactions** — each a small, named interaction with its own outcome.

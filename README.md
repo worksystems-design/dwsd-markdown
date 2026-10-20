@@ -102,9 +102,10 @@ agents bound to column groups, and an org chart that is not the units tree.
 
 ## Claude Code plugin
 
-This repo also ships a thin Claude Code plugin, **`dwsd-md`**, that teaches an agent the
-format and validates an org folder. Its skill points back at the files above, so there is
-nothing to keep in sync. Add this repo as a plugin marketplace and install `dwsd-md`; the
-commands are `/dwsd-md:org-validate` and `/dwsd-md:org-new`.
+This repo also ships a thin Claude Code plugin, **`dwsd-md`**, that teaches an agent to read,
+write and validate an org folder. Its skills point back at the files above, so there is
+nothing to keep in sync, and they are worded host-neutral, so another agent host can vendor
+them. Add this repo as a plugin marketplace and install `dwsd-md`; the commands are
+`/dwsd-md:org-validate` and `/dwsd-md:org-new`.
 
 See [`CHANGELOG.md`](CHANGELOG.md) for model and convention decisions.

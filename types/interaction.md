@@ -61,6 +61,19 @@ interaction-of: "[[3P Board]]#3P Board/col:Doing::in"  # the board position it's
 Ad-hoc alignment between [[Head of 3P]] and [[Head of Assembly]] on the next hand-off window.
 ```
 
+## Reading it
+
+- **The question:** who acts in relation to whom, about what, and where in the flow?
+- **Look first:** `interaction-type` and `interaction-of`; `start` / `rrule` if it is
+  scheduled, otherwise the body says what triggers it (often a `## Trigger` section).
+- **Go next:** into the detail via `interaction-of` (a board position, a route stage, or a
+  bare entity; two persons make a 1:1); up via `for-domain`; the `.mw` sibling for timing.
+- **Backlinks:** a meeting whose `## Interactions` table names it in a row (the way back
+  needs no field); a board that names it inline in `interactions:`.
+- **Pictured in:** wherever it is anchored: on the board at its position, on a flight route
+  at its stage (`::before` reads as "when an item arrives here"), or on the box of a
+  bare-named entity in the topology, org chart or units view.
+
 ## Notes
 
 - **Not every interaction is scheduled.** Without `start` / `rrule` an interaction happens

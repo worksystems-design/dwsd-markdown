@@ -114,6 +114,20 @@ columns:
 ```
 ````
 
+## Reading it
+
+- **The question:** how does work move through this work system, and what applies at which
+  column?
+- **Look first:** `visualization-of`, then the `dwsd.board` fence: columns left to right,
+  with their `status-category`, `wip` and `check`.
+- **Go next:** up via `visualization-of` to the work system; the `[[…]]` entries in inline
+  `agreements:` / `interactions:` to their files.
+- **Backlinks:** the interactions, agreements and AI agents whose locator names this board
+  (outside-in), including rows of meeting and accountability tables; the flight routes
+  that bind a band to it in `bound-to:`.
+- **Pictured in:** the board itself. Inside-out and outside-in anchors render on the same
+  surface; where both meet one position they blend with a provenance badge.
+
 ## Notes
 
 - `board` is the only visualization kind so far; the type is general enough to host other

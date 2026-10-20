@@ -38,6 +38,16 @@ bound-to:
 ---
 ```
 
+## Reading it
+
+- **The question:** where does an AI surface in the work, and which domain does it belong to?
+- **Look first:** `bound-to` (where the surface appears), then `description`, `platform`
+  and `status`.
+- **Go next:** into the detail via `bound-to`: a board position, or the entity whose box
+  carries the agent; up via `for-domain` (a role there reaches each keeper).
+- **Pictured in:** on the board at its `bound-to` position, or on the box of a bare-named
+  entity in the topology, org chart or units view. Like the type, `bound-to` is preliminary.
+
 ## Notes
 
 - An ai-agent is really a **surface**: use `bound-to` when it appears at a specific point

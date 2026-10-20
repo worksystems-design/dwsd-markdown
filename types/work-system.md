@@ -118,6 +118,23 @@ Depends on [[Procurement]] for components and [[Assembly]] for final build.
 Reviewed quarterly; next review 2026-08-11.
 ```
 
+## Reading it
+
+- **The question:** what is this domain of work for, at which flight level, and whom does it
+  serve?
+- **Look first:** `flightlevel` and `contributes-to`; in the body, `## Purpose`,
+  `## Key Responsibilities` and `## Customers and Deliverables`.
+- **Go next:** up via `contributes-to` to the work system it feeds; across via the `[[…]]`
+  links in `## Dependencies`; `delegator` names who handed over the domain.
+- **Backlinks:** its board (the visualization whose `visualization-of` names it); the roles,
+  agreements, interactions, AI agents and change entities scoped `for-domain` to it; the
+  flight routes whose `for-domain` names it; the individuals and units whose `member-of`
+  names it; signals and insights that `observes` it.
+- **Pictured in:** the topology, as a node at its flight level carrying what is anchored to
+  it; a `dwsd.topology` fence in the file (`around: self`, or no `around:`) draws the map
+  from it outward. The units view shows it with its `unit-type` chips, and the change trail
+  shows the agreements that land on it.
+
 ## Notes
 
 - A work system is **not its own type** — it is a `unit` whose `unit-type` includes

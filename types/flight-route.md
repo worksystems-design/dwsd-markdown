@@ -139,6 +139,19 @@ specs are *copied* down into the Assembly band (dashed `-->`); build status *fee
 to the order (dotted `..>`); the finished component is *delivered* to the customer
 (`..> ()`, the ⊙ ring).
 
+## Reading it
+
+- **The question:** how does one type of work travel through the flight levels, end to end,
+  and who takes care of the route?
+- **Look first:** the prose above the fence, then the `dwsd.flightroute` fence: `for:`,
+  `for-domain:` and `bands:`, then `path:` line by line (the glyph names the edge kind).
+- **Go next:** `for:` to the flight-item-type; `for-domain:` up to the responsible domain;
+  `bound-to:` to the boards each band lives on.
+- **Backlinks:** the flight-item-type whose `uses-route` names it; the interactions,
+  agreements and role accountabilities anchored on a stage with a `/stage:` locator.
+- **Pictured in:** the route itself, rendered from the fence. The work systems it flows
+  through are derived (`bound-to` → board → `visualization-of`), never read off the route.
+
 ## Notes
 
 - `for-domain:` and `bound-to: … board:` take wikilinks — the target entity's name, like

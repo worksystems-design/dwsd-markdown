@@ -24,6 +24,12 @@ commit onward**. The current model is described by the reference itself — `REA
 - **Skills are host-neutral.** Each skill names its **spec root** once (the folder that
   holds `conventions.md`; `${CLAUDE_PLUGIN_ROOT}` in Claude Code) and says what to do in
   verbs rather than tool names, so another host can vendor a skill unchanged.
+- **Reading an org.** A new skill, `org-read`, routes a question about an org to the right
+  files and links. Every type page gains a `## Reading it` section: the question the entity
+  answers, where to look first, which links and backlinks complete it, and which picture
+  shows it. Small fixes on the way: the driver and agreement pages name a unit as a possible
+  domain, the ODR note no longer calls the record the category's only member, and the
+  signal example is in English.
 
 ## 2026-10-19
 

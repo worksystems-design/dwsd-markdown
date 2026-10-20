@@ -58,7 +58,7 @@ Both kinds share the body structure below.
   who agreed it have moved on.
 
 > **Where each one is pinned.** An ODR is pinned at the **domain** (`for-domain` — the work
-> system the decision concerns); its agreements are pinned **where the work happens**
+> system, role or unit the decision concerns); its agreements are pinned **where the work happens**
 > (`agreement-of` — a board position). One decision up at the system, its consequences down in
 > the flow.
 
@@ -132,6 +132,22 @@ Raised during the 2026-Q1 delivery-bottleneck review.
 - [[Standard Order Fulfillment Protocol]]
 - [[Sales]]
 ```
+
+## Reading it
+
+- **The question:** what rule applies here, who is responsible for what, and why does it
+  exist?
+- **Look first:** `agreement-type` (`organizational` on the system, `work` in it), then
+  `## Who is responsible for what?` and `## Description`.
+- **Go next:** up via `for-domain` to the domain (a role there reaches each keeper); into the
+  detail via `agreement-of`: a board position, a route stage (`::before` reads as a gate) or
+  a bare entity; back via `derived-from` to the ODR or proposal it carries out, which answers
+  *why does this rule apply?*
+- **Backlinks:** a board that names it inline in `agreements:` (inside-out); an agreement
+  container whose `## Agreements` table names it; a signal or insight that `observes` it.
+- **Pictured in:** wherever it is anchored: on the board at its position, on a flight route
+  at its stage, on the box of a bare-named entity. In the change trail it is the last rung,
+  landing on the units and work systems named in `for-domain` or a bare `agreement-of`.
 
 ## Notes
 

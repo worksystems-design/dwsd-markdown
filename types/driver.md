@@ -21,7 +21,7 @@ Plus the shared optionals from [conventions](../conventions.md).
 ## Relationships
 
 - **`for-domain`** — the domain the driver belongs to (whose team has the need) — a work
-  system or a role.
+  system, a role or a unit.
 - **`derived-from`** — the [insight(s)](insight.md) the driver was distilled from, and
   through them the [signals](signal.md) beneath. Continues the Ladder of Inference.
   *Metadata only:* the parser has no `derived-from` relationship type, so it is not a
@@ -71,6 +71,18 @@ manage standard-order flow.
 
 A clear protocol cuts idle wait time and restores Sales' visibility into intake capacity.
 ```
+
+## Reading it
+
+- **The question:** what need arises, for whom, and from which situation?
+- **Look first:** the condensed driver that opens the body, then `## Need`; `for-domain`
+  says whose need it is, `status` whether it has been addressed.
+- **Go next:** back along `derived-from` to the insights and, through them, the signals; up
+  via `for-domain` to the domain (a role there reaches each keeper).
+- **Backlinks:** the proposals (or decision records) whose `derived-from` names it: the
+  responses it has drawn.
+- **Pictured in:** the change trail, as the third rung; a driver nothing derives from yet is
+  an open end. A `dwsd.change-trail` fence with `around: self` keeps its own line.
 
 ## Notes
 

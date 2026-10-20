@@ -62,6 +62,20 @@ A unit that is *also* a work system carries `unit-type: [team, work-system]` (or
 `[department, work-system]`, …) plus a `flightlevel` — see the example in
 [`work-system.md`](work-system.md).
 
+## Reading it
+
+- **The question:** what is this grouping, what belongs to it, and what does it belong to?
+- **Look first:** `unit-type`: the kind of unit, and whether it includes `work-system` (then
+  read it as a [work system](work-system.md) as well).
+- **Go next:** up via `member-of` to the parent unit; the body is usually a line or two.
+- **Backlinks:** the individuals and units whose `member-of` names it are its members (for a
+  `team`, the individuals are the members a view may count); entities scoped `for-domain` to
+  it; interactions, agreements and AI agents anchored to it with a bare locator; signals and
+  insights that `observes` it.
+- **Pictured in:** the units view, nested in its parent by its first `member-of`; a
+  `dwsd.units` fence with `around: self` draws it with its parent and children. Entities
+  scoped `for-domain` to a plain unit show on its box there.
+
 ## Notes
 
 - A unit becomes a work system by including `work-system` in its `unit-type` — not by its

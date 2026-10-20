@@ -45,6 +45,20 @@ external_position_key: P3278
 Sales Representative (Lead) — member of [[Sales Team]], reports to [[Daljit Singh]].
 ```
 
+## Reading it
+
+- **The question:** who is this person, whom do they report to, and where do they work?
+- **Look first:** `role` (a free-text title, not a `role` entity), `reports-to` and
+  `member-of`.
+- **Go next:** up via `reports-to` to the manager; into the units and work systems named in
+  `member-of`.
+- **Backlinks:** the roles whose `role-keeper` names the person, and through them every
+  entity scoped `for-domain` to those roles; the individuals whose `reports-to` names them;
+  interactions, agreements and AI agents anchored to them with a bare locator (a 1:1, a
+  personal working agreement); signals and insights that `observes` them.
+- **Pictured in:** the org chart; a `dwsd.orgchart` fence with `around: self` draws the
+  person's line, with what is anchored to them on their box.
+
 ## Notes
 
 - `role:` here is a **string**, a job title. It is *not* a wikilink to a `role` entity.

@@ -93,12 +93,27 @@ around: self
 `around: self` centers the trail on the record that hosts the fence. Nothing in it is listed by
 hand; add an agreement that names the record in `derived-from`, and the trail shows it.
 
+## Reading it
+
+- **The question:** what was decided about the organization, why, and with what expected
+  effect?
+- **Look first:** `status` and `for-domain`, then `## Decision`; `## Context` says why a
+  decision was needed, `## Consequences` what it is expected to bring.
+- **Go next:** back along `derived-from` to the proposal or driver it captures, and from
+  there down the ladder to the insights and signals; `decision-makers` names who decided.
+- **Backlinks:** the agreements whose `derived-from` names the record are its bundle: what
+  the decision produced, each anchored where the work happens. A signal or insight that
+  `observes` the record is feedback on it.
+- **Pictured in:** the change trail. The `## Change trail` fence with `around: self` draws
+  the record's own line, from the signals it came from to its agreements and the units and
+  work systems they land on.
+
 ## Notes
 
 - Modeled on the ADR (Michael Nygard) minimal form — Status / Context / Decision /
   Consequences. Kept minimal on purpose.
-- An ODR is the initial member of the **change** category (records of decided organizational
-  change).
+- An ODR closes the **Design** phase of the **change** category: it records the decided
+  organizational change.
 - **It is a Decision Record, not a Design Record.** The ADR lineage it is named after is
   *Architecture **Decision** Record*, and the body section is `## Decision`. "Design" names the
   phase a decision is usually taken in, not the artifact — keeping the two apart stops one word

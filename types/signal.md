@@ -36,10 +36,23 @@ observes:
   - "[[Emma Design Lead]]"
 created_at: "2026-03-29"
 ---
-# Schmidt kommt um halb sechs
+# Schmidt comes by at half past five
 
-Schmidt kommt um 17:30 Uhr vorbei.
+Schmidt comes by at 5:30 pm.
 ```
+
+## Reading it
+
+- **The question:** what was observed, and about what?
+- **Look first:** the body, the selected datum itself (often one line); then `observes` and
+  `created_at`.
+- **Go next:** via `observes` to the entity the signal is about.
+- **Backlinks:** the insights whose `derived-from` names it: what was made of the signal.
+  Until one does, the signal is an open end.
+- **Pictured in:** pinned on the box of the observed person or unit (topology, org chart,
+  units view). In the change trail it is the first rung; one that `observes` a decision
+  record or an agreement draws a loop-back. A `dwsd.change-trail` fence with
+  `around: self` shows what came of it.
 
 ## Notes
 

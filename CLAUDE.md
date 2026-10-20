@@ -23,8 +23,8 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - `examples/<org>/` — worked example organizations (full instances; e.g. `goldcrust-bakery/`).
 - `CHANGELOG.md` — model & convention decisions.
 - `.claude-plugin/`, `skills/` — the **`dwsd-md`** Claude Code plugin: thin
-  authoring + validation skills (`dwsd-format`, `org-validate`, `org-new`,
-  `explore-example-org`) that point back at the files above via the **spec root**
+  reading, authoring + validation skills (`dwsd-format`, `org-read`, `org-validate`,
+  `org-new`, `explore-example-org`) that point back at the files above via the **spec root**
   (`${CLAUDE_PLUGIN_ROOT}` in Claude Code; no duplication). Skills are written
   host-neutral — verbs, not tool names — so other hosts can vendor them. Heavier tooling
   (parser, rendering, the change-accompaniment workflow) stays out of scope. **Bump the plugin version** (`version` in both
@@ -67,7 +67,8 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 
 Intro one-liner → `**Serialized type:**` → `## Frontmatter` table (Field / Required /
 Format / Meaning) → `## Relationships` → `## Body` (often a section table) → `## Example`
-(self-contained markdown) → `## Notes`. **No folder line** on pages — the folder/category
+(self-contained markdown) → `## Reading it` (how to read one: the question it answers,
+where to look, links and backlinks, which picture shows it) → `## Notes`. **No folder line** on pages — the folder/category
 convention lives in `conventions.md`.
 
 ## Open / preliminary

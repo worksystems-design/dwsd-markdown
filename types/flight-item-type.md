@@ -58,6 +58,17 @@ Customer receives an assembled, tested drone with documentation.
 Year-1 baseline: 2–4 weeks. Year-5 reality: 4–6 weeks.
 ```
 
+## Reading it
+
+- **The question:** what kind of work is this: where does it come from, why is it worth
+  doing, to whom does it go, and how long does it take?
+- **Look first:** the four question headings in the body.
+- **Go next:** via `uses-route` to the flight route items of this type travel.
+- **Backlinks:** the route whose `for:` names it, and every route whose stages link it as a
+  wikilink (`[[Feature]] @ Train`); a stage written as text does not count.
+- **Pictured in:** the flight route, as the item type of its stages. A board lane named
+  after the type is just a named lane, not a link to it.
+
 ## Notes
 
 - The four-question structure is a convention, not enforced.

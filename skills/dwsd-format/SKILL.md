@@ -116,4 +116,5 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
 4. Fill the frontmatter (required fields + discriminator) and wire relationships as
    `[[wikilinks]]`.
 
-When in doubt, the spec wins — this skill never overrides it.
+When in doubt, the spec wins — this skill never overrides it. To answer questions about an
+existing org, use the `org-read` skill.
