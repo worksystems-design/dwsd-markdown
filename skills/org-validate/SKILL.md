@@ -8,10 +8,14 @@ argument-hint: "[org-folder] (defaults to the current folder)"
 
 # org-validate
 
-Validate the DWSD organization rooted at **$ARGUMENTS** (default: the current working
-directory). You are the validator — use Glob, Grep, and Read; no parser needed. The
-authoritative type list and contracts are bundled with this plugin
-(`${CLAUDE_PLUGIN_ROOT}/conventions.md`, `${CLAUDE_PLUGIN_ROOT}/types/`). This is
+**Spec root** — the folder that holds `conventions.md`, `types/`, `templates/` and
+`examples/`; paths below start there (`<spec-root>/…`). In Claude Code it is
+`${CLAUDE_PLUGIN_ROOT}`; another host names its own.
+
+Validate the DWSD organization rooted at the folder you are given (**$ARGUMENTS** in
+Claude Code; default: the current working directory). You are the validator — list, search
+and read the files; no parser needed. The authoritative type list and contracts are in the
+spec (`<spec-root>/conventions.md`, `<spec-root>/types/`). This is
 **read-only** — do not modify files; offer fixes only after reporting.
 
 Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** summary:

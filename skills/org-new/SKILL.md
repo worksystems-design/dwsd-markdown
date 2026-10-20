@@ -8,10 +8,15 @@ disable-model-invocation: true
 
 # org-new
 
-Create a new DWSD entity of type **$ARGUMENTS**. If the type or the name is missing, ask.
+**Spec root** — the folder that holds `conventions.md`, `types/`, `templates/` and
+`examples/`; paths below start there (`<spec-root>/…`). In Claude Code it is
+`${CLAUDE_PLUGIN_ROOT}`; another host names its own.
 
-1. Resolve the type to its template `${CLAUDE_PLUGIN_ROOT}/templates/<type>.md` and its
-   contract `${CLAUDE_PLUGIN_ROOT}/types/<type>.md`, and read both. Mind the subtypes: a
+Create a new DWSD entity of the type and with the name you are given (**$ARGUMENTS** in
+Claude Code). If the type or the name is missing, ask.
+
+1. Resolve the type to its template `<spec-root>/templates/<type>.md` and its
+   contract `<spec-root>/types/<type>.md`, and read both. Mind the subtypes: a
    **work system** is the `unit` template **plus** `work-system` in `unit-type` (and a
    `flightlevel`); a **meeting** is the `meeting` template (a `type: interaction` with
    `interaction-type: meeting`).
@@ -30,4 +35,5 @@ Create a new DWSD entity of type **$ARGUMENTS**. If the type or the name is miss
 4. Wire any relationships the user provides as `[[wikilinks]]`. For a `meeting`, also offer
    to create the `.mw` Markwhen sibling.
 
-Confirm the path you created and suggest running `/dwsd-md:org-validate` afterwards.
+Confirm the path you created and suggest validating the org afterwards (the
+`org-validate` skill; in Claude Code `/dwsd-md:org-validate`).

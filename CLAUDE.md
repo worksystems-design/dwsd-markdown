@@ -24,9 +24,10 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - `CHANGELOG.md` — model & convention decisions.
 - `.claude-plugin/`, `skills/` — the **`dwsd-md`** Claude Code plugin: thin
   authoring + validation skills (`dwsd-format`, `org-validate`, `org-new`,
-  `explore-example-org`) that point back at the files above via `${CLAUDE_PLUGIN_ROOT}`
-  (no duplication). Heavier tooling (parser, rendering, the change-accompaniment workflow)
-  stays out of scope. **Bump the plugin version** (`version` in both
+  `explore-example-org`) that point back at the files above via the **spec root**
+  (`${CLAUDE_PLUGIN_ROOT}` in Claude Code; no duplication). Skills are written
+  host-neutral — verbs, not tool names — so other hosts can vendor them. Heavier tooling
+  (parser, rendering, the change-accompaniment workflow) stays out of scope. **Bump the plugin version** (`version` in both
   `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`, kept equal) whenever
   skills, templates, types or examples change — `claude plugin update` compares the version
   string, not the commit, and silently keeps the old cache otherwise.

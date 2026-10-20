@@ -10,13 +10,16 @@ argument-hint: "[example-name]"
 
 # explore-example-org
 
-Copy a complete DWSD **example organization** out of the plugin and into the user's current
+**Spec root** — the folder that holds `conventions.md`, `types/`, `templates/` and
+`examples/`; paths below start there (`<spec-root>/…`). In Claude Code it is
+`${CLAUDE_PLUGIN_ROOT}`; another host names its own.
+
+Copy a complete DWSD **example organization** out of the spec root and into the user's current
 working directory, so they can open the files in the editor, follow the guided tour, and see
 the visual board renders. Use this whenever the user wants to see or explore an example org —
-the bundled examples otherwise live inside the plugin folder and are not visible in the
-workspace.
+the examples otherwise live in the spec root and are not visible in the workspace.
 
-1. **List the available examples.** Each subdirectory of `${CLAUDE_PLUGIN_ROOT}/examples/` is
+1. **List the available examples.** Each subdirectory of `<spec-root>/examples/` is
    one example org. Right now there are two: `goldcrust-bakery` (a small bakery — the gentler
    start, fourteen people) and `voltfeld` (an EV-charging hardware maker with an Agile Release
    Train — the example where the org chart and the units view draw two different trees, with
@@ -29,9 +32,9 @@ workspace.
      preference, suggest `goldcrust-bakery` first.
 
 3. **Copy the whole tree** into a subfolder of the current directory named after the example,
-   preserving its structure:
+   preserving its structure — in a shell, for instance:
    ```bash
-   cp -r "${CLAUDE_PLUGIN_ROOT}/examples/<name>" "./<name>"
+   cp -r "<spec-root>/examples/<name>" "./<name>"
    ```
    If `./<name>` already exists, do **not** overwrite it — tell the user it is already there
    and point them to it.

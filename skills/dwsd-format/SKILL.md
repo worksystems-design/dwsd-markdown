@@ -9,6 +9,10 @@ description: >-
 
 # DWSD format
 
+**Spec root** — the folder that holds `conventions.md`, `types/`, `templates/` and
+`examples/`; paths below start there (`<spec-root>/…`). In Claude Code it is
+`${CLAUDE_PLUGIN_ROOT}`; another host names its own.
+
 DWSD describes an organization as a folder of Markdown files: **one file = one entity**,
 and the `type:` field in the frontmatter decides what it is. Entities are grouped into flat
 **plural per-type folders** (`individuals/`, `roles/`, `units/`, `work-systems/`,
@@ -16,19 +20,19 @@ and the `type:` field in the frontmatter decides what it is. Entities are groupe
 `decision-records/`, `visualizations/`, `flight-item-types/`, `flight-routes/`,
 `ai-agents/`) — the folder is a convenience; the `type:` is authoritative.
 
-## The authoritative spec ships with this plugin — read it
+## The authoritative spec sits next to this skill — read it
 
-This skill is a thin pointer; the **full contract lives in the bundled spec** (the same
-files as the `dwsd-markdown` repo). Before authoring or validating, read:
+This skill is a thin pointer; the **full contract lives in the spec** at the spec root (the
+same files as the `dwsd-markdown` repo). Before authoring or validating, read:
 
-- **`${CLAUDE_PLUGIN_ROOT}/conventions.md`** — rules for every entity: frontmatter, the
+- **`<spec-root>/conventions.md`** — rules for every entity: frontmatter, the
   `type` field, `[[wikilink]]` relationships, `reports-to` (structure) vs `member-of`
   (flow), tracking fields, the `sources` block, the embedded DSL fences, and `.mw` siblings.
-- **`${CLAUDE_PLUGIN_ROOT}/types/<type>.md`** — the per-type contract (required vs optional
+- **`<spec-root>/types/<type>.md`** — the per-type contract (required vs optional
   frontmatter, relationships, body sections, a worked example). Always open the specific
   type page before authoring that type.
-- **`${CLAUDE_PLUGIN_ROOT}/templates/<type>.md`** — a bare copy-paste skeleton per type.
-- **`${CLAUDE_PLUGIN_ROOT}/examples/`** — two complete worked examples: `goldcrust-bakery/`
+- **`<spec-root>/templates/<type>.md`** — a bare copy-paste skeleton per type.
+- **`<spec-root>/examples/`** — two complete worked examples: `goldcrust-bakery/`
   (a small bakery) and `voltfeld/` (a hardware product company with an Agile Release Train).
 
 ## Subtypes: the `type:` value is not always the conceptual type
@@ -80,15 +84,15 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   `[[Board]]#BoardName::in` addresses the whole board and shows in the board header; a bare
   `[[Board]]::in` is an entity anchor, not a board anchor. A meeting's `## Interactions`
   table row may name a standalone interaction with `[[…]]` — the file is then the source
-  for outcome and anchor (conventions.md › Reading guide). See `${CLAUDE_PLUGIN_ROOT}/types/visualization.md` and
-  `${CLAUDE_PLUGIN_ROOT}/types/flight-route.md`.
+  for outcome and anchor (conventions.md › Reading guide). See `<spec-root>/types/visualization.md` and
+  `<spec-root>/types/flight-route.md`.
 - **Three more fences are inferred views any entity may host** (or standalone files at the
   org root): ` ```dwsd.topology ` (flight-level context over `contributes-to`),
   ` ```dwsd.orgchart ` (individuals over `reports-to`), ` ```dwsd.units ` (units over their
   first `member-of`, `layout: nested | tree`). `mode: infer` lists nothing — the pictures
   follow the entity files; `around:` names the entity to draw from (a wikilink or `self`),
   `radius:` how far. `focus:` is the earlier name of `around:`, still read as an alias.
-  See `${CLAUDE_PLUGIN_ROOT}/conventions.md` › Embedded DSL fences and › Anchors and around.
+  See `<spec-root>/conventions.md` › Embedded DSL fences and › Anchors and around.
 - **A fourth inferred view, ` ```dwsd.change-trail `,** draws the change ladder as one
   network (along `derived-from`, landing via `for-domain` / bare `agreement-of`, loop-backs
   via `observes`); keys `around:` (a wikilink or `self`), `show: all | open | recent`,
@@ -105,11 +109,11 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
 ## Authoring steps
 
 1. Identify the conceptual type (mind the subtypes above) and open
-   `${CLAUDE_PLUGIN_ROOT}/types/<type>.md` for its contract.
-2. Start from `${CLAUDE_PLUGIN_ROOT}/templates/<type>.md`.
+   `<spec-root>/types/<type>.md` for its contract.
+2. Start from `<spec-root>/templates/<type>.md`.
 3. Name the file with the entity's human label (Title Case, spaces allowed — the filename
    *is* the label and the wikilink target). Put it in the matching plural folder.
 4. Fill the frontmatter (required fields + discriminator) and wire relationships as
    `[[wikilinks]]`.
 
-When in doubt, the bundled spec wins — this skill never overrides it.
+When in doubt, the spec wins — this skill never overrides it.

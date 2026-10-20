@@ -21,6 +21,9 @@ commit onward**. The current model is described by the reference itself — `REA
   type page that carries `for-domain`, and both skills (`org-validate` now warns only on a
   person). Goldcrust gains the role *Market Street Site Lead*, scoped to the Market Street
   site and kept by Ines Rossi.
+- **Skills are host-neutral.** Each skill names its **spec root** once (the folder that
+  holds `conventions.md`; `${CLAUDE_PLUGIN_ROOT}` in Claude Code) and says what to do in
+  verbs rather than tool names, so another host can vendor a skill unchanged.
 
 ## 2026-10-19
 
