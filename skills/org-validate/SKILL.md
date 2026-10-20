@@ -46,8 +46,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      `flightroute` fence tag. A wikilink `for:` resolves like any wikilink (broken link
      otherwise) and should name a flight-item-type file — **warn** when it names another
      type; a plain-text `for:` is a description and is not checked.
-     `for-domain:` (a quoted wikilink or a list of them) must resolve to a **work system
-     or a role** — **warn** otherwise, including when it names a person or a plain unit
+     `for-domain:` (a quoted wikilink or a list of them) must resolve to a **work system,
+     a role or a unit** — **warn** otherwise, including when it names a person
      (see `conventions.md` › Up vs. into the detail). A stage item type is text or a wikilink:
      text is **never** looked up or flagged, even when a file of that name exists; a
      wikilink stage resolves like any wikilink (broken link otherwise) and should name a
@@ -98,8 +98,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      empty; if filled, they are a copy — **warn** when the anchor cell differs from the
      file's `interaction-of` (`agreement-of`), and note a differing outcome. The file wins;
      never merge the two.
-   - **`for-domain`** on any entity names a **work system or a role** (a list may mix
-     them) — both are valid; **warn** only when it names a person or a plain unit.
+   - **`for-domain`** on any entity names a **work system, a role or a unit** (a list may
+     mix them) — all are valid; **warn** only when it names a person.
    - **Board-binding consistency (informational):** when an entity carries both
      `for-domain` (a work system) and a board-position `interaction-of` / `agreement-of`,
      **note** — not warn — if the anchored board's work system (its `visualization-of`)

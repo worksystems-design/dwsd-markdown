@@ -11,7 +11,7 @@
 |---|---|---|---|
 | `type` | yes | `role` | Entity type |
 | `role-keeper` / `role_keeper` | no | wikilink or list | The individual(s) holding the role — a list means a **shared** role |
-| `for-domain` / `for_domain` | no | wikilink | The work system / domain the role is scoped to; a role is itself a domain for `for-domain` — an entity scoped to a role shows up on every keeper |
+| `for-domain` / `for_domain` | no | wikilink | The domain the role is scoped to — a work system or a unit (a site, a department); a role is itself a domain for `for-domain` — an entity scoped to a role shows up on every keeper |
 | `version` | no | string | Version of the description |
 | `decision_date` | no | date | When this version was decided |
 | `review_date` | no | date | When it is due for review |
@@ -25,7 +25,8 @@ Plus the shared optionals from [conventions](../conventions.md).
 
 - **`role-keeper`** — who currently holds the role. Multiple keepers = a role shared
   across several people.
-- **`for-domain`** — the work system or domain the role operates in. The role is in turn a
+- **`for-domain`** — the domain the role operates in: a work system, or a unit such as a site
+  or a department that decides something for itself. The role is in turn a
   **domain** other entities can name: an agreement, interaction, ODR, driver, proposal or AI
   agent with `for-domain: "[[This Role]]"` shows up on every keeper of the role — one hop;
   the role's own `for-domain` is not followed further.

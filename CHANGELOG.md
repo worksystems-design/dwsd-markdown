@@ -14,6 +14,14 @@ commit onward**. The current model is described by the reference itself — `REA
   every picture: an anchor (`for-domain`, a locator, `observes`) says where an entity sits;
   `around:` says from where a view looks at the organization.
 
+- **`for-domain` may name a unit.** A domain is a work system, a role or a unit — any named
+  grouping that decides something for itself: a department, a site, a circle that governs
+  without running a flow. `for-domain` still never names a person. An entity scoped to a
+  plain unit shows on that unit's box in the units view. Changed in `conventions.md`, every
+  type page that carries `for-domain`, and both skills (`org-validate` now warns only on a
+  person). Goldcrust gains the role *Market Street Site Lead*, scoped to the Market Street
+  site and kept by Ines Rossi.
+
 ## 2026-10-19
 
 - **A decision record shows its own change trail.** `focus:` in a ` ```dwsd.change-trail `

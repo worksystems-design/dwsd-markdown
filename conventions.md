@@ -120,7 +120,7 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `member-of` | Belongs to a unit / work system — an **individual** or a **unit** can be a member |
 | `contributes-to` | A work system contributes to a higher-level work system |
 | `role-keeper` / `role_keeper` | Who holds this role |
-| `for-domain` / `for_domain` | The **domain** — a work system or a role — that a role, agreement, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to, and that a flight route (in its `dwsd.flightroute` block) names as the domain **responsible** for the route — points *up*. Naming a role lands the entity on every keeper of that role |
+| `for-domain` / `for_domain` | The **domain** — a work system, a role or a unit — that a role, agreement, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to, and that a flight route (in its `dwsd.flightroute` block) names as the domain **responsible** for the route — points *up*. Naming a role lands the entity on every keeper of that role |
 | `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board), or a bare `[[entity]]` — a work system, a unit or a person |
 | `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
 | `bound-to` | Where an **AI agent**'s surface appears — the same **locator** as `interaction-of` / `agreement-of` (or a bare `[[entity]]` — a work system, a unit or a person) |
@@ -132,10 +132,12 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 
 > **Up vs. into the detail.** `for-domain` names the **domain** (points *up*);
 > `interaction-of` / `agreement-of` name a **board position** (a locator — points
-> *into the detail*). A domain is a work system or a role; `for-domain` never names a person or
-> a plain unit — a decision about a person is anchored through the role the person keeps, and it
-> then shows on the box of every keeper of that role (one hop: the role's own `for-domain` is
-> not followed further). A board is **not** a work system, so the two coexist and neither field
+> *into the detail*). A domain is a work system, a role or a unit — any named grouping that
+> decides something for itself: a department, a site, a circle that governs without running a
+> flow. `for-domain` never names a person — a decision about a person is anchored through the
+> role the person keeps, and it then shows on the box of every keeper of that role (one hop:
+> the role's own `for-domain` is not followed further). A board is **not** a work system, so
+> the two coexist and neither field
 > is overloaded to mean both. A board renders exactly one work system (`visualization-of`), so
 > the work system is **inferable** from the board — `for-domain` is therefore optional, and
 > stating it is just clearer. If both are present and the board's work system differs from
@@ -448,7 +450,8 @@ from the fence: a
 signal or insight that `observes` a person or unit pins on that box; an interaction,
 agreement or AI agent whose locator names an entity shows on it (a unit that is also a work
 system shows the marker on its unit box *and* its topology node); an entity scoped
-`for-domain` to a role reaches the box of every keeper of that role — one hop. They declare
+`for-domain` to a role reaches the box of every keeper of that role — one hop; one scoped
+to a plain unit shows on that unit's box in the units view. They declare
 no relationships and are never part of a type's required body structure. All four take
 `around:` as described in [Anchors and around](#anchors-and-around); `focus:` is its earlier
 name and is still read as an alias — when both are written, `around:` wins. ⚠ **Preliminary**

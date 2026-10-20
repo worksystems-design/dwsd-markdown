@@ -21,7 +21,7 @@ operational and tactical changes are agreements, or nothing.
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `organizational-decision-record` | Entity type |
-| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system or a role — the decision concerns. Naming a role lands the record on every keeper of that role; a decision *about a person* is anchored through the role the person keeps, never on the person |
+| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system, a role or a unit — the decision concerns. Naming a role lands the record on every keeper of that role; a decision *about a person* is anchored through the role the person keeps, never on the person |
 | `status` | no | `proposed` \| `accepted` \| `superseded` \| `deprecated` | Lifecycle of the decision |
 | `date` | no | date | When the decision was recorded / last updated |
 | `decision-makers` | no | wikilink or list | Who made the decision |
@@ -71,7 +71,7 @@ decision produced, each anchored where it applies. They name the record they cam
 decision's **bundle** readable: the agreements belonging to a decision are exactly those pointing
 back at it.
 
-The decision itself is pinned at the **domain** (`for-domain` — the work system or the role it concerns); its
+The decision itself is pinned at the **domain** (`for-domain` — the work system, role or unit it concerns); its
 agreements are pinned **where the work happens** (`agreement-of` — a board position). One decision
 up at the system, its consequences down in the flow.
 

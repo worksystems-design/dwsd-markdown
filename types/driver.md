@@ -12,7 +12,7 @@
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `driver` | Entity type |
-| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system or a role — whose team (or keeper) has the need. Naming a role lands the driver on every keeper of that role |
+| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system, a role or a unit — whose team (or keeper) has the need. Naming a role lands the driver on every keeper of that role |
 | `derived-from` | no | wikilink or list | The [insight(s)](insight.md) this driver is built on (see note) |
 | `status` | no | string | Lifecycle, e.g. `new`, `addressed` |
 

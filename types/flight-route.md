@@ -22,10 +22,10 @@ itself lives in the body, not the frontmatter.
   named in its `for:` key.
 - The route names its primary [flight-item-type](flight-item-type.md) in the fence's
   `for:` key, and maps onto boards via `bound-to:` — both are part of the DSL below.
-- The route names its **responsible domain** — a [work system](work-system.md) or a
-  [role](role.md) — in the fence's `for-domain:` key. This is responsibility, not flow:
+- The route names its **responsible domain** — a [work system](work-system.md), a
+  [role](role.md) or a [unit](unit.md) — in the fence's `for-domain:` key. This is responsibility, not flow:
   the work systems a route flows through are **derived** (`bound-to` → board →
-  `visualization-of`) and never authored on the route. A work system or role can list the
+  `visualization-of`) and never authored on the route. A work system, role or unit can list the
   routes it is responsible for.
 - External entities (interactions, agreements) can anchor **onto a route stage** with a
   locator: `"[[Route]]/stage:<itemType> @ <Band>::before|in|after"` — see
@@ -45,7 +45,7 @@ boards. In plain Markdown the block still reads as a YAML document.
 | `title` | string | The route name (shared document header; the old `route:` key is retired) |
 | `tags` | string list | Descriptive chips, document scope only |
 | `for` | wikilink or string | The primary flight-item-type the route describes — a wikilink to its file, or plain text when it has none |
-| `for-domain` | wikilink or list of wikilinks | The **domain** — a work system or a role — **responsible** for the route: who has to take care when it changes. Points *up*. An unresolved target is a warning, never an error |
+| `for-domain` | wikilink or list of wikilinks | The **domain** — a work system, a role or a unit — **responsible** for the route: who has to take care when it changes. Points *up*. An unresolved target is a warning, never an error |
 | `bands` | list of `{ name, fl }` | The named bands work moves through; `fl` is `1`/`2`/`3` or a span like `[1, 2]`; omit `fl` for a pure custom band |
 | `triggers` | list of `{ name, generates }` | External start events outside the bands; `generates` is one stage or a list (fan-out) |
 | `path` | edge list | The route itself — typed edges between stages |

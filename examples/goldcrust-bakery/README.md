@@ -73,7 +73,9 @@ carries a `flightlevel`). This example shows the shapes of `unit`:
   `Goldcrust Bakery.md`, the three sites and the plain teams `Deliveries.md` and
   `Wholesale.md`. [`roles/`](roles/) keeps one
   shop-manager role file per location — roles are individual and evolve independently; a
-  role *shared* by several people would instead list them all as `role-keeper`s.
+  role *shared* by several people would instead list them all as `role-keeper`s. The
+  *Market Street Site Lead* is scoped to the site, a plain unit, not to the shop's work
+  system: keys, opening hours and the back door belong to the building.
 - **Flow** — [`visualizations/`](visualizations/): a board per work system, in the YAML
   ` ```dwsd.board ` DSL. The Bakehouse and shop boards run the daily flow; the
   `Bakery Operations Coordination` board is end-to-end with a **swimlane per

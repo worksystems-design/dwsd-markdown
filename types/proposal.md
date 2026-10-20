@@ -12,7 +12,7 @@
 |---|---|---|---|
 | `type` | yes | `proposal` | Entity type |
 | `derived-from` | no | wikilink or list | The [`driver`](driver.md) (and rungs below it) this responds to (see note) |
-| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system or a role — the proposal concerns. Naming a role lands the proposal on every keeper of that role |
+| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system, a role or a unit — the proposal concerns. Naming a role lands the proposal on every keeper of that role |
 | `status` | no | `draft` \| `in-consent` \| `consented` \| `declined` | Where the proposal is in its decision |
 
 Plus the shared optionals from [conventions](../conventions.md).

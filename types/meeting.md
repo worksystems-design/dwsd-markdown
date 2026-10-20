@@ -14,7 +14,7 @@
 | `type` | yes | `interaction` | Base type |
 | `interaction-type` | yes | `meeting` | Marks it a meeting |
 | `interaction-of` | no | board locator or list (or a bare `[[entity]]` — a work system, a unit or a person) | The **board (position)** it is of — points *into the detail* |
-| `for-domain` / `for_domain` | no | wikilink or list | The **domain** — a work system or a role — it is scoped to — points *up*. Naming a role lands the meeting on every keeper of that role |
+| `for-domain` / `for_domain` | no | wikilink or list | The **domain** — a work system, a role or a unit — it is scoped to — points *up*. Naming a role lands the meeting on every keeper of that role |
 | `start` | no | ISO datetime | First occurrence start |
 | `end` | no | ISO datetime | First occurrence end |
 | `rrule` | no | iCal RRULE | Recurrence, e.g. `RRULE:FREQ=WEEKLY;BYDAY=TU` |

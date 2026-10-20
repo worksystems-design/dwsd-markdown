@@ -18,7 +18,7 @@
 | `platform` | no | string | Host platform, e.g. `jira-rovo` |
 | `description` | no | string | What the agent is / does |
 | `status` | no | `active` \| `deactivated` \| … | Lifecycle (e.g. `deactivated` when switched off) |
-| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system or a role — the agent belongs to (as for a role). Naming a role lands the agent on every keeper of that role |
+| `for-domain` / `for_domain` | no | wikilink or list | The domain — a work system, a role or a unit — the agent belongs to (as for a role). Naming a role lands the agent on every keeper of that role |
 | `bound-to` | no | board locator or list (or a bare `[[entity]]` — a work system, a unit or a person) | Where the agent's surface appears — a board-position anchor, the same locator as `interaction-of` / `agreement-of` (e.g. `[[Board]]#BoardName/col:Column::in`), or the entity whose box carries the agent. Preliminary convention, to be revisited. |
 
 Plus the shared optionals from [conventions](../conventions.md).

@@ -7,7 +7,8 @@ created_at: "2026-09-17"
 ---
 
 Ines works the counter at the [[Market Street Shop]] and does the evening stock count
-that feeds the next-day [[Daily Replenishment Order]].
+that feeds the next-day [[Daily Replenishment Order]]. She also holds the
+[[Market Street Site Lead]] role: the keys, the opening hours, the back door.
 
 ## In context
 

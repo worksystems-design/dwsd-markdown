@@ -13,7 +13,7 @@
 | `type` | yes | `interaction` | Entity type |
 | `interaction-type` | yes | `meeting` \| `conversation` \| `bilateral` \| … | Kind of interaction (open vocabulary) |
 | `interaction-of` | no | board locator or list (or a bare `[[entity]]` — a work system, a unit or a person) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`; two persons make a 1:1 |
-| `for-domain` / `for_domain` | no | wikilink or list | The **domain** — a work system or a role — it is scoped to — points *up*, e.g. `[[Strategic Direction]]`. Naming a role lands the interaction on every keeper of that role |
+| `for-domain` / `for_domain` | no | wikilink or list | The **domain** — a work system, a role or a unit — it is scoped to — points *up*, e.g. `[[Strategic Direction]]`. Naming a role lands the interaction on every keeper of that role |
 | `start` | no | ISO datetime | First occurrence start — **any** interaction may be scheduled |
 | `end` | no | ISO datetime | First occurrence end |
 | `rrule` | no | iCal RRULE | Recurrence, e.g. `RRULE:FREQ=DAILY` |
@@ -32,7 +32,7 @@ kind adds a **list of interactions** it bundles — see [`meeting.md`](meeting.m
 - **`interaction-of`** may also name a **route stage**:
   `[[Route]]/stage:<itemType> @ <Band>::before|in|after` — see
   [conventions](../conventions.md).
-- **`for-domain`** — the **domain** — a work system or a role — the interaction is scoped to.
+- **`for-domain`** — the **domain** — a work system, a role or a unit — the interaction is scoped to.
   Points *up*. Optional —
   inferable from the board, but clearer when stated (board ≠ work system). See
   [conventions](../conventions.md).
