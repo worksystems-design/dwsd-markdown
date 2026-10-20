@@ -11,6 +11,12 @@ derived-from: "[[Let the Agent Route Known Failure Patterns]]"
 created_at: "2026-10-06"
 ---
 
+## Change trail
+
+```dwsd.change-trail id=change-trail
+focus: self
+```
+
 ## Context
 
 Every field issue of the [[Charger ART]] has gone through the weekly
@@ -38,9 +44,3 @@ stay with the people, the same day, as before.
 - Customers with a known fault hear back the same day instead of after Tuesday.
 - Trade-off: a pattern that drifts may be routed wrongly for up to a week, until the count
   shows it.
-
-## Change trail
-
-```dwsd.change-trail id=change-trail
-focus: self
-```

@@ -8,7 +8,8 @@ commit onward**. The current model is described by the reference itself — `REA
 
 - **A decision record shows its own change trail.** `focus:` in a ` ```dwsd.change-trail `
   fence now also takes `self` — the entity whose file hosts the fence. A decision record
-  carries one in an optional `## Change trail` section: back to the signals it came from,
+  carries one in an optional `## Change trail` section at the top of the body, before
+  `## Context`: back to the signals it came from,
   forward to its agreements and where they land. Added to the type page, the template, and
   all four decision records in the example orgs; `org-validate` accepts `self`.
 - **Goldcrust: both decision records have an origin.** Two short chains — signal, insight,

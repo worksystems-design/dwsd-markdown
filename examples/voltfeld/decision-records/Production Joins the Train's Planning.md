@@ -13,6 +13,12 @@ derived-from: "[[Bring the Plant and Supply Chain into PI Planning]]"
 created_at: "2026-10-06"
 ---
 
+## Change trail
+
+```dwsd.change-trail id=change-trail
+focus: self
+```
+
 ## Context
 
 Since the [[Charger ART]] was chartered in January 2026, Voltfeld has had two planning
@@ -57,9 +63,3 @@ participants, and [[Manufacturing]], whose ramp now starts earlier.
 
 > [!NOTE]
 > **Modeling note.** The decision is anchored on both domains.
-
-## Change trail
-
-```dwsd.change-trail id=change-trail
-focus: self
-```

@@ -8,6 +8,12 @@ derived-from: "[[A Head of Operations for the Day-to-Day]]"
 created_at: "2026-09-17"
 ---
 
+## Change trail
+
+```dwsd.change-trail id=change-trail
+focus: self
+```
+
 ## Context
 
 Until September 2026 every coordination question in [[Bakery Operations]] — a late van, a
@@ -35,9 +41,3 @@ and the final call on capacity.
 > **role**: `for-domain` names [[Head of Operations]], not Jonas. The decision lands on the
 > box of whoever keeps that role — today Jonas — and the org chart says through which role
 > it arrived. The role's own domain ([[Bakery Operations]]) learns nothing new from it.
-
-## Change trail
-
-```dwsd.change-trail id=change-trail
-focus: self
-```

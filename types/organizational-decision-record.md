@@ -34,10 +34,10 @@ Plus the shared optionals from [conventions](../conventions.md), including
 
 | Section | Holds |
 |---|---|
+| `## Change trail` | Optional, first in the body, before `## Context`. A ```` ```dwsd.change-trail ```` fence with `focus: self` — the record's own line, from the signals it came from to the agreements it produced and where they land |
 | `## Context` | The situation and forces — why a decision was needed |
 | `## Decision` | What was decided, and what we will do |
 | `## Consequences` | What we expect to follow — benefits and trade-offs |
-| `## Change trail` | Optional. A ```` ```dwsd.change-trail ```` fence with `focus: self` — the record's own line, from the signals it came from to the agreements it produced and where they land |
 
 ## Example
 
@@ -79,7 +79,8 @@ Not every continuation is an agreement: a decision about structure shows up as a
 one about people as changed roles or membership. Only the process / way-of-working branch produces
 agreements.
 
-A `## Change trail` section draws this bundle and its origin from the files themselves:
+A `## Change trail` section at the top of the body draws this bundle and its origin from
+the files themselves:
 
 ````markdown
 ## Change trail

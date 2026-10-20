@@ -6,6 +6,12 @@ date: "2026-01-01"
 decision-makers:
   - "[[]]"
 ---
+## Change trail
+
+```dwsd.change-trail id=change-trail
+focus: self
+```
+
 ## Context
 <The situation and forces — why a decision was needed.>
 
@@ -14,9 +20,3 @@ decision-makers:
 
 ## Consequences
 <What we expect to follow — benefits and trade-offs.>
-
-## Change trail
-
-```dwsd.change-trail id=change-trail
-focus: self
-```
