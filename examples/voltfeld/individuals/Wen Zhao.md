@@ -14,6 +14,6 @@ tooling orders. Reports to [[Ingrid Halvorsen]]. One seat under her is open — 
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

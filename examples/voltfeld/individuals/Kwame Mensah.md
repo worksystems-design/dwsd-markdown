@@ -13,6 +13,6 @@ Kwame writes the load-management and metering firmware in [[Wallbox Fleet]], on 
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

@@ -14,6 +14,6 @@ Marek owns EMC and safety pre-tests and the certification dossiers in
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

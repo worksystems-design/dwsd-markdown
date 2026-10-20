@@ -14,6 +14,6 @@ split from the features [[Product Management]] ranks for the ART. Reports to
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

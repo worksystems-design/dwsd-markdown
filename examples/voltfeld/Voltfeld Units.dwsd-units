@@ -4,11 +4,11 @@
 # Software Engineering · Operations ⊃ Manufacturing, Supply Chain · Commercial ⊃ Sales,
 # Field Service. The two engineering departments are empty boxes on purpose — their
 # people are members of the ART teams. `layout: tree` draws the same containment as a tree.
-# `focus` + `radius` scope the picture to this organization (the index spans the whole
+# `around` + `radius` scope the picture to this organization (the index spans the whole
 # workspace): `up: 0` = nothing above the company root, `down: inf` = everything inside it.
 mode: infer
 layout: nested
-focus: "[[Voltfeld]]"
+around: "[[Voltfeld]]"
 radius: { up: 0, down: inf }
 notes:
   - on: "[[Supply Chain]]"

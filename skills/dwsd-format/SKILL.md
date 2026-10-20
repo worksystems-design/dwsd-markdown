@@ -86,12 +86,14 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   org root): ` ```dwsd.topology ` (flight-level context over `contributes-to`),
   ` ```dwsd.orgchart ` (individuals over `reports-to`), ` ```dwsd.units ` (units over their
   first `member-of`, `layout: nested | tree`). `mode: infer` lists nothing — the pictures
-  follow the entity files. See `${CLAUDE_PLUGIN_ROOT}/conventions.md` › Embedded DSL fences.
+  follow the entity files; `around:` names the entity to draw from (a wikilink or `self`),
+  `radius:` how far. `focus:` is the earlier name of `around:`, still read as an alias.
+  See `${CLAUDE_PLUGIN_ROOT}/conventions.md` › Embedded DSL fences and › Anchors and around.
 - **A fourth inferred view, ` ```dwsd.change-trail `,** draws the change ladder as one
   network (along `derived-from`, landing via `for-domain` / bare `agreement-of`, loop-backs
-  via `observes`); keys `focus:` (a wikilink or `self`), `show: all | open | recent`,
+  via `observes`); keys `around:` (a wikilink or `self`), `show: all | open | recent`,
   `radius:`, an empty body is the whole trail. No standalone file. A decision record carries
-  one under `## Change trail`, first in the body, with `focus: self`.
+  one under `## Change trail`, first in the body, with `around: self`.
 - **Fence ids:** any of the six fences may name itself after the tag
   (` ```dwsd.board id=intake `) — kebab-case, unique within the file, kept when the title
   or heading changes. Optional; when you create a fence, give it one.

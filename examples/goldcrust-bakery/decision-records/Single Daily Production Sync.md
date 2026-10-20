@@ -10,7 +10,7 @@ derived-from: "[[One Afternoon Sync for Shops and Bakehouse]]"
 ## Change trail
 
 ```dwsd.change-trail id=change-trail
-focus: self
+around: self
 ```
 
 ## Context

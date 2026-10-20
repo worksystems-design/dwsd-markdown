@@ -13,6 +13,6 @@ Yara designs the shared power and metering module in [[HW Base]] — the platfor
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

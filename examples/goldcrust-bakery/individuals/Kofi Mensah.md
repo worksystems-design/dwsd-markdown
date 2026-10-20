@@ -13,6 +13,6 @@ levain in the evening and preps the mise-en-place for the morning bake.
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

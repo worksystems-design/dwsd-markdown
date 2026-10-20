@@ -13,6 +13,6 @@ dispatch hand-off to the shops.
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

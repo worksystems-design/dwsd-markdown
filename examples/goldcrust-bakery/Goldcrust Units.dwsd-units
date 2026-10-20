@@ -3,11 +3,11 @@
 # Goldcrust Bakery ⊃ three sites (Mill Lane ⊃ Deliveries, Wholesale · Market Street ·
 # Station Road). The work systems carry no `member-of`: they are the flow, drawn in the
 # topology, not a second time here. `layout: tree` draws the same containment as a tree.
-# `focus` + `radius` scope the picture to this organization (the index spans the whole
+# `around` + `radius` scope the picture to this organization (the index spans the whole
 # workspace): `up: 0` = nothing above the company root, `down: inf` = everything inside it.
 mode: infer
 layout: nested
-focus: "[[Goldcrust Bakery]]"
+around: "[[Goldcrust Bakery]]"
 radius: { up: 0, down: inf }
 notes:
   - on: "[[Deliveries]]"

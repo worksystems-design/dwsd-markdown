@@ -15,6 +15,6 @@ report to [[Lior Katz]]. Like [[Hardware Engineering]] it holds reporting lines,
 
 ```dwsd.units id=units
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: inf }
 ```

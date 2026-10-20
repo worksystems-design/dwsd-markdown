@@ -4,6 +4,16 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-20
+
+- **`focus:` becomes `around:`** in all four inferred views — topology, org chart, units and
+  change trail. Same values (a wikilink or `self`); `radius:` and `show:` are unchanged.
+  `focus:` stays a valid alias, and when a fence carries both, `around:` wins. All example
+  fences, the decision-record template, the type page and both skills use `around:`.
+- **Anchors and around**, a new section in `conventions.md`, names the two ideas behind
+  every picture: an anchor (`for-domain`, a locator, `observes`) says where an entity sits;
+  `around:` says from where a view looks at the organization.
+
 ## 2026-10-19
 
 - **A decision record shows its own change trail.** `focus:` in a ` ```dwsd.change-trail `

@@ -14,6 +14,6 @@ sits at the top of the reporting line — she reports to no one.
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

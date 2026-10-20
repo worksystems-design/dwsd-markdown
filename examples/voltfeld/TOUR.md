@@ -22,7 +22,7 @@ Those two lines draw two different pictures. Her reporting line, two levels up:
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: "[[Daria Novak]]"
+around: "[[Daria Novak]]"
 radius: { up: 2, down: 0 }
 ```
 
@@ -30,7 +30,7 @@ And the team she works in, inside the train:
 
 ```dwsd.units id=units
 mode: infer
-focus: "[[Wallbox Fleet]]"
+around: "[[Wallbox Fleet]]"
 radius: { up: 2, down: 0 }
 ```
 
@@ -51,7 +51,7 @@ base — one hardware platform that both product lines are built on. Look at its
 
 ```dwsd.topology id=topology
 mode: infer
-focus: "[[HW Base]]"
+around: "[[HW Base]]"
 radius: 1
 ```
 

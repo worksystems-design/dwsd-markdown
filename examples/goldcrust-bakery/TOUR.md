@@ -90,7 +90,7 @@ look:
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: "[[Mara Holt]]"
+around: "[[Mara Holt]]"
 radius: { up: 0, down: inf }
 ```
 
@@ -104,7 +104,7 @@ The units, cut by site:
 ```dwsd.units id=units
 mode: infer
 layout: nested
-focus: "[[Goldcrust Bakery]]"
+around: "[[Goldcrust Bakery]]"
 radius: { up: 0, down: inf }
 ```
 
@@ -141,11 +141,11 @@ frontmatter. One rule behind all of it: a bare wikilink means that entity, where
 drawn.
 
 **Watch for:** neither fence lists a person or a unit. Each names one entity — the root to
-start from (`focus`) — and says how far to go (`radius: { up: 0, down: inf }`: nothing
+start from (`around`) — and says how far to go (`radius: { up: 0, down: inf }`: nothing
 above it, everything below it). That scope is what keeps the picture to *this*
 organization when the renderer's index spans a whole workspace — this repository holds a
 second example org, and without it both roots would appear side by side. The dashed ring
-around the outer box marks the focus. (The two standalone files each add one `notes:` entry — a note written on a box, and even that
+around the outer box marks the entity the picture is drawn around. (The two standalone files each add one `notes:` entry — a note written on a box, and even that
 names its box with a bare wikilink.) Rename a file, move someone's `reports-to`, and both
 pictures follow. Structure and flow are two views over the same files — the flight-level
 map in the [README](README.md) is the third.

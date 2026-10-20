@@ -70,8 +70,11 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      not render). Inline inside-out `agreements:` / `interactions:` keys on a
      column/lane/group are valid board content, not references to resolve.
    - **Change trail fences** (` ```dwsd.change-trail `) — the body may be empty; the only
-     keys are `focus:` (a wikilink that must resolve, or `self`), `show:` (`all` | `open` | `recent`)
+     keys are `around:` (a wikilink that must resolve, or `self`), `show:` (`all` | `open` | `recent`)
      and `radius:` (a whole number or `inf`). **Warn** on any other key or value.
+   - **`around:` in the four inferred views** (topology, org chart, units, change trail) — a
+     wikilink that must resolve, or `self`. `focus:` is the earlier name: **note** it as
+     retired, don't flag it; **warn** when a fence carries both (`around:` wins).
    - **Fence ids** (any of the six fences, e.g. ` ```dwsd.board id=intake `) — optional,
      never flag a fence without one. Flag two fences in one file with the same id; **warn**
      when the value is not kebab-case (`[a-z0-9][a-z0-9-]*`), is quoted, or follows another

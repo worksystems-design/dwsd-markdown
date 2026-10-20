@@ -371,6 +371,27 @@ row's `Name` column:
 - The same holds for an agreement container: `## Agreements` with its `Agreement of`
   column.
 
+## Anchors and around
+
+Two ideas carry every picture of the organization, and they point in opposite directions.
+
+- **An anchor says where an entity sits.** It is written in the entity's own file:
+  `for-domain` anchors it up, to the domain that decides about it; a locator
+  (`interaction-of`, `agreement-of`, `bound-to`) anchors it into the detail — an entity, a
+  board position or a route stage; `observes` anchors a signal or an insight to what was
+  seen. Every view finds an entity through its anchors and shows it on the box, column or
+  stage it is anchored to.
+- **`around:` says from where the organization is looked at.** Each inferred view —
+  topology, org chart, units, change trail — takes `around:`, a wikilink or `self` (the
+  entity whose file hosts the fence), and draws the organization from that entity outward,
+  as far as `radius:` reaches. `around:` belongs to the view, not to the model: changing it
+  changes what is shown, never what is true.
+
+Anchors are written once, from each entity outward; `around:` reads them back from any
+point. An org chart with `around: self` in a person's file shows that person's line; the
+change trail with `around: self` in a decision record shows where the decision came from
+and where its agreements landed. Same files, read from a different place.
+
 ## Embedded DSL fences
 
 Six fence tags are parsed and rendered by the app. All six DSLs are **plain YAML**,
@@ -388,7 +409,7 @@ org chart and units view may also stand alone as a file (see below):
   [`types/flight-route.md`](types/flight-route.md).
 - **any entity** (optional) → ```` ```dwsd.topology ```` — an inline **flight-level
   context map**, inferred from the org's relationships rather than authored. Keys:
-  `mode: infer` (the only mode so far), `focus:` (a wikilink naming the entity to center
+  `mode: infer` (the only mode so far), `around:` (a wikilink naming the entity to center
   on; when omitted, the map centers on the entity hosting the block), and `radius:` (how
   many relationship hops the map reaches). Purely a view — it declares no relationships
   and is never part of a type's required body structure.
@@ -396,7 +417,7 @@ org chart and units view may also stand alone as a file (see below):
   every `individual` and its `reports-to` chain, drawn top-down as a tree of person boxes.
   A person without `reports-to` is a root; a vacancy is an individual with the position in
   `role:` (the Goldcrust and Voltfeld examples name theirs `NA1`). Keys: `mode: infer`,
-  `focus:` (a person), `radius:` (a number or `{ up, down }`), and `notes:` — a note
+  `around:` (a person), `radius:` (a number or `{ up, down }`), and `notes:` — a note
   written on a box, naming it with a bare wikilink. Nothing else is listed in the fence:
   rename a file or move a `reports-to`, and the chart follows.
 - **any entity** (optional) → ```` ```dwsd.units ```` — the **unit structure**: every
@@ -405,7 +426,7 @@ org chart and units view may also stand alone as a file (see below):
   `layout: tree` the same containment as a tree; each box wears its `unit-type` values as
   chips, so a `[team, work-system]` is told from a plain `team` at a glance. Units only —
   no people (that is the org chart), no flow between work systems (that is the topology).
-  Same `mode:` / `focus:` / `radius:` / `notes:` keys as the org chart.
+  Same `mode:` / `around:` / `radius:` / `notes:` keys as the org chart.
 - **any entity** (optional) → ```` ```dwsd.change-trail ```` — the **change trail**: the
   org's change entities as one network, left to right — signal → insight → driver →
   proposal → decision record → agreement, one rung back along `derived-from` (an agreement
@@ -415,11 +436,11 @@ org chart and units view may also stand alone as a file (see below):
   agreement draws a **loop-back**. An entity nothing derives from yet is an **open end**
   and shows its next step; agreements are never open, and a `status` of `declined`,
   `rejected`, `withdrawn` or `superseded` closes an entity. `created_at` (fallback `date:`)
-  dates each entry. Keys: `focus:` (a wikilink, or `self` — the entity whose file hosts
+  dates each entry. Keys: `around:` (a wikilink, or `self` — the entity whose file hosts
   the fence), `show:` (`all`, the default, `open` or `recent`) and `radius:` (a number or
-  `inf`); an empty body is the whole trail. With a focus the trail keeps that entity's own
+  `inf`); an empty body is the whole trail. With `around:` the trail keeps that entity's own
   line: back along `derived-from` to the signals, forward to what derives from it and where
-  that lands. A decision record carries one this way (`focus: self`), so its file shows
+  that lands. A decision record carries one this way (`around: self`), so its file shows
   where the decision came from and where its agreements apply.
 
 The topology, org chart and units view are **annotated from the entity files**, never
@@ -428,7 +449,9 @@ signal or insight that `observes` a person or unit pins on that box; an interact
 agreement or AI agent whose locator names an entity shows on it (a unit that is also a work
 system shows the marker on its unit box *and* its topology node); an entity scoped
 `for-domain` to a role reaches the box of every keeper of that role — one hop. They declare
-no relationships and are never part of a type's required body structure. ⚠ **Preliminary**
+no relationships and are never part of a type's required body structure. All four take
+`around:` as described in [Anchors and around](#anchors-and-around); `focus:` is its earlier
+name and is still read as an alias — when both are written, `around:` wins. ⚠ **Preliminary**
 — the key sets of the four inferred views may still change.
 
 **Fence ids.** Any of the six fences may carry an id after its tag:

@@ -17,7 +17,7 @@ that [[Bakery Operations]] (FL2) coordinates — it carries the morning dispatch
 
 ```dwsd.units id=units
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: inf }
 ```
 

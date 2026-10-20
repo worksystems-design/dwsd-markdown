@@ -14,7 +14,7 @@ created_at: "2026-10-06"
 ## Change trail
 
 ```dwsd.change-trail id=change-trail
-focus: self
+around: self
 ```
 
 ## Context

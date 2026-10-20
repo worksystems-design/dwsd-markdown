@@ -34,7 +34,7 @@ Plus the shared optionals from [conventions](../conventions.md), including
 
 | Section | Holds |
 |---|---|
-| `## Change trail` | Optional, first in the body, before `## Context`. A ```` ```dwsd.change-trail ```` fence with `focus: self` — the record's own line, from the signals it came from to the agreements it produced and where they land |
+| `## Change trail` | Optional, first in the body, before `## Context`. A ```` ```dwsd.change-trail ```` fence with `around: self` — the record's own line, from the signals it came from to the agreements it produced and where they land |
 | `## Context` | The situation and forces — why a decision was needed |
 | `## Decision` | What was decided, and what we will do |
 | `## Consequences` | What we expect to follow — benefits and trade-offs |
@@ -86,11 +86,11 @@ the files themselves:
 ## Change trail
 
 ```dwsd.change-trail id=change-trail
-focus: self
+around: self
 ```
 ````
 
-`focus: self` centers the trail on the record that hosts the fence. Nothing in it is listed by
+`around: self` centers the trail on the record that hosts the fence. Nothing in it is listed by
 hand; add an agreement that names the record in `derived-from`, and the trail shows it.
 
 ## Notes

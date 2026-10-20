@@ -15,7 +15,7 @@ organization.
 
 ```dwsd.topology id=topology
 mode: infer
-focus: "[[Bakery Operations]]"
+around: "[[Bakery Operations]]"
 radius: 1
 ```
 

@@ -12,6 +12,6 @@ Mirela designs the cooling and the module stacking of the DC power cabinet in [[
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

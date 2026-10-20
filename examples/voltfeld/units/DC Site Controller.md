@@ -16,7 +16,7 @@ and the [[ART Sync]].
 
 ```dwsd.units id=units
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: inf }
 ```
 

@@ -14,6 +14,6 @@ product line — product-specific boards and the enclosure fit on top of the [[H
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

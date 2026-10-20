@@ -14,6 +14,6 @@ the ERP do its work; the rest of the time she runs the studio — the cases the
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

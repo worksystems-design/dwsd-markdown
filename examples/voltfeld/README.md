@@ -39,7 +39,7 @@ on them.
 
 ```dwsd.topology id=topology
 mode: infer
-focus: "[[Portfolio]]"
+around: "[[Portfolio]]"
 radius: { up: 0, down: inf }
 ```
 
@@ -99,7 +99,7 @@ keys of the same files.
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: "[[Henrik Dahl]]"
+around: "[[Henrik Dahl]]"
 radius: { up: 0, down: inf }
 ```
 
@@ -110,14 +110,14 @@ inside them, because nobody *works* there — their `line` chip says so:
 ```dwsd.units id=units
 mode: infer
 layout: nested
-focus: "[[Voltfeld]]"
+around: "[[Voltfeld]]"
 radius: { up: 0, down: inf }
 ```
 
-(`focus` + `radius: { up: 0, down: inf }` mean "this root and everything below it". The
+(`around` + `radius: { up: 0, down: inf }` mean "this root and everything below it". The
 renderer indexes the whole workspace, and this repository holds two example organizations
 — without the scope, both roots would appear side by side. The dashed ring around the
-outer box marks the focus. Open one example folder as its own workspace and the two keys
+outer box marks the entity the picture is drawn around. Open one example folder as its own workspace and the two keys
 become redundant; they are kept because they say what the picture is of.)
 
 Follow one person through both: [Daria Novak](individuals/Daria%20Novak.md) reports to
@@ -179,7 +179,7 @@ where the people meet when it does not work.
   …) — the folder is a convenience, the `type:` is authoritative.
 - Relationships are `[[wikilinks]]` to other entities.
 - The ` ```dwsd.topology `, ` ```dwsd.orgchart ` and ` ```dwsd.units ` blocks are
-  **inferred views** — they list no people and no units, only where to look (`focus`) and
+  **inferred views** — they list no people and no units, only where to look (`around`) and
   how far (`radius`); rename a file or move a `reports-to` and the pictures follow. All
   three are optional extras; an entity is complete without them.
 

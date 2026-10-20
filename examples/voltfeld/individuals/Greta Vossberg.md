@@ -14,6 +14,6 @@ cross-team dependencies between the product lines and the platforms.
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```

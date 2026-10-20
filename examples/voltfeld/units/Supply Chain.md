@@ -17,7 +17,7 @@ attend PI planning — it learns about new enclosure variants when the first dra
 
 ```dwsd.units id=units
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: inf }
 ```
 

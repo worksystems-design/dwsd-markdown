@@ -13,6 +13,6 @@ Tom's days off. She keeps the recipe book current.
 
 ```dwsd.orgchart id=orgchart
 mode: infer
-focus: self
+around: self
 radius: { up: 1, down: 1 }
 ```
