@@ -93,8 +93,7 @@ Standard-order flow across 3P / 4P / 5P, and the hand-off to [[Assembly]].
 - **The question:** who takes care of what, and in which domain?
 - **Look first:** `role-keeper` (who holds it now) and `for-domain` (where it operates); in
   the body, `## Accountabilities` and `## Decision Rights` carry the gist.
-- **Go next:** up via `for-domain` to the work system or unit; into the flow via the
-  `Anchor` column when the accountabilities use the table form; across to each keeper's file.
+- **Go next:** up via `for-domain` to the work system or unit; across to each keeper's file.
 - **Backlinks:** the agreements, interactions, ODRs, drivers, proposals and AI agents scoped
   `for-domain` to the role say what is decided, met about and agreed for whoever keeps it;
   the flight routes whose `for-domain` names it are the routes it is responsible for; a

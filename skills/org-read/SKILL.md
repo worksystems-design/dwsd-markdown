@@ -25,7 +25,7 @@ relationships, locators and the views.
 | The question is about … | Start at | Then follow |
 |---|---|---|
 | a person — what they do, whom they report to | `individuals/` | `reports-to`, `member-of`, the roles naming them as `role-keeper` |
-| who takes care of something, who may decide | `roles/` | the role's `for-domain`; the agreements, interactions and routes scoped `for-domain` to the role; its `## Accountabilities` anchors |
+| who takes care of something, who may decide | `roles/` | the role's `for-domain`; the agreements, interactions and routes scoped `for-domain` to the role |
 | a team, site, department, the shape of the org | `units/`, `work-systems/` | first `member-of` upward; `contributes-to` between work systems; the board via `visualization-of` |
 | how work flows, where an item is | `visualizations/` (boards), `flight-routes/` | columns and lanes; route stages and `bound-to`; what anchors there (`interaction-of`, `agreement-of`, `bound-to`) |
 | how people work together, a meeting | `interactions/` | `interaction-of`, `for-domain`; a meeting's `## Interactions` table, row by row |
