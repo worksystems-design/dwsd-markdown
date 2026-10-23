@@ -445,6 +445,45 @@ org chart and units view may also stand alone as a file (see below):
   that lands. A decision record carries one this way (`around: self`), so its file shows
   where the decision came from and where its agreements apply.
 
+  A change trail fence may also hold **entries of its own**, chosen by `mode:` — `infer`
+  (the default) draws the organization's trail and ignores entries; `mixed` lays
+  `entries:` over it; `declared` draws only `entries:`, a sketch that needs no organization.
+  **Brackets point outward**, here as everywhere in the format: `[[…]]` is a file, a bare
+  name is something in the same fence. So each item is one of two kinds:
+
+  - **an inline entry** — a mapping whose `name` is bare: a change entity defined right in
+    the fence. It carries the frontmatter keys of its `type`, spelled and formatted as the
+    file would carry them (`type: insight`, `type: organizational-decision-record`, no short
+    forms; `derived-from`, `observes`, `status`, `created_at`, …); `name` stands for the
+    file name.
+  - **a reference** — `- "[[Name]]"`, or a mapping whose `name` is a wikilink: the file is
+    the definition, so a reference carries none of its frontmatter keys.
+
+  A link value inside the fence says by its form where its target lives:
+  `derived-from: hh` is the inline entry `hh` of the same fence, `derived-from: "[[hh]]"`
+  the file. A file never holds a bare name — an inline entry moved out into a file takes
+  its frontmatter keys along, its inline ancestors along `derived-from` move out with it,
+  and the fence's bare references to it gain brackets. Either kind of item may also carry
+  **annotations**, which exist only in the fence: `delta: add` or `delta: remove` marks what
+  a change would add or take away (`remove` on a reference: "going away"). Annotations are
+  set on purpose; an inline entry needs none.
+
+  ```yaml
+  mode: mixed
+  entries:
+    - name: Swap times differ per hub
+      type: insight
+      derived-from: "[[Late Swaps at Hub North]]"
+    - name: One swap standard
+      type: driver
+      derived-from: Swap times differ per hub
+    - name: "[[Weekly Swap Review]]"
+      delta: remove
+  ```
+
+  Inline entries live only in their fence: no other view, backlink or graph sees them —
+  the organization is the files.
+
 The topology, org chart and units view are **annotated from the entity files**, never
 from the fence: a
 signal or insight that `observes` a person or unit pins on that box; an interaction,

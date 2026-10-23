@@ -4,6 +4,20 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-23
+
+- **Change trail fences may hold entries of their own.** `mode: mixed` lays `entries:` over
+  the organization's trail, `mode: declared` draws only them (a sketch without an
+  organization); `infer` stays the default. **Brackets point outward**: an item with a bare
+  `name` is an **inline entry** — a change entity defined in the fence, carrying the
+  frontmatter keys of its `type` in the file's own spelling (`type:`, not `stage:`; no
+  `odr`); `"[[Name]]"` is a reference to the file. Inside the fence a bare link value
+  (`derived-from: hh`) means an inline entry, a wikilink the file, and a file never holds a
+  bare name. `delta: add | remove` is an annotation that lives only in the fence; a new
+  inline entry needs none. The spec says "inline entry", not "draft" — a proposal's
+  `status: draft` already means something else. Agreed with the DSL for its Phase 53.1.1.
+  `org-validate` checks the new keys.
+
 ## 2026-10-20
 
 - **`focus:` becomes `around:`** in all four inferred views — topology, org chart, units and

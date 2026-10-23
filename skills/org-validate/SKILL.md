@@ -73,9 +73,21 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      key is retired); flag a hyphenated `dwsd-board` fence tag (it highlights but does
      not render). Inline inside-out `agreements:` / `interactions:` keys on a
      column/lane/group are valid board content, not references to resolve.
-   - **Change trail fences** (` ```dwsd.change-trail `) — the body may be empty; the only
-     keys are `around:` (a wikilink that must resolve, or `self`), `show:` (`all` | `open` | `recent`)
-     and `radius:` (a whole number or `inf`). **Warn** on any other key or value.
+   - **Change trail fences** (` ```dwsd.change-trail `) — the body may be empty; the keys
+     are `around:` (a wikilink that must resolve, or `self`), `show:` (`all` | `open` | `recent`),
+     `radius:` (a whole number or `inf`), `mode:` (`infer` | `mixed` | `declared`) and
+     `entries:`. **Warn** on any other key or value; **note** `entries:` under `infer` as
+     ignored. Each `entries:` item (`<spec-root>/conventions.md` › Embedded DSL fences):
+     - **inline entry** (a bare `name`) — `type` is one of `signal`, `insight`, `driver`,
+       `proposal`, `organizational-decision-record`, `agreement`; **warn** on anything else,
+       naming `stage:` and `odr` as earlier forms. Check its other keys as that type's
+       frontmatter. **Warn** when its name is also a file's name ("a file of that name
+       exists"), and on a second item of the same name.
+     - **reference** (`"[[Name]]"`, or `name: "[[Name]]"`) — must resolve. **Warn** on a
+       frontmatter key on it ("the file defines this").
+     - **links** — a bare name in a link value (`derived-from`, `observes`, …) must match an
+       inline entry of the same fence; **warn** otherwise ("did you mean `[[Name]]`?").
+     - **annotations** — `delta` is `add` or `remove`; **warn** otherwise.
    - **`around:` in the four inferred views** (topology, org chart, units, change trail) — a
      wikilink that must resolve, or `self`. `focus:` is the earlier name: **note** it as
      retired, don't flag it; **warn** when a fence carries both (`around:` wins).

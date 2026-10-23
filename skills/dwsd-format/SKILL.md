@@ -97,7 +97,12 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   network (along `derived-from`, landing via `for-domain` / bare `agreement-of`, loop-backs
   via `observes`); keys `around:` (a wikilink or `self`), `show: all | open | recent`,
   `radius:`, an empty body is the whole trail. No standalone file. A decision record carries
-  one under `## Change trail`, first in the body, with `around: self`.
+  one under `## Change trail`, first in the body, with `around: self`. `mode: mixed` lays
+  the fence's own `entries:` over the organization's trail, `mode: declared` draws only
+  them. Brackets point outward: an item with a bare `name` is an **inline entry** carrying
+  its type's frontmatter keys (`type: insight`, never `stage:`); `"[[Name]]"` is a reference
+  to the file. Inside the fence `derived-from: hh` means the inline entry, `"[[hh]]"` the
+  file; a file never holds a bare name. `delta: add | remove` is an annotation on either.
 - **Fence ids:** any of the six fences may name itself after the tag
   (` ```dwsd.board id=intake `) — kebab-case, unique within the file, kept when the title
   or heading changes. Optional; when you create a fence, give it one.
