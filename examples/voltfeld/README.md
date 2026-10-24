@@ -1,3 +1,7 @@
+---
+dwsd-format: "2026-10-24"
+---
+
 # Voltfeld
 
 A fictional maker of EV charging hardware, described in DWSD: an AC **Wallbox** line and a

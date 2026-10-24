@@ -35,5 +35,10 @@ Claude Code). If the type or the name is missing, ask.
 4. Wire any relationships the user provides as `[[wikilinks]]`. For a `meeting`, also offer
    to create the `.mw` Markwhen sibling.
 
+5. If the org root has no `README.md` yet, offer to create one: frontmatter with only
+   `dwsd-format` set to the date of the newest entry in `<spec-root>/CHANGELOG.md`, quoted;
+   then a `#` heading with the organization's name and one paragraph describing it
+   (`<spec-root>/conventions.md` › The org's README, The format id).
+
 Confirm the path you created and suggest validating the org afterwards (the
 `org-validate` skill; in Claude Code `/dwsd-md:org-validate`).

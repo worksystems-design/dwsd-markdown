@@ -1,3 +1,7 @@
+---
+dwsd-format: "2026-10-24"
+---
+
 # Goldcrust Bakery
 
 A small, fictional bakery described in DWSD: a production **Bakehouse**, two retail shops,

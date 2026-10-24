@@ -4,6 +4,16 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-24
+
+- **An org folder names the spec state it is written to.** The root `README.md` may carry
+  frontmatter with one key, `dwsd-format`, holding the date of a `CHANGELOG.md` entry
+  (`dwsd-format: "2026-10-24"`). The README stays a note: no `type`, name and description
+  still from the first heading and paragraph. The id moves with each migration commit, so
+  it is where migration paths start; a reader that does not know it warns and reads on.
+  The spec has no version number of its own, and the plugin version also moves when only
+  the skills change, so neither serves as the id. `org-validate` reports the id and the
+  entries since; `org-new` offers a README with it. Both example orgs carry it.
 ## 2026-10-23
 
 - **Change trail fences may hold entries of their own.** `mode: mixed` lays `entries:` over
