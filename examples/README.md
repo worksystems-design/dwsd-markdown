@@ -9,5 +9,9 @@ Complete, self-consistent DWSD organizations — worked examples that show the
 | [`goldcrust-bakery/`](goldcrust-bakery/) | A small bakery — production + two shops + a coordination and a strategy layer. Exercises every entity type once. The gentler start. |
 | [`voltfeld/`](voltfeld/) | A hardware product company — EV chargers — with one Agile Release Train (partially SAFe-inspired), a plant and a supply base outside it. The line (`reports-to`) and the work (`member-of`) are two different trees; platform work systems contribute to several teams; agents are bound to column groups. Every entity type at least once. |
 
+Each example org links only within itself, so it can be copied anywhere on its own —
+into a repository of its own, an app, a website. The way back to the spec and to the
+other example is up to the place that shows it.
+
 Each example is laid out like a real organization: one folder per entity type
 (`individuals/`, `roles/`, `work-systems/`, …), one Markdown file per entity.

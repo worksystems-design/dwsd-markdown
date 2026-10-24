@@ -8,14 +8,14 @@ A fictional maker of EV charging hardware, described in DWSD: an AC **Wallbox** 
 **DC Charger** line, developed by one Agile Release Train of three product lines, built in a plant,
 sold and serviced by a commercial department — about 120 people, of whom this folder models
 the thirty-seven that carry the structure. It is the second worked example next to the
-[Goldcrust Bakery](../goldcrust-bakery/); where Goldcrust is small enough that the line and
+Goldcrust Bakery; where Goldcrust is small enough that the line and
 the work almost coincide, Voltfeld is the example where they **do not**.
 
 > **New here? [Take the tour](TOUR.md)** — eight stops, fifteen minutes: one engineer in two
 > pictures, a platform that serves two product lines, the train's board, a route that stops at the
 > plant, two signals and a decision, the decision in two agreements, an agent that
 > prepares while people decide, and an order process with a factory and a studio. If this is your first DWSD example, start with the
-> [Goldcrust tour](../goldcrust-bakery/TOUR.md) instead — it is smaller.
+> Goldcrust tour instead — it is smaller.
 
 > Fictional and public-safe. Names and numbers are invented.
 

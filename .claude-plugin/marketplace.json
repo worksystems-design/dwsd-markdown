@@ -8,7 +8,7 @@
     {
       "name": "dwsd-md",
       "description": "Read, write, and validate DWSD organization entities.",
-      "version": "0.14.0",
+      "version": "0.14.1",
       "source": {
         "source": "url",
         "url": "https://github.com/worksystems-design/dwsd-markdown.git"

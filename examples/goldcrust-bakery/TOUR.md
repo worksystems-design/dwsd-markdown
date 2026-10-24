@@ -51,7 +51,7 @@ Sourdough sells out before 9am. Follow the thread, one small file per rung:
 **Watch for:** each rung points back at the one below it. Months later, anyone can trace
 *why* the bakery changed — from decision all the way down to the observation.
 
-A decision about how the organization itself works can earn one more file: an [organizational decision record](../../types/organizational-decision-record.md), which keeps the context, what was decided, and what the bakery expects to follow from it. The bakery keeps one from a different thread, [Single Daily Production Sync](decision-records/Single%20Daily%20Production%20Sync.md) — why the shops and the Bakehouse now coordinate in one daily afternoon sync. The type page says when a proposal earns one.
+A decision about how the organization itself works can earn one more file: an organizational decision record, which keeps the context, what was decided, and what the bakery expects to follow from it. The bakery keeps one from a different thread, [Single Daily Production Sync](decision-records/Single%20Daily%20Production%20Sync.md) — why the shops and the Bakehouse now coordinate in one daily afternoon sync. The type page says when a proposal earns one.
 
 ## Stop 5 — The decision, made operational
 
@@ -152,7 +152,7 @@ map in the [README](README.md) is the third.
 
 ## Now you — your first three files
 
-Grab three skeletons from [`templates/`](../../templates/) and describe your own
+Grab three skeletons from the DWSD templates and describe your own
 organization for fifteen minutes:
 
 1. **Yourself** — an `individual`, five lines.
@@ -173,5 +173,5 @@ That's it. You've started.
 - An open thread no one has interpreted yet:
   [Two Wholesale Enquiries Waiting at the Cap](signals/Two%20Wholesale%20Enquiries%20Waiting%20at%20the%20Cap.md)
   — the ladder from stop 4 starts here, unclimbed. What would you do?
-- The rules behind it all: [conventions](../../conventions.md) and the
-  [type index](../../README.md#types)
+- The rules behind it all: the DWSD conventions and the
+  type pages

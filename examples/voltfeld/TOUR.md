@@ -5,7 +5,7 @@ organization: **one Markdown file per thing** — people, teams, boards, agreeme
 company runs its product development as an Agile Release Train, borrowing parts of SAFe
 without adopting the framework; you do not need to know SAFe, Flight Levels, or YAML to take
 this tour. Eight stops, about fifteen minutes. At each stop: open the linked file, read it, come
-back. If this is your first DWSD example, take the [Goldcrust tour](../goldcrust-bakery/TOUR.md)
+back. If this is your first DWSD example, take the Goldcrust tour
 first — it is smaller, and this one builds on what it shows.
 
 > This page is a guide, not part of the organization — it carries no `type:` and is skipped
@@ -183,7 +183,7 @@ the train looking at the same problem from two sides.
 
 ## Now you — your first three files
 
-Grab three skeletons from [`templates/`](../../templates/) and describe your own
+Grab three skeletons from the DWSD templates and describe your own
 organization for fifteen minutes:
 
 1. **Your team** — a `unit`, with `member-of` pointing where its work goes and a
@@ -207,5 +207,5 @@ That's it. You've started.
   — the [Platform Variant Rule](agreements/Platform%20Variant%20Rule.md) is doing what it was
   written to do, and a product line is quietly routing around it. The ladder from stop 5
   starts here, unclimbed. What would you do?
-- The rules behind it all: [conventions](../../conventions.md) and the
-  [type index](../../README.md#types).
+- The rules behind it all: the DWSD conventions and the
+  type pages.
