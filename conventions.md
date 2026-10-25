@@ -49,22 +49,28 @@ type: individual
 A file with **no frontmatter**, or with an **unknown/missing `type`**, is silently
 skipped by the parser. It is not an entity.
 
-**The org's README.** A `README.md` at the org root is such a file. For lack of anything
+**Types that are not entities.** Two `type` values name a note on purpose: `readme` (the
+org's README) and `tour` (a guided reading tour through an org's files). They are not
+entity types — no tool lists, counts or links them as entities — but they give the file
+the non-empty `type` that OKF asks of every Markdown file (see `okf.md`).
+
+**The org's README.** A `README.md` at the org root is such a file, with `type: readme`. For lack of anything
 better, its first `#` heading serves as the organization's name and its first paragraph
 as its description — a tool that shows the org reads them from there, as written. There
 is no extra key for name or description, and nothing else in the README is read, except
 the format id below.
 
-**The format id.** The README may carry frontmatter with **exactly one key**,
-`dwsd-format`: the date of the `CHANGELOG.md` entry whose state of this spec the folder is
-written to, quoted like every date (`dwsd-format: "2026-10-24"`). It carries no `type`, so
-the README stays a note. The id moves when someone brings the folder up to a newer spec
+**The format id.** The README's frontmatter holds **exactly two keys**, `type: readme`
+and `dwsd-format`: the date of the `CHANGELOG.md` entry whose state of this spec the folder is
+written to, quoted like every date (`dwsd-format: "2026-10-24"`). The README stays a note.
+The id moves when someone brings the folder up to a newer spec
 state, in the same commit as the migration. A reader that does not know the date, or finds
 none, warns and reads on as best it can; it never refuses the folder. A YAML 1.1 reader may
 turn an unquoted date into a date value; compare it as the string it is written as.
 
 ```markdown
 ---
+type: readme
 dwsd-format: "2026-10-24"
 ---
 
@@ -73,7 +79,8 @@ dwsd-format: "2026-10-24"
 A small, fictional bakery described in DWSD: …
 ```
 
-**Notes.** Such files — a README, a tour, any page without a `type:` — are **notes**. A
+**Notes.** Such files — a README (`type: readme`), a tour (`type: tour`), any page without
+a `type:` — are **notes**. A
 wikilink may point at a note and then resolves (it is not broken), but a note is not a node
 in the organization's graph, and the wikilinks inside it are not relationships.
 

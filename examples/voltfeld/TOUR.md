@@ -1,3 +1,7 @@
+---
+type: tour
+---
+
 # The Voltfeld tour — one engineer, two trees, one missing edge
 
 This folder describes a company that builds EV chargers the way DWSD describes any

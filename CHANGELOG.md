@@ -4,6 +4,15 @@ Notable changes to the DWSD model and its Markdown conventions, recorded **from 
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
 
+## 2026-10-25
+
+- **README and tour carry a `type` of their own.** The org's `README.md` gets `type:
+  readme` next to `dwsd-format`, a `TOUR.md` gets `type: tour`. Neither is an entity type:
+  DWSD reads both as notes, and no tool lists or counts them. They give each Markdown file
+  in an org folder the non-empty `type` OKF asks for, which the README lost when it gained
+  frontmatter and the tours never had. `org-validate` notes a README or tour without it;
+  both example orgs carry it.
+
 ## 2026-10-24
 
 - **An org folder names the spec state it is written to.** The root `README.md` may carry

@@ -128,12 +128,14 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
    an ODR without `derived-from` — report those as informational, not as breaks. A break
    is a `derived-from` that does not resolve, or one that points *down* the ladder. `derived-from` is the shared emergence key (any entity may carry
    it); reading it in reverse from an ODR yields that decision's **bundle** of agreements.
-5. **Format id** (informational) — the root `README.md` may carry frontmatter with the
-   single key `dwsd-format`, a quoted date (`"YYYY-MM-DD"`) that matches a `## YYYY-MM-DD`
+5. **Format id** (informational) — the root `README.md` carries frontmatter with two keys,
+   `type: readme` and `dwsd-format`, a quoted date (`"YYYY-MM-DD"`) that matches a `## YYYY-MM-DD`
    heading in `<spec-root>/CHANGELOG.md` (`<spec-root>/conventions.md` › The format id).
    **Note** a missing id, a date with no CHANGELOG entry, and the entries newer than it
-   (what a migration would bring). **Warn** on any other key in the README's frontmatter,
-   and on a `type:` there (the README is a note, not an entity).
+   (what a migration would bring). **Note** a README or a `TOUR.md` without `type: readme`
+   / `type: tour` (OKF asks every Markdown file for a `type`). **Warn** on any other key in
+   the README's frontmatter, and on any other `type` there. `readme` and `tour` are never
+   reported as unknown types, and never counted as entities.
 6. **Type coverage** (informational) — list which of the 16 types are present / absent
    (remember: work systems are `unit` whose `unit-type` includes `work-system`; meetings are
    `interaction`+`interaction-type: meeting`).

@@ -1,3 +1,7 @@
+---
+type: tour
+---
+
 # The Goldcrust tour — one day, one loaf, one decision
 
 This folder describes a small bakery the way DWSD describes any organization: **one

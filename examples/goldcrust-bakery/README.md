@@ -1,5 +1,6 @@
 ---
-dwsd-format: "2026-10-24"
+type: readme
+dwsd-format: "2026-10-25"
 ---
 
 # Goldcrust Bakery

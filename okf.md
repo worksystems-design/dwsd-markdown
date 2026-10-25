@@ -69,11 +69,10 @@ than a generic OKF reader will interpret:
    reader keeps DWSD's relationships intact but does not read them as edges — a DWSD-aware
    tool does. Conformance is unaffected: OKF never requires body links.
 
-2. **Documentation files.** A few files in an org folder are not entities (for example an
-   `examples/.../README.md`). OKF would have these either carry `type` frontmatter or use
-   the reserved `index.md` name; DWSD currently skips frontmatter-less files as
-   non-entities. Aligning them to OKF's `index.md` convention is a planned, low-cost
-   refinement.
+2. **Documentation files.** A few files in an org folder are not entities: the org's
+   README and its tour. They carry `type: readme` and `type: tour`, which OKF reads as
+   ordinary concepts and DWSD as notes (`conventions.md` › Types that are not entities).
+   So every Markdown file in an org folder has the `type` OKF asks for.
 
 ## Why it matters
 
