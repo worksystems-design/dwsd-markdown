@@ -1,6 +1,6 @@
 ---
 type: readme
-dwsd-format: "2026-10-25"
+dwsd-format: "1.0.0"
 ---
 
 # Voltfeld

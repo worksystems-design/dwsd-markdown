@@ -36,7 +36,7 @@ Claude Code). If the type or the name is missing, ask.
    to create the `.mw` Markwhen sibling.
 
 5. If the org root has no `README.md` yet, offer to create one: frontmatter with only
-   `type: readme` and `dwsd-format` set to the date of the newest entry in `<spec-root>/CHANGELOG.md`, quoted;
+   `type: readme` and `dwsd-format` set to the newest version on a `Format:` line in `<spec-root>/CHANGELOG.md`, quoted;
    then a `#` heading with the organization's name and one paragraph describing it
    (`<spec-root>/conventions.md` › The org's README, The format id).
 

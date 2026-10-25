@@ -63,17 +63,14 @@ is no extra key for name or description, and nothing else in the README is read,
 the format id below.
 
 **The format id.** The README's frontmatter holds **exactly two keys**, `type: readme`
-and `dwsd-format`: the date of the `CHANGELOG.md` entry whose state of this spec the folder is
-written to, quoted like every date (`dwsd-format: "2026-10-24"`). The README stays a note.
-The id moves when someone brings the folder up to a newer spec
-state, in the same commit as the migration. A reader that does not know the date, or finds
-none, warns and reads on as best it can; it never refuses the folder. A YAML 1.1 reader may
-turn an unquoted date into a date value; compare it as the string it is written as.
+and `dwsd-format`: the **format version** the folder is written to, quoted
+(`dwsd-format: "1.0.0"`). The README stays a note. What the version means, how readers
+treat it and when writers move it: [Format versions](#format-versions).
 
 ```markdown
 ---
 type: readme
-dwsd-format: "2026-10-24"
+dwsd-format: "1.0.0"
 ---
 
 # Goldcrust Bakery
@@ -85,6 +82,66 @@ A small, fictional bakery described in DWSD: …
 a `type:` — are **notes**. A
 wikilink may point at a note and then resolves (it is not broken), but a note is not a node
 in the organization's graph, and the wikilinks inside it are not relationships.
+
+## Format versions
+
+The format is a contract between an org folder and every tool that reads or writes it. It
+has a version of its own, `MAJOR.MINOR.PATCH`, independent of any tool, package or plugin
+version. An org names it in its README (`dwsd-format: "1.0.0"`, above); `CHANGELOG.md`
+names it on each entry that changes it, on a line `Format: x.y.z`.
+
+**What it covers.** Everything a file in an org folder may contain, and what it means: the
+types, their frontmatter keys and values, the discriminators, the relationship and wikilink
+rules, the folder layout, the body sections a tool reads, and the grammar of the embedded
+fences (their keys and syntax). Not covered: how a renderer draws a picture, the wording of
+the spec, the plugin skills, and the versions of tools.
+
+**Which step.** Ask of each change: is every file that was correct before still correct,
+and does it still mean the same?
+
+| Step | When | Examples |
+|---|---|---|
+| **Major** (`2.0.0`) | No — an existing file becomes incorrect, or reads differently. Always comes with a migration. | a key renamed without an alias; a new required field; a type or value removed; a value changes its meaning; an allowed set shrinks |
+| **Minor** (`1.1.0`) | Yes, and new files may use something new. It only adds. | a new type (`mandate`); a new optional key; a new value in an allowed set; a new fence key; an old spelling accepted as an alias |
+| **Patch** (`1.0.1`) | Yes, and nothing new is allowed. A rule is worded more precisely. | a sentence that two readers took two ways now says one thing — the one tools already follow |
+
+- **When in doubt, take the higher step.** A clarification that turns out to change what is
+  correct is a minor or a major, not a patch.
+- **Typos, examples, type-page prose and skills** need no version; their entries carry no
+  `Format:` line.
+- **An old spelling retires in two steps.** A minor makes the new spelling current and keeps
+  reading the old one as an alias, with an info; only a later major drops the alias.
+- **The fence grammar counts.** A change to it reaches orgs only through an entry here: the
+  DSL marks such changes `fence grammar` in its changelog, and this spec decides the step.
+- **Every major entry describes its migration in words**, for people and agents without the
+  tool; the migration itself is a script that ships with the DSL library.
+
+**Reading.** A reader never refuses a folder.
+
+- It reads every form of a major version it supports, and the aliases that version keeps.
+- A newer minor of a major it knows: it checks against the newest minor it knows, and warns.
+  That is safe, because a minor only adds.
+- An unknown major: it warns and skips the format checks.
+- No id, or one it cannot parse: it warns and reads on as best it can.
+- A tool declares the range it supports (for example `>=1.0 <2`); its own version stays free.
+
+**Writing.** A writer that changes a file anyway brings it to the current form of its major
+version in the same commit (`focus:` → `around:`). When what it writes needs a newer minor —
+a mandate file in a 1.0 org — it raises the README's id to that minor in the same commit.
+Three limits: **one commit** (never a 1.1 file in an org that still says 1.0); **upward
+only**, and only to a version the writer itself knows; **only the version line** of the
+README changes, the rest stays byte for byte. Anyone who may write may do this.
+
+**Major jumps.** A writer never crosses a major on its own. A migration to a new major is
+offered as a proposal: the owner sees the diff and accepts or declines, as with a dependency
+update. Until then, tolerant reading carries the folder. Each migration step is a commit of
+its own, carries the new id, and can be reverted.
+
+**Before versions.** Until `1.0.0` the id was the date of a `CHANGELOG.md` entry.
+`"2026-10-24"` and `"2026-10-25"` are aliases of `1.0.0`: a reader treats them as 1.0.0, and
+a writer may replace them with `"1.0.0"` under the rules above.
+
+**Quote it.** Unquoted, YAML reads `1.0` as a number.
 
 ## Filename = label = slug
 

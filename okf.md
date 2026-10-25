@@ -14,8 +14,8 @@ it for organizations.
 
 ## Conformance
 
-OKF v0.1 defines three requirements for a conformant bundle. DWSD meets all three by
-construction:
+OKF v0.2 defines three requirements for a conformant bundle (its other rules bind
+consumers). DWSD meets all three by construction:
 
 | OKF requirement | DWSD |
 |---|---|
@@ -43,7 +43,7 @@ datasets, metrics), DWSD profiles it for organizations.
 
 ## Field mapping
 
-OKF *recommends* — but never requires — five frontmatter fields beyond `type`. DWSD's
+OKF *recommends* — but never requires — four frontmatter fields beyond `type`. DWSD's
 equivalents:
 
 | OKF field | DWSD |
@@ -53,14 +53,13 @@ equivalents:
 | `description` | the Markdown body (often a `## Purpose` or intro line) |
 | `resource` | the `sources:` block for discovered/synced entities; otherwise omitted |
 | `tags` | not used by default |
-| `timestamp` | the `updated_at` / `created_at` tracking fields |
 
 Every one of these is OKF-optional, so the differences cost nothing for conformance. A
 consumer that wants OKF's canonical field names can map them; DWSD does not duplicate them.
 
-## Two honest differences
+## Three honest differences
 
-DWSD is a **superset** of the OKF baseline, not a reduction of it. Two places carry more
+DWSD is a **superset** of the OKF baseline, not a reduction of it. Three places carry more
 than a generic OKF reader will interpret:
 
 1. **Relationships live in frontmatter, not body links.** OKF builds its knowledge graph
@@ -74,6 +73,26 @@ than a generic OKF reader will interpret:
    ordinary concepts and DWSD as notes (`conventions.md` › Types that are not entities).
    So every Markdown file in an org folder has the `type` OKF asks for.
 
+3. **Two keys mean something else.** OKF v0.2 gives `status` and `sources` a fixed meaning;
+   DWSD used both before and keeps its own. In OKF, `status` is the maturity of the document
+   (`draft | stable | deprecated`); in DWSD it is where an entity stands in its flow
+   (`consented`, `addressed`, …). In OKF, `sources` lists the materials a concept derives
+   from; in DWSD it records where a synced entity lives in an external system
+   ([`conventions.md`](conventions.md) › `sources` block). Conformance is unaffected — both
+   keys are optional in OKF — but a generic OKF reader reads them wrong; a DWSD-aware tool
+   reads them as DWSD defines them.
+
+## Format versions and OKF versions
+
+Each DWSD format version ([`conventions.md`](conventions.md) › Format versions) names the
+OKF version it is compatible with. An org folder declares no `okf_version` of its own — OKF
+allows that only in a root `index.md`, which DWSD does not use — so its `dwsd-format`
+implies the OKF version below. A major step that breaks compatibility says so here.
+
+| DWSD format | OKF |
+|---|---|
+| `1.0.0` | 0.2 |
+
 ## Why it matters
 
 Two independent efforts — one inside Google Cloud, one here — converged on the same
@@ -84,6 +103,6 @@ works.
 
 ## References
 
-- OKF specification and reference implementations —
-  [GoogleCloudPlatform/knowledge-catalog/okf](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf)
+- OKF specification (`SPEC.md`) and reference implementations —
+  [GoogleCloudPlatform/open-knowledge-format](https://github.com/GoogleCloudPlatform/open-knowledge-format)
 - [`conventions.md`](conventions.md) — the DWSD rules that satisfy OKF's requirements

@@ -3,6 +3,27 @@
 Notable changes to the DWSD model and its Markdown conventions, recorded **from the first
 commit onward**. The current model is described by the reference itself — `README.md`,
 `conventions.md`, and the pages under `types/`; this log tracks how it changes over time.
+An entry that changes the format names the new format version on a `Format: x.y.z` line
+(`conventions.md` › Format versions).
+
+## Unreleased
+
+Format: 1.0.0
+
+- **The format has a version of its own.** `dwsd-format` in an org's README now holds a
+  semantic version, `"1.0.0"`, instead of a CHANGELOG date: a date says when the spec
+  changed, not whether the change breaks existing files. Major: an existing file becomes
+  incorrect, always with a migration. Minor: it only adds. Patch: a rule worded more
+  precisely. The fence grammar counts, renderers do not. `conventions.md` › Format versions
+  gives the steps with examples, and how tools handle them: readers tolerate, writers bring
+  a file to the current form of its major and may raise the minor in the same commit, a
+  major jump is offered as a proposal. **1.0.0 is the state of 2026-10-25**; `"2026-10-24"`
+  and `"2026-10-25"` are its aliases, so nothing needs to migrate. `org-validate` checks the
+  id, `org-new` writes the newest version. Both example orgs carry `"1.0.0"`.
+- **`okf.md` follows OKF v0.2.** Conformance is stated against v0.2, the field mapping lists
+  its four recommended fields, and a third difference names `status` and `sources`, which
+  v0.2 defines differently. Each format version names its OKF version (1.0.0 → OKF 0.2), so
+  an org declares no `okf_version` of its own. The OKF repository moved; the link follows.
 
 ## 2026-10-25
 

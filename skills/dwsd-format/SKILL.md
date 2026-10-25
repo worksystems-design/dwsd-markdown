@@ -29,8 +29,12 @@ same files as the `dwsd-markdown` repo). Before authoring or validating, read:
   `type` field, `[[wikilink]]` relationships, `reports-to` (structure) vs `member-of`
   (flow), tracking fields, the `sources` block, the embedded DSL fences, and `.mw` siblings.
 - **The org root `README.md`** is a note (`type: readme`; a tour is `type: tour`). Its first `#` heading is the org's
-  name, its first paragraph the description; its frontmatter holds only
-  `dwsd-format: "YYYY-MM-DD"`, the CHANGELOG date the folder is written to.
+  name, its first paragraph the description; its frontmatter holds `type: readme` and
+  `dwsd-format: "1.0.0"`, the format version the folder is written to. When you write a
+  file, use the current form of that major version; if what you write needs a newer minor
+  (a type the README's version does not have yet), raise the id to that minor in the same
+  change and say so; never cross a major — offer the migration instead
+  (`<spec-root>/conventions.md` › Format versions).
 - **`<spec-root>/types/<type>.md`** — the per-type contract (required vs optional
   frontmatter, relationships, body sections, a worked example). Always open the specific
   type page before authoring that type.
