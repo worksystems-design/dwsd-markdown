@@ -24,6 +24,10 @@ Format: 1.0.0
   its four recommended fields, and a third difference names `status` and `sources`, which
   v0.2 defines differently. Each format version names its OKF version (1.0.0 → OKF 0.2), so
   an org declares no `okf_version` of its own. The OKF repository moved; the link follows.
+- **The checkable part is data.** `contracts/1.0.json` lists the types (which are entities,
+  which keys they require) and the one conditional rule (a work system needs a
+  `flightlevel`), so tools stop copying the spec. Findings about the id share `format.*`
+  codes across all tools; none is an error.
 
 ## 2026-10-25
 

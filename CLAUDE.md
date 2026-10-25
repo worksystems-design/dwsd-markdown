@@ -21,7 +21,8 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - `types/<type>.md` — one spec page per type.
 - `templates/<type>.md` — bare copy-paste skeletons (+ `meeting.mw` Markwhen sibling).
 - `examples/<org>/` — worked example organizations (full instances; e.g. `goldcrust-bakery/`).
-- `CHANGELOG.md` — model & convention decisions.
+- `CHANGELOG.md` — model & convention decisions; `Format: x.y.z` on entries that change the format.
+- `contracts/<major>.<minor>.json` — the checkable part of each format version, as data for tools.
 - `.claude-plugin/`, `skills/` — the **`dwsd-md`** Claude Code plugin: thin
   reading, authoring + validation skills (`dwsd-format`, `org-read`, `org-validate`,
   `org-new`, `explore-example-org`) that point back at the files above via the **spec root**

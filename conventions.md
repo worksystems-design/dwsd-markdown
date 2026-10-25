@@ -137,11 +137,30 @@ offered as a proposal: the owner sees the diff and accepts or declines, as with 
 update. Until then, tolerant reading carries the folder. Each migration step is a commit of
 its own, carries the new id, and can be reverted.
 
+**The checkable part.** What a tool can check in one file without the rest of the org — the
+types, which of them are entities, their required keys, conditional requirements — is in
+`contracts/<major>.<minor>.json`, one complete file per minor (a patch changes nothing that
+can be checked). Tools read it as data instead of copying this spec.
+
+**Findings about the id.** Every tool reports them with the same codes, which this spec
+owns. None is an error, so they never change a check's exit code.
+
+| Code | Severity | When |
+|---|---|---|
+| `format.missing` | warning | no README with `type: readme` above the file, or no `dwsd-format` in it; the format checks are skipped |
+| `format.unparseable` | warning | neither three numbers (`"1.0"` and `"v1.0.0"` are not) nor a known alias |
+| `format.unquoted` | warning | the id is written without quotes |
+| `format.alias` | info | a date alias; the report carries the version it stands for |
+| `format.newer-minor` | warning | a minor newer than the tool knows; checked against the newest it knows |
+| `format.unknown-major` | warning | a major the tool does not know; the format checks are skipped |
+| `format.raise-missing` | warning | (org check only) a file uses something a newer minor added than the README names |
+
 **Before versions.** Until `1.0.0` the id was the date of a `CHANGELOG.md` entry.
 `"2026-10-24"` and `"2026-10-25"` are aliases of `1.0.0`: a reader treats them as 1.0.0, and
 a writer may replace them with `"1.0.0"` under the rules above.
 
-**Quote it.** Unquoted, YAML reads `1.0` as a number.
+**Quote it.** Unquoted, YAML reads `1.0` as a number. The id is three numbers and nothing
+else: no `v`, no pre-release tag.
 
 ## Filename = label = slug
 
