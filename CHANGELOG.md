@@ -6,7 +6,7 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
-## Unreleased
+## 2026-10-25
 
 Format: 1.0.0
 
@@ -28,9 +28,6 @@ Format: 1.0.0
   which keys they require) and the one conditional rule (a work system needs a
   `flightlevel`), so tools stop copying the spec. Findings about the id share `format.*`
   codes across all tools; none is an error.
-
-## 2026-10-25
-
 - **README and tour carry a `type` of their own.** The org's `README.md` gets `type:
   readme` next to `dwsd-format`, a `TOUR.md` gets `type: tour`. Neither is an entity type:
   DWSD reads both as notes, and no tool lists or counts them. They give each Markdown file
