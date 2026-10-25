@@ -52,7 +52,9 @@ skipped by the parser. It is not an entity.
 **Types that are not entities.** Two `type` values name a note on purpose: `readme` (the
 org's README) and `tour` (a guided reading tour through an org's files). They are not
 entity types — no tool lists, counts or links them as entities — but they give the file
-the non-empty `type` that OKF asks of every Markdown file (see `okf.md`).
+the non-empty `type` that OKF asks of every Markdown file (see `okf.md`). Their frontmatter
+holds `type` and nothing else, except the README's `dwsd-format`; tools that stamp
+entities on save (`updated_at` and the like) leave these files alone.
 
 **The org's README.** A `README.md` at the org root is such a file, with `type: readme`. For lack of anything
 better, its first `#` heading serves as the organization's name and its first paragraph
