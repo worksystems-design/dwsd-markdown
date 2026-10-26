@@ -11,7 +11,7 @@
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `interaction` | Entity type |
-| `interaction-type` | yes | `meeting` \| `workshop` \| `conversation` \| `bilateral` \| … | Kind of interaction (open vocabulary) |
+| `interaction-type` | yes | `meeting` \| `conversation` \| `bilateral` \| … | Kind of interaction (open vocabulary) |
 | `interaction-of` | no | board locator or list (or a bare `[[entity]]` — a work system, a unit or a person) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`; two persons make a 1:1 |
 | `for-domain` / `for_domain` | no | wikilink or list | The **domain** — a work system, a role or a unit — it is scoped to — points *up*, e.g. `[[Strategic Direction]]`. Naming a role lands the interaction on every keeper of that role |
 | `start` | no | ISO datetime | First occurrence start — **any** interaction may be scheduled |
@@ -81,9 +81,4 @@ Ad-hoc alignment between [[Head of 3P]] and [[Head of Assembly]] on the next han
   (a WIP limit hit, a card aging past its limit), a call for help. Say what triggers it in
   the body — a `## Trigger` section works — and let the anchor say *where*: an interaction
   anchored `::before` a route stage reads as "when an item arrives here". No `.mw` sibling.
-- **A workshop** (`interaction-type: workshop`) is a working session whose result is
-  artifacts: a draft role, a board, a proposal. It may be scheduled like any interaction and
-  may use a meeting's four framing questions. What it produces names it in `derived-from`
-  ([conventions](../conventions.md#derived-from--the-shared-emergence-key)), so reading that
-  key in reverse lists the workshop's output. Since format 1.1.0.
 - Influence: Flight Levels' *agile interactions*.

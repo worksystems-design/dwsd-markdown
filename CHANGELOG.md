@@ -29,10 +29,6 @@ Format: 1.1.0
   files. Two authoring skills turn prose into rows: `extract-mandates` and
   `extract-interactions`. Goldcrust carries `"1.1.0"`, since it has mandate files;
   Voltfeld stays at `"1.0.0"` and is still correct.
-- **`interaction-type: workshop`** is a named value: a working session whose result is
-  artifacts — a draft role, a board, a proposal. What it produces may name it in
-  `derived-from`, so a workshop's output is the reverse reading of that key, as an ODR's
-  bundle is. The vocabulary stays open.
 - **`contracts/1.1.json`** adds the `mandate` type (an entity, no required key beyond
   `type`). A 1.0 org stays valid unchanged; a writer that adds a mandate file raises its
   README to `"1.1.0"` in the same commit.
