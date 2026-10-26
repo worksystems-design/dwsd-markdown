@@ -32,6 +32,10 @@ Format: 1.1.0
 - **`contracts/1.1.json`** adds the `mandate` type (an entity, no required key beyond
   `type`). A 1.0 org stays valid unchanged; a writer that adds a mandate file raises its
   README to `"1.1.0"` in the same commit.
+- **MADE becomes D-MADE** (Define · Map · Assess · Design · Elevate). Define comes first:
+  what you want to achieve or what bothers you, and who should have a say. No Change type
+  belongs to it; Assess and Design keep their five types. Wording in `conventions.md` only,
+  not part of the format.
 
 ## 2026-10-25
 

@@ -23,14 +23,16 @@ category is a way of thinking about an entity, not a directory.
 
 ### The Change category spans two phases
 
-The five Change types divide by the phase of change work they belong to — the middle two of the
-four MADE phases (Map · **Assess** · **Design** · Elevate):
+The five Change types divide by the phase of change work they belong to — two of the five
+D-MADE phases (Define · Map · **Assess** · **Design** · Elevate):
 
 | Phase | Types | What it does |
 |---|---|---|
 | **Assess** | `signal` · `insight` · `driver` | Reads the organization as it is — selected data, its interpretation, and the need that follows |
 | **Design** | `proposal` · `organizational-decision-record` | Says what should be instead — a proposed response, and the decision once taken |
 
+**Define** is the starting point: what you want to achieve or what is bothering you right now,
+and who should have a say. It produces goals or a tension, and no Change type belongs to it.
 **Map** is the topology itself (the as-is picture), and **Elevate** — actually moving from as-is
 toward to-be — is deliberately **not** modeled here: it is facilitation work (experiments, guides,
 katas), a practice artifact rather than a record, and it belongs elsewhere.
