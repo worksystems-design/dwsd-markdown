@@ -61,17 +61,18 @@ Format: 1.0.0
 
 ## 2026-10-22
 
-- **Mandates, optional.** Any structure entity — individual, role, unit, work system and,
-  preliminary, AI agent — may list what it may or must do in a `## Mandates` table with the
-  columns `Mandate | Level | Anchor`. `Level` is free text. Nothing requires the table; how
-  a holder decides internally is its own business, and a unit may record it in one of its
-  agreements. On a role the table is another way to write `## Accountabilities` and
-  `## Decision Rights`; a work system's `## Key Responsibilities` count as its mandates. A
-  row has no identity of its own, as in a meeting's `## Interactions` table: a mandate that
-  needs one becomes an agreement file the row names. New section in `conventions.md`, one
-  line on each structure type page, `org-read` collects a person's mandates directly,
-  through roles and through units, `org-validate` checks the table. Goldcrust shows all
-  three routes around Ines Rossi and the Market Street site. Plugin 0.11.0.
+- **Mandates, optional.** A mandate is what a holder must or may do. Any structure entity —
+  individual, role, unit, work system and, preliminary, AI agent — may write its mandates
+  under `## Accountabilities` (must), `## Decision Rights` (may), a work system's
+  `## Key Responsibilities` (must), or one general `## Mandates` table holding both. Each
+  is a list or a table `Name | Level | Mandate of`; `Level` is free text, `Mandate of` a
+  locator. Nothing requires them; how a holder decides internally is its own business, and
+  a unit may record it in one of its agreements. A row has no identity of its own, as in a
+  meeting's `## Interactions` table: a mandate that needs one becomes an agreement file the
+  row names. New section in `conventions.md`, a line on each structure type page,
+  `org-read` collects a person's mandates directly, through roles and through units,
+  `org-validate` checks the tables. Goldcrust shows all three routes around Ines Rossi and
+  the Market Street site. Plugin 0.11.0.
 
 ## 2026-10-20
 

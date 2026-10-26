@@ -44,9 +44,10 @@ system also carries the work-system frontmatter (`delegator`, `version`,
 - **Unit that is also a work system (`unit-type` includes `work-system`):** use the full
   domain-description body from [`work-system.md`](work-system.md) (Purpose, Key
   Responsibilities, Customers and Deliverables, … Evaluation Schedule).
-- **Either kind** may add an optional `## Mandates` table — what the unit as a whole may or
-  must do; how its members use it is the unit's own business — see
-  [conventions](../conventions.md#mandates--what-a-holder-may-or-must-do).
+- **Either kind** may add optional `## Accountabilities` and `## Decision Rights` (or one
+  `## Mandates` table) — what the unit as a whole must or may do; how its members use it is
+  the unit's own business — see
+  [conventions](../conventions.md#mandates--what-a-holder-must-or-may-do).
 
 ## Example — a plain team
 

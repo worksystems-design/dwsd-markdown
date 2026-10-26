@@ -20,7 +20,8 @@ how long it trades, the site lead says what the door says.
 - The posted hours match the hours the shop actually opens.
 
 > [!NOTE]
-> **Modeling note.** A mandate pulled out of a `## Mandates` table into its own file. The
-> [[Market Street Site Lead]] names it in its table, as a meeting names an interaction;
+> **Modeling note.** A mandate pulled out of a table into its own file. The
+> [[Market Street Site Lead]] names it under `## Decision Rights`, as a meeting names an
+> interaction;
 > `for-domain` says whose mandate it is, `agreement-of` where it shows, and the body states
 > the level.

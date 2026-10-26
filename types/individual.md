@@ -26,9 +26,10 @@ Plus the shared optionals from [conventions](../conventions.md).
 
 ## Body
 
-Free Markdown — a short profile or notes. Wikilinks in prose are fine. An optional
-`## Mandates` table lists what the person holds directly, outside any role — see
-[conventions](../conventions.md#mandates--what-a-holder-may-or-must-do).
+Free Markdown — a short profile or notes. Wikilinks in prose are fine. Optional
+`## Accountabilities` and `## Decision Rights` (or one `## Mandates` table) say what the
+person must or may do directly, outside any role — see
+[conventions](../conventions.md#mandates--what-a-holder-must-or-may-do).
 
 ## Example
 

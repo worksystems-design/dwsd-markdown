@@ -23,9 +23,10 @@
 
 Plus the shared optionals from [conventions](../conventions.md).
 
-An optional `## Mandates` table in the body says what the agent may do on its own and
-where it must ask — `autonomous`, `consult [[…]]` — see
-[conventions](../conventions.md#mandates--what-a-holder-may-or-must-do). Preliminary, like
+Optional `## Accountabilities` and `## Decision Rights` in the body (or one `## Mandates`
+table) say what the agent must do, what it may do on its own and where it must ask —
+`autonomous`, `consult [[…]]` — see
+[conventions](../conventions.md#mandates--what-a-holder-must-or-may-do). Preliminary, like
 the type.
 
 ## Example

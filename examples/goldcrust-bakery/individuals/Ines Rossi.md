@@ -10,11 +10,11 @@ Ines works the counter at the [[Market Street Shop]] and does the evening stock 
 that feeds the next-day [[Daily Replenishment Order]]. She also holds the
 [[Market Street Site Lead]] role: the keys, the opening hours, the back door.
 
-## Mandates
+## Accountabilities
 
-| Mandate                                            | Level | Anchor                                                    |
+| Name                                               | Level | Mandate of                                                |
 |----------------------------------------------------|-------|-----------------------------------------------------------|
-| Count the evening stock and pass it to the reorder | must  | [[Market Street Shop Board]]#Market Street Shop/col:Reorder::before |
+| Count the evening stock and pass it to the reorder | daily | [[Market Street Shop Board]]#Market Street Shop/col:Reorder::before |
 
 ## In context
 

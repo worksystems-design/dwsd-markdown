@@ -445,31 +445,43 @@ Readers can skip it; tools can tell it apart from content. Place it next to a pa
 when it explains that one passage and would lose its meaning at the end. Wikilinks inside the callout
 are ordinary wikilinks. A file with nothing to explain about its modeling has no callout.
 
-## Mandates — what a holder may or must do
+## Mandates — what a holder must or may do
 
-A **mandate** is something a holder may or must do: open the building, spend up to a
-limit, decide who gets a key. Any **structure** entity may list its mandates in an optional
-`## Mandates` body section — an `individual`, a `role`, a `unit` (work systems included)
-and, preliminary like the type itself, an `ai-agent`. Nothing requires it; an org without a
-single mandate table is complete.
+A **mandate** is something a holder must or may do: open the building, count the stock,
+spend up to a limit, decide who gets a key. Any **structure** entity may write down its
+mandates — an `individual`, a `role`, a `unit` (work systems included) and, preliminary
+like the type itself, an `ai-agent`. Nothing requires it; an org without a single mandate
+is complete.
+
+Mandates sit under any of these body headings, each optional:
+
+| Heading | Holds |
+|---|---|
+| `## Accountabilities` | what the holder **must** do |
+| `## Decision Rights` | what the holder **may** decide or do |
+| `## Key Responsibilities` | on a work system: what it **must** deliver (its accountabilities) |
+| `## Mandates` | both in one table, for whoever prefers the general form; start `Level` with `must` or `may` |
+
+Each takes a plain list or, when there is more to say, a table:
 
 ```markdown
-## Mandates
+## Decision Rights
 
-| Mandate                                  | Level                                  | Anchor                          |
-|------------------------------------------|----------------------------------------|---------------------------------|
-| Open and lock the building               | must                                   |                                 |
-| Spend up to $1,000 a day on the site     | as [[How Market Street Decides]] says  |                                 |
-| Count the evening stock                  | must                                   | [[Shop Board]]#Shop/col:Reorder::before |
-| [[Market Street Opening Hours]]          |                                        |                                 |
+| Name                             | Level                                  | Mandate of |
+|----------------------------------|----------------------------------------|------------|
+| Decide who else holds a key      | autonomous                             |            |
+| Spend up to $1,000 a day         | as [[How Market Street Decides]] says  |            |
+| Pull the next batch              | autonomous                             | [[Shop Board]]#Shop/col:Reorder::before |
+| [[Market Street Opening Hours]]  |                                        |            |
 ```
 
-- **Mandate** — what the holder may or must do, in a short sentence, or a `[[…]]` link to a
-  file that carries it (below).
-- **Level** — how free the holder is: `must`, `autonomous`, `agree with [[Deliveries]]`,
-  `within the band [[…]] sets`. **Free text**, quoted as written; there is no fixed scale.
-- **Anchor** — optional: where the mandate shows (a locator, as in `interaction-of`) or
-  where it is written down at length (an agreement, a decision record).
+- **Name** — the mandate in a short sentence, or a `[[…]]` link to a file that carries it
+  (below).
+- **Level** — how free the holder is and with whom: `autonomous`, `with [[Deliveries]]`,
+  `within the band [[…]] sets`, `daily`. **Free text**, quoted as written; there is no fixed
+  scale. Where the mandate is written down at length, link it here.
+- **Mandate of** — optional: where the mandate hangs, as a locator — the same form as
+  `interaction-of` and `agreement-of`.
 
 **How the holder decides is its own business.** A person decides alone; a role through its
 keeper. A unit settles internally how it uses a mandate — who may act alone, up to what,
@@ -477,18 +489,14 @@ when two decide together — and may record that in one of its agreements (`for-
 `agreement-of` naming the unit). When it records nothing, the org does not say; readers
 say so rather than assume.
 
-**On a role**, the table is another way to write `## Accountabilities` and
-`## Decision Rights` — use either. A work system's `## Key Responsibilities` list counts as
-its mandates too. Readers take all of them.
-
 **A row has no identity of its own** — the same rule as a meeting's `## Interactions`
 table ([below](#how-do-i-refer-to-an-interaction-from-a-meeting-table)). When a mandate
 gains weight — a band it must stay in, a history, something that wants to link to it —
-**pull it out into its own agreement file** and name that file in the `Mandate` column.
-The file is the source: `Level` and `Anchor` stay empty, the file states the level in its
-body and the anchor in `agreement-of`, and its `for-domain` names the holder when the
-holder is a role or a unit. Many such files mean many names; collisions are handled by
-the label rules above, like any other file.
+**pull it out into its own agreement file** and name that file in the `Name` column. The
+file is the source: `Level` and `Mandate of` stay empty, the file states the level in its
+body and where it hangs in `agreement-of`, and its `for-domain` names the holder when the
+holder is a role or a unit. Many such files mean many names; collisions are handled by the
+label rules above, like any other file.
 
 ## Reading guide
 

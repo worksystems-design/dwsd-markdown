@@ -41,9 +41,9 @@ Plus the shared optionals from [conventions](../conventions.md).
 | `## Purpose` → `### Requirement` | What the role must fulfill |
 | `## Description` | What the role is |
 | `## Concerns` | What the role looks after / cares about — its areas of attention |
-| `## Accountabilities` | What the role *should* do — obligations and deliverables |
-| `## Decision Rights` | What the role *may* decide — its authority (optionally hinted via RACI or delegation levels, not necessarily a full matrix) |
-| `## Mandates` | Optional — the two lists above as one table, `Mandate \| Level \| Anchor`; see [conventions](../conventions.md#mandates--what-a-holder-may-or-must-do) |
+| `## Accountabilities` | What the role *should* do — obligations and deliverables; a list or a table `Name \| Level \| Mandate of` |
+| `## Decision Rights` | What the role *may* decide — its authority (optionally hinted via RACI or delegation levels, not necessarily a full matrix); a list or a table |
+| `## Mandates` | Optional — both in one table instead; see [conventions](../conventions.md#mandates--what-a-holder-must-or-may-do) |
 | `## Evaluation` → `### Metrics and Monitoring` | How the role's performance is observed |
 
 ## Example

@@ -45,7 +45,7 @@ Describe the work system as a domain. All sections are `##` headings.
 | Section | Holds |
 |---|---|
 | `## Purpose` | Why this domain exists |
-| `## Key Responsibilities` | What the domain is accountable for *(list)* |
+| `## Key Responsibilities` | What the domain is accountable for *(list, or a table — see [mandates](../conventions.md#mandates--what-a-holder-must-or-may-do))* |
 | `## Customers and Deliverables` | Who it serves and what it delivers *(list)* |
 | `## Dependencies` | What it depends on — link work systems with `[[…]]` |
 | `## External Constraints` | Constraints from outside the domain *(list)* |
