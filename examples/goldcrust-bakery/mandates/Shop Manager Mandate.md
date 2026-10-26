@@ -1,11 +1,10 @@
 ---
-type: agreement
-agreement-type: organizational
+type: mandate
 for-domain:
-  - "[[Bakery Operations]]"
   - "[[Market Street Shop Manager]]"
   - "[[Station Road Shop Manager]]"
-agreement-of: "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination::in"
+delegator: "[[Mara Holt]]"
+mandate-of: "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination::in"
 version: "1.0"
 decision_date: "2026-05-20"
 review_date: "2026-11-20"
@@ -31,7 +30,7 @@ Each shop manager — [[Lena Frei]] as [[Market Street Shop Manager]], [[Selin A
 agreed band (opening no earlier than 6:30, closing no later than 19:00), and next-day replenishment quantities without prior sign-off. Range and
 pricing sit outside the mandate: the [[Head Baker]] curates the range, and changing it
 is a [[Bakery Strategy]] decision under the [[Daily Range Cap]]. One mandate, two roles:
-the agreement governs both location roles at once.
+it covers both location roles at once.
 
 ## Evaluation Criteria
 
@@ -39,6 +38,6 @@ the agreement governs both location roles at once.
 - Range and brand stay consistent across locations.
 
 > [!NOTE]
-> **Modeling note.** The agreement's `for-domain` names the domain ([[Bakery Operations]])
-> **and** the two roles, so it also shows on the box of whoever keeps each role: today
-> Lena and Selin.
+> **Modeling note.** A mandate, not an agreement: [[Mara Holt]] handed it over and can
+> widen, narrow or withdraw it alone. Its `for-domain` names the two roles that hold it, so
+> it shows on the box of whoever keeps each role: today Lena and Selin.

@@ -61,21 +61,24 @@ Format: 1.0.0
 
 ## 2026-10-22
 
-- **Mandate levels as inspiration.** `Level` stays free text; an org that wants a shared
-  scale may agree on one. John Cutler's Mandate Levels are named in `conventions.md` as an
-  inspiration for such a scale, not as a grade and not as part of the spec.
-- **Mandates, optional.** A mandate is what a holder must or may do. Any structure entity —
-  individual, role, unit, work system and, preliminary, AI agent — may write its mandates
-  under `## Accountabilities` (must), `## Decision Rights` (may), a work system's
-  `## Key Responsibilities` (must), or one general `## Mandates` table holding both. Each
-  is a list or a table `Name | Level | Mandate of`; `Level` is free text, `Mandate of` a
-  locator. Nothing requires them; how a holder decides internally is its own business, and
-  a unit may record it in one of its agreements. A row has no identity of its own, as in a
-  meeting's `## Interactions` table: a mandate that needs one becomes an agreement file the
-  row names. New section in `conventions.md`, a line on each structure type page,
-  `org-read` collects a person's mandates directly, through roles and through units,
-  `org-validate` checks the tables. Goldcrust shows all three routes around Ines Rossi and
-  the Market Street site. Plugin 0.11.0.
+- **Mandates, optional.** A mandate is what a holder must or may do; the holder is the
+  file it is written in — an individual, a role, a unit or work system, and, preliminary,
+  an AI agent. Mandates sit under `## Accountabilities` (must), `## Decision Rights` (may),
+  a work system's `## Key Responsibilities` (must) or a general `## Mandates`, as a list,
+  prose or a table `Name | Mandate of`. A row with a locator in `Mandate of` shows as a
+  **mandate chip** where it points, as an interaction row does in a meeting's table. How
+  free the holder is stands in the mandate's own words; there is no fixed scale, and John
+  Cutler's Mandate Levels are named as an inspiration for one. A row has no identity of its
+  own: a mandate that needs one becomes a file of the new type **`mandate`** (`for-domain`
+  the holder, `delegator` who can change it, `mandate-of` where it hangs). Reading rule:
+  an agreement is changed by its parties together, a mandate by its delegator alone. New
+  section in `conventions.md`, `types/mandate.md`, `templates/mandate.md`, the mandate
+  table in the role, individual, unit and work-system templates; `org-read` collects a
+  person's mandates directly, through roles and through units; `org-validate` checks the
+  tables and the files. Goldcrust: Ines Rossi, the Market Street Site Lead and the Market
+  Street site; the Shop Manager Mandate and the Market Street Opening Hours become mandate
+  files. Two authoring skills turn prose into rows: `extract-mandates` and
+  `extract-interactions`. Plugin 0.13.0.
 
 ## 2026-10-20
 

@@ -24,8 +24,8 @@
 Plus the shared optionals from [conventions](../conventions.md).
 
 Optional `## Accountabilities` and `## Decision Rights` in the body (or one `## Mandates`
-table) say what the agent must do, what it may do on its own and where it must ask —
-`autonomous`, `consult [[…]]` — see
+section) say what the agent must do, what it may do on its own and where it must ask
+("on its own", "after consulting [[…]]") — see
 [conventions](../conventions.md#mandates--what-a-holder-must-or-may-do). Preliminary, like
 the type.
 

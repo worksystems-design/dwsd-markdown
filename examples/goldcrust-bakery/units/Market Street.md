@@ -12,9 +12,9 @@ the [[Market Street Site Lead]], a role scoped to the site.
 
 ## Mandates
 
-| Name                                                                  | Level                                      | Mandate of |
-|-----------------------------------------------------------------------|--------------------------------------------|------------|
-| Spend up to $1,000 a day on the site — repairs, supplies, a locksmith | may, as [[How Market Street Decides]] says |            |
+| Name                                                                                                            | Mandate of |
+|-----------------------------------------------------------------------------------------------------------------|------------|
+| May spend up to $1,000 a day on the site — repairs, supplies, a locksmith — as [[How Market Street Decides]] says |            |
 
 ## In context
 

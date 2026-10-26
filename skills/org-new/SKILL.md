@@ -24,7 +24,7 @@ Claude Code). If the type or the name is missing, ask.
    - `individual` → `individuals/`, `role` → `roles/`, plain `unit` → `units/`,
      **work system (`unit` with `work-system` in `unit-type`) → `work-systems/`**,
      `interaction` and
-     **`meeting` → `interactions/`**, `agreement` → `agreements/`, `signal` → `signals/`,
+     **`meeting` → `interactions/`**, `agreement` → `agreements/`, `mandate` → `mandates/`, `signal` → `signals/`,
      `insight` → `insights/`, `driver` → `drivers/`, `proposal` → `proposals/`,
      `organizational-decision-record` → `decision-records/`, `visualization` → `visualizations/`,
      `flight-item-type` → `flight-item-types/`, `flight-route` → `flight-routes/`,

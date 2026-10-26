@@ -116,12 +116,14 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      never merge the two.
    - **Mandate sections** — `## Accountabilities`, `## Decision Rights`,
      `## Key Responsibilities` and `## Mandates` are optional; never flag their absence.
-     `## Mandates` belongs on a structure entity (individual, role, unit, ai-agent) —
-     **warn** elsewhere. A table form has the columns `Name | Level | Mandate of`. `Level`
-     is free text, never checked against a scale. A `[[…]]` link in `Name` must resolve,
-     and should name an agreement (**warn** otherwise); its `Level` and `Mandate of` cells
-     should be empty — if filled, **note** them as a copy (the file wins). A
-     `Mandate of` locator is checked like any locator.
+     A table form has the columns `Name | Mandate of`. A `[[…]]` link in `Name` must
+     resolve, and should name a `type: mandate` file (**warn** otherwise); its `Mandate of`
+     cell should be empty — if filled, **note** it as a copy (the file wins). A
+     `Mandate of` locator is checked like any locator, and must be absolute (a mandate's
+     holder is not a board).
+   - **`mandate` files** — `mandate-of` is checked like any locator; `delegator` must
+     resolve; `for-domain` follows the rule below. **Note** a mandate file no mandate row
+     names and no `for-domain` points from — it has no holder.
    - **`for-domain`** on any entity names a **work system, a role or a unit** (a list may
      mix them) — all are valid; **warn** only when it names a person.
    - **Board-binding consistency (informational):** when an entity carries both

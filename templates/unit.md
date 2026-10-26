@@ -9,3 +9,11 @@ contributes-to: "[[]]"   # the higher work system this unit feeds
 # <Unit / team name>
 
 <One line — a plain structural team with no own work system.>
+
+## Mandates
+
+<!-- optional — what the unit as a whole must or may do directly; delete if none -->
+
+| Name                                   | Mandate of |
+|----------------------------------------|------------|
+| <must / may …, and how freely>         |            |

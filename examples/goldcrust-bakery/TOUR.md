@@ -133,7 +133,7 @@ too. A decision *about* Jonas is not anchored on him but through his role:
 [Jonas Keller Leads Operations](decision-records/Jonas%20Keller%20Leads%20Operations.md)
 carries `for-domain: "[[Head of Operations]]"`, and the record reaches the box of whoever
 keeps that role — open it and the drawer says "via Head of Operations". The same bridge
-puts the [Shop Manager Mandate](agreements/Shop%20Manager%20Mandate.md) on both shop
+puts the [Shop Manager Mandate](mandates/Shop%20Manager%20Mandate.md) on both shop
 managers, because its `for-domain` lists both shop-manager roles. On the units side the
 [Wholesale Capacity Cap](agreements/Wholesale%20Capacity%20Cap.md) names the
 [Wholesale](units/Wholesale.md) team with a bare wikilink and shows on that box; the

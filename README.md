@@ -77,6 +77,7 @@ organizational-decision-record); see [conventions](conventions.md).
 | `interaction` | flow | [spec](types/interaction.md) | People acting in relation across work systems |
 | `meeting` | flow | [spec](types/meeting.md) | A scheduled interaction that bundles a list of interactions |
 | `agreement` | flow | [spec](types/agreement.md) | A working agreement between work systems |
+| `mandate` | flow | [spec](types/mandate.md) | Something a holder must or may do, in its own file |
 | `flight-item-type` | flow | [spec](types/flight-item-type.md) | A class of work item |
 | `flight-route` | flow | [spec](types/flight-route.md) | A path of work through the flight levels |
 | `visualization` | flow | [spec](types/visualization.md) | A board (or other view) of a work system |

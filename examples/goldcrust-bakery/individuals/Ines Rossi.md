@@ -12,9 +12,9 @@ that feeds the next-day [[Daily Replenishment Order]]. She also holds the
 
 ## Accountabilities
 
-| Name                                               | Level | Mandate of                                                |
-|----------------------------------------------------|-------|-----------------------------------------------------------|
-| Count the evening stock and pass it to the reorder | daily | [[Market Street Shop Board]]#Market Street Shop/col:Reorder::before |
+| Name                                                       | Mandate of                                                          |
+|------------------------------------------------------------|---------------------------------------------------------------------|
+| Count the evening stock every day and pass it to the reorder | [[Market Street Shop Board]]#Market Street Shop/col:Reorder::before |
 
 ## In context
 

@@ -15,7 +15,7 @@ category is a way of thinking about an entity, not a directory.
 
 - **Structure** — the organization's makeup (who, and how they're organized): individual,
   role, unit, work-system, ai-agent.
-- **Flow** — how work is coordinated and flows: interaction, meeting, agreement,
+- **Flow** — how work is coordinated and flows: interaction, meeting, agreement, mandate,
   flight-item-type, flight-route, visualization.
 - **Change** — working *on* the system: signal, insight, driver, proposal,
   organizational-decision-record. These **look at** the organization and decide about it; they
@@ -224,9 +224,10 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `member-of` | Belongs to a unit / work system — an **individual** or a **unit** can be a member |
 | `contributes-to` | A work system contributes to a higher-level work system |
 | `role-keeper` / `role_keeper` | Who holds this role |
-| `for-domain` / `for_domain` | The **domain** — a work system, a role or a unit — that a role, agreement, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to, and that a flight route (in its `dwsd.flightroute` block) names as the domain **responsible** for the route — points *up*. Naming a role lands the entity on every keeper of that role |
+| `for-domain` / `for_domain` | The **domain** — a work system, a role or a unit — that a role, agreement, mandate, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to, and that a flight route (in its `dwsd.flightroute` block) names as the domain **responsible** for the route — points *up*. Naming a role lands the entity on every keeper of that role |
 | `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board), or a bare `[[entity]]` — a work system, a unit or a person |
 | `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
+| `mandate-of` | Where a **mandate** hangs — the same **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
 | `bound-to` | Where an **AI agent**'s surface appears — the same **locator** as `interaction-of` / `agreement-of` (or a bare `[[entity]]` — a work system, a unit or a person) |
 | `observes` | The entity a **signal** or **insight** observes — what was seen / interpreted — a work system, a unit, a person, or another entity |
 | `derived-from` / `derived_from` | What this entity **emerged from** — the shared lineage key, see below |
@@ -249,7 +250,7 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 > `for-domain` says who takes care when the route changes; the work systems the route flows
 > through are derived (`bound-to` → board → `visualization-of`), never authored there.
 >
-> **The locator** (`interaction-of` / `agreement-of` / `bound-to`) is **value-polymorphic**: a
+> **The locator** (`interaction-of` / `agreement-of` / `mandate-of` / `bound-to`) is **value-polymorphic**: a
 > bare `[[…]]` wikilink anchors to the **entity** it names — a work system, a unit, or a person
 > (a 1:1, a personal working agreement) — wherever that entity is drawn (the topology, the org
 > chart, the units view); a unit that is also a work system shows the same anchors in both
@@ -448,10 +449,16 @@ are ordinary wikilinks. A file with nothing to explain about its modeling has no
 ## Mandates — what a holder must or may do
 
 A **mandate** is something a holder must or may do: open the building, count the stock,
-spend up to a limit, decide who gets a key. Any **structure** entity may write down its
-mandates — an `individual`, a `role`, a `unit` (work systems included) and, preliminary
-like the type itself, an `ai-agent`. Nothing requires it; an org without a single mandate
-is complete.
+spend up to a limit, decide who gets a key. The **holder** is the file the mandate is
+written in — an `individual`, a `role`, a `unit` (work systems included) and, preliminary
+like the type itself, an `ai-agent`. Nothing requires mandates; an org without a single
+one is complete.
+
+**Mandate or agreement?** In an organization nearly everything is agreed in the end. The
+difference is who can change it: an **agreement** is changed by its parties together; a
+**mandate** is handed to its holder by someone with the power to do so — a domain or a
+person, the **delegator** — who can widen, narrow or withdraw it alone. That is a way of
+reading, not a field.
 
 Mandates sit under any of these body headings, each optional:
 
@@ -460,32 +467,37 @@ Mandates sit under any of these body headings, each optional:
 | `## Accountabilities` | what the holder **must** do |
 | `## Decision Rights` | what the holder **may** decide or do |
 | `## Key Responsibilities` | on a work system: what it **must** deliver (its accountabilities) |
-| `## Mandates` | both in one table, for whoever prefers the general form; start `Level` with `must` or `may` |
+| `## Mandates` | either, for whoever prefers the general form |
 
-Each takes a plain list or, when there is more to say, a table:
+Each takes a list, prose, or a two-column table. A row whose `Mandate of` holds a
+locator **shows as a mandate chip** where the locator points — on a board position, a
+route stage, a meeting, a work system — as an interaction row with `Interaction of` does
+in a meeting's table. A list item, a sentence or a row without a locator is read, not
+drawn.
 
 ```markdown
 ## Decision Rights
 
-| Name                             | Level                                  | Mandate of |
-|----------------------------------|----------------------------------------|------------|
-| Decide who else holds a key      | autonomous                             |            |
-| Spend up to $1,000 a day         | as [[How Market Street Decides]] says  |            |
-| Pull the next batch              | autonomous                             | [[Shop Board]]#Shop/col:Reorder::before |
-| [[Market Street Opening Hours]]  |                                        |            |
+| Name                                               | Mandate of                              |
+|----------------------------------------------------|-----------------------------------------|
+| Decide who else holds a key                        |                                         |
+| Set the back-door delivery slot with [[Deliveries]] |                                        |
+| Pull the next batch when the shelf runs low        | [[Shop Board]]#Shop/col:Reorder::before |
+| [[Market Street Opening Hours]]                    |                                         |
 ```
 
-- **Name** — the mandate in a short sentence, or a `[[…]]` link to a file that carries it
-  (below).
-- **Level** — how free the holder is and with whom: `autonomous`, `with [[Deliveries]]`,
-  `within the band [[…]] sets`, `daily`. **Free text**, quoted as written; there is no fixed
-  scale. Where the mandate is written down at length, link it here. An organization that
-  wants a shared scale may agree on one and write its values here; John Cutler's
-  [Mandate Levels](https://cutlefish.substack.com/p/tbm-2752-mandate-levels), from a very
-  specific mandate to a very general one, are an inspiration for that — not a grade, and
-  not part of the spec.
+- **Name** — the mandate in a short sentence, **including how free the holder is** and
+  with whom: "with [[Deliveries]]", "up to $200 alone", "within the band [[…]] sets". Or a
+  `[[…]]` link to a mandate file (below).
 - **Mandate of** — optional: where the mandate hangs, as a locator — the same form as
-  `interaction-of` and `agreement-of`.
+  `interaction-of` and `agreement-of`; a relative locator inherits nothing, since a
+  mandate's holder is not a board.
+
+There is no fixed scale for how free a holder is. An organization that wants a shared one
+may agree on it and use its words in the names; John Cutler's
+[Mandate Levels](https://cutlefish.substack.com/p/tbm-2752-mandate-levels), from a very
+specific mandate to a very general one, are an inspiration for that — not a grade, and
+not part of the spec.
 
 **How the holder decides is its own business.** A person decides alone; a role through its
 keeper. A unit settles internally how it uses a mandate — who may act alone, up to what,
@@ -495,12 +507,14 @@ say so rather than assume.
 
 **A row has no identity of its own** — the same rule as a meeting's `## Interactions`
 table ([below](#how-do-i-refer-to-an-interaction-from-a-meeting-table)). When a mandate
-gains weight — a band it must stay in, a history, something that wants to link to it —
-**pull it out into its own agreement file** and name that file in the `Name` column. The
-file is the source: `Level` and `Mandate of` stay empty, the file states the level in its
-body and where it hangs in `agreement-of`, and its `for-domain` names the holder when the
-holder is a role or a unit. Many such files mean many names; collisions are handled by the
-label rules above, like any other file.
+gains weight — a band it must stay in, a delegator worth naming, a history, something that
+wants to link to it — **pull it out into a [`mandate`](types/mandate.md) file** and name
+that file in the `Name` column. The file is the source: `Mandate of` stays empty, the file
+says where it hangs in `mandate-of`. Many such files mean many names; collisions are
+handled by the label rules above, like any other file.
+
+Mandates can be written as prose first and turned into rows later — the `extract-mandates`
+skill proposes the rows from the text.
 
 ## Reading guide
 
@@ -540,7 +554,7 @@ Two ideas carry every picture of the organization, and they point in opposite di
 
 - **An anchor says where an entity sits.** It is written in the entity's own file:
   `for-domain` anchors it up, to the domain that decides about it; a locator
-  (`interaction-of`, `agreement-of`, `bound-to`) anchors it into the detail — an entity, a
+  (`interaction-of`, `agreement-of`, `mandate-of`, `bound-to`) anchors it into the detail — an entity, a
   board position or a route stage; `observes` anchors a signal or an insight to what was
   seen. Every view finds an entity through its anchors and shows it on the box, column or
   stage it is anchored to.

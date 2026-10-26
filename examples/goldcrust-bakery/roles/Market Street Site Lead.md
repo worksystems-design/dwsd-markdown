@@ -33,18 +33,18 @@ The building and its access — keys, alarm, opening hours, the back-door delive
 
 ## Accountabilities
 
-| Name                                                     | Level | Mandate of |
-|----------------------------------------------------------|-------|------------|
-| Open and lock the building; hold the keys and alarm code | daily |            |
-| Receive the early delivery at the back door, sign for it |       |            |
+| Name                                                               | Mandate of |
+|--------------------------------------------------------------------|------------|
+| Open and lock the building every day; hold the keys and alarm code |            |
+| Receive the early delivery at the back door and sign for it        |            |
 
 ## Decision Rights
 
-| Name                            | Level                  | Mandate of |
-|---------------------------------|------------------------|------------|
-| [[Market Street Opening Hours]] |                        |            |
-| Decide who else holds a key     | autonomous             |            |
-| Set the back-door delivery slot | with [[Deliveries]]    |            |
+| Name                                                  | Mandate of |
+|-------------------------------------------------------|------------|
+| [[Market Street Opening Hours]]                       |            |
+| Decide on its own who else holds a key                |            |
+| Set the back-door delivery slot with [[Deliveries]]   |            |
 
 ## Evaluation
 

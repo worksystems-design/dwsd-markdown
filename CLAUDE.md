@@ -25,7 +25,7 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - `contracts/<major>.<minor>.json` — the checkable part of each format version, as data for tools.
 - `.claude-plugin/`, `skills/` — the **`dwsd-md`** Claude Code plugin: thin
   reading, authoring + validation skills (`dwsd-format`, `org-read`, `org-validate`,
-  `org-new`, `explore-example-org`) that point back at the files above via the **spec root**
+  `org-new`, `explore-example-org`, `extract-mandates`, `extract-interactions`) that point back at the files above via the **spec root**
   (`${CLAUDE_PLUGIN_ROOT}` in Claude Code; no duplication). Skills are written
   host-neutral — verbs, not tool names — so other hosts can vendor them. Heavier tooling
   (parser, rendering, the change-accompaniment workflow) stays out of scope. **Bump the plugin version** (`version` in both
@@ -38,7 +38,7 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - **One file = one entity.** The `type:` field decides the type, not the folder. Each type
   lives in a flat plural folder (`individuals/`, `signals/`, …).
 - **Three conceptual categories — NOT folders:** `structure` (individual, role, unit,
-  work-system, ai-agent), `flow` (interaction, meeting, agreement, flight-item-type,
+  work-system, ai-agent), `flow` (interaction, meeting, agreement, mandate, flight-item-type,
   flight-route, visualization), `change` (signal, insight, driver, proposal,
   organizational-decision-record — these *look at* the org and decide about it). The change
   category spans two phases: **Assess** (signal/insight/driver) and **Design**

@@ -45,7 +45,7 @@ system also carries the work-system frontmatter (`delegator`, `version`,
   domain-description body from [`work-system.md`](work-system.md) (Purpose, Key
   Responsibilities, Customers and Deliverables, … Evaluation Schedule).
 - **Either kind** may add optional `## Accountabilities` and `## Decision Rights` (or one
-  `## Mandates` table) — what the unit as a whole must or may do; how its members use it is
+  `## Mandates` section) — what the unit as a whole must or may do; how its members use it is
   the unit's own business — see
   [conventions](../conventions.md#mandates--what-a-holder-must-or-may-do).
 

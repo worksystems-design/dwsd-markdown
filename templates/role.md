@@ -24,10 +24,17 @@ review_date: "2026-04-01"
 <What the role looks after / cares about — its areas of attention.>
 
 ## Accountabilities
-- <What the role should do — obligations and deliverables.>
+
+| Name                                              | Mandate of |
+|---------------------------------------------------|------------|
+| <What the role must do — obligations, deliverables> |          |
 
 ## Decision Rights
-- <What the role may decide — its authority. Optionally hint via RACI or delegation levels.>
+
+| Name                                              | Mandate of |
+|---------------------------------------------------|------------|
+| <What the role may decide or do, and how freely>  |            |
+<!-- a row with a locator in "Mandate of" shows as a chip there; leave it empty otherwise -->
 
 ## Evaluation
 

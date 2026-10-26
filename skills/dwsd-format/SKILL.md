@@ -16,7 +16,7 @@ description: >-
 DWSD describes an organization as a folder of Markdown files: **one file = one entity**,
 and the `type:` field in the frontmatter decides what it is. Entities are grouped into flat
 **plural per-type folders** (`individuals/`, `roles/`, `units/`, `work-systems/`,
-`interactions/`, `agreements/`, `signals/`, `insights/`, `drivers/`, `proposals/`,
+`interactions/`, `agreements/`, `mandates/`, `signals/`, `insights/`, `drivers/`, `proposals/`,
 `decision-records/`, `visualizations/`, `flight-item-types/`, `flight-routes/`,
 `ai-agents/`) — the folder is a convenience; the `type:` is authoritative.
 

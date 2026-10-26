@@ -8,3 +8,11 @@ reports-to: "[[]]"       # manager — structure / reporting line (individuals o
 # <Name>
 
 <Short profile.>
+
+## Mandates
+
+<!-- optional — what the person must or may do directly; delete if none -->
+
+| Name                                   | Mandate of |
+|----------------------------------------|------------|
+| <must / may …, and how freely>         |            |

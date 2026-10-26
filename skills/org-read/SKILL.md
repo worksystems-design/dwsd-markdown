@@ -41,21 +41,23 @@ The folder is a convenience; the `type:` field decides. A work system is a `unit
 
 ## Mandates of a person
 
-A mandate is something a holder must or may do. Mandates sit under `## Accountabilities`
-(must), `## Decision Rights` (may), a work system's `## Key Responsibilities` (must), or
-one `## Mandates` table holding both (`<spec-root>/conventions.md` › Mandates) — as list
-items or table rows. A row may name an agreement file with `[[…]]`; that file is then the
-source, and its body states the level. The level is free text — quote it, do not translate
-it into a scheme. Collect a person's mandates along three routes and say for each the route
-it came by, and whether it is a must or a may:
-
+A mandate is something a holder must or may do; the holder is the file it is written in.
+Mandates sit under `## Accountabilities` (must), `## Decision Rights` (may), a work
+system's `## Key Responsibilities` (must) or a general `## Mandates`
+(`<spec-root>/conventions.md` › Mandates) — as list items, prose or table rows
+`Name | Mandate of`. How free the holder is stands in the mandate's own words — quote them,
+do not translate them into a scheme. A row may name a `type: mandate` file with `[[…]]`;
+that file is then the source, and its `delegator` says who can change the mandate.
+Collect a person's mandates along three routes and say for each the route it came by,
+and whether it is a must or a may:
 
 1. **Held directly** — the person's own mandate sections.
 2. **Through a role** — every role naming the person as `role-keeper`: the role's mandate
-   sections, and the agreements their rows name.
+   sections, the mandate files their rows name, and the mandate files whose
+   `for-domain` names the role.
 3. **Through a unit** — every unit the person is directly `member-of`: the unit's mandate
-   sections (a work system's `## Key Responsibilities` included), and the agreements their
-   rows name. These belong to the unit, not to the person alone.
+   sections (a work system's `## Key Responsibilities` included), and the mandate files
+   their rows name or whose `for-domain` names the unit. These belong to the unit, not to the person alone.
 
 Then **read around** before you answer. A unit's mandate means something for one member only
 through how the unit decides: look for the unit's agreements (`for-domain` or

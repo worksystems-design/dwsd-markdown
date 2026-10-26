@@ -16,7 +16,10 @@ review_date: "2026-04-01"
 
 ## Key Responsibilities
 
-- <What the domain is accountable for.>
+| Name                                     | Mandate of |
+|------------------------------------------|------------|
+| <What the domain is accountable for>     |            |
+<!-- a row with a locator in "Mandate of" shows as a chip there; leave it empty otherwise -->
 
 ## Customers and Deliverables
 
