@@ -23,4 +23,4 @@ radius: { up: 1, down: inf }
 
 > [!NOTE]
 > **Modeling note.** The `member-of` and `reports-to` trees agree here. What does **not**
-> agree is the flow — see the topology map in the [README](../README.md).
+> agree is the flow — see the topology map in the org's README.
