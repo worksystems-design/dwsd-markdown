@@ -31,16 +31,15 @@ the [[Market Street Shop]] work system: what is sold and how much is ordered sta
 
 The building and its access — keys, alarm, opening hours, the back-door delivery slot.
 
-## Accountabilities
+## Mandates
 
-- Open and lock the building; hold the keys and the alarm code.
-- Keep the posted opening hours current.
-- Receive the early delivery at the back door and sign for it.
-
-## Decision Rights
-
-- Decides who else holds a key (autonomous).
-- Agrees the back-door delivery slot with [[Deliveries]].
+| Mandate                                                  | Level                       | Anchor |
+|----------------------------------------------------------|-----------------------------|--------|
+| Open and lock the building; hold the keys and alarm code | must                        |        |
+| [[Market Street Opening Hours]]                          |                             |        |
+| Receive the early delivery at the back door, sign for it | must                        |        |
+| Decide who else holds a key                              | autonomous                  |        |
+| Set the back-door delivery slot                          | agree with [[Deliveries]]   |        |
 
 ## Evaluation
 

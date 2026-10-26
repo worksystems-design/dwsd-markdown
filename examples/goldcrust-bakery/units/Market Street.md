@@ -10,6 +10,12 @@ Market Street is a **site** — the older of the two shops, in the town center. 
 they work in. The building itself — keys, opening hours, the back door — is looked after by
 the [[Market Street Site Lead]], a role scoped to the site.
 
+## Mandates
+
+| Mandate                                                           | Level                                   | Anchor |
+|-------------------------------------------------------------------|-----------------------------------------|--------|
+| Spend up to $1,000 a day on the site — repairs, supplies, a locksmith | as [[How Market Street Decides]] says |        |
+
 ## In context
 
 ```dwsd.units id=units

@@ -32,11 +32,37 @@ relationships, locators and the views.
 | a rule, a working agreement | `agreements/` | `agreement-of`, `for-domain`; `derived-from` back to the decision |
 | why something changed, what was decided | `decision-records/` | `derived-from` back to proposal, driver, insight, signal; forward to what names the record in `derived-from` |
 | something someone noticed, an open issue | `signals/`, `insights/`, `drivers/`, `proposals/` | `observes`; up and down the ladder along `derived-from` |
+| the mandates someone holds — what they may or must do | `individuals/` | see *Mandates of a person* below |
 | an AI agent and where it acts | `ai-agents/` | `bound-to`, `for-domain`, `delegator` |
 
 The folder is a convenience; the `type:` field decides. A work system is a `unit` whose
 `unit-type` includes `work-system`; a meeting is an `interaction` with
 `interaction-type: meeting`.
+
+## Mandates of a person
+
+A mandate is something a holder may or must do. It sits as a row in a `## Mandates` table
+or, when it has weight of its own, in a file of `type: mandate`; a row may name such a file
+with `[[…]]`. The `Level` column, or a file's `level:`, is free text — quote it, do not
+translate it into a scheme. Collect a person's mandates along three routes and say for each
+the route it came by:
+
+1. **Held directly** — the rows of the person's own `## Mandates` table.
+2. **Through a role** — every role naming the person as `role-keeper`: the role's
+   `## Mandates` rows, and the files of `type: mandate` whose `for-domain` names the role.
+   Plain `## Accountabilities` and `## Decision Rights` lists count as the role's mandates
+   too.
+3. **Through a unit** — every unit the person is directly `member-of`: the unit's
+   `## Mandates` rows, and the files of `type: mandate` whose `for-domain` names the unit.
+   These belong to the unit, not to the person alone.
+
+Then **read around** before you answer. A unit's mandate means something for one member only
+through how the unit decides: look for the unit's agreements (`for-domain` or
+`agreement-of` naming it) and say what they make of the mandate for this person — alone,
+together with others, or not at all. Agreements scoped to the person's roles may widen or
+bound a role's mandates. When the org does not say how a unit decides, say that, rather than
+assuming the person may act alone. A mandate reached by two routes is one mandate with two
+origins.
 
 ## Read, then follow
 
