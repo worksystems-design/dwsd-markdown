@@ -54,7 +54,8 @@ the route it came by:
    too.
 3. **Through a unit** — every unit the person is directly `member-of`: the unit's
    `## Mandates` rows, and the files of `type: mandate` whose `for-domain` names the unit.
-   These belong to the unit, not to the person alone.
+   A work system's `## Key Responsibilities` list counts as its mandates too. These belong
+   to the unit, not to the person alone.
 
 Then **read around** before you answer. A unit's mandate means something for one member only
 through how the unit decides: look for the unit's agreements (`for-domain` or
