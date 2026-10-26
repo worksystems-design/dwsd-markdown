@@ -92,6 +92,7 @@ implies the OKF version below. A major step that breaks compatibility says so he
 | DWSD format | OKF |
 |---|---|
 | `1.0.0` | 0.2 |
+| `1.1.0` | 0.2 |
 
 ## Why it matters
 

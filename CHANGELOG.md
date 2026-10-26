@@ -6,6 +6,37 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-10-26
+
+Format: 1.1.0
+
+- **Mandates, optional.** A mandate is what a holder must or may do; the holder is the
+  file it is written in — an individual, a role, a unit or work system, and, preliminary,
+  an AI agent. Mandates sit under `## Accountabilities` (must), `## Decision Rights` (may),
+  a work system's `## Key Responsibilities` (must) or a general `## Mandates`, as a list,
+  prose or a table `Name | Mandate of`. A row with a locator in `Mandate of` shows as a
+  **mandate chip** where it points, as an interaction row does in a meeting's table. How
+  free the holder is stands in the mandate's own words; there is no fixed scale, and John
+  Cutler's Mandate Levels are named as an inspiration for one. A row has no identity of its
+  own: a mandate that needs one becomes a file of the new type **`mandate`** (`for-domain`
+  the holder, `delegator` who can change it, `mandate-of` where it hangs). Reading rule:
+  an agreement is changed by its parties together, a mandate by its delegator alone. New
+  section in `conventions.md`, `types/mandate.md`, `templates/mandate.md`, the mandate
+  table in the role, individual, unit and work-system templates; `org-read` collects a
+  person's mandates directly, through roles and through units; `org-validate` checks the
+  tables and the files. Goldcrust: Ines Rossi, the Market Street Site Lead and the Market
+  Street site; the Shop Manager Mandate and the Market Street Opening Hours become mandate
+  files. Two authoring skills turn prose into rows: `extract-mandates` and
+  `extract-interactions`. Goldcrust carries `"1.1.0"`, since it has mandate files;
+  Voltfeld stays at `"1.0.0"` and is still correct.
+- **`interaction-type: workshop`** is a named value: a working session whose result is
+  artifacts — a draft role, a board, a proposal. What it produces may name it in
+  `derived-from`, so a workshop's output is the reverse reading of that key, as an ODR's
+  bundle is. The vocabulary stays open.
+- **`contracts/1.1.json`** adds the `mandate` type (an entity, no required key beyond
+  `type`). A 1.0 org stays valid unchanged; a writer that adds a mandate file raises its
+  README to `"1.1.0"` in the same commit.
+
 ## 2026-10-25
 
 Format: 1.0.0
@@ -58,27 +89,6 @@ Format: 1.0.0
   inline entry needs none. The spec says "inline entry", not "draft" — a proposal's
   `status: draft` already means something else. Agreed with the DSL for its Phase 53.1.1.
   `org-validate` checks the new keys.
-
-## 2026-10-22
-
-- **Mandates, optional.** A mandate is what a holder must or may do; the holder is the
-  file it is written in — an individual, a role, a unit or work system, and, preliminary,
-  an AI agent. Mandates sit under `## Accountabilities` (must), `## Decision Rights` (may),
-  a work system's `## Key Responsibilities` (must) or a general `## Mandates`, as a list,
-  prose or a table `Name | Mandate of`. A row with a locator in `Mandate of` shows as a
-  **mandate chip** where it points, as an interaction row does in a meeting's table. How
-  free the holder is stands in the mandate's own words; there is no fixed scale, and John
-  Cutler's Mandate Levels are named as an inspiration for one. A row has no identity of its
-  own: a mandate that needs one becomes a file of the new type **`mandate`** (`for-domain`
-  the holder, `delegator` who can change it, `mandate-of` where it hangs). Reading rule:
-  an agreement is changed by its parties together, a mandate by its delegator alone. New
-  section in `conventions.md`, `types/mandate.md`, `templates/mandate.md`, the mandate
-  table in the role, individual, unit and work-system templates; `org-read` collects a
-  person's mandates directly, through roles and through units; `org-validate` checks the
-  tables and the files. Goldcrust: Ines Rossi, the Market Street Site Lead and the Market
-  Street site; the Shop Manager Mandate and the Market Street Opening Hours become mandate
-  files. Two authoring skills turn prose into rows: `extract-mandates` and
-  `extract-interactions`. Plugin 0.13.0.
 
 ## 2026-10-20
 

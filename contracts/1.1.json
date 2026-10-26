@@ -1,0 +1,31 @@
+{
+  "format": "1.1",
+  "aliases": [],
+  "okf": "0.2",
+  "types": {
+    "agreement": { "entity": true, "required": ["agreement-type"] },
+    "ai-agent": { "entity": true, "required": [] },
+    "driver": { "entity": true, "required": [] },
+    "flight-item-type": { "entity": true, "required": [] },
+    "flight-route": { "entity": true, "required": [] },
+    "individual": { "entity": true, "required": [] },
+    "insight": { "entity": true, "required": [] },
+    "interaction": { "entity": true, "required": ["interaction-type"] },
+    "mandate": { "entity": true, "required": [] },
+    "organizational-decision-record": { "entity": true, "required": [] },
+    "proposal": { "entity": true, "required": [] },
+    "role": { "entity": true, "required": [] },
+    "signal": { "entity": true, "required": [] },
+    "unit": { "entity": true, "required": [] },
+    "visualization": { "entity": true, "required": ["visualization-type"] },
+    "readme": { "entity": false, "required": [] },
+    "tour": { "entity": false, "required": [] }
+  },
+  "rules": [
+    {
+      "type": "unit",
+      "when": { "field": "unit-type", "contains": "work-system" },
+      "require": { "field": "flightlevel", "oneOf": ["1", "2", "3"] }
+    }
+  ]
+}

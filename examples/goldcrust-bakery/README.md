@@ -1,6 +1,6 @@
 ---
 type: readme
-dwsd-format: "1.0.0"
+dwsd-format: "1.1.0"
 ---
 
 # Goldcrust Bakery
