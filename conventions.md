@@ -479,7 +479,11 @@ Each takes a plain list or, when there is more to say, a table:
   (below).
 - **Level** — how free the holder is and with whom: `autonomous`, `with [[Deliveries]]`,
   `within the band [[…]] sets`, `daily`. **Free text**, quoted as written; there is no fixed
-  scale. Where the mandate is written down at length, link it here.
+  scale. Where the mandate is written down at length, link it here. An organization that
+  wants a shared scale may agree on one and write its values here; John Cutler's
+  [Mandate Levels](https://cutlefish.substack.com/p/tbm-2752-mandate-levels), from a very
+  specific mandate to a very general one, are an inspiration for that — not a grade, and
+  not part of the spec.
 - **Mandate of** — optional: where the mandate hangs, as a locator — the same form as
   `interaction-of` and `agreement-of`.
 

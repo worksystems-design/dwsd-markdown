@@ -11,7 +11,7 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - **English (US) only.** Translations, if ever, are a deliberate future restructuring —
   not a parallel tree maintained now.
 - Inspirations (Sociocracy 3.0, Flight Levels, Ladder of Inference,
-  Management 3.0, ADR/MADR) are cited as **inspiration, not dogma** — adapted, not copied.
+  Management 3.0, ADR/MADR, John Cutler's Mandate Levels) are cited as **inspiration, not dogma** — adapted, not copied.
 - Keep it **crisp and technical**.
 
 ## Layout

@@ -61,6 +61,9 @@ Format: 1.0.0
 
 ## 2026-10-22
 
+- **Mandate levels as inspiration.** `Level` stays free text; an org that wants a shared
+  scale may agree on one. John Cutler's Mandate Levels are named in `conventions.md` as an
+  inspiration for such a scale, not as a grade and not as part of the spec.
 - **Mandates, optional.** A mandate is what a holder must or may do. Any structure entity —
   individual, role, unit, work system and, preliminary, AI agent — may write its mandates
   under `## Accountabilities` (must), `## Decision Rights` (may), a work system's
