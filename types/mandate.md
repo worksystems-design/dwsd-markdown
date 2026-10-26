@@ -84,3 +84,6 @@ band the site lead decides alone.
   an identity of its own.
 - Whether a person holds a mandate directly or through a role: through a role is usual;
   a direct one is a row in the person's file.
+- Hosts that draw an icon per type show a mandate with the Lucide icon `key-round`: a
+  mandate unlocks what the holder could not do without it. It pairs with the agreement's
+  handshake, which stands for what parties settle together.
