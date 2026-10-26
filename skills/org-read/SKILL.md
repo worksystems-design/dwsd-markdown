@@ -64,6 +64,11 @@ bound a role's mandates. When the org does not say how a unit decides, say that,
 assuming the person may act alone. A mandate reached by two routes is one mandate with two
 origins.
 
+When a mandate's level or text names another role, agreement or mandate, follow that link
+and say what it bounds or widens. Keep three things apart in the answer: what the files say,
+what you conclude from them (say so), and what the org cannot know — today's figures, who is
+in the shop, what was already spent. Name where that would be found, rather than guessing it.
+
 ## Read, then follow
 
 1. **Find the files.** Search the org for the names in the question — the filename is the

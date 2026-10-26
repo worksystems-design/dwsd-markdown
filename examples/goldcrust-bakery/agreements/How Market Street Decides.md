@@ -25,6 +25,7 @@ needs the team to say how it decides — otherwise everyone waits for everyone.
 - **Up to $200:** any member decides alone, no need to ask.
 - **Above $200:** two members decide together. On a site of two, that is both.
 - **Above $1,000 in a day:** outside the site's mandate — it goes to [[Bakery Operations]].
+  The daily limit counts everything the site spends that day, by all members together.
 
 Whoever spends writes it in the site cash book the same day. Being
 [[Market Street Shop Manager]] gives no extra say here: the site's money is the site's.

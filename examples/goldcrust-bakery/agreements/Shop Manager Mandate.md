@@ -28,7 +28,7 @@ without escalating routine trading decisions.
 
 Each shop manager — [[Lena Frei]] as [[Market Street Shop Manager]], [[Selin Aydin]] as
 [[Station Road Shop Manager]] — may decide counter staffing, opening hours within the
-agreed band, and next-day replenishment quantities without prior sign-off. Range and
+agreed band (opening no earlier than 6:30, closing no later than 19:00), and next-day replenishment quantities without prior sign-off. Range and
 pricing sit outside the mandate: the [[Head Baker]] curates the range, and changing it
 is a [[Bakery Strategy]] decision under the [[Daily Range Cap]]. One mandate, two roles:
 the agreement governs both location roles at once.
