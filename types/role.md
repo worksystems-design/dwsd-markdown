@@ -43,6 +43,7 @@ Plus the shared optionals from [conventions](../conventions.md).
 | `## Concerns` | What the role looks after / cares about — its areas of attention |
 | `## Accountabilities` | What the role *should* do — obligations and deliverables |
 | `## Decision Rights` | What the role *may* decide — its authority (optionally hinted via RACI or delegation levels, not necessarily a full matrix) |
+| `## Mandates` | Optional — the two lists above as one table, `Mandate \| Level \| Anchor`; see [conventions](../conventions.md#mandates--what-a-holder-may-or-must-do) |
 | `## Evaluation` → `### Metrics and Monitoring` | How the role's performance is observed |
 
 ## Example

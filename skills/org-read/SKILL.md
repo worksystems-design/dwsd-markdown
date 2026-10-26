@@ -41,19 +41,20 @@ The folder is a convenience; the `type:` field decides. A work system is a `unit
 
 ## Mandates of a person
 
-A mandate is something a holder may or must do. It sits as a row in a `## Mandates` table
-or, when it has weight of its own, in a file of `type: mandate`; a row may name such a file
-with `[[…]]`. The `Level` column, or a file's `level:`, is free text — quote it, do not
-translate it into a scheme. Collect a person's mandates along three routes and say for each
+A mandate is something a holder may or must do. It sits as a row in an optional
+`## Mandates` table (`<spec-root>/conventions.md` › Mandates) or, when it has weight of its
+own, in an agreement file the row names with `[[…]]` — that file is then the source, and
+its body states the level. The level is free text — quote it, do not translate it into a
+scheme. Collect a person's mandates along three routes and say for each
 the route it came by:
 
 1. **Held directly** — the rows of the person's own `## Mandates` table.
 2. **Through a role** — every role naming the person as `role-keeper`: the role's
-   `## Mandates` rows, and the files of `type: mandate` whose `for-domain` names the role.
+   `## Mandates` rows, and the agreements those rows name.
    Plain `## Accountabilities` and `## Decision Rights` lists count as the role's mandates
    too.
 3. **Through a unit** — every unit the person is directly `member-of`: the unit's
-   `## Mandates` rows, and the files of `type: mandate` whose `for-domain` names the unit.
+   `## Mandates` rows, and the agreements those rows name.
    A work system's `## Key Responsibilities` list counts as its mandates too. These belong
    to the unit, not to the person alone.
 

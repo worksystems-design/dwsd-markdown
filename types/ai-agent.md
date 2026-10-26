@@ -23,6 +23,11 @@
 
 Plus the shared optionals from [conventions](../conventions.md).
 
+An optional `## Mandates` table in the body says what the agent may do on its own and
+where it must ask — `autonomous`, `consult [[…]]` — see
+[conventions](../conventions.md#mandates--what-a-holder-may-or-must-do). Preliminary, like
+the type.
+
 ## Example
 
 ```markdown

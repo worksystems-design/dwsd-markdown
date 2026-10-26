@@ -114,6 +114,13 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      empty; if filled, they are a copy — **warn** when the anchor cell differs from the
      file's `interaction-of` (`agreement-of`), and note a differing outcome. The file wins;
      never merge the two.
+   - **Mandate tables** — `## Mandates` is optional; never flag its absence. Where it
+     exists it sits on a structure entity (individual, role, unit, ai-agent) — **warn**
+     elsewhere — and has the columns `Mandate | Level | Anchor`. `Level` is free text,
+     never checked against a scale. A `[[…]]` link in `Mandate` must resolve, and should
+     name an agreement (**warn** otherwise); its `Level` and `Anchor` cells should be
+     empty — if filled, **note** them as a copy (the file wins). An `Anchor` locator is
+     checked like any locator.
    - **`for-domain`** on any entity names a **work system, a role or a unit** (a list may
      mix them) — all are valid; **warn** only when it names a person.
    - **Board-binding consistency (informational):** when an entity carries both
