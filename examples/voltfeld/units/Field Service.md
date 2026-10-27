@@ -10,6 +10,18 @@ installer partners for wallboxes, and handles repairs and firmware recoveries in
 A plain team. It sees every product first when it fails — which makes it the richest source
 of signals in the company and the starting point of the field-issue flow.
 
+## Accountabilities
+
+| Name                                                                   | Mandate of                                    |
+|------------------------------------------------------------------------|-----------------------------------------------|
+| Log every failure seen on site as a field issue within one working day | [[Field Issue Route]]/stage:issue @ Field::in |
+
+## Decision Rights
+
+| Name                                                                                                   | Mandate of |
+|--------------------------------------------------------------------------------------------------------|------------|
+| Power-cycle a charger or roll its firmware back on site to restore charging, before triage has seen it |            |
+
 ## In context
 
 ```dwsd.units id=units

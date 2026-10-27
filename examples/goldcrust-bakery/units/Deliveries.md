@@ -13,6 +13,18 @@ system.
 It sits at the [[Mill Lane]] site, where the van leaves from. It participates in the flow
 that [[Bakery Operations]] (FL2) coordinates — it carries the morning dispatch.
 
+## Accountabilities
+
+| Name                                                          | Mandate of                                              |
+|---------------------------------------------------------------|---------------------------------------------------------|
+| Have the morning dispatch on both shop shelves before opening | [[Daily Replenishment Flow]]/stage:dispatch @ Shops::in |
+
+## Decision Rights
+
+| Name                                                                         | Mandate of |
+|------------------------------------------------------------------------------|------------|
+| Change the order of the drops on the day, as long as both shops open stocked |            |
+
 ## In context
 
 ```dwsd.units id=units

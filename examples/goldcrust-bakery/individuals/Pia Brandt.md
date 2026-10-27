@@ -10,6 +10,12 @@ Pia drives the morning delivery run, loading the dispatch at the [[Bakehouse]] a
 stock at [[Market Street Shop]] and [[Station Road Shop]] before opening. She is a member of
 the [[Deliveries]] team.
 
+## Decision Rights
+
+| Name                                                                  | Mandate of |
+|-----------------------------------------------------------------------|------------|
+| Send back a crate that arrives damaged, and tell the shop on the spot |            |
+
 ## In context
 
 ```dwsd.orgchart id=orgchart

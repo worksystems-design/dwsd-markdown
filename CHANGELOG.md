@@ -17,6 +17,9 @@ Format: 1.3.0
   lane, a route stage) and carry `"1.3.0"`.
 - **`contracts/1.3.json`** is 1.2 with the new number; what changed is a value form, not
   a key the contract lists.
+- **More mandates in the examples.** Mandates held directly by a person and by a plain
+  team: in Goldcrust the Deliveries team and Pia Brandt, in Voltfeld Field Service and
+  Keiko Tanaka. Voltfeld now has mandates, which its `"1.3.0"` covers.
 
 ## 2026-10-27
 
