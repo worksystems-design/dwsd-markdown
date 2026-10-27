@@ -1,6 +1,8 @@
 ---
 type: signal
-observes: "[[Market Street Shop]]"
+observes:
+  - "[[Market Street Shop]]"
+  - "[[Daily Replenishment Flow]]/stage:dispatch @ Shops::in"
 created_at: "2026-05-18"
 ---
 

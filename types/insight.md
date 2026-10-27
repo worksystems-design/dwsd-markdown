@@ -12,7 +12,7 @@
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `insight` | Entity type |
-| `observes` | no | wikilink or list | The entity (or entities) the insight is about — an individual, a unit, a work system, or another entity |
+| `observes` | no | wikilink, locator or list | The entity (or entities) the insight is about — an individual, a unit, a work system, or another entity — or, as a locator, a board position or route stage (since format 1.3.0) |
 | `title` | no | string | Explicit title (otherwise the `#` heading / filename is the title) |
 | `status` | no | `new` \| `acknowledged` | Lifecycle |
 | `acknowledged_at` | no | ISO datetime | When it was acknowledged |

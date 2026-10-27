@@ -1,6 +1,8 @@
 ---
 type: signal
-observes: "[[Bakehouse]]"
+observes:
+  - "[[Bakehouse]]"
+  - "[[Bakehouse Production Board]]#Bakehouse Production/col:Mise-en-Place::before"
 created_at: "2026-05-11"
 ---
 

@@ -1,6 +1,8 @@
 ---
 type: signal
-observes: "[[Wallbox]]"
+observes:
+  - "[[Wallbox]]"
+  - "[[Field Issue Route]]/stage:issue @ Field::in"
 created_at: "2026-09-08"
 ---
 

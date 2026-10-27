@@ -12,7 +12,7 @@
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `signal` | Entity type |
-| `observes` | no | wikilink or list | The entity the signal is about — an individual, a unit, a work system, or another entity |
+| `observes` | no | wikilink, locator or list | The entity the signal is about — an individual, a unit, a work system, or another entity — or, as a locator, the board position or route stage where it was seen (since format 1.3.0) |
 
 Plus the shared optionals from [conventions](../conventions.md).
 

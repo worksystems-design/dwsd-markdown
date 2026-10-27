@@ -6,6 +6,18 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-10-27 (later)
+
+Format: 1.3.0
+
+- **`observes` may be a locator.** A signal or an insight may name, besides an entity, a
+  place in the detail where it was seen: a board position or a route stage, in the same
+  locator form as `interaction-of`. Driver, proposal and decision record keep
+  `for-domain`. Goldcrust and Voltfeld each anchor two signals this way (a board column or
+  lane, a route stage) and carry `"1.3.0"`.
+- **`contracts/1.3.json`** is 1.2 with the new number; what changed is a value form, not
+  a key the contract lists.
+
 ## 2026-10-27
 
 Format: 1.2.0

@@ -241,7 +241,7 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
 | `mandate-of` | Where a **mandate** hangs — the same **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
 | `bound-to` | Where an **AI agent**'s surface appears — the same **locator** as `interaction-of` / `agreement-of` (or a bare `[[entity]]` — a work system, a unit or a person) |
-| `observes` | The entity a **signal** or **insight** observes — what was seen / interpreted — a work system, a unit, a person, or another entity |
+| `observes` | What a **signal** or **insight** observes — what was seen / interpreted — a work system, a unit, a person, or another entity; or, since format 1.3.0, a place in the detail: the same **locator** as `interaction-of` (a board position or a route stage) |
 | `derived-from` / `derived_from` | What this entity **emerged from** — the shared lineage key, see below |
 | `uses-route` | The flight route an entity uses |
 | `defined-for` | The entity something is defined for |
@@ -568,7 +568,7 @@ Two ideas carry every picture of the organization, and they point in opposite di
   `for-domain` anchors it up, to the domain that decides about it; a locator
   (`interaction-of`, `agreement-of`, `mandate-of`, `bound-to`) anchors it into the detail — an entity, a
   board position or a route stage; `observes` anchors a signal or an insight to what was
-  seen. Every view finds an entity through its anchors and shows it on the box, column or
+  seen — an entity, or, with a locator, a board position or a route stage. Every view finds an entity through its anchors and shows it on the box, column or
   stage it is anchored to.
 - **`around:` says from where the organization is looked at.** Each inferred view —
   topology, org chart, units, change trail — takes `around:`, a wikilink or `self` (the

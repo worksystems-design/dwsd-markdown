@@ -1,0 +1,31 @@
+{
+  "format": "1.3",
+  "aliases": [],
+  "okf": "0.2",
+  "types": {
+    "agreement": { "entity": true, "required": ["agreement-type"], "folders": ["agreements"] },
+    "ai-agent": { "entity": true, "required": [], "folders": ["ai-agents"] },
+    "driver": { "entity": true, "required": [], "folders": ["drivers"] },
+    "flight-item-type": { "entity": true, "required": [], "folders": ["flight-item-types"] },
+    "flight-route": { "entity": true, "required": [], "folders": ["flight-routes"] },
+    "individual": { "entity": true, "required": [], "folders": ["individuals"] },
+    "insight": { "entity": true, "required": [], "folders": ["insights"] },
+    "interaction": { "entity": true, "required": ["interaction-type"], "folders": ["interactions"] },
+    "mandate": { "entity": true, "required": [], "folders": ["mandates"] },
+    "organizational-decision-record": { "entity": true, "required": [], "folders": ["decision-records"] },
+    "proposal": { "entity": true, "required": [], "folders": ["proposals"] },
+    "role": { "entity": true, "required": [], "folders": ["roles"] },
+    "signal": { "entity": true, "required": [], "folders": ["signals"] },
+    "unit": { "entity": true, "required": [], "folders": ["units", "work-systems"] },
+    "visualization": { "entity": true, "required": ["visualization-type"], "folders": ["visualizations"] },
+    "readme": { "entity": false, "required": [] },
+    "tour": { "entity": false, "required": [] }
+  },
+  "rules": [
+    {
+      "type": "unit",
+      "when": { "field": "unit-type", "contains": "work-system" },
+      "require": { "field": "flightlevel", "oneOf": ["1", "2", "3"] }
+    }
+  ]
+}

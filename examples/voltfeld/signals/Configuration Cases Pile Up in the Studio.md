@@ -2,7 +2,7 @@
 type: signal
 observes:
   - "[[Order to Delivery]]"
-  - "[[Order Studio Board]]"
+  - "[[Order Studio Board]]#Order Studio/lane:Configuration"
 tags: [factory-studio]
 created_at: "2026-10-07"
 ---

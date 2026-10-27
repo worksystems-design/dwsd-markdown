@@ -100,7 +100,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      never flag a fence without one. Flag two fences in one file with the same id; **warn**
      when the value is not kebab-case (`[a-z0-9][a-z0-9-]*`), is quoted, or follows another
      attribute. Match a fence by its tag only — text after the tag never hides a fence.
-   - **Locator** — `interaction-of` / `agreement-of` carry a locator
+   - **Locator** — `interaction-of` / `agreement-of` (and, from format 1.3.0, `observes`
+     on a signal or insight) carry a locator
      `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole
      board, a bare `[[entity]]` — a work system, a **unit** or a **person** (two persons
      make a 1:1) — for an entity anchor, or
