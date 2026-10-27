@@ -38,7 +38,7 @@ radius: { up: 1, down: inf }
 ```dwsd.change-trail id=change-trail
 ```
 
-Every change entity of Voltfeld in one picture. Two signals from the train and the plant
+Voltfeld's change entities. Two signals from the train and the plant
 become one insight, one driver, one proposal and one decision, which lands in two
 agreements. Two reports from the field — a wallbox that stops charging after an update, and
 the same pattern eleven times in a month — end in version 2.0 of the

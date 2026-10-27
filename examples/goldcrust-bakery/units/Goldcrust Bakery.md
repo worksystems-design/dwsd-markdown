@@ -36,9 +36,9 @@ radius: { up: 1, down: inf }
 ```dwsd.change-trail id=change-trail
 ```
 
-Every change entity of the bakery in one picture, from what was seen to where the
-agreement landed. The sourdough shortfall runs from the sold-out shelf to an agreement in
-the [[Bakehouse]]. Two more chains end in decision records: separate phone calls became
+The bakery's change entities, from what was seen to where the agreement landed. The
+sourdough shortfall runs from the sold-out shelf to an agreement in the [[Bakehouse]].
+Two more chains end in decision records: separate phone calls became
 the [[Single Daily Production Sync]], and an owner who could not leave the oven became
 [[Jonas Keller Leads Operations]]. The dispatch insight looks back at that second decision
 and, like the van and the wholesale enquiries, is still open.
