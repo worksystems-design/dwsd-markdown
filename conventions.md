@@ -85,6 +85,16 @@ a `type:` — are **notes**. A
 wikilink may point at a note and then resolves (it is not broken), but a note is not a node
 in the organization's graph, and the wikilinks inside it are not relationships.
 
+**Host files.** A host may keep files of its own in an org folder — guides, drafts,
+anything the org model does not describe — in folders of its own, with any `type` it
+likes. The format does not list them. The **model folders** are the per-type folders the
+contract names for each entity type (`folders`), directly under the org root: `units/`
+and `work-systems/` for `unit`, `decision-records/` for the decision record, and so on.
+Inside a model folder, a `type` the contract does not know is reported as a likely typo.
+Anywhere else, such a file is a note: no warning, its links resolve, it is not in the graph.
+The `type:` field still decides — a `type: role` file outside `roles/` is a role. Since
+format 1.2.0; under 1.0 and 1.1 an unknown `type` is reported wherever it stands.
+
 ## Format versions
 
 The format is a contract between an org folder and every tool that reads or writes it. It
@@ -140,9 +150,9 @@ update. Until then, tolerant reading carries the folder. Each migration step is 
 its own, carries the new id, and can be reverted.
 
 **The checkable part.** What a tool can check in one file without the rest of the org — the
-types, which of them are entities, their required keys, conditional requirements — is in
-`contracts/<major>.<minor>.json`, one complete file per minor (a patch changes nothing that
-can be checked). Tools read it as data instead of copying this spec.
+types, which of them are entities, their required keys, their model folders, conditional
+requirements — is in `contracts/<major>.<minor>.json`, one complete file per minor (a
+patch changes nothing that can be checked). Tools read it as data instead of copying this spec.
 
 **Findings about the id.** Every tool reports them with the same codes, which this spec
 owns. None is an error, so they never change a check's exit code.

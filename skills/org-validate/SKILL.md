@@ -29,6 +29,11 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
    Flag a `visualization` missing `visualization-type`, an `agreement` missing
    `agreement-type`, or an `interaction` missing `interaction-type`. **Warn** on
    `type: meeting` (→ `type: interaction` + `interaction-type: meeting`).
+   - **Unknown types:** from format 1.2.0 on, **warn** on a `type` the contract does not
+     know only inside a model folder (the `folders` of the entity types, directly under
+     the org root) — a likely typo. Elsewhere it is a host file: treat it as a note and say
+     nothing (`<spec-root>/conventions.md` › Host files). Under 1.0 and 1.1, warn wherever
+     it stands.
    - **Team integrity:** a unit whose `unit-type` includes `team` should have at least one
      individual with `member-of` naming it — **note** a team without members (its size
      would read as zero).

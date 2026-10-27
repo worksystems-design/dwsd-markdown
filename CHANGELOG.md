@@ -6,6 +6,19 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-10-27
+
+Format: 1.2.0
+
+- **Host files.** A host may keep files of its own in an org folder, in folders of its
+  own and with any `type`. The contract now names each entity type's **model folders**
+  (`folders`: `units` and `work-systems` for `unit`, `decision-records` for the decision
+  record, …). Inside a model folder an unknown `type` is still reported as a likely
+  typo; anywhere else such a file is a note, without a warning. The format lists no host
+  types. New in `conventions.md` › Host files; `org-validate` follows it.
+- **`contracts/1.2.json`** adds `folders` to every entity type and nothing else. A 1.1
+  org stays valid unchanged; it gets the new rule once its README says `"1.2.0"`.
+
 ## 2026-10-26
 
 Format: 1.1.0
