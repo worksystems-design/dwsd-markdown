@@ -13,6 +13,9 @@ An entry that changes the format names the new format version on a `Format: x.y.
   review is overdue (Shop Manager Mandate), one comes up soon and one is months away. The site's
   $1,000-a-day spending row on Market Street became its own file, Market Street Site
   Spend, because a new limit gets an early first review. No format change.
+  Host impact: one new file, `goldcrust-bakery/mandates/Market Street Site Spend.md`
+  (mandate count +1); new frontmatter values on `Shop Manager Mandate.md` and
+  `Market Street Opening Hours.md`; no type change, no new type, no renamed key.
 - **The README marks the organization's root.** A `README.md` with `dwsd-format` is where
   a tool stops when it looks for the organization a file belongs to, and wikilinks
   resolve within that folder. It keeps `type: readme`: the organization as an entity is
