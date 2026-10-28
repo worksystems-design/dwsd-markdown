@@ -8,6 +8,11 @@ An entry that changes the format names the new format version on a `Format: x.y.
 
 ## 2026-10-28
 
+- **Example mandates carry review dates.** In the Goldcrust example each mandate file has
+  `version`, `decision_date` and `review_date`, spread so that in early November 2026 one
+  review is overdue (Shop Manager Mandate), one comes up soon and one is months away. The site's
+  $1,000-a-day spending row on Market Street became its own file, Market Street Site
+  Spend, because a new limit gets an early first review. No format change.
 - **The README marks the organization's root.** A `README.md` with `dwsd-format` is where
   a tool stops when it looks for the organization a file belongs to, and wikilinks
   resolve within that folder. It keeps `type: readme`: the organization as an entity is

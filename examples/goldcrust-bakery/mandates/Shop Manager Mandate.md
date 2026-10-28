@@ -7,7 +7,7 @@ delegator: "[[Mara Holt]]"
 mandate-of: "[[Bakery Operations Coordination Board]]#Bakery Operations Coordination::in"
 version: "1.0"
 decision_date: "2026-05-20"
-review_date: "2026-11-20"
+review_date: "2026-10-20"
 created_at: "2026-05-24"
 ---
 

@@ -3,6 +3,9 @@ type: mandate
 for-domain: "[[Market Street Site Lead]]"
 delegator: "[[Market Street Shop Manager]]"
 mandate-of: "[[Market Street Shop Board]]#Market Street Shop::in"
+version: "1.0"
+decision_date: "2026-10-22"
+review_date: "2027-04-22"
 created_at: "2026-10-22"
 ---
 

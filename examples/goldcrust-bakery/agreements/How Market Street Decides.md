@@ -11,7 +11,7 @@ created_at: "2026-10-22"
 
 ## Driver and Requirement
 
-[[Market Street]] may spend up to $1,000 a day on the site. A mandate held by a team
+[[Market Street]] may spend up to $1,000 a day on the site ([[Market Street Site Spend]]). A mandate held by a team
 needs the team to say how it decides — otherwise everyone waits for everyone.
 
 ## Who is responsible for what?
