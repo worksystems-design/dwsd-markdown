@@ -270,8 +270,9 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 > bare `[[…]]` wikilink anchors to the **entity** it names — a work system, a unit, or a person
 > (a 1:1, a personal working agreement) — wherever that entity is drawn (the topology, the org
 > chart, the units view); a unit that is also a work system shows the same anchors in both
-> pictures. A same-named person and unit both receive the bare link; the path form
-> `[[individuals/Name]]` / `[[units/Name]]` names one of them. A value carrying a `#BoardName`
+> pictures. A person and a unit never share a name — labels are unique in an organization
+> (see above); a path form such as `[[units/Name]]`, still found in older files, resolves
+> by its last segment. A value carrying a `#BoardName`
 > and/or a `/kind:Name` path is a **board-position** locator. The path drills in with
 > `/`-chained `col:` · `lane:` · `group:` · `split:` · `stage:` segments and an optional
 > trailing `::before` · `::in` · `::after` (bare = `::in`), e.g.

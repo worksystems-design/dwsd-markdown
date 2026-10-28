@@ -16,6 +16,10 @@ An entry that changes the format names the new format version on a `Format: x.y.
 - **`dwsd-format` skill** no longer lists the keys that take a locator; it points to the
   field table in `conventions.md` and the type pages, so a new locator key (like
   `observes` in 1.3.0) needs no change there.
+- **No path-form locator.** `conventions.md` still said a same-named person and unit both
+  receive a bare link, with `[[individuals/Name]]` / `[[units/Name]]` to tell them apart.
+  That predates unique labels (2026-10-17): two files with one key are an error, so the
+  case cannot arise. A path form in an older file still resolves, by its last segment.
 
 ## 2026-10-27 (later)
 
