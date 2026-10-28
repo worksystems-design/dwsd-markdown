@@ -6,6 +6,16 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-10-28
+
+- **The README marks the organization's root.** A `README.md` with `dwsd-format` is where
+  a tool stops when it looks for the organization a file belongs to, and wikilinks
+  resolve within that folder. It keeps `type: readme`: the organization as an entity is
+  its root unit, and a second "organization" outside the graph would be mistaken for it.
+  No format change.
+- **`dwsd-format` skill** names `observes` on a signal or insight among the locator keys
+  (1.3.0).
+
 ## 2026-10-27 (later)
 
 Format: 1.3.0

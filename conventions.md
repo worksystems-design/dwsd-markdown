@@ -68,6 +68,10 @@ the format id below.
 and `dwsd-format`: the **format version** the folder is written to, quoted
 (`dwsd-format: "1.0.0"`). The README stays a note. What the version means, how readers
 treat it and when writers move it: [Format versions](#format-versions).
+A `README.md` that carries `dwsd-format` marks the **organization's root**: a tool that
+looks for the organization a file belongs to walks up to it, and wikilinks resolve within
+that folder. The organization as an entity is its root unit (`unit-type: company` or
+similar), not the README.
 
 ```markdown
 ---
