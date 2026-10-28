@@ -20,6 +20,11 @@ Format: 1.3.0
 - **More mandates in the examples.** Mandates held directly by a person and by a plain
   team: in Goldcrust the Deliveries team and Pia Brandt, in Voltfeld Field Service and
   Keiko Tanaka. Voltfeld now has mandates, which its `"1.3.0"` covers.
+- **A change trail around a unit or work system** starts from the change entities scoped
+  to it: `for-domain` on a driver, proposal, decision record or agreement, `observes` on
+  a signal or insight. A driver or proposal states a standpoint of its domain, not an
+  observation at a place, so this is where it shows; an entity scoped to a role does not
+  count. A reading rule for the view, no new key (the trail stays preliminary).
 
 ## 2026-10-27
 

@@ -102,7 +102,8 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   See `<spec-root>/conventions.md` › Embedded DSL fences and › Anchors and around.
 - **A fourth inferred view, ` ```dwsd.change-trail `,** draws the change ladder as one
   network (along `derived-from`, landing via `for-domain` / bare `agreement-of`, loop-backs
-  via `observes`); keys `around:` (a wikilink or `self`), `show: all | open | recent`,
+  via `observes`); keys `around:` (a wikilink or `self`; around a unit or work system it
+  starts from what names it in `for-domain` or `observes`), `show: all | open | recent`,
   `radius:`, an empty body is the whole trail. No standalone file. A decision record carries
   one under `## Change trail`, first in the body, with `around: self`. `mode: mixed` lays
   the fence's own `entries:` over the organization's trail, `mode: declared` draws only

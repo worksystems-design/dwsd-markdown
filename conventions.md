@@ -630,7 +630,10 @@ org chart and units view may also stand alone as a file (see below):
   `inf`); an empty body is the whole trail. With `around:` the trail keeps that entity's own
   line: back along `derived-from` to the signals, forward to what derives from it and where
   that lands. A decision record carries one this way (`around: self`), so its file shows
-  where the decision came from and where its agreements apply.
+  where the decision came from and where its agreements apply. Around a unit or work
+  system, the trail starts from the change entities scoped to it — `for-domain` on a
+  driver, proposal, decision record or agreement, `observes` on a signal or insight — and
+  follows each one's line; an entity scoped to a role does not count here.
 
   A change trail fence may also hold **entries of its own**, chosen by `mode:` — `infer`
   (the default) draws the organization's trail and ignores entries; `mixed` lays
