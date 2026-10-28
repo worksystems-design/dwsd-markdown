@@ -13,8 +13,9 @@ An entry that changes the format names the new format version on a `Format: x.y.
   resolve within that folder. It keeps `type: readme`: the organization as an entity is
   its root unit, and a second "organization" outside the graph would be mistaken for it.
   No format change.
-- **`dwsd-format` skill** names `observes` on a signal or insight among the locator keys
-  (1.3.0).
+- **`dwsd-format` skill** no longer lists the keys that take a locator; it points to the
+  field table in `conventions.md` and the type pages, so a new locator key (like
+  `observes` in 1.3.0) needs no change there.
 
 ## 2026-10-27 (later)
 

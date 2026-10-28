@@ -81,9 +81,9 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   (`"[[Feature]] @ Train"`) — never matched by name; a linked stage is named by its target
   in locators and `bound-to` keys (`stage:Feature @ Train`), `for-domain:` naming the work system, role or unit responsible for the route, `bands:`, `triggers:`, glyph-typed `path:` edges `->` / `-->` / `..>` /
   `..> ()`, and a `bound-to:` layer binding bands to boards). External entities anchor
-  **into** a board or route via a **locator** (`interaction-of` / `agreement-of` /
-  `bound-to`, and from format 1.3.0 `observes` on a signal or insight — never on a driver or
-  proposal, which keep `for-domain`: `[[Board]]#BoardName/col:Column::in`, a column group
+  **into** a board or route via a **locator** — which keys take one, and on which types, is
+  in the field table of `<spec-root>/conventions.md` and on each type page; the forms are
+  `[[Board]]#BoardName/col:Column::in`, a column group
   `[[Board]]#BoardName/lane:Lane/group:Group::in`, the `::before` / `::after` slot of a
   position, or `[[Route]]/stage:itemType @ Band::in`); a bare `[[Entity]]` anchors to a work
   system, unit or person instead. A locator without `#BoardName` (`[[Board]]/col:Column::in`)
