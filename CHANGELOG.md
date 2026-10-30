@@ -6,6 +6,25 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-10-30
+
+Format: 1.4.0
+
+- **The contract names the fields.** `contracts/1.4.json` is 1.3 plus, for each type, its
+  known frontmatter keys: kind, aliases, the values of an enum or discriminator, and the
+  types a link may point at; `shared-fields` holds the keys every type may carry. The
+  fields mirror the type pages and add nothing to them: a file that was correct stays
+  correct, but a tool on 1.4 can now see, for example, a `delegator` pointing at a type the
+  page does not allow. A key the contract does not list stays allowed (`conventions.md` ›
+  Format versions). `contracts/check-fields.py` reports a key that is on a type page but
+  not in the newest contract, or the other way round. `contracts/1.3.json` is unchanged.
+- **`org-validate` skill** warns on a value outside a closed set and on a link to a type
+  the contract does not allow, from 1.4.0 on.
+- Goldcrust and Voltfeld carry `"1.4.0"`; both pass the field checks unchanged.
+  Host impact: new file `contracts/1.4.json` (and `contracts/check-fields.py`); the
+  `dwsd-format` line in `examples/goldcrust-bakery/README.md` and
+  `examples/voltfeld/README.md`; no entity file, type or key changed.
+
 ## 2026-10-28
 
 - **Example mandates carry review dates.** In the Goldcrust example each mandate file has

@@ -118,7 +118,7 @@ and does it still mean the same?
 | Step | When | Examples |
 |---|---|---|
 | **Major** (`2.0.0`) | No — an existing file becomes incorrect, or reads differently. Always comes with a migration. | a key renamed without an alias; a new required field; a type or value removed; a value changes its meaning; an allowed set shrinks |
-| **Minor** (`1.1.0`) | Yes, and new files may use something new. It only adds. | a new type (`mandate`); a new optional key; a new value in an allowed set; a new fence key; an old spelling accepted as an alias |
+| **Minor** (`1.1.0`) | Yes, and new files may use something new. It only adds. | a new type (`mandate`); a new optional key; a new value in an allowed set; a new fence key; an old spelling accepted as an alias; the contract describes something it did not before (field kinds, 1.4.0) |
 | **Patch** (`1.0.1`) | Yes, and nothing new is allowed. A rule is worded more precisely. | a sentence that two readers took two ways now says one thing — the one tools already follow |
 
 - **When in doubt, take the higher step.** A clarification that turns out to change what is
@@ -157,6 +157,18 @@ its own, carries the new id, and can be reverted.
 types, which of them are entities, their required keys, their model folders, conditional
 requirements — is in `contracts/<major>.<minor>.json`, one complete file per minor (a
 patch changes nothing that can be checked). Tools read it as data instead of copying this spec.
+
+Since 1.4.0 the contract also names each type's **frontmatter fields** (`fields`, plus
+`shared-fields` for the keys every type may carry): their `kind` (`string`, `date`,
+`datetime`, `enum`, `token-or-list`, `wikilink`, `locator`, `object`), their `aliases`, the
+`values` of an enum or a discriminator (`open: true` when the vocabulary is open), and the
+`targets` a link may point at. A target is a type name, `work-system` (a unit whose
+`unit-type` includes `work-system`), or `any`; without `targets` a link may point at any
+entity. A `wikilink` or `locator` field may always hold a list (see the relationship rules);
+a `locator` may also be a bare `[[entity]]`. The fields are the **known keys**, not a
+closed list: a key of the author's own stays allowed. The type pages and the contract say the
+same thing; `python contracts/check-fields.py` reports any key that is on one but not the
+other.
 
 **Findings about the id.** Every tool reports them with the same codes, which this spec
 owns. None is an error, so they never change a check's exit code.

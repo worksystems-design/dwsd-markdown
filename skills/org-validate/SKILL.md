@@ -34,6 +34,11 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      the org root) — a likely typo. Elsewhere it is a host file: treat it as a note and say
      nothing (`<spec-root>/conventions.md` › Host files). Under 1.0 and 1.1, warn wherever
      it stands.
+   - **Field kinds:** from format 1.4.0 on, the contract
+     (`<spec-root>/contracts/<major>.<minor>.json`) names each type's known keys under
+     `fields`. **Warn** on a value outside a closed set of `values`, and on a link whose
+     target is not one of its `targets`. A key the contract does not list is the author's
+     own — say nothing.
    - **Team integrity:** a unit whose `unit-type` includes `team` should have at least one
      individual with `member-of` naming it — **note** a team without members (its size
      would read as zero).

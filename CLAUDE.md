@@ -23,6 +23,9 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - `examples/<org>/` — worked example organizations (full instances; e.g. `goldcrust-bakery/`).
 - `CHANGELOG.md` — model & convention decisions; `Format: x.y.z` on entries that change the format.
 - `contracts/<major>.<minor>.json` — the checkable part of each format version, as data for tools.
+  Since 1.4 it names each type's fields; a change to a type page's Frontmatter table changes
+  the newest contract in the same commit (a new minor if the contract is already published).
+  `python contracts/check-fields.py` reports drift between the two.
 - `.claude-plugin/`, `skills/` — the **`dwsd-md`** Claude Code plugin: thin
   reading, authoring + validation skills (`dwsd-format`, `org-read`, `org-validate`,
   `org-new`, `explore-example-org`, `extract-mandates`, `extract-interactions`) that point back at the files above via the **spec root**
