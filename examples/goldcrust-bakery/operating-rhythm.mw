@@ -1,7 +1,8 @@
 title: Goldcrust Bakery — Operating Rhythm
 
 // Aggregates the per-interaction .mw siblings into one timeline — Markwhen viewers
-// operate on a single file. The siblings remain the source of truth; keep in sync.
+// operate on a single file. A view derived from the interactions' frontmatter
+// (start, end, rrule), which wins when the two disagree; keep in sync.
 
 group Daily rhythm
 May 25 2026 05:30-06:15 every day: Counter Handover
