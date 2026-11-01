@@ -70,8 +70,9 @@ and `Interaction of` empty — see
 
 ## Markwhen sibling (`.mw`)
 
-A recurring meeting usually has a `.mw` sibling (same basename) with one
-[Markwhen](https://markwhen.com) line. Attached to the meeting, not a separate entity.
+A recurring meeting may have a `.mw` sibling (same basename) with one
+[Markwhen](https://markwhen.com) line. Attached to the meeting, not a separate entity, and
+derived from `start` / `end` / `rrule`: the frontmatter is the source.
 
 ## Example
 
@@ -139,8 +140,8 @@ May 12 2026 10:00-11:00 every week on Tuesday: 3P Coordination
 
 - **The question:** when do people meet, and which interactions do they run there, with what
   outcome?
-- **Look first:** the four framing sections, then `## Interactions`; `rrule` and the `.mw`
-  sibling give the rhythm.
+- **Look first:** the four framing sections, then `## Interactions`; `start` and `rrule`
+  give the rhythm.
 - **Go next:** read the `## Interactions` table in reverse, meeting → row → anchor; a
   relative locator inherits the frontmatter `interaction-of` head, and for a `[[…]]` row the
   outcome and anchor come from the linked file. Up via `for-domain` to the domain.

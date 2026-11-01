@@ -723,18 +723,21 @@ without a fence (the examples keep one org chart and one units file each, e.g.
 
 ## Markwhen siblings (`.mw`)
 
-A scheduled `interaction` (e.g. a recurring meeting) may have a sibling file with the same
-basename and a `.mw` extension holding a one-line [Markwhen](https://markwhen.com) timeline
-entry:
+When an interaction takes place is said once, in its frontmatter: `start`, `end` and
+`rrule`. A scheduled `interaction` (e.g. a recurring meeting) may also have a sibling file
+with the same basename and a `.mw` extension holding a one-line
+[Markwhen](https://markwhen.com) timeline entry:
 
 ```
 interactions/3P Coordination.md
 interactions/3P Coordination.mw
 ```
 
-The `.mw` file is not an entity on its own; it is attached to the interaction.
+The `.mw` file is not an entity on its own; it is attached to the interaction. It is a
+**view, derived from the frontmatter**: a tool may write it, nobody edits it by hand, and
+when the two disagree the frontmatter wins.
 
 An org folder may additionally keep **one consolidated timeline file** (e.g.
 `operating-rhythm.mw`) that aggregates the sibling lines — a pragmatic workaround while
-Markwhen viewers operate on a single file. It is not an entity either; the per-interaction
-siblings remain the source of truth.
+Markwhen viewers operate on a single file. It is not an entity either, and it is derived
+the same way.

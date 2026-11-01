@@ -19,7 +19,8 @@
 | `rrule` | no | iCal RRULE | Recurrence, e.g. `RRULE:FREQ=DAILY` |
 
 Plus the shared optionals from [conventions](../conventions.md). A scheduled interaction
-usually has a `.mw` Markwhen sibling (see [conventions](../conventions.md)). The `meeting`
+may have a `.mw` Markwhen sibling, a view derived from `start` / `end` / `rrule` (see
+[conventions](../conventions.md)). The `meeting`
 kind adds a **list of interactions** it bundles — see [`meeting.md`](meeting.md).
 
 ## Relationships
@@ -67,7 +68,7 @@ Ad-hoc alignment between [[Head of 3P]] and [[Head of Assembly]] on the next han
 - **Look first:** `interaction-type` and `interaction-of`; `start` / `rrule` if it is
   scheduled, otherwise the body says what triggers it (often a `## Trigger` section).
 - **Go next:** into the detail via `interaction-of` (a board position, a route stage, or a
-  bare entity; two persons make a 1:1); up via `for-domain`; the `.mw` sibling for timing.
+  bare entity; two persons make a 1:1); up via `for-domain`.
 - **Backlinks:** a meeting whose `## Interactions` table names it in a row (the way back
   needs no field); a board that names it inline in `interactions:`.
 - **Pictured in:** wherever it is anchored: on the board at its position, on a flight route

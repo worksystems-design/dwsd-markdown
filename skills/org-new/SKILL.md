@@ -32,8 +32,9 @@ Claude Code). If the type or the name is missing, ask.
 3. Write `<folder>/<Name>.md` — the filename is the entity's human label (Title Case,
    spaces allowed; it is the wikilink target). Fill the frontmatter from the template
    (required fields + discriminator) and leave body sections as prompts to complete.
-4. Wire any relationships the user provides as `[[wikilinks]]`. For a `meeting`, also offer
-   to create the `.mw` Markwhen sibling.
+4. Wire any relationships the user provides as `[[wikilinks]]`. For a `meeting`, put its
+   schedule in `start` / `end` / `rrule`; a `.mw` Markwhen sibling is optional and derived
+   from those.
 
 5. If the org root has no `README.md` yet, offer to create one: frontmatter with only
    `type: readme` and `dwsd-format` set to the newest version on a `Format:` line in `<spec-root>/CHANGELOG.md`, quoted;

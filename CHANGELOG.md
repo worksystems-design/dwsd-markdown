@@ -6,6 +6,19 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-01
+
+Format: 1.4.1
+
+- **The frontmatter is the schedule.** `start`, `end` and `rrule` say when an interaction
+  takes place; a `.mw` Markwhen sibling, and a consolidated `operating-rhythm.mw`, are an
+  optional view derived from them: a tool may write it, nobody edits it by hand, and the
+  frontmatter wins when the two disagree. `conventions.md` had called the siblings "the
+  source of truth", which gave a scheduled interaction two sources for one date. No file
+  changes; the contract is unchanged (a patch has no contract file of its own).
+  Host impact: none in the files; a host that read the schedule from `.mw` reads it from
+  the frontmatter instead. The example `.mw` files stay.
+
 ## 2026-10-30
 
 Format: 1.4.0
