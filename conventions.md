@@ -160,7 +160,8 @@ patch changes nothing that can be checked). Tools read it as data instead of cop
 
 Since 1.4.0 the contract also names each type's **frontmatter fields** (`fields`, plus
 `shared-fields` for the keys every type may carry): their `kind` (`string`, `date`,
-`datetime`, `enum`, `token-or-list`, `wikilink`, `locator`, `object`), their `aliases`, the
+`datetime`, `enum`, `token-or-list`, `wikilink`, `locator`, `object`, and since 1.6.0
+`text-or-wikilink`: free text, or a link that must hit its `targets`), their `aliases`, the
 `values` of an enum or a discriminator (`open: true` when the vocabulary is open), and the
 `targets` a link may point at. A target is a type name, `work-system` (a unit whose
 `unit-type` includes `work-system`), or `any`; without `targets` a link may point at any

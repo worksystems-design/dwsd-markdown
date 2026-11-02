@@ -1,6 +1,6 @@
 ---
 type: individual
-role: ""                 # job title (free text, not a [[role]] link)
+role: ""                 # primary role: free text, or "[[Role]]" once spelled out
 level: ""                # optional, e.g. Lead
 member-of: "[[]]"        # unit / work system — flow membership
 reports-to: "[[]]"       # manager — structure / reporting line (individuals only)

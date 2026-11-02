@@ -1,6 +1,6 @@
 ---
 type: individual
-role: Manufacturing Lead
+role: "[[Manufacturing Lead]]"
 reports-to: "[[Ingrid Halvorsen]]"
 member-of: "[[Manufacturing]]"
 created_at: "2026-10-10"

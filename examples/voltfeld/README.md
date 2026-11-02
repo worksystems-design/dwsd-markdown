@@ -1,6 +1,6 @@
 ---
 type: readme
-dwsd-format: "1.4.0"
+dwsd-format: "1.6.0"
 ---
 
 # Voltfeld

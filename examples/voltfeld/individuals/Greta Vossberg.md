@@ -1,6 +1,6 @@
 ---
 type: individual
-role: Release Train Engineer
+role: "[[Release Train Engineer]]"
 reports-to: "[[Marit Solberg]]"
 member-of: "[[Charger ART]]"
 created_at: "2026-10-10"

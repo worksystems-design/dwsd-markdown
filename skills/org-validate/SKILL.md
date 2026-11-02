@@ -137,6 +137,10 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      names and no `for-domain` points from — it has no holder.
    - **`for-domain`** on any entity names a **work system, a role or a unit** (a list may
      mix them) — all are valid; **warn** only when it names a person.
+   - **`role`** on an individual (the primary role): free text needs no check. A
+     `[[link]]` must resolve to a `role` (**warn** otherwise); **warn**
+     `individual.primary-role-not-kept` when that role's `role-keeper` does not name the
+     person (format 1.6.0).
    - **Board-binding consistency (informational):** when an entity carries both
      `for-domain` (a work system) and a board-position `interaction-of` / `agreement-of`,
      **note** — not warn — if the anchored board's work system (its `visualization-of`)

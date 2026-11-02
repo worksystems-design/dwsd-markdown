@@ -1,6 +1,6 @@
 ---
 type: individual
-role: System Architect
+role: "[[System Architect]]"
 reports-to: "[[Marit Solberg]]"
 member-of: "[[Charger ART]]"
 created_at: "2026-10-10"

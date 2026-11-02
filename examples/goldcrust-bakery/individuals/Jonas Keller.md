@@ -1,6 +1,6 @@
 ---
 type: individual
-role: Head of Operations
+role: "[[Head of Operations]]"
 reports-to: "[[Mara Holt]]"
 member-of: ["[[Mill Lane]]", "[[Bakery Operations]]"]
 tags: [new-role]

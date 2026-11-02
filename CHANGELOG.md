@@ -6,6 +6,24 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-02 (later)
+
+Format: 1.6.0
+
+- **`role` on an individual is the primary role.** Free text, the way it is said today, or
+  `"[[Role]]"` once that role is spelled out as a `role` entity. Until now the field was
+  described as a job title that must not link to a role; the text form keeps its meaning,
+  a link is new. Who holds a role stays with the role's `role-keeper`; the link only says
+  which of the person's roles is the primary one, and a primary role whose `role-keeper`
+  does not name the person is a warning (`individual.primary-role-not-kept`). The contract
+  gets a new field kind, `text-or-wikilink`. Minor: every file stays correct.
+  The examples link where the role is already spelled out: Jonas Keller (Goldcrust), Bastian
+  Lorenz, Greta Vossberg, Elias Moreau (Voltfeld); their READMEs move to 1.6.0.
+  Host impact: `individuals/*.md` may now hold a link in `role`; a reader that shows it as
+  text shows the role's name. Validators add the warning above. In the examples:
+  `goldcrust-bakery/individuals/Jonas Keller.md`, `voltfeld/individuals/Bastian Lorenz.md`,
+  `Greta Vossberg.md`, `Elias Moreau.md`, both `README.md`.
+
 ## 2026-11-02
 
 Format: 1.5.0
