@@ -630,7 +630,10 @@ org chart and units view may also stand alone as a file (see below):
   `unit` (work systems included) nested by its **first** `member-of`; a unit without
   `member-of` is a root. `layout: nested` (default) draws children inside the parent box,
   `layout: tree` the same containment as a tree; each box wears its `unit-type` values as
-  chips, so a `[team, work-system]` is told from a plain `team` at a glance. Units only —
+  chips, so a `[team, work-system]` is told from a plain `team` at a glance. `shape: box`
+  (default) or `shape: circle` — round units, for an organization that sees itself in
+  circles; a reader that cannot draw circles in a layout draws boxes there (since format
+  1.5.0). Units only —
   no people (that is the org chart), no flow between work systems (that is the topology).
   Same `mode:` / `around:` / `radius:` / `notes:` keys as the org chart.
 - **any entity** (optional) → ```` ```dwsd.change-trail ```` — the **change trail**: the

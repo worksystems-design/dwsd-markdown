@@ -6,6 +6,18 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-02
+
+Format: 1.5.0
+
+- **Units can be drawn as circles.** The `dwsd.units` fence takes `shape: box` (default) or
+  `shape: circle`, for an organization that sees itself in circles rather than boxes. A
+  reader that cannot draw circles in a layout draws boxes there; nothing else changes. New
+  fence key, so a minor; `contracts/1.5.json` is 1.4 with the new version, since the
+  contract does not list fence keys.
+  Host impact: renderers of `dwsd.units` may draw the new shape; a host that does not,
+  ignores the key. No org files change.
+
 ## 2026-11-01
 
 Format: 1.4.1

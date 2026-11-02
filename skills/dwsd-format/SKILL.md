@@ -97,7 +97,7 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
 - **Three more fences are inferred views any entity may host** (or standalone files at the
   org root): ` ```dwsd.topology ` (flight-level context over `contributes-to`),
   ` ```dwsd.orgchart ` (individuals over `reports-to`), ` ```dwsd.units ` (units over their
-  first `member-of`, `layout: nested | tree`). `mode: infer` lists nothing — the pictures
+  first `member-of`, `layout: nested | tree`, `shape: box | circle`). `mode: infer` lists nothing — the pictures
   follow the entity files; `around:` names the entity to draw from (a wikilink or `self`),
   `radius:` how far. `focus:` is the earlier name of `around:`, still read as an alias.
   See `<spec-root>/conventions.md` › Embedded DSL fences and › Anchors and around.
