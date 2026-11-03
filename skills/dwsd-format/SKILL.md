@@ -72,9 +72,12 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   unit). `derived-from` and `delegator` are metadata, not typed edges.
 - **Discriminators are named `<base>-type`**: `unit-type`, `interaction-type`,
   `agreement-type`, `visualization-type`. Each may hold a single token **or a YAML list**
-  (e.g. `unit-type: [team, work-system]`). `flightlevel` is one word.
+  (e.g. `unit-type: [team, work-system]`). `unit-type`, `interaction-type` and, since 1.7.0,
+  `visualization-type` are open: tools act on the known values (`work-system`, `board`, …),
+  any other value is carried as is (e.g. a `chart` visualization: no board fence, a plain
+  Markdown body such as a ` ```mermaid ` fence). `flightlevel` is one word.
 - **Two types carry embedded DSL — both plain YAML, dot-form fence tags:**
-  `visualization` → ` ```dwsd.board ` (`title:`, `columns:` / `lanes:` / `groups:`, with
+  a `board` visualization → ` ```dwsd.board ` (`title:`, `columns:` / `lanes:` / `groups:`, with
   inline inside-out `agreements:` / `interactions:` on any node — no inline sugar like
   `#status` or `[wip]`); `flight-route` → ` ```dwsd.flightroute ` (`title:`, `for:` as a
   wikilink or plain text, stage item types as text (`order @ Shops`) or a quoted wikilink
