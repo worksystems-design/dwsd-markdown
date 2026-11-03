@@ -6,6 +6,23 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-03
+
+Format: 1.7.0
+
+- **`visualization-type` is an open vocabulary**, the way `unit-type` is. `board` stays the
+  kind tools do something with (the `dwsd.board` fence, board locators); any other value,
+  e.g. `chart`, is a valid visualization that tools carry as an ordinary entity, its body
+  plain Markdown such as a ```` ```mermaid ```` fence. A visualization can be more than a board.
+- **`interaction-of` may name a visualization** with a bare `[[…]]`, typically next to a
+  board position: a meeting row looks at the board and at a chart of the number it reviews.
+  Minor: every file stays correct.
+  Host impact: `contracts/1.7.json` (visualization-type `open: true`; interaction-of targets
+  add `visualization`). A host that treats every `visualization` as a board must check for
+  the `board` token first; a non-board visualization has no `dwsd.board` fence. Validators
+  accept a bare visualization in `interaction-of`. Files: `types/visualization.md`,
+  `types/interaction.md`, `skills/org-validate/SKILL.md`, `okf.md`.
+
 ## 2026-11-02 (later)
 
 Format: 1.6.0

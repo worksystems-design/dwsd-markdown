@@ -108,8 +108,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
    - **Locator** — `interaction-of` / `agreement-of` (and, from format 1.3.0, `observes`
      on a signal or insight) carry a locator
      `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole
-     board, a bare `[[entity]]` — a work system, a **unit** or a **person** (two persons
-     make a 1:1) — for an entity anchor, or
+     board, a bare `[[entity]]` — a work system, a **unit**, a **person** (two persons
+     make a 1:1) or, from format 1.7.0, a **visualization** of any kind — for an entity anchor, or
      `[[Route]]/stage:itemType @ Band::in` for a **route stage**). Confirm the target
      file exists (a bare entity anchor that names a plain unit or a person is valid —
      never flag it); any `col:` / `lane:` / `group:` / `split:` segment names a unit present

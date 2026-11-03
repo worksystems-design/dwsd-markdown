@@ -1,7 +1,8 @@
 # `visualization`
 
-> A visualization of a work system. The kind in use today is **`board`** — a
-> Kanban-style board defined with the Board DSL and rendered live.
+> A visualization of a work system. The kind tools know is **`board`** — a Kanban-style
+> board defined with the Board DSL and rendered live. Any other kind (a chart, a map, a
+> picture) is allowed and carried as an ordinary entity.
 
 **Serialized `type`:** `visualization`
 
@@ -10,7 +11,7 @@
 | Field | Required | Format | Meaning |
 |---|---|---|---|
 | `type` | yes | `visualization` | Entity type |
-| `visualization-type` | yes | `board` | The kind of visualization (the `<base>-type` discriminator) |
+| `visualization-type` | yes | `board` \| … | The kind of visualization (the `<base>-type` discriminator; open vocabulary since 1.7.0) |
 | `title` | no | string | Board title |
 | `visualization-of` / `visualization_of` | no | wikilink | The work system this board renders |
 
@@ -130,7 +131,14 @@ columns:
 
 ## Notes
 
-- `board` is the only visualization kind so far; the type is general enough to host other
-  view kinds later via additional `visualization-type` values.
+- **`board` is the kind tools do something with**: its `dwsd.board` fence is parsed and
+  rendered, and only a board can be named in a board locator. Since 1.7.0 the vocabulary is
+  open, the way `unit-type` is: any other value — e.g. `chart`, a picture of a key number
+  over time — is a valid visualization that tools show as an ordinary entity, with its body
+  as Markdown (a ```` ```mermaid ```` fence, a table, an image). It needs no `dwsd.board`
+  fence. An interaction can name it with a bare `[[…]]` in `interaction-of`, next to the
+  board position it is about.
+- A chart written by hand is a snapshot: its numbers are as old as the file. Where the
+  numbers come from is not this spec's concern.
 - The parser is tolerant: unknown or malformed fields produce a `board.*` diagnostic and a
   clamp/skip rather than an error.

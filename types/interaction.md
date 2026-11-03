@@ -12,7 +12,7 @@
 |---|---|---|---|
 | `type` | yes | `interaction` | Entity type |
 | `interaction-type` | yes | `meeting` \| `conversation` \| `bilateral` \| … | Kind of interaction (open vocabulary) |
-| `interaction-of` | no | board locator or list (or a bare `[[entity]]` — a work system, a unit or a person) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`; two persons make a 1:1 |
+| `interaction-of` | no | board locator or list (or a bare `[[entity]]` — a work system, a unit, a person or a visualization) | The **board (position)** it is of — points *into the detail*, e.g. `[[Sprint Board]]#Sprint Board/col:Doing::in`; two persons make a 1:1 |
 | `for-domain` / `for_domain` | no | wikilink or list | The **domain** — a work system, a role or a unit — it is scoped to — points *up*, e.g. `[[Strategic Direction]]`. Naming a role lands the interaction on every keeper of that role |
 | `start` | no | ISO datetime | First occurrence start — **any** interaction may be scheduled |
 | `end` | no | ISO datetime | First occurrence end |
@@ -29,6 +29,8 @@ kind adds a **list of interactions** it bundles — see [`meeting.md`](meeting.m
   `[[Board]]#BoardName/col:Column::in` (a specific column) or `[[Board]]#BoardName::in` (the
   whole board). Value-polymorphic: a bare `[[entity]]` — a work system, a unit or a person —
   anchors to that entity instead, wherever it is drawn; a list of two persons is a 1:1.
+  Since 1.7.0 a bare `[[visualization]]` of any kind (e.g. a `chart`) is allowed too, usually
+  next to a board position: the interaction looks at the board *and* at that picture.
   Points *into the detail*.
 - **`interaction-of`** may also name a **route stage**:
   `[[Route]]/stage:<itemType> @ <Band>::before|in|after` — see
