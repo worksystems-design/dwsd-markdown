@@ -115,7 +115,8 @@ stages, without touching the entity's file. Each entry names one `stage` and lis
   agreement that holds just before a stage names the stage from its own file.
 - A stage that `path:` and `triggers:` do not produce is a warning (`route.unknown-stage`).
   A stage named in two entries is merged in order, with an info (`route.duplicate-stage`),
-  so nothing written by hand is lost.
+  so nothing written by hand is lost. An item that is not a string, an unknown key or an
+  invalid `stage` is a warning (`route.invalid-at-stages`).
 - Where an `at-stages` item and an external `/stage:` locator meet at the same slot, both
   show, each with its provenance — as on a board.
 

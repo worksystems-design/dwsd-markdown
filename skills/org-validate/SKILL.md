@@ -56,8 +56,10 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      `tags:` / `for:` / `for-domain:` / `bands:` / `triggers:` / `path:` / `bound-to:` /
      `notes:` / (from format 1.8.0) `at-stages:`. In `at-stages:`, **warn** on a `stage` that
      `path:` and `triggers:` do not produce (`route.unknown-stage`), **note** a stage named
-     twice (`route.duplicate-stage`), flag an item that is not a string; a `[[…]]` item
-     resolves like any wikilink.
+     twice (`route.duplicate-stage`), **warn** (`route.invalid-at-stages`) on an item that is not a
+     string, on an `at` or any other unknown key, or on an invalid `stage`. Tolerated, as in
+     locators: a `stage:` prefix and `[[X]]` in `stage`; a single string under `agreements:`
+     counts as one item, as on a board node. A `[[…]]` item resolves like any wikilink.
      Flag retired forms: a `route "…"` header or a root `route:` key (→ `title:`), the
      legacy keys `fl-path:` (→ `path:`), `fl-triggers:` (→ `triggers:`), `fl-bands:`
      (→ `bands:`) and a `flow:` section (→ `bound-to:`), `@`-handle references, a `deliver` edge (→ `..> ()`), a bare
