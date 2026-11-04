@@ -53,7 +53,11 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
    target. Report danglers. Flag two files in one org whose labels share a key.
 3. **DSL fence & locator integrity** — three checks:
    - **Route fences** (` ```dwsd.flightroute `) — only the closed key set `title:` /
-     `tags:` / `for:` / `for-domain:` / `bands:` / `triggers:` / `path:` / `bound-to:`.
+     `tags:` / `for:` / `for-domain:` / `bands:` / `triggers:` / `path:` / `bound-to:` /
+     `notes:` / (from format 1.8.0) `at-stages:`. In `at-stages:`, **warn** on a `stage` that
+     `path:` and `triggers:` do not produce (`route.unknown-stage`), **note** a stage named
+     twice (`route.duplicate-stage`), flag an item that is not a string; a `[[…]]` item
+     resolves like any wikilink.
      Flag retired forms: a `route "…"` header or a root `route:` key (→ `title:`), the
      legacy keys `fl-path:` (→ `path:`), `fl-triggers:` (→ `triggers:`), `fl-bands:`
      (→ `bands:`) and a `flow:` section (→ `bound-to:`), `@`-handle references, a `deliver` edge (→ `..> ()`), a bare

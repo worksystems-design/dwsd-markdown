@@ -6,6 +6,27 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-04
+
+Format: 1.8.0
+
+- **A route can place agreements and interactions at its own stages** (`at-stages:` in the
+  `dwsd.flightroute` fence), inside-out the way a board column does. Each entry names a
+  `stage` (as in a locator) and lists `agreements:` / `interactions:`; an item is a string,
+  a `[[wikilink]]` or an inline rule, as on a board node, and applies to the stage itself.
+  The before / after slots stay with the external locator, as on a board. Stages stay
+  undeclared; an unknown stage is a warning
+  (`route.unknown-stage`), a stage named twice is merged (`route.duplicate-stage`, info).
+  The external `/stage:` locator is unchanged; where both meet, both show with provenance.
+  Also: `notes:` (`{ on, text }`), which tools already read, joins the route's key table.
+  Minor: every file stays correct.
+  Host impact: route parsers accept `at-stages:` and `notes:` as keys; renderers place the
+  items in the stage; editors that drop an agreement or
+  interaction on a stage may write it here instead of into the entity. Validators add the
+  two findings. `contracts/1.8.json` changes only the format line (fence keys are not in
+  the contract). Files: `types/flight-route.md`, `skills/org-validate/SKILL.md`,
+  `skills/dwsd-format/SKILL.md`, `okf.md`.
+
 ## 2026-11-03
 
 Format: 1.7.0

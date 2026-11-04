@@ -83,7 +83,9 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   wikilink or plain text, stage item types as text (`order @ Shops`) or a quoted wikilink
   (`"[[Feature]] @ Train"`) — never matched by name; a linked stage is named by its target
   in locators and `bound-to` keys (`stage:Feature @ Train`), `for-domain:` naming the work system, role or unit responsible for the route, `bands:`, `triggers:`, glyph-typed `path:` edges `->` / `-->` / `..>` /
-  `..> ()`, and a `bound-to:` layer binding bands to boards). External entities anchor
+  `..> ()`, a `bound-to:` layer binding bands to boards, and since 1.8.0 `at-stages:` —
+  agreements / interactions the route places at a stage itself, inside-out: `{ stage,
+  agreements, interactions }`, items a `[[link]]` or an inline rule, as on a board node). External entities anchor
   **into** a board or route via a **locator** — which keys take one, and on which types, is
   in the field table of `<spec-root>/conventions.md` and on each type page; the forms are
   `[[Board]]#BoardName/col:Column::in`, a column group

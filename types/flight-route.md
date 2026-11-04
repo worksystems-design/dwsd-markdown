@@ -29,7 +29,9 @@ itself lives in the body, not the frontmatter.
   routes it is responsible for.
 - External entities (interactions, agreements) can anchor **onto a route stage** with a
   locator: `"[[Route]]/stage:<itemType> @ <Band>::before|in|after"` — see
-  [conventions](../conventions.md).
+  [conventions](../conventions.md). This is **outside-in**: the entity names the stage.
+- Since 1.8.0 the route can also name them itself, **inside-out**, in `at-stages:` — as a
+  board column does in its `agreements:` / `interactions:`. The entity file stays as it is.
 
 ## Body — the `dwsd.flightroute` DSL
 
@@ -50,6 +52,8 @@ boards. In plain Markdown the block still reads as a YAML document.
 | `triggers` | list of `{ name, generates }` | External start events outside the bands; `generates` is one stage or a list (fan-out) |
 | `path` | edge list | The route itself — typed edges between stages |
 | `bound-to` | list of band→board bindings | Optional binding of bands to boards (see below) |
+| `at-stages` | list of `{ stage, agreements?, interactions? }` | Since 1.8.0: agreements and interactions the route itself places at a stage — inside-out (see below) |
+| `notes` | list of `{ on, text }` | Free notes pinned to a position, `on: "stage:<itemType> @ <Band>::before\|in\|after"` |
 
 **Stages** are never declared — a stage is an `itemType @ Band` pair (single space each
 side of `@`, e.g. `order @ Shops`), and the parser infers the set of stages from the edge
@@ -97,6 +101,24 @@ several boards and vice versa; an entirely unbound route is valid. The one hard 
 **Flow ⊆ Path**: every bound band must exist in `bands:`, and every pinned item type must
 live in that band per `path:`.
 
+**Anchors at a stage — `at-stages:`** (since 1.8.0). The inside-out counterpart of an
+external `/stage:` locator: the route places an agreement or an interaction at one of its
+stages, without touching the entity's file. Each entry names one `stage` and lists
+`agreements:` and/or `interactions:`.
+
+- **`stage`** is a stage name as in a locator — `itemType @ Band`, the token or a linked
+  stage's target, without brackets and without `stage:`. Stages are still not declared: an
+  entry only annotates a stage that `path:` or `triggers:` already produce.
+- **An item** is a string, exactly as on a board node: a `[[wikilink]]` to the entity, or
+  an inline rule as text. It applies to the stage itself (the `::in` slot). The
+  `::before` / `::after` slots stay with the external locator, as on a board: an
+  agreement that holds just before a stage names the stage from its own file.
+- A stage that `path:` and `triggers:` do not produce is a warning (`route.unknown-stage`).
+  A stage named in two entries is merged in order, with an info (`route.duplicate-stage`),
+  so nothing written by hand is lost.
+- Where an `at-stages` item and an external `/stage:` locator meet at the same slot, both
+  show, each with its provenance — as on a board.
+
 ## Example
 
 ````markdown
@@ -130,6 +152,12 @@ bound-to:
       - board: "[[Assembly 1 Board]]"
         stages:
           - component-spec: "col:To-Do"
+at-stages:
+  - stage: component-spec @ Assembly
+    agreements:
+      - "Specs arrive with drawings attached"
+    interactions:
+      - "[[Assembly Stand-up]]"
 ```
 ````
 
@@ -137,7 +165,8 @@ Reading the path: Sales is the domain responsible for the route (`for-domain`); 
 order *generates* component specs (same band, solid `->`); the
 specs are *copied* down into the Assembly band (dashed `-->`); build status *feeds back*
 to the order (dotted `..>`); the finished component is *delivered* to the customer
-(`..> ()`, the ⊙ ring).
+(`..> ()`, the ⊙ ring). At the spec's arrival in Assembly, the route itself places a rule and
+the stand-up (`at-stages:`).
 
 ## Reading it
 
@@ -146,7 +175,8 @@ to the order (dotted `..>`); the finished component is *delivered* to the custom
 - **Look first:** the prose above the fence, then the `dwsd.flightroute` fence: `for:`,
   `for-domain:` and `bands:`, then `path:` line by line (the glyph names the edge kind).
 - **Go next:** `for:` to the flight-item-type; `for-domain:` up to the responsible domain;
-  `bound-to:` to the boards each band lives on.
+  `bound-to:` to the boards each band lives on; the `[[…]]` items in `at-stages:` to their
+  files.
 - **Backlinks:** the flight-item-type whose `uses-route` names it; the interactions,
   agreements and role accountabilities anchored on a stage with a `/stage:` locator.
 - **Pictured in:** the route itself, rendered from the fence. The work systems it flows
