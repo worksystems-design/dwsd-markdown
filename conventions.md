@@ -460,6 +460,12 @@ sources:
 Some synced entities instead carry flat `atlassian_id` / `atlassian_url` fields — both
 patterns are valid.
 
+Tools read this block as references to objects in other systems: each system key names the
+other graph, `id` the object in it (the flat pair is a reference to `atlassian`; the block
+wins when both are present). The `url` is for people. A tool that publishes a snapshot of
+the org publishes this block with it, so an internal URL in `sources` is public there unless
+the publisher drops it.
+
 ## Modeling notes in the body
 
 Body text tells the organization's story. Where a file explains how it is **modeled** — why

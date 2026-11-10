@@ -6,6 +6,17 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-10
+
+Format: 1.8.1
+
+- **`sources` is worded as references to other systems.** The block was always one key per
+  source system with an `id` and a `url`; the text now says how tools read it (the system
+  key names the other graph, `id` the object in it) and that a published snapshot carries the
+  `url`. Patch: nothing new is allowed, every file stays as it was.
+  Host impact: none for files. `conventions.md` › `sources` block. Tools that read the block
+  as foreign references (the Work Systems Graph) already follow this.
+
 ## 2026-11-04
 
 Format: 1.8.0
