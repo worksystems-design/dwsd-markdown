@@ -51,6 +51,15 @@ for name, entry in contract["types"].items():
     for key in sorted(set(entry.get("fields", {})) - seen.get(name, set())):
         problems.append(f"{contracts[-1].name}: {name}.{key} is in the contract but on no type page")
 
+guide = contracts[-1].with_suffix(".guide.md")
+if guide.exists():
+    import subprocess
+    r = subprocess.run([sys.executable, str(root / "contracts" / "build-guide.py"), contracts[-1].stem, "--check"],
+                       capture_output=True, text=True)
+    print(r.stdout.strip())
+    if r.returncode:
+        problems.append(f"{guide.name} differs from what build-guide.py generates")
+
 for p in problems:
     print(p)
 print(f"{contracts[-1].name}: {'ok' if not problems else f'{len(problems)} problem(s)'}")
