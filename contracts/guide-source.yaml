@@ -1,0 +1,87 @@
+# What the contract cannot say: the hand-written part of the agent guide.
+# contracts/build-guide.py joins this with contracts/<version>.json into
+# contracts/<version>.guide.md. Keep the result under 8 KB.
+
+intro: |
+  Read this before you create or change an entity. A DWSD organization is a folder of
+  Markdown files; each file is one entity.
+
+rules:
+  - "**One file = one entity.** YAML frontmatter between `---` lines, then a Markdown body. `type:` decides the type, not the folder; each type lives in one flat plural folder (below). Files are UTF-8."
+  - "**The file name is the identity** and the display label: `Jonas Keller.md` is `[[Jonas Keller]]`. Spaces are fine. Renaming a file renames the entity, so update every link to it."
+  - "**Keys are kebab-case** (`for-domain`, `unit-type`). `<base>-type` keys (`unit-type`, `agreement-type`, `interaction-type`, `visualization-type`) hold one token or a YAML list: `unit-type: [team, work-system]`."
+  - "**Relations are wikilinks in frontmatter, quoted:** `for-domain: \"[[Bakehouse]]\"`. Alias: `[[Name|label]]`. A relation field may hold a list unless marked single. Link only to files that exist or that you create in the same step."
+  - "**Locators** (`interaction-of`, `agreement-of`, `mandate-of`, `observes`, `bound-to`) say where something hangs: a board position `\"[[Board File]]#Board Title/col:Column::in\"` (suffix `::before`, `::in` or `::after`; whole board `\"[[Board File]]#Board Title::in\"`), a route stage `\"[[Route File]]/stage:item @ Band::in\"`, or a bare `\"[[Entity]]\"`."
+  - "**Dates** are ISO: `2026-11-10`, datetimes `2026-11-10T09:00:00`. Do not invent values for fields you do not know; leave them out. Most fields are optional."
+  - "**Work systems and meetings are not types of their own.** A work system is a `unit` with `unit-type` containing `work-system` (it then needs `flightlevel` 1, 2 or 3) and lives in `work-systems/`. A meeting is an `interaction` with `interaction-type: meeting`."
+  - "**Body:** write the organization's story in prose. Role, agreement, mandate and decision-record bodies use `##` sections (Purpose, Description, Accountabilities, Decision Rights; Context, Decision, Consequences). The README of an org carries `dwsd-format: \"<version>\"`."
+  - "**Embedded fences** are plain YAML: `dwsd.board` (visualization with `visualization-type: board`), `dwsd.flightroute`, `dwsd.units`, `dwsd.orgchart`. Their syntax is not in this guide; read the type page of the spec before you write one."
+
+# One or two sentences per type: what it is for.
+meaning:
+  agreement: "A working agreement, protocol or SLA. Parties and who is responsible for what are in the body."
+  ai-agent: "An AI agent present in the organization, described by where it surfaces (`bound-to`)."
+  driver: "Why to act: a situation, its effect and the need that follows. Comes from insights."
+  flight-item-type: "A class of work item that flows (a standard order, a feature). Says what the item is, not an instance."
+  flight-route: "How one item type flows through bands and stages. Body holds a `dwsd.flightroute` fence."
+  individual: "A person. Pointer, not a personnel file."
+  insight: "Meaning drawn from signals. Ladder: signal, insight, driver, proposal, decision, agreement."
+  interaction: "People acting together: conversation, bilateral, or meeting (scheduled, bundles interactions with outcomes)."
+  mandate: "What a holder must or may do, pulled out into its own file. `for-domain` is the holder."
+  organizational-decision-record: "A recorded org design decision (like an ADR): Context, Decision, Consequences."
+  proposal: "A proposed response to a driver, before consent. Once consented it produces agreements."
+  role: "A role held by one or more people; the role persists when people change."
+  signal: "A selected observation before interpretation."
+  unit: "Any named grouping (team, department, circle); nestable via `member-of`. With `unit-type` containing `work-system` it is a work system."
+  visualization: "A picture of a work system. `board` is the kind tools render; other kinds (e.g. `chart`) are plain Markdown."
+
+# Minimal example files; keys are the type names. The path says where the file would live.
+example-paths:
+  individual: "individuals/Jonas Keller.md"
+  role: "roles/Baker.md"
+  unit: "work-systems/Bakehouse.md"
+  agreement: "agreements/Second Pair of Eyes.md"
+  interaction: "interactions/Weekly Planning.md"
+
+examples:
+  individual: |
+    ---
+    type: individual
+    role: "Baker"
+    member-of: "[[Bakehouse]]"
+    ---
+    Jonas bakes the morning batch.
+  role: |
+    ---
+    type: role
+    role-keeper: "[[Jonas Keller]]"
+    for-domain: "[[Bakehouse]]"
+    ---
+    ## Purpose
+    Keeps the bakehouse on schedule.
+  unit: |
+    ---
+    type: unit
+    unit-type: [team, work-system]
+    flightlevel: 1
+    member-of: "[[Bakery Operations]]"
+    ---
+    The team that bakes and dispatches.
+  agreement: |
+    ---
+    type: agreement
+    agreement-type: work
+    for-domain: "[[Bakehouse]]"
+    agreement-of: "[[Bakehouse Board]]#Bakehouse/col:Review::in"
+    ---
+    Nothing leaves Review without a second pair of eyes.
+  interaction: |
+    ---
+    type: interaction
+    interaction-type: meeting
+    for-domain: "[[Bakehouse]]"
+    start: "2026-11-10T09:00:00"
+    rrule: "RRULE:FREQ=WEEKLY;BYDAY=MO"
+    ---
+    ## Why are we doing this meeting?
+    To plan the week.
