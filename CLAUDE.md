@@ -51,7 +51,7 @@ organization as a folder of Markdown files. It is a **public** repo, written for
   `interaction-type`) and may hold a single token **or a YAML list** (e.g.
   `unit-type: [team, work-system]`).
 - **Relationships are wikilinks** (`[[Target]]`). `reports-to` (individuals only) =
-  structure; `member-of` (individuals + units) = flow. `derived-from` and `delegator` are
+  structure; `member-of` (individuals + units) = structure (membership); `contributes-to` = flow. `derived-from` and `delegator` are
   **metadata** (no parser relationship type yet), not typed edges.
 - **Ladder of Inference (through the change category):** signal → insight → driver →
   proposal → `organizational-decision-record` → agreement(s). The ODR (ADR-style) is the

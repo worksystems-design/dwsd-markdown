@@ -26,8 +26,8 @@ This skill is a thin pointer; the **full contract lives in the spec** at the spe
 same files as the `dwsd-markdown` repo). Before authoring or validating, read:
 
 - **`<spec-root>/conventions.md`** — rules for every entity: frontmatter, the
-  `type` field, `[[wikilink]]` relationships, `reports-to` (structure) vs `member-of`
-  (flow), tracking fields, the `sources` block, the embedded DSL fences, and `.mw` siblings.
+  `type` field, `[[wikilink]]` relationships, `reports-to` and `member-of`
+  (structure) vs `contributes-to` (flow), tracking fields, the `sources` block, the embedded DSL fences, and `.mw` siblings.
 - **The org root `README.md`** is a note (`type: readme`; a tour is `type: tour`). Its first `#` heading is the org's
   name, its first paragraph the description; its frontmatter holds `type: readme` and
   `dwsd-format: "1.0.0"`, the format version the folder is written to. When you write a
@@ -68,8 +68,8 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
 - **Relationships are `[[wikilinks]]`** in frontmatter, pointing at the target's **label**
   (its filename without `.md`). `[[Target]]` and `[[Target|Alias]]` both resolve to
   `Target`. Hyphen and underscore field spellings are both accepted.
-- **`reports-to`** = structure (individuals only). **`member-of`** = flow (individual or
-  unit). `derived-from` and `delegator` are metadata, not typed edges.
+- **`reports-to`** = structure (individuals only). **`member-of`** = structure, membership
+  in the formal structure (individual or unit). **`contributes-to`** = flow. `derived-from` and `delegator` are metadata, not typed edges.
 - **Discriminators are named `<base>-type`**: `unit-type`, `interaction-type`,
   `agreement-type`, `visualization-type`. Each may hold a single token **or a YAML list**
   (e.g. `unit-type: [team, work-system]`). `unit-type`, `interaction-type` and, since 1.7.0,

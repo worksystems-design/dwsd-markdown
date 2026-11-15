@@ -12,7 +12,7 @@
 | `role` | no | string or wikilink | The person's **primary role**: free text, the way it is said today, or `"[[Role]]"` once that role is spelled out as a `role` entity (since format 1.6.0) |
 | `level` | no | string | Seniority marker, e.g. `Lead` |
 | `reports-to` | no | wikilink | Reporting line → **structure** (individuals only) |
-| `member-of` | no | wikilink | Unit / work system the person belongs to → **flow** |
+| `member-of` | no | wikilink | Unit / work system the person belongs to in the formal structure (*Aufbauorganisation*) → **structure** |
 | `position_key` | no | string | Internal position id |
 | `external_position_key` | no | string | Source-system position id |
 
@@ -21,8 +21,8 @@ Plus the shared optionals from [conventions](../conventions.md).
 ## Relationships
 
 - **`reports-to`** — the formal manager (structure / reporting line).
-- **`member-of`** — the unit/work system the person works in. Often the flow side, but
-  not necessarily (see [structure vs. flow](../conventions.md#structure-vs-flow)).
+- **`member-of`** — the unit/work system the person belongs to in the formal structure
+  (see [structure vs. flow](../conventions.md#structure-vs-flow)).
 - **`role`** as a link — which of the person's roles is the **primary** one. Who holds a
   role is said by the role's `role-keeper`, not here; the person named primary for a role
   belongs in its `role-keeper` too.

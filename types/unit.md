@@ -2,7 +2,7 @@
 
 > The base structural unit — a **named grouping** that one or more people, teams, or other
 > units belong to. It need not be a team: an R&D department or a SAFe ART is a unit too,
-> and units can nest. A unit belongs to the **structure** (the reporting line). A unit
+> and units can nest. A unit belongs to the **structure** (membership in the formal structure, the *Aufbauorganisation*). A unit
 > whose **`unit-type` includes `work-system`** is also a [work system](work-system.md)
 > (and carries a `flightlevel`); without it the unit is purely structural.
 
@@ -29,7 +29,7 @@ carry more than one value. On top of the bare unit:
 | `type` | yes | `unit` | Entity type (base) |
 | `unit-type` | no | token **or** list — `team` \| `ART` \| `[team, work-system]` \| … | Kind(s) of unit (open vocabulary). Include `work-system` to mark it a **work system** |
 | `flightlevel` | no | `1` \| `2` \| `3` | Required **when `unit-type` includes `work-system`**; the work system's flight level |
-| `member-of` | no | wikilink | The parent unit / work system this one belongs to → **flow** |
+| `member-of` | no | wikilink | The parent unit / work system this one belongs to in the formal structure (*Aufbauorganisation*) → **structure** |
 | `contributes-to` | no | wikilink | The higher work system this unit feeds |
 
 Plus the shared optionals from [conventions](../conventions.md). A unit that *is* a work

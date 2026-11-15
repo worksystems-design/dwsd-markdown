@@ -250,7 +250,7 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | Field (variants) | Meaning |
 |---|---|
 | `reports-to` / `reports_to` | Reporting line — **individuals only** (individual → individual) |
-| `member-of` | Belongs to a unit / work system — an **individual** or a **unit** can be a member |
+| `member-of` | Membership in a unit / work system in the formal structure (*Aufbauorganisation*) — an **individual** or a **unit** can be a member |
 | `contributes-to` | A work system contributes to a higher-level work system |
 | `role-keeper` / `role_keeper` | Who holds this role |
 | `for-domain` / `for_domain` | The **domain** — a work system, a role or a unit — that a role, agreement, mandate, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to, and that a flight route (in its `dwsd.flightroute` block) names as the domain **responsible** for the route — points *up*. Naming a role lands the entity on every keeper of that role |
@@ -349,12 +349,15 @@ them apart — an entity can sit very differently in each.
 - **`reports-to` → structure** (the formal reporting line — "who reports to whom").
   **Individuals only.**
 
-- **`member-of` → flow, optionally** (value creation — how work flows). `member-of`
-  expresses *belonging* to a unit or work system; an **individual or a unit** can be a
-  member. That belonging *can* describe the flow side — but need not. Use the membership
-  that matters in context.
+- **`member-of` → structure** (the formal structure of the organization — the
+  *Aufbauorganisation*: who or what belongs to which unit). `member-of` expresses
+  *membership* in a unit or work system; an **individual or a unit** can be a member. It is
+  not a flow edge.
 
-A **`unit`** sits **between** the two: a named grouping that one or more people, teams, or
+- **`contributes-to` → flow** (the *Ablauforganisation*: how work flows). A work system's
+  output feeds a higher-level work system.
+
+A **`unit`** is the structural grouping: a named grouping that one or more people, teams, or
 other units belong to. It need not be a team — it can be an R&D department, a SAFe ART, or
 any other named unit, and units can nest. A unit that also participates in flow is a work
 system (its `unit-type` includes `work-system`, and it carries a `flightlevel`). See

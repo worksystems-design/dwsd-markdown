@@ -6,6 +6,21 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-15
+
+Format: 1.8.2
+
+- **`member-of` is membership in the formal structure, not a flow edge.** The spec said
+  "`member-of` → flow, optionally" (`conventions.md` › Structure vs. flow, the `unit`,
+  `individual` and `work-system` pages, the individual template, the `dwsd-format` skill).
+  It now says: `reports-to` and `member-of` are the structure (the *Aufbauorganisation*),
+  `contributes-to` is the flow (the *Ablauforganisation*). Decision: Thomas, 2026-11-15.
+  Patch: nothing new is allowed, every file stays as it was.
+  Host impact: none for files. Wording in `conventions.md`, `types/unit.md`,
+  `types/individual.md`, `types/work-system.md`, `README.md`,
+  `skills/dwsd-format/SKILL.md`; `describe_format` text served by the Lib and the DSL's
+  docs/skill cards that repeat "member-of → flow" need the same fix.
+
 ## 2026-11-10
 
 Format: 1.8.1

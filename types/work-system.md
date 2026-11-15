@@ -34,7 +34,8 @@ Plus the shared optionals from [conventions](../conventions.md).
 ## Relationships
 
 - **`contributes-to`** — flow upward: this work system's output feeds the named one.
-- **`member-of`** — structural belonging within the flow organization.
+- **`member-of`** — the unit / strategy layer this work system belongs to in the formal
+  structure (*Aufbauorganisation*). Not a flow edge; `contributes-to` is the flow.
 - **Flight routes** — every [flight route](flight-route.md) whose `for-domain` names this
   work system; the route lists it as the domain responsible for it.
 

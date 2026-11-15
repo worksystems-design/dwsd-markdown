@@ -71,7 +71,7 @@ organizational-decision-record); see [conventions](conventions.md).
 |---|---|---|---|
 | `individual` | structure | [spec](types/individual.md) | A person |
 | `role` | structure | [spec](types/role.md) | A role, held by one or more people |
-| `unit` | structure | [spec](types/unit.md) | A named grouping (people, teams, or units) — between structure and flow |
+| `unit` | structure | [spec](types/unit.md) | A named grouping (people, teams, or units) that others are `member-of` — the formal structure |
 | `work-system` | structure | [spec](types/work-system.md) | A flow / value-creation system (a unit whose `unit-type` includes `work-system`) |
 | `ai-agent` | structure | [spec](types/ai-agent.md) | An AI-agent surface — where an AI appears in the workflow (preliminary) |
 | `interaction` | flow | [spec](types/interaction.md) | People acting in relation across work systems |

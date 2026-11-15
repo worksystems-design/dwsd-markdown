@@ -2,7 +2,7 @@
 type: individual
 role: ""                 # primary role: free text, or "[[Role]]" once spelled out
 level: ""                # optional, e.g. Lead
-member-of: "[[]]"        # unit / work system — flow membership
+member-of: "[[]]"        # unit / work system — structure membership
 reports-to: "[[]]"       # manager — structure / reporting line (individuals only)
 ---
 # <Name>
