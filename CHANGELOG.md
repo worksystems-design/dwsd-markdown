@@ -8,6 +8,20 @@ An entry that changes the format names the new format version on a `Format: x.y.
 
 ## 2026-11-15
 
+Format: 1.9.0
+
+- **An interaction may name what sets it off: `trigger:`.** Optional, one line of plain
+  text (`trigger: "a release candidate is ready"`). Until now an event-driven interaction
+  had only a `## Trigger` body section by convention, so a view could not tell "no
+  rhythm by design" from "no rhythm yet". `trigger` and `rrule` may stand together without
+  a warning; the view reading is in `types/interaction.md` › Notes. Not a link (the "where"
+  stays `interaction-of`) and not the route fence's `triggers:`. Thomas, 2026-11-15:
+  not every interaction needs a rhythm, especially when other triggers exist. Agreed with
+  the DSL. Contract 1.9, plugin 0.25.0.
+  Host impact: `contracts/1.9.json` (interaction.trigger, kind string),
+  `contracts/1.9.guide.md`, `types/interaction.md`, `templates/interaction.md`. The DSL's
+  rhythm view reads the key; the Lib vendors the new contract and guide.
+
 Format: 1.8.2
 
 - **`member-of` is membership in the formal structure, not a flow edge.** The spec said

@@ -17,6 +17,7 @@
 | `start` | no | ISO datetime | First occurrence start — **any** interaction may be scheduled |
 | `end` | no | ISO datetime | First occurrence end |
 | `rrule` | no | iCal RRULE | Recurrence, e.g. `RRULE:FREQ=DAILY` |
+| `trigger` | no | text (one line) | What sets it off when it has no fixed rhythm, e.g. `a release candidate is ready` (since 1.9.0) |
 
 Plus the shared optionals from [conventions](../conventions.md). A scheduled interaction
 may have a `.mw` Markwhen sibling, a view derived from `start` / `end` / `rrule` (see
@@ -68,7 +69,8 @@ Ad-hoc alignment between [[Head of 3P]] and [[Head of Assembly]] on the next han
 
 - **The question:** who acts in relation to whom, about what, and where in the flow?
 - **Look first:** `interaction-type` and `interaction-of`; `start` / `rrule` if it is
-  scheduled, otherwise the body says what triggers it (often a `## Trigger` section).
+  scheduled, `trigger` if it is event-driven; with neither, the body may say what sets it
+  off (often a `## Trigger` section).
 - **Go next:** into the detail via `interaction-of` (a board position, a route stage, or a
   bare entity; two persons make a 1:1); up via `for-domain`.
 - **Backlinks:** a meeting whose `## Interactions` table names it in a row (the way back
@@ -82,6 +84,13 @@ Ad-hoc alignment between [[Head of 3P]] and [[Head of Assembly]] on the next han
 - **Not every interaction is scheduled.** Without `start` / `rrule` an interaction happens
   when something triggers it: an item reaching a route stage or a board column, a threshold
   (a WIP limit hit, a card aging past its limit), a call for help. Say what triggers it in
-  the body — a `## Trigger` section works — and let the anchor say *where*: an interaction
-  anchored `::before` a route stage reads as "when an item arrives here". No `.mw` sibling.
+  the `trigger` key (one line of plain text) and, where more is needed, the body (a
+  `## Trigger` section), and let the anchor say *where*: an interaction anchored `::before`
+  a route stage reads as "when an item arrives here". No `.mw` sibling.
+- **`trigger` and `rrule` may stand together** — a weekly sync that is also called ad hoc;
+  nothing warns. A view reads it so: with `rrule` the interaction sits on its cadence and
+  `trigger` is a label; `trigger` without `rrule` marks it as deliberately event-driven
+  ("on trigger", not a gap in the rhythm); neither says nothing about its cadence yet.
+  `trigger` is text, not a link — where it happens is `interaction-of`. It is not the
+  `triggers:` key of a route fence.
 - Influence: Flight Levels' *agile interactions*.
