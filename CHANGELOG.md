@@ -16,8 +16,9 @@ Format: 1.10.0
   a list (several per entity and per system). Each entry: `system` (required; an open list
   with known values `atlassian`, `oboard`, `businessmap`, `notion`), `id` or `url` (at
   least one), optional `instance` (the space in which `id` is unique), `label` (a snapshot)
-  and `part` (an anchor path in this file, as in a locator but without the slot; without it
-  the whole entity is meant). The name follows schema.org `sameAs`: with synchronization in
+  and `part` (an anchor path in this file, as in a locator but without the slot, plus
+  `section:<heading>` for a section of the body, nested with `/`; without it the whole
+  entity is meant — one agreement here can be three pages there, one per section). The name follows schema.org `sameAs`: with synchronization in
   both directions no side is "the source", and `sources` meant something else in OKF.
   `same-as` points out of the org and is not a relationship; it carries no direction, no
   object kind, nothing about the tools that read it, no API forms or versions and no sync

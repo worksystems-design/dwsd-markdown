@@ -471,12 +471,13 @@ same-as:
 | `url` | one of `id` / `url` | The address a person opens in the browser, copied as it is; a permalink where the system offers one. Never an API endpoint. A tool may refresh it. |
 | `instance` | no | The space in which `id` is unique — a site, an organization, a workspace, a tenant — as the system names it: its own stable identifier where it has one, else a host. Give it when neither `id` nor `url` tells which one is meant. |
 | `label` | no | The object's name over there, a snapshot. Optional also because it carries a name from that system into the org. |
-| `part` | no | Which part of this entity the object is the same as: an anchor path in this file, written as in a locator ([Anchors and around](#anchors-and-around)) but without the file and without the `::before` / `::in` / `::after` slot — `"#Bakehouse"` (one board of the file), `"#Bakehouse/lane:Expedite"`, `"/stage:Standing Order @ FL2"`. Without `part` the whole entity is meant. |
+| `part` | no | Which part of this entity the object is the same as: an anchor path in this file, written as in a locator ([Anchors and around](#anchors-and-around)) but without the file and without the `::before` / `::in` / `::after` slot — `"#Bakehouse"` (one board of the file), `"#Bakehouse/lane:Expedite"`, `"/stage:Standing Order @ FL2"`. A section of the body is `section:` plus its heading text, nested with `/` — `"section:Description"`, `"section:Description/section:Service levels"` (the heading text exactly as written, without the `#` marks; the first heading of that text, or the one inside the previous segment). Without `part` the whole entity is meant. |
 
 - **Several entries are normal**, also several on the same system: a team can be an
   Atlassian team, a directory group and an OKR-tool group at once; a board with three lanes
   can be three boards over there plus one page that shows them together (three entries with
-  `part`, one without). The same object may also be named from two files (a lane and a
+  `part`, one without); a long agreement written over there as three pages is one agreement
+  here, with one entry per page and `part: "section:…"` on the section each page holds. The same object may also be named from two files (a lane and a
   route stage that are the same work); that is not an error.
 - **An entry with only a `url` is complete.** Taking an address apart into `id` and
   `instance` needs knowledge of that system, and every system builds its addresses

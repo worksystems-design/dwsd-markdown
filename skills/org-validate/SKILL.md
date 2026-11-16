@@ -151,7 +151,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      without both `id` and `url`, and on a key other than `system`, `id`, `url`, `instance`,
      `label`, `part`. A `part` resolves like a locator inside this file, without the
      `::before|in|after` slot — **warn** when it lands nowhere (same reasons as a board
-     locator). Never check that the object over there exists, and never flag the same
+     locator). A `section:<heading>` segment names a body heading by its exact text (nested
+     segments: a heading inside the previous one) — **warn** when no such heading exists. Never check that the object over there exists, and never flag the same
      object named from two files. **Note** an earlier form (`sources:` map, flat
      `atlassian_id` / `atlassian_url`) as readable but superseded by `same-as`.
    - **Board-binding consistency (informational):** when an entity carries both
