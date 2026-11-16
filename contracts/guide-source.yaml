@@ -4,7 +4,7 @@
 
 intro: |
   Read this before you create or change an entity. A DWSD organization is a folder of
-  Markdown files; each file is one entity.
+  Markdown files.
 
 rules:
   - "**One file = one entity.** YAML frontmatter between `---` lines, then a Markdown body. `type:` decides the type, not the folder; each type lives in one flat plural folder (below). Files are UTF-8."
@@ -16,6 +16,7 @@ rules:
   - "**Dates** are ISO: `2026-11-10`, datetimes `2026-11-10T09:00:00`. Do not invent values for fields you do not know; leave them out. Most fields are optional."
   - "**Work systems and meetings are not types of their own.** A work system is a `unit` with `unit-type` containing `work-system` (it then needs `flightlevel` 1, 2 or 3) and lives in `work-systems/`. A meeting is an `interaction` with `interaction-type: meeting`."
   - "**Body:** write in the organization's language (read existing files first), as prose. Role, agreement, mandate and decision-record bodies use `##` sections (Purpose, Description, Accountabilities, Decision Rights; Context, Decision, Consequences). The README of an org carries `dwsd-format: \"<version>\"`."
+  - "**`same-as`** lists the same thing in other systems: `- system: atlassian` plus `id` (stable id) or `url` (browser address); optional `instance`, `label`, `part` (`#Board/lane:X`). Not a relation. Identify by `system` + `id`. Reading one to answer is no reason to write it into the org; write `same-as`, not `sources`."
   - "**Embedded fences** are plain YAML: `dwsd.board` (visualization with `visualization-type: board`), `dwsd.flightroute`, `dwsd.units`, `dwsd.orgchart`. Their syntax is not in this guide; read the type page of the spec before you write one."
 
 # One or two sentences per type: what it is for.

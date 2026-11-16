@@ -147,6 +147,13 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      `[[link]]` must resolve to a `role` (**warn** otherwise); **warn**
      `individual.primary-role-not-kept` when that role's `role-keeper` does not name the
      person (format 1.6.0).
+   - **`same-as`** (format 1.10.0) — a list; **warn** on an entry without `system`, or
+     without both `id` and `url`, and on a key other than `system`, `id`, `url`, `instance`,
+     `label`, `part`. A `part` resolves like a locator inside this file, without the
+     `::before|in|after` slot — **warn** when it lands nowhere (same reasons as a board
+     locator). Never check that the object over there exists, and never flag the same
+     object named from two files. **Note** an earlier form (`sources:` map, flat
+     `atlassian_id` / `atlassian_url`) as readable but superseded by `same-as`.
    - **Board-binding consistency (informational):** when an entity carries both
      `for-domain` (a work system) and a board-position `interaction-of` / `agreement-of`,
      **note** — not warn — if the anchored board's work system (its `visualization-of`)

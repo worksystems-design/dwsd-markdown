@@ -340,6 +340,7 @@ repeats them.
 | Field | Meaning |
 |---|---|
 | `tags` | Descriptive chips on **any** entity type — a list of short words, e.g. `tags: [core, pilot]`. The renderers read them from the entity's frontmatter wherever the entity is drawn (the topology, the org chart, the units view); the view documents (board, flight-route, topology, org chart, units) carry a document-level `tags:` as well. A tag is a label, not a relationship — it resolves to nothing |
+| `same-as` | The same thing in another system — a list of counterparts, each `{system, id or url, instance?, label?, part?}`; see [`same-as`](#same-as-the-same-thing-in-another-system). Not a relationship |
 
 ## Structure vs. flow
 
@@ -445,29 +446,59 @@ updated_at: "2026-03-20"
 created_by: "thomas"
 ```
 
-## `sources` block (discovered / synced entities)
+## `same-as` (the same thing in another system)
 
-Entities pulled in from an external system carry a `sources:` block recording where
-they came from (one key per source system, each with an `id` and `url`):
+An entity that also exists in another system — a team that is also an Atlassian team, a
+board that was built as Jira boards — names those counterparts in `same-as:`, a list.
+Each entry says: *this entity (or this part of it) is the same thing as that object over
+there.*
 
 ```yaml
-sources:
-  atlassian:
-    id: "00000000-0000-0000-0000-000000000000"
-    url: "https://example.atlassian.net/o/<org-id>/people/team/00000000-0000-0000-0000-000000000000"
-  discovery:
-    id: discovery-00000000
-    url: "https://www.notion.so/00000000000000000000000000000000"
+same-as:
+  - system: atlassian
+    instance: "<org-id>"
+    id: "<team-id>"
+    url: "https://home.atlassian.com/o/<org-id>/people/team/<team-id>"
+    label: "Bakehouse Crew"
+  - system: oboard
+    url: "https://<site>.atlassian.net/…"
 ```
 
-Some synced entities instead carry flat `atlassian_id` / `atlassian_url` fields — both
-patterns are valid.
+| Key | Required | Meaning |
+|---|---|---|
+| `system` | yes | The system the object lives in: the thing an agent talks to, with its own interface and its own ids. An open list; use a known value where one fits (`atlassian`, `oboard`, `businessmap`, `notion`), lowercase. The host of a URL does not say it (custom domains, several hosts per system). |
+| `id` | one of `id` / `url` | The object's own identifier in that system — the stable one (for Atlassian the ARI where there is one; for a Jira issue the numeric id, not the key, which changes when the issue moves). It carries the identity. |
+| `url` | one of `id` / `url` | The address a person opens in the browser, copied as it is; a permalink where the system offers one. Never an API endpoint. A tool may refresh it. |
+| `instance` | no | The space in which `id` is unique — a site, an organization, a workspace, a tenant — as the system names it: its own stable identifier where it has one, else a host. Give it when neither `id` nor `url` tells which one is meant. |
+| `label` | no | The object's name over there, a snapshot. Optional also because it carries a name from that system into the org. |
+| `part` | no | Which part of this entity the object is the same as: an anchor path in this file, written as in a locator ([Anchors and around](#anchors-and-around)) but without the file and without the `::before` / `::in` / `::after` slot — `"#Bakehouse"` (one board of the file), `"#Bakehouse/lane:Expedite"`, `"/stage:Standing Order @ FL2"`. Without `part` the whole entity is meant. |
 
-Tools read this block as references to objects in other systems: each system key names the
-other graph, `id` the object in it (the flat pair is a reference to `atlassian`; the block
-wins when both are present). The `url` is for people. A tool that publishes a snapshot of
-the org publishes this block with it, so an internal URL in `sources` is public there unless
-the publisher drops it.
+- **Several entries are normal**, also several on the same system: a team can be an
+  Atlassian team, a directory group and an OKR-tool group at once; a board with three lanes
+  can be three boards over there plus one page that shows them together (three entries with
+  `part`, one without). The same object may also be named from two files (a lane and a
+  route stage that are the same work); that is not an error.
+- **An entry with only a `url` is complete.** Taking an address apart into `id` and
+  `instance` needs knowledge of that system, and every system builds its addresses
+  differently; a tool that knows the system may add them later.
+- **Not in the entry:** the kind of object (a tool that knows the system reads it from the
+  `id` or the `url`), anything about the tool or connection that reads it, versions of the
+  other system or its API, and the state of any synchronization. They belong to the tools.
+- **No direction.** `same-as` does not say which side leads or which way a synchronization
+  runs; that is the tools' business too.
+- **Not a relationship.** Relationships are wikilinks to files of the org; `same-as` points
+  out of it. Renderers do not draw it as an edge, and a validator cannot check that the
+  object over there exists. Renaming the file keeps the entries; the `id` over there stays
+  the anchor.
+- **Publishing.** A tool that publishes a snapshot of the org publishes `same-as` with it,
+  so an internal URL or label is public there unless the publisher drops it.
+
+**Earlier forms.** Before 1.10.0 the counterparts were a `sources:` map, one key per
+system, and some files carried flat `atlassian_id` / `atlassian_url` fields. Both are still
+read: each `sources:` key is one entry with that key as `system` (its `id` and `url`
+carried over), and the flat pair is one entry with `system: atlassian`. A file that has
+`same-as:` and an earlier form is read as the union. Write `same-as:` in new files; the
+earlier forms are dropped only in a later major.
 
 ## Modeling notes in the body
 

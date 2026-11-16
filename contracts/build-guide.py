@@ -46,7 +46,7 @@ def field(name, spec):
     return f"`{name}` ({kind})" if kind not in ("string", "token-or-list") else f"`{name}`"
 
 
-shared = ", ".join(f"`{n}`" for n in contract["shared-fields"])
+shared = ", ".join(f"`{n}`" for n, s in contract["shared-fields"].items() if "earlier-form-of" not in s)
 out = [f"# DWSD format {version} — guide for agents", "", source["intro"].strip(), "", "## Rules", ""]
 out += [f"- {r}" for r in source["rules"]]
 out += ["", f"Any entity may also carry: {shared}.", "", "## Types", ""]

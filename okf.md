@@ -51,7 +51,7 @@ equivalents:
 | `type` | `type` — same field, required (e.g. `work-system`) |
 | `title` | the **filename** is the label (`Head Baker.md`); no separate field |
 | `description` | the Markdown body (often a `## Purpose` or intro line) |
-| `resource` | the `sources:` block for discovered/synced entities; otherwise omitted |
+| `resource` | `same-as:` for entities that also exist in another system; otherwise omitted |
 | `tags` | not used by default |
 
 Every one of these is OKF-optional, so the differences cost nothing for conformance. A
@@ -73,14 +73,14 @@ than a generic OKF reader will interpret:
    ordinary concepts and DWSD as notes (`conventions.md` › Types that are not entities).
    So every Markdown file in an org folder has the `type` OKF asks for.
 
-3. **Two keys mean something else.** OKF v0.2 gives `status` and `sources` a fixed meaning;
-   DWSD used both before and keeps its own. In OKF, `status` is the maturity of the document
+3. **One key means something else.** OKF v0.2 gives `status` a fixed meaning; DWSD used it
+   before and keeps its own. In OKF, `status` is the maturity of the document
    (`draft | stable | deprecated`); in DWSD it is where an entity stands in its flow
-   (`consented`, `addressed`, …). In OKF, `sources` lists the materials a concept derives
-   from; in DWSD it records where a synced entity lives in an external system
-   ([`conventions.md`](conventions.md) › `sources` block). Conformance is unaffected — both
-   keys are optional in OKF — but a generic OKF reader reads them wrong; a DWSD-aware tool
-   reads them as DWSD defines them.
+   (`consented`, `addressed`, …). Conformance is unaffected — the key is optional in OKF —
+   but a generic OKF reader reads it wrong; a DWSD-aware tool reads it as DWSD defines it.
+   Until format 1.10.0 the same held for `sources` (in OKF the materials a concept derives
+   from, in DWSD the counterparts in other systems); 1.10.0 writes those as `same-as` and
+   reads `sources:` only as an earlier form, so new files no longer collide with OKF.
 
 ## Format versions and OKF versions
 

@@ -63,7 +63,8 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - **`meeting`** is an `interaction` of `interaction-type: meeting`; it bundles a **list of
   interactions** (a meeting "container"), each with its outcome. Any interaction may
   optionally use the same four framing questions.
-- **`sources`** is documented only in `conventions.md` — don't repeat it on type pages.
+- **`same-as`** (earlier `sources`) is documented only in `conventions.md` — don't repeat it on
+  type pages. It points out of the org (counterparts in other systems), it is not a relationship.
 - **Out of scope:** the change-accompaniment *workflow* (facilitation, consent process) is
   an application concern, not this spec.
 

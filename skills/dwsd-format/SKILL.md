@@ -27,7 +27,7 @@ same files as the `dwsd-markdown` repo). Before authoring or validating, read:
 
 - **`<spec-root>/conventions.md`** — rules for every entity: frontmatter, the
   `type` field, `[[wikilink]]` relationships, `reports-to` and `member-of`
-  (structure) vs `contributes-to` (flow), tracking fields, the `sources` block, the embedded DSL fences, and `.mw` siblings.
+  (structure) vs `contributes-to` (flow), tracking fields, `same-as` (counterparts in other systems), the embedded DSL fences, and `.mw` siblings.
 - **The org root `README.md`** is a note (`type: readme`; a tour is `type: tour`). Its first `#` heading is the org's
   name, its first paragraph the description; its frontmatter holds `type: readme` and
   `dwsd-format: "1.0.0"`, the format version the folder is written to. When you write a

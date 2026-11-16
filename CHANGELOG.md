@@ -6,6 +6,36 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-16
+
+Format: 1.10.0
+
+- **`same-as` names the same thing in other systems; `sources` is its earlier form.** An
+  entity that also exists elsewhere — a team that is also an Atlassian team and a directory
+  group, a board built as one Jira board per lane — lists those counterparts in `same-as:`,
+  a list (several per entity and per system). Each entry: `system` (required; an open list
+  with known values `atlassian`, `oboard`, `businessmap`, `notion`), `id` or `url` (at
+  least one), optional `instance` (the space in which `id` is unique), `label` (a snapshot)
+  and `part` (an anchor path in this file, as in a locator but without the slot; without it
+  the whole entity is meant). The name follows schema.org `sameAs`: with synchronization in
+  both directions no side is "the source", and `sources` meant something else in OKF.
+  `same-as` points out of the org and is not a relationship; it carries no direction, no
+  object kind, nothing about the tools that read it, no API forms or versions and no sync
+  state. An entry with only a `url` is complete: taking an address apart into `id` and
+  `instance` is knowledge of that system, left to the tools. The `sources:` map (one key per
+  system) and the flat `atlassian_id` / `atlassian_url` are still read, as entries with that
+  `system`; they are dropped only in a later major. Minor: every file stays correct. Decided
+  with Thomas, 2026-11-16, after review by the App, the library and the strategy session.
+  Host impact: `conventions.md` › `same-as` (new section, replaces the `sources` block) and
+  Shared optional fields; `contracts/1.10.json` (`same-as` kind `object-list` with item keys;
+  `sources`, `atlassian_id`, `atlassian_url` marked `earlier-form-of`);
+  `contracts/1.10.guide.md` (one rule; `build-guide.py` leaves earlier forms out of the
+  shared list); `skills/org-validate` (entry checks, `part` resolves like a locator, earlier
+  forms noted); `skills/dwsd-format`; `okf.md` (the `sources` collision is gone for new
+  files). Readers that take `sources` as a map read all three forms through one normalizer
+  and write the list. The examples keep their earlier form for now (Voltfeld's Customer
+  Order Route) until the App reads `same-as`. Plugin 0.26.0.
+
 ## 2026-11-15
 
 Format: 1.9.0
