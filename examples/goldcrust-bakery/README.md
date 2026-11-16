@@ -44,41 +44,6 @@ FL1  Bakehouse        Market Street Shop   Station Road Shop
 
 </details>
 
-## Who reports to whom
-
-**The org chart** — `reports-to`, individuals only. Nothing is listed here: edit a person's
-file and the chart follows. Mara has no `reports-to`, so she is the root; `NA1` is an open
-position.
-
-```dwsd.orgchart id=orgchart
-mode: infer
-around: "[[Mara Holt]]"
-radius: { up: 0, down: inf }
-notes:
-  - on: "[[NA1]]"
-    text: "Interviews in October"
-```
-
-## Which unit sits inside which
-
-**The units** — `member-of`, units only: Goldcrust Bakery contains three sites (Mill Lane
-with Deliveries and Wholesale, Market Street, Station Road). The work systems carry no
-`member-of`; they are the flow, drawn in the map above, not a second time here.
-
-```dwsd.units id=units
-mode: infer
-layout: nested
-around: "[[Goldcrust Bakery]]"
-radius: { up: 0, down: inf }
-notes:
-  - on: "[[Deliveries]]"
-    text: "Second van budgeted for Q4"
-```
-
-(`around` + `radius: { up: 0, down: inf }` scope each picture to this organization: the
-renderer indexes the whole workspace, and a workspace with several example orgs would
-otherwise show every root side by side.)
-
 A unit is a **work system** when its `unit-type` includes `work-system` (it then also
 carries a `flightlevel`). This example shows the shapes of `unit`:
 
@@ -104,9 +69,7 @@ carries a `flightlevel`). This example shows the shapes of `unit`:
 - Boards and flight routes carry embedded DSL (` ```dwsd.board ` and ` ```dwsd.flightroute `,
   both plain YAML). The ` ```dwsd.topology ` blocks (the map above, and the "In context"
   section in each work system) are the **optional** third fence — an inferred flight-level
-  context map, used here as a demo extra; a work system is complete without one. The org
-  chart and the units view above are two more inferred pictures (` ```dwsd.orgchart `,
-  ` ```dwsd.units `); they also exist as standalone files at the org root.
+  context map, used here as a demo extra; a work system is complete without one.
 
 ## Entry points
 
