@@ -113,8 +113,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      attribute. Match a fence by its tag only — text after the tag never hides a fence.
    - **Locator** — `interaction-of` / `agreement-of` (and, from format 1.3.0, `observes`
      on a signal or insight) carry a locator
-     `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole
-     board, a bare `[[entity]]` — a work system, a **unit**, a **person** (two persons
+     `[[Board]]/col:Column::in` (`[[Board]]#dwsd.board::in` for the whole board,
+     `#dwsd.board:<id>` when the file holds several, earlier form `#BoardName`; a bare `[[entity]]` — a work system, a **unit**, a **person** (two persons
      make a 1:1) or, from format 1.7.0, a **visualization** of any kind — for an entity anchor, or
      `[[Route]]/stage:itemType @ Band::in` for a **route stage**). Confirm the target
      file exists (a bare entity anchor that names a plain unit or a person is valid —
@@ -125,6 +125,18 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      board exists but has no unit at that path); a `stage:` segment names an `itemType @ Band` pair — the token, or a linked stage's
      target without brackets, matched exactly — the route's
      `path:` (or a trigger's `generates:`) actually places in that band.
+   - **Fence and heading segments** (format 1.10.0; `<spec-root>/conventions.md` ›
+     Relationship fields › Which fence, which heading) — after the file, `#<tag>:<id-or-title>`
+     names a fence (split at the first colon; the `id` wins; **warn**
+     `locator.ambiguous-fence` when a title equals another fence's id, and when a short
+     form — no fence segment, or `#<tag>` without a value — meets a file holding more than
+     one fence of that kind). A `#anchor` without a dot or colon is a heading anchor:
+     compare it with the GitHub-style anchors of the file's headings (raw heading text
+     accepted, compared as an anchor); **warn** when none matches and name the closest
+     heading, and **warn** when it hits a numbered repeat (`-1`, `-2`), which shifts when
+     headings are reordered. **Note** an earlier-form `#BoardName` / `#Route Name` that
+     resolves as a fence title (readable, superseded); report it as `board-not-found` when it
+     matches neither a heading nor a fence title.
    - **Meeting tables** — in a meeting's `## Interactions` (or `## Agreements`) table, a
      row whose `Name` is a `[[…]]` link must resolve to an interaction (or meeting /
      agreement) file. Its `Outcome` and `Interaction of` (`Agreement of`) cells should be
@@ -151,8 +163,7 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      without both `id` and `url`, and on a key other than `system`, `id`, `url`, `instance`,
      `label`, `part`. A `part` resolves like a locator inside this file, without the
      `::before|in|after` slot — **warn** when it lands nowhere (same reasons as a board
-     locator). A `section:<heading>` segment names a body heading by its exact text (nested
-     segments: a heading inside the previous one) — **warn** when no such heading exists. Never check that the object over there exists, and never flag the same
+     locator; a heading anchor is checked as in **Fence and heading segments** below). Never check that the object over there exists, and never flag the same
      object named from two files. **Note** an earlier form (`sources:` map, flat
      `atlassian_id` / `atlassian_url`) as readable but superseded by `same-as`.
    - **Board-binding consistency (informational):** when an entity carries both

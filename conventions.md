@@ -254,7 +254,7 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 | `contributes-to` | A work system contributes to a higher-level work system |
 | `role-keeper` / `role_keeper` | Who holds this role |
 | `for-domain` / `for_domain` | The **domain** — a work system, a role or a unit — that a role, agreement, mandate, interaction (or meeting), AI agent, ODR, driver or proposal is scoped to, and that a flight route (in its `dwsd.flightroute` block) names as the domain **responsible** for the route — points *up*. Naming a role lands the entity on every keeper of that role |
-| `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]#BoardName/col:Column::in` (or `[[Board]]#BoardName::in` for the whole board), or a bare `[[entity]]` — a work system, a unit or a person |
+| `interaction-of` | The **board (position)** an interaction is of — points *into the detail*: a board **locator** `[[Board]]/col:Column::in` (or `[[Board]]#dwsd.board::in` for the whole board; `#dwsd.board:<id>` when the file holds several boards), or a bare `[[entity]]` — a work system, a unit or a person |
 | `agreement-of` | The **board (position)** an agreement is of — the same board **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
 | `mandate-of` | Where a **mandate** hangs — the same **locator** as `interaction-of` (or a bare `[[entity]]`); coexists with `for-domain` |
 | `bound-to` | Where an **AI agent**'s surface appears — the same **locator** as `interaction-of` / `agreement-of` (or a bare `[[entity]]` — a work system, a unit or a person) |
@@ -285,21 +285,47 @@ Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
 > chart, the units view); a unit that is also a work system shows the same anchors in both
 > pictures. A person and a unit never share a name — labels are unique in an organization
 > (see above); a path form such as `[[units/Name]]`, still found in older files, resolves
-> by its last segment. A value carrying a `#BoardName`
-> and/or a `/kind:Name` path is a **board-position** locator. The path drills in with
+> by its last segment. A value carrying a fence segment and/or a `/kind:Name` path is a
+> **board-position** locator. The path drills in with
 > `/`-chained `col:` · `lane:` · `group:` · `split:` · `stage:` segments and an optional
 > trailing `::before` · `::in` · `::after` (bare = `::in`), e.g.
-> `[[Sprint Board]]#Sprint Board/col:Build/split:QA::before`. This is the **outside-in**
+> `[[Sprint Board]]/col:Build/split:QA::before`. This is the **outside-in**
 > direction; the board may also declare relationships **inside-out** with inline `agreements:` /
 > `interactions:` keys on a column/lane/group (see [Embedded DSL fences](#embedded-dsl-fences)).
 >
 > **`stage:` anchors into a route, not a board.** The same locator can point at a **route
 > stage**: `[[Route]]/stage:<itemType> @ <Band>::before|in|after`, where the name after
 > `stage:` is the full `itemType @ Band` pair (single space each side of `@`), e.g.
-> `[[Daily Replenishment Flow]]/stage:order @ Shops::before`. A `#Route Name` fragment
-> disambiguates when one file hosts several routes. A stage whose item type is a wikilink
-> is named by its link target, without brackets: `[[Feature Route]]/stage:Feature @ Train::in`
+> `[[Daily Replenishment Flow]]/stage:order @ Shops::before`. A stage whose item type is a
+> wikilink is named by its link target, without brackets: `[[Feature Route]]/stage:Feature @ Train::in`
 > for the stage `[[Feature]] @ Train`.
+>
+> **Which fence, which heading (format 1.10.0).** After the file, a `#` names a place in it:
+>
+> - **A fence** is named by its tag as the kind, a colon, and the fence's `id` (or, without
+>   an id, its `title:`): `[[Ops Notes]]#dwsd.board:intake/lane:Expedite`,
+>   `#dwsd.flightroute:standard/stage:order @ Shops`. **Short form:** when the file holds
+>   exactly one fence of that kind, the fence segment may be left out —
+>   `[[Bakehouse Production Board]]/lane:Expedite` — or written without a value,
+>   `#dwsd.board/lane:Expedite`. The `id` wins over a title; a title that equals another
+>   fence's id is ambiguous and reported, never resolved silently. Split at the first
+>   colon only, so a title may contain one (`#dwsd.board:Ops: East`); `/`, `#` and `::`
+>   stay out of identifiers. No number forms. In a file with several fences of that
+>   kind a short form lands on every fence that has that path, as it always did; that is
+>   rarely meant, so a validator warns, and a tool that adds a second fence of a kind
+>   should rewrite the short forms into that file to the long form (tools give every new
+>   fence an `id`, so the long form is always available).
+> - **A heading** is named by its anchor as on GitHub: the heading text lowercased,
+>   spaces to `-`, punctuation dropped, at any level (`#`, `##`, `###`): `## Service levels`
+>   → `#service-levels`. A repeated heading gets `-1`, `-2` in order of appearance. Readers
+>   also accept the raw heading text (`#Service levels`, as Obsidian writes it) and compare
+>   it as an anchor. Only headings are addressable, not paragraphs or list items. A heading
+>   anchor never contains a dot or a colon, so it cannot be mistaken for a fence segment.
+>
+> **Earlier form.** Up to 1.9 a fence was named by its title alone, `#BoardName` (and
+> `#Route Name` for routes). It is still read: a `#Name` that is no heading anchor and
+> matches the title of a fence in the file names that fence. New files write the short
+> form or the fence segment; the earlier form is dropped only in a later major.
 
 ### `derived-from` — the shared emergence key
 
@@ -471,13 +497,13 @@ same-as:
 | `url` | one of `id` / `url` | The address a person opens in the browser, copied as it is; a permalink where the system offers one. Never an API endpoint. A tool may refresh it. |
 | `instance` | no | The space in which `id` is unique — a site, an organization, a workspace, a tenant — as the system names it: its own stable identifier where it has one, else a host. Give it when neither `id` nor `url` tells which one is meant. |
 | `label` | no | The object's name over there, a snapshot. Optional also because it carries a name from that system into the org. |
-| `part` | no | Which part of this entity the object is the same as: an anchor path in this file, written as in a locator ([Anchors and around](#anchors-and-around)) but without the file and without the `::before` / `::in` / `::after` slot — `"#Bakehouse"` (one board of the file), `"#Bakehouse/lane:Expedite"`, `"/stage:Standing Order @ FL2"`. A section of the body is `section:` plus its heading text, nested with `/` — `"section:Description"`, `"section:Description/section:Service levels"` (the heading text exactly as written, without the `#` marks; the first heading of that text, or the one inside the previous segment). Without `part` the whole entity is meant. |
+| `part` | no | Which part of this entity the object is the same as: what a locator names after the file (see [Relationship fields](#relationship-fields) › Which fence, which heading), without the `::before` / `::in` / `::after` slot — `"/lane:Expedite"` (in the file's one board), `"#dwsd.board:intake/lane:Expedite"` (one of several boards), `"#dwsd.board:intake"` (a whole board), `"/stage:order @ Shops"` (a route stage), `"#service-levels"` (a section of the body, by its heading anchor). Without `part` the whole entity is meant. |
 
 - **Several entries are normal**, also several on the same system: a team can be an
   Atlassian team, a directory group and an OKR-tool group at once; a board with three lanes
   can be three boards over there plus one page that shows them together (three entries with
   `part`, one without); a long agreement written over there as three pages is one agreement
-  here, with one entry per page and `part: "section:…"` on the section each page holds. The same object may also be named from two files (a lane and a
+  here, with one entry per page and `part: "#<heading-anchor>"` on the section each page holds. The same object may also be named from two files (a lane and a
   route stage that are the same work); that is not an error.
 - **An entry with only a `url` is complete.** Taking an address apart into `id` and
   `instance` needs knowledge of that system, and every system builds its addresses
@@ -756,7 +782,7 @@ kebab-case (`[a-z0-9][a-z0-9-]*`), unquoted, unique within the file, and stays a
 when the fence's `title:` or the enclosing heading changes. The id is optional — a fence
 without one is valid — and tools that create a fence should assign one. It is a plain
 name, not a wikilink, and not part of the YAML, so the key sets above are unaffected; a
-board's `title:` still names it in locators (`#BoardName`). Readers recognize a fence by
+locator names a fence by tag and id (`#dwsd.board:intake`; see Relationship fields). Readers recognize a fence by
 its tag, the first word of the info string, and ignore attributes they do not know. A
 standalone view file (below) has no fence and no id; its filename names it.
 

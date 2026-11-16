@@ -88,14 +88,15 @@ When scanning an org, key off the discriminator (`unit-type` containing `work-sy
   agreements, interactions }`, items a `[[link]]` or an inline rule, as on a board node). External entities anchor
   **into** a board or route via a **locator** — which keys take one, and on which types, is
   in the field table of `<spec-root>/conventions.md` and on each type page; the forms are
-  `[[Board]]#BoardName/col:Column::in`, a column group
-  `[[Board]]#BoardName/lane:Lane/group:Group::in`, the `::before` / `::after` slot of a
-  position, or `[[Route]]/stage:itemType @ Band::in`); a bare `[[Entity]]` anchors to a work
-  system, unit or person instead. A locator without `#BoardName` (`[[Board]]/col:Column::in`)
-  lands on the column of a titled board, just as a route locator lands on a titled route;
-  in a file with several titled board fences it lands on every fence that has the unit.
-  `[[Board]]#BoardName::in` addresses the whole board and shows in the board header; a bare
-  `[[Board]]::in` is an entity anchor, not a board anchor. A meeting's `## Interactions`
+  `[[Board]]/col:Column::in`, a column group `[[Board]]/lane:Lane/group:Group::in`, the
+  `::before` / `::after` slot of a position, or `[[Route]]/stage:itemType @ Band::in`); a
+  bare `[[Entity]]` anchors to a work system, unit or person instead. From format 1.10.0 a
+  fence is named after `#` by its tag and id (`[[Notes]]#dwsd.board:intake/col:Review`),
+  needed only when the file holds several fences of that kind — the short form without it
+  lands on every fence that has the unit, and the validator warns. A `#anchor` without dot
+  or colon is a body heading, GitHub-style (`#service-levels`). The earlier `#BoardName`
+  still reads as a board title. `[[Board]]#dwsd.board::in` addresses the whole board and
+  shows in the board header; a bare `[[Board]]::in` is an entity anchor, not a board anchor. A meeting's `## Interactions`
   table row may name a standalone interaction with `[[…]]` — the file is then the source
   for outcome and anchor (conventions.md › Reading guide). See `<spec-root>/types/visualization.md` and
   `<spec-root>/types/flight-route.md`.

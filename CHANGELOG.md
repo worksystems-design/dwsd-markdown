@@ -16,9 +16,9 @@ Format: 1.10.0
   a list (several per entity and per system). Each entry: `system` (required; an open list
   with known values `atlassian`, `oboard`, `businessmap`, `notion`), `id` or `url` (at
   least one), optional `instance` (the space in which `id` is unique), `label` (a snapshot)
-  and `part` (an anchor path in this file, as in a locator but without the slot, plus
-  `section:<heading>` for a section of the body, nested with `/`; without it the whole
-  entity is meant — one agreement here can be three pages there, one per section). The name follows schema.org `sameAs`: with synchronization in
+  and `part` (what a locator names after the file, without the slot — a lane, a stage, a
+  whole board, or a body section by its heading anchor; without it the whole entity is
+  meant — one agreement here can be three pages there, one per section). The name follows schema.org `sameAs`: with synchronization in
   both directions no side is "the source", and `sources` meant something else in OKF.
   `same-as` points out of the org and is not a relationship; it carries no direction, no
   object kind, nothing about the tools that read it, no API forms or versions and no sync
@@ -36,6 +36,30 @@ Format: 1.10.0
   files). Readers that take `sources` as a map read all three forms through one normalizer
   and write the list. The examples keep their earlier form for now (Voltfeld's Customer
   Order Route) until the App reads `same-as`. Plugin 0.26.0.
+
+- **A locator names a fence by its tag, a heading by its anchor.** After the file, `#` used
+  to mean a board's title (`#BoardName`), so Markdown's own heading anchors could not be
+  used. Now a fence is `#<tag>:<id-or-title>` — `[[Ops Notes]]#dwsd.board:intake/lane:Expedite`,
+  `#dwsd.flightroute:standard/stage:…` — in the same `kind:value` grammar as `lane:` and
+  `col:`; the `id` wins over a title, a clash is reported, the split is at the first colon,
+  no number forms. **Short form:** with one fence of that kind in the file, leave the fence
+  segment out (`[[Bakehouse Production Board]]/lane:Expedite`, valid before too) or write
+  `#dwsd.board` without a value. A plain `#anchor` is a heading, GitHub-style (lowercase,
+  `-` for spaces, punctuation dropped, `-1` for repeats, any level); readers also accept the
+  raw heading text. Heading anchors carry no dot or colon, so they never look like a fence.
+  Only headings are addressable. When a second fence of a kind is added, short forms into
+  that file become ambiguous: the validator warns (`locator.ambiguous-fence`) and the tool
+  that adds the fence should rewrite them; tools give every new fence an `id`. The earlier
+  `#BoardName` / `#Route Name` is still read as a fence title (dropped only in a later
+  major). Proposed by Thomas, 2026-11-16 ("ds.rhythm:xyz"), effort and pitfalls checked
+  with the DSL.
+  Host impact: `conventions.md` › Relationship fields (locator text, new "Which fence, which
+  heading"), Embedded DSL fences › Fence ids; `skills/org-validate` (fence and heading
+  segments, `locator.ambiguous-fence`, heading warnings); the DSL locator parser and
+  resolvers, the App, the library. Files are migrated only after the hosts read the new
+  form: a DSL script with a dry-run rewrites `#BoardName` to the short form where the file
+  holds one board (all 63 board locators in the examples), and to `#dwsd.board:<id>`
+  otherwise. Type pages, templates and examples still show the earlier form until then.
 
 ## 2026-11-15
 
