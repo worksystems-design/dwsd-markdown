@@ -1,9 +1,10 @@
 ---
 type: flight-route
-sources:
-  erp:
+same-as:
+  - system: erp
     id: "O2C-STD"
     url: "https://erp.example.com/process/O2C-STD"
+    label: "Order to Cash (standard)"
 created_at: "2026-10-11"
 ---
 
@@ -65,6 +66,7 @@ bound-to:
 ```
 
 > [!NOTE]
-> **Modeling note.** The `sources:` block above points at the ERP process. The `ERP` band
+> **Modeling note.** The `same-as:` entry above says this route is the ERP's order-to-cash
+> process, described here from the organization's side. The `ERP` band
 > is bound to **no board** on purpose: the ERP is where its state lives. The
 > [[Order Andon]] agreement sits on the edge from `ERP` to `Studio`.

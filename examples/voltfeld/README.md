@@ -1,6 +1,6 @@
 ---
 type: readme
-dwsd-format: "1.6.0"
+dwsd-format: "1.10.0"
 ---
 
 # Voltfeld
@@ -158,7 +158,7 @@ work system **around** that process, and the
 without a flight level stand for two **work modes**, not two places.
 
 - `ERP` is **factory mode** — order entry, scheduling, production order and invoice, run
-  by the system of record. The route's `sources:` block points at the ERP process; the band
+  by the system of record. The route's `same-as:` entry names the ERP process it describes; the band
   is bound to no board, because the ERP is where that state lives.
 - `Studio` is **studio mode** — the seven orders in a hundred that do not go through. The
   [Order Exception Agent](ai-agents/Order%20Exception%20Agent.md), bound to the factory
