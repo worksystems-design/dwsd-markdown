@@ -6,6 +6,21 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-22
+
+- **Rename, remove, change type — the rules written down.** Renaming stays allowed; the
+  links to the old name are updated in the same commit (frontmatter, body, locators).
+  Whoever removes a file resolves the links to it: frontmatter links go, body links point
+  to the successor or become plain text; Git is the archive. A type change is allowed and
+  leaves the file to be checked against its new type. No format change: these rules
+  describe how to keep files correct, not what a correct file is. Decided with Thomas,
+  2026-10-30.
+- **A board lane has its own columns or the board's, never both.** An agreement on a
+  board-level column holds in every lane that uses the board's columns. Clarification of
+  what the renderer already does; no format change.
+  Host impact: `conventions.md` › Filename = label = slug › Rename, remove, change type
+  (new); `types/visualization.md` › Lanes (two sentences). Nothing to re-read in tools.
+
 ## 2026-11-16
 
 Format: 1.10.0

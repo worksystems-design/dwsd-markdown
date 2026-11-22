@@ -58,7 +58,9 @@ renders it live; in plain Markdown the same block still reads as a YAML document
 **Lanes** — each entry is a bare name (a `named` lane) or an object with `name`, an explicit
 `type` (`named` \| `assignee` \| `expedite`), and optional `wip` (a single number binds
 **both** min and max), `status-category`, `tags`, `agreements`, `interactions`, and
-lane-local `columns` / `groups`. Lanes are **not** bound to a flight-item-type; a
+lane-local `columns` / `groups`. A lane has **either** its own `columns` **or** the board's,
+never both. An agreement on a board-level column holds in every lane that uses the board's
+columns. Lanes are **not** bound to a flight-item-type; a
 "swimlane per item type" is just a `named` lane named after the type.
 
 **Groups** — each entry is an object with a required `name` and any of `columns`,

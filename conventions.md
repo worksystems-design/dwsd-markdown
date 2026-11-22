@@ -217,8 +217,26 @@ Two files with the same key in one organization are an error — labels are uniq
 (`aaron-turner`, umlauts spelled out) serves URLs and internal ids only; it is lossy, so it
 is never used to match a link.
 
+### Rename, remove, change type
+
 Because the filename is the identity, **renaming a file renames the entity** — update
 the wikilinks that point at it.
+
+- **Rename** — allowed. Update every link to the old name **in the same commit**:
+  frontmatter, body, and the file part of locators. `same-as:` entries travel with the
+  file; the id over there stays the anchor.
+- **Remove** — whoever removes a file resolves the links to it, as when renaming. A
+  frontmatter link to it is taken out. A body link either points to the successor or
+  becomes plain text (the name without brackets). Git keeps the removed file; nothing else
+  needs to.
+- **Change type** — allowed. Afterwards the file must be correct for its new type: its
+  required fields, the targets its relationship keys allow, keys the new type does not
+  define, and `flightlevel` when it becomes (or stops being) a work system.
+
+A decision and its implementation are two moments: while an
+`organizational-decision-record` is accepted, the files it retires still exist and its
+links still resolve. Links into the void appear only when the files go — that is the
+commit that resolves them.
 
 ## Relationships are wikilinks
 
