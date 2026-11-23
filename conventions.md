@@ -259,7 +259,8 @@ role-keeper:                          # or a list
   the detail, a locator). Any other key — `derived-from`, `delegator`, `decision-makers`,
   or a key of the author's own like `mentor:` — is a plain **link** named by its key: it
   connects the two entities, but no view draws a marker from it. Wikilinks in the body
-  are references, not relationships.
+  are references, not relationships; so are [Live Links](#live-links-an-object-in-another-system-named-in-the-text)
+  to objects in other systems.
 
 ### Relationship fields
 
@@ -544,6 +545,48 @@ read: each `sources:` key is one entry with that key as `system` (its `id` and `
 carried over), and the flat pair is one entry with `system: atlassian`. A file that has
 `same-as:` and an earlier form is read as the union. Write `same-as:` in new files; the
 earlier forms are dropped only in a later major.
+
+## Live Links (an object in another system, named in the text)
+
+Body text often names an object that lives in another system: an objective in an OKR tool,
+a Jira epic, a Confluence page. A **Live Link** is a plain Markdown link that says which
+system and which object it means, in the link's title:
+
+```markdown
+The bakery works toward [a quick yes for wholesale customers](https://app.oboard.io/#/workspaces/<workspace-id>?editObjective=<objective-id> "oboard:GC-12").
+```
+
+- **The form.** An inline Markdown link `[text](url "system:ref")`. A title that matches
+  `^[a-z][a-z0-9-]{0,31}:\S+$` makes the link a Live Link: `system` is the part before the
+  first colon, `ref` everything after it, as written (a ref may hold colons, as Atlassian
+  ARIs do). Any other title is an ordinary tooltip, and the link an ordinary link.
+- **`system`** uses the vocabulary of [`same-as`](#same-as-the-same-thing-in-another-system)
+  (`atlassian`, `oboard`, `businessmap`, `notion`, … an open list, lowercase).
+- **`ref`** is the key or id **as that system shows it to people** (`GC-12`, `PROJ-481`).
+  Whether it is a key or a stable id is the reading tool's knowledge of that system, not
+  the format's.
+- **The `url` carries the identity.** It is the address a person opens, copied as it is,
+  never an API endpoint; when the url and the ref disagree, the url wins. The title's ref
+  and the link text are reading aids for people and tools. The link stays clickable in any
+  Markdown viewer, with or without a tool that knows the system.
+- **Where it is read.** In the body only, on prose lines: not in the frontmatter (there an
+  object over there is a `same-as` entry), not inside fences or inline code, not in images.
+  Only inline links on one line count: a reference-style link (`[text][1]`), an autolink
+  (`<https://…>`) or a link broken across a line is not a Live Link.
+- **Not a wikilink, not a relationship.** A Live Link is never matched against file labels
+  and is never a broken link, whatever its target. Like a wikilink in the body it is a
+  reference: it connects nothing in the org's graph. A tool may list where a given object
+  is referenced (file, nearest heading).
+- **Case counts.** `oboard:GC-12` and `oboard:gc-12` are two refs as written; a tool that
+  knows the system may treat them as one.
+
+**For hosts and tools (guidance, not part of the format).** A host that knows the system
+may resolve a Live Link live and show the object's current title or state next to the
+link; without a connection it shows the link text and the link still works. A tool may
+refresh a stale ref or link text, but never rewrites a file silently: the change is a
+diff someone sees. A validator reports a ref that no longer resolves; it is a finding,
+not an error in the file. Resolved data (state, progress, owner) never goes into the
+file.
 
 ## Modeling notes in the body
 
