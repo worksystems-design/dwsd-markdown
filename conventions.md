@@ -285,8 +285,10 @@ flowchart LR
 - An `http(s)` URL, another scheme, an absolute path (`/x.md` — its root is not defined
   here), a bare anchor or a file that is not `.md` is an ordinary link, not a reference.
   A target that resolves to no file is a dangling reference, as elsewhere in the body.
-- Mermaid keeps one link per node: the last `click` line for a node wins; there is no
-  fallback from one form to the other. Many Markdown viewers render Mermaid with clicks
+- Mermaid keeps one link per node: the last `click` statement **with a target** for a node
+  wins, whatever form the target has; there is no fallback from one form to the other. A
+  later callback or a malformed statement does not retire an earlier link. A fence without
+  a diagram keyword Mermaid knows has no clicks. Many Markdown viewers render Mermaid with clicks
   disabled, so a click works where a host resolves it.
 
 ### Relationship fields
