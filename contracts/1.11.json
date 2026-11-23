@@ -881,6 +881,18 @@
         "gives": "each row a mandate of the file's holder; a row with a locator shows as a mandate chip where it points"
       },
       {
+        "name": "mermaid-click",
+        "where": {
+          "types": "any",
+          "form": "a `click <node> \"<target>\"` line inside a mermaid fence in the body",
+          "targets": [
+            "[[Label]] (recommended)",
+            "relative path to a .md file of the org, spaces as %20"
+          ]
+        },
+        "gives": "a body reference from the node to that file; renamed with the file; an http(s) target stays an ordinary link"
+      },
+      {
         "name": "live-links",
         "where": {
           "types": "any",

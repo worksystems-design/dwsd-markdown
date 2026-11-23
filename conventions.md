@@ -262,6 +262,27 @@ role-keeper:                          # or a list
   are references, not relationships; so are [Live Links](#live-links-an-object-in-another-system-named-in-the-text)
   to objects in other systems.
 
+**Links from a Mermaid node.** A ```` ```mermaid ```` fence in the body may link a node to
+a file of the org with a `click` line. The target is a body reference like a wikilink: it
+is read, a tool that renames the file updates it, and it is not a relationship.
+
+```mermaid
+flowchart LR
+  A[Baking Agreement] --> B[Morning Bake]
+  click A "[[Baking Agreement]]"
+  click B "../interactions/Morning%20Bake.md"
+```
+
+- **`"[[Label]]"`** is the recommended form, resolved like a wikilink: it survives a moved
+  file and a type change.
+- **A relative path** to a `.md` file of the org, with spaces as `%20`, is read as well
+  and resolved as that file.
+- An `http(s)` URL is an ordinary link, not a reference. A target that resolves to no file
+  is a dangling reference, as elsewhere in the body.
+- Mermaid keeps one link per node: the last `click` line for a node wins; there is no
+  fallback from one form to the other. Many Markdown viewers render Mermaid with clicks
+  disabled, so a click works where a host resolves it.
+
 ### Relationship fields
 
 Both hyphen and underscore spellings are accepted (`reports-to` = `reports_to`).
