@@ -559,7 +559,10 @@ The bakery works toward [a quick yes for wholesale customers](https://app.oboard
 - **The form.** An inline Markdown link `[text](url "system:ref")`. A title that matches
   `^[a-z][a-z0-9-]{0,31}:\S+$` makes the link a Live Link: `system` is the part before the
   first colon, `ref` everything after it, as written (a ref may hold colons, as Atlassian
-  ARIs do). Any other title is an ordinary tooltip, and the link an ordinary link.
+  ARIs do). Any other title is an ordinary tooltip, and the link an ordinary link. The
+  title may be delimited by `"…"`, `'…'` or `(…)`, as CommonMark allows; a backslash
+  before ASCII punctuation is resolved (`\"` → `"`), nothing else is decoded (no HTML
+  entities). An image (`![…](… "oboard:x")`) is never a Live Link.
 - **`system`** uses the vocabulary of [`same-as`](#same-as-the-same-thing-in-another-system)
   (`atlassian`, `oboard`, `businessmap`, `notion`, … an open list, lowercase).
 - **`ref`** is the key or id **as that system shows it to people** (`GC-12`, `PROJ-481`).
