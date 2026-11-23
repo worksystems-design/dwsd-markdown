@@ -276,9 +276,12 @@ flowchart LR
 - **`"[[Label]]"`** is the recommended form, resolved like a wikilink: it survives a moved
   file and a type change.
 - **A relative path** to a `.md` file of the org, with spaces as `%20`, is read as well
-  and resolved as that file.
-- An `http(s)` URL is an ordinary link, not a reference. A target that resolves to no file
-  is a dangling reference, as elsewhere in the body.
+  and resolved as that file; a `#fragment` names a heading in it.
+- Both `click A "<target>"` and `click A href "<target>"` (with an optional tooltip and
+  `_blank`) count; a callback form is not a link.
+- An `http(s)` URL, another scheme, an absolute path (`/x.md` — its root is not defined
+  here), a bare anchor or a file that is not `.md` is an ordinary link, not a reference.
+  A target that resolves to no file is a dangling reference, as elsewhere in the body.
 - Mermaid keeps one link per node: the last `click` line for a node wins; there is no
   fallback from one form to the other. Many Markdown viewers render Mermaid with clicks
   disabled, so a click works where a host resolves it.
