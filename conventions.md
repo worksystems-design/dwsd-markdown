@@ -278,7 +278,10 @@ flowchart LR
 - **A relative path** to a `.md` file of the org, with spaces as `%20`, is read as well
   and resolved as that file; a `#fragment` names a heading in it.
 - Both `click A "<target>"` and `click A href "<target>"` (with an optional tooltip and
-  `_blank`) count; a callback form is not a link.
+  `_blank`) count; a callback form is not a link. Mermaid's grammar decides what a click
+  line is: only in the diagram types that know `click` (flowchart / graph, classDiagram,
+  gantt), one statement per `;`, and `click A,B "…"` names each node. Other keywords that
+  link (classDiagram's `link`) are not read.
 - An `http(s)` URL, another scheme, an absolute path (`/x.md` — its root is not defined
   here), a bare anchor or a file that is not `.md` is an ordinary link, not a reference.
   A target that resolves to no file is a dangling reference, as elsewhere in the body.
