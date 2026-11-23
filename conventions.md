@@ -274,7 +274,9 @@ flowchart LR
 ```
 
 - **`"[[Label]]"`** is the recommended form, resolved like a wikilink: it survives a moved
-  file and a type change.
+  file and a type change. It may carry what a locator names after the file
+  (`"[[Morning Bake]]/col:Doing::in"`): the reference is still to the file, the suffix says
+  where in it a host may go; it adds no relationship, and a rename rewrites only the name.
 - **A relative path** to a `.md` file of the org, with spaces as `%20`, is read as well
   and resolved as that file; a `#fragment` names a heading in it.
 - Both `click A "<target>"` and `click A href "<target>"` (with an optional tooltip and
