@@ -580,22 +580,21 @@ earlier forms are dropped only in a later major.
 ## Live Links (an object in another system, named in the text)
 
 Body text often names an object that lives in another system: an objective in an OKR tool,
-a Jira epic, a Confluence page. A **Live Link** is a plain Markdown link that says which
+an epic in an issue tracker, a wiki page. A **Live Link** is a plain Markdown link that says which
 system and which object it means, in the link's title:
 
 ```markdown
-The bakery works toward [a quick yes for wholesale customers](https://app.oboard.io/#/workspaces/<workspace-id>?editObjective=<objective-id> "oboard:GC-12").
+The bakery works toward [a quick yes for wholesale customers](https://okr.example.com/goals/12 "okr-tool:GC-12").
 ```
 
 - **The form.** An inline Markdown link `[text](url "system:ref")`. A title that matches
   `^[a-z][a-z0-9-]{0,31}:\S+$` makes the link a Live Link: `system` is the part before the
-  first colon, `ref` everything after it, as written (a ref may hold colons, as Atlassian
-  ARIs do). Any other title is an ordinary tooltip, and the link an ordinary link. The
+  first colon, `ref` everything after it, as written (a ref may hold colons). Any other title is an ordinary tooltip, and the link an ordinary link. The
   title may be delimited by `"…"`, `'…'` or `(…)`, as CommonMark allows; a backslash
   before ASCII punctuation is resolved (`\"` → `"`), nothing else is decoded (no HTML
-  entities). An image (`![…](… "oboard:x")`) is never a Live Link.
+  entities). An image (`![…](… "okr-tool:x")`) is never a Live Link.
 - **`system`** uses the vocabulary of [`same-as`](#same-as-the-same-thing-in-another-system)
-  (`atlassian`, `oboard`, `businessmap`, `notion`, … an open list, lowercase).
+  (an open list, lowercase).
 - **`ref`** is the key or id **as that system shows it to people** (`GC-12`, `PROJ-481`).
   Whether it is a key or a stable id is the reading tool's knowledge of that system, not
   the format's.
@@ -611,7 +610,7 @@ The bakery works toward [a quick yes for wholesale customers](https://app.oboard
   and is never a broken link, whatever its target. Like a wikilink in the body it is a
   reference: it connects nothing in the org's graph. A tool may list where a given object
   is referenced (file, nearest heading).
-- **Case counts.** `oboard:GC-12` and `oboard:gc-12` are two refs as written; a tool that
+- **Case counts.** `okr-tool:GC-12` and `okr-tool:gc-12` are two refs as written; a tool that
   knows the system may treat them as one.
 
 **For hosts and tools (guidance, not part of the format).** A host that knows the system
