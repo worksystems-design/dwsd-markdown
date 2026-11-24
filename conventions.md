@@ -580,8 +580,8 @@ earlier forms are dropped only in a later major.
 ## Live Links (an object in another system, named in the text)
 
 Body text often names an object that lives in another system: an objective in an OKR tool,
-an epic in an issue tracker, a wiki page. A **Live Link** is a plain Markdown link that says which
-system and which object it means, in the link's title:
+an epic in an issue tracker, a wiki page. A **Live Link** is a plain Markdown link that
+says which system and which object it means, in the link's title:
 
 ```markdown
 The bakery works toward [a quick yes for wholesale customers](https://okr.example.com/goals/12 "okr-tool:GC-12").
@@ -589,12 +589,14 @@ The bakery works toward [a quick yes for wholesale customers](https://okr.exampl
 
 - **The form.** An inline Markdown link `[text](url "system:ref")`. A title that matches
   `^[a-z][a-z0-9-]{0,31}:\S+$` makes the link a Live Link: `system` is the part before the
-  first colon, `ref` everything after it, as written (a ref may hold colons). Any other title is an ordinary tooltip, and the link an ordinary link. The
-  title may be delimited by `"…"`, `'…'` or `(…)`, as CommonMark allows; a backslash
+  first colon, `ref` everything after it, as written (a ref may hold colons).
+  Any other title is an ordinary tooltip, and the link an ordinary link. The title may be delimited by `"…"`, `'…'` or `(…)`, as CommonMark allows; a backslash
   before ASCII punctuation is resolved (`\"` → `"`), nothing else is decoded (no HTML
   entities). An image (`![…](… "okr-tool:x")`) is never a Live Link.
 - **`system`** uses the vocabulary of [`same-as`](#same-as-the-same-thing-in-another-system)
-  (an open list, lowercase).
+  (an open list, lowercase), and the same word for the same system in both places. Several
+  products of one system (an issue tracker and a wiki on one platform) share its word; the
+  url tells which product is meant.
 - **`ref`** is the key or id **as that system shows it to people** (`GC-12`, `PROJ-481`).
   Whether it is a key or a stable id is the reading tool's knowledge of that system, not
   the format's.
