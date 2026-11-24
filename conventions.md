@@ -594,9 +594,7 @@ The bakery works toward [a quick yes for wholesale customers](https://okr.exampl
   before ASCII punctuation is resolved (`\"` → `"`), nothing else is decoded (no HTML
   entities). An image (`![…](… "okr-tool:x")`) is never a Live Link.
 - **`system`** uses the vocabulary of [`same-as`](#same-as-the-same-thing-in-another-system)
-  (an open list, lowercase), and the same word for the same system in both places. Several
-  products of one system (an issue tracker and a wiki on one platform) share its word; the
-  url tells which product is meant.
+  (an open list, lowercase).
 - **`ref`** is the key or id **as that system shows it to people** (`GC-12`, `PROJ-481`).
   Whether it is a key or a stable id is the reading tool's knowledge of that system, not
   the format's.
