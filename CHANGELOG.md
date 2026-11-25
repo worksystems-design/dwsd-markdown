@@ -6,6 +6,31 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-25
+
+Format: 1.11.0
+
+- **Live Links: an object in another system, named in the text.** An inline Markdown link
+  whose title is `system:ref` (`[text](url "okr-tool:GC-12")`); the url carries the
+  identity. Body prose only; not a wikilink, not a relationship, never a broken link.
+  Resolving it live is a host's business and stays guidance. Thomas, 2026-11-23.
+- **A Mermaid `click` target can be a body reference:** `"[[Label]]"` (recommended) or a
+  relative `.md` path. It counts for renames and dangling references. Agreed with the App
+  and the DSL.
+- **New type `automation`** (preliminary, minimal): acts in the workflow by fixed rules — a
+  rule, a workflow, a whole system. Same fields as `ai-agent`, folder `automations/`, no
+  mandates, no credentials. Thomas, 2026-11-25.
+- **The contract lists the places tools read** (`managed`).
+- **The format names no `system` words.** The known values of `same-as` › `system` are
+  gone from the contract and the text; the organization chooses the word and keeps to one
+  per system. Every existing file stays valid.
+  Plugin 0.27.0; Voltfeld gains an automation and names 1.11.0.
+  Host impact: `contracts/1.11.json` (type `automation`, `managed`, `same-as` `system`
+  without values), `contracts/1.11.guide.md`, `conventions.md` › Relationships are
+  wikilinks, Format versions, `same-as`, Live Links; `types/automation.md`,
+  `templates/automation.md`, `skills/org-validate`. Readers add Live Links, Mermaid click
+  targets and the new type; example orgs are re-pinned.
+
 ## 2026-11-22
 
 - **Rename, remove, change type — the rules written down.** Renaming stays allowed; the

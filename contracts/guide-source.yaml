@@ -3,21 +3,22 @@
 # contracts/<version>.guide.md. Keep the result under 8 KB.
 
 intro: |
-  Read this before you create or change an entity. A DWSD organization is a folder of
+  A DWSD organization is a folder of
   Markdown files.
 
 rules:
   - "**One file = one entity.** YAML frontmatter between `---` lines, then a Markdown body. `type:` decides the type, not the folder; each type lives in one flat plural folder (below). Files are UTF-8."
-  - "**The file name is the identity** and the display label: `Jonas Keller.md` is `[[Jonas Keller]]`. Spaces are fine. Renaming a file renames the entity, so update every link to it."
+  - "**The file name is the identity** and the display label: `Jonas Keller.md` is `[[Jonas Keller]]`. Renaming a file means updating every link to it."
   - "**Keys are kebab-case** (`for-domain`, `unit-type`). `<base>-type` keys (`unit-type`, `agreement-type`, `interaction-type`, `visualization-type`) hold one token or a YAML list: `unit-type: [team, work-system]`."
   - "**Relations are wikilinks in frontmatter, quoted:** `for-domain: \"[[Bakehouse]]\"`. Alias: `[[Name|label]]`. A relation field may hold a list unless marked single. Link only to files that exist or that you create in the same step."
-  - "**`member-of` is structure, `contributes-to` is flow.** `member-of` says where an individual or unit sits in the formal structure (*Aufbauorganisation*); `contributes-to` says which higher work system a work system feeds (*Ablauforganisation*). A work system often has both, often the same target (an FL1 work system inside an FL2 one); a plain unit or person has only `member-of`."
+  - "**`member-of` is structure, `contributes-to` is flow.** `member-of` says where an individual or unit sits in the formal structure; `contributes-to` says which higher work system a work system feeds. A work system often has both; a plain unit or person has only `member-of`."
   - "**Locators** (`interaction-of`, `agreement-of`, `mandate-of`, `observes`, `bound-to`) say where something hangs: a board position `\"[[Board File]]/col:Column::in\"` (slot `::before|in|after`; whole board `#dwsd.board::in`; several boards: `#dwsd.board:<id>/col:…`), a route stage `\"[[Route File]]/stage:item @ Band::in\"`, or a bare `\"[[Entity]]\"`."
-  - "**Dates** are ISO: `2026-11-10`, datetimes `2026-11-10T09:00:00`. Do not invent values for fields you do not know; leave them out. Most fields are optional."
+  - "**Dates** are ISO: `2026-11-10`, datetimes `2026-11-10T09:00:00`. Leave out what you do not know; most fields are optional."
   - "**Work systems and meetings are not types of their own.** A work system is a `unit` with `unit-type` containing `work-system` (it then needs `flightlevel` 1, 2 or 3) and lives in `work-systems/`. A meeting is an `interaction` with `interaction-type: meeting`."
-  - "**Body:** write in the organization's language (read existing files first), as prose. Role, agreement, mandate and decision-record bodies use `##` sections (Purpose, Description, Accountabilities, Decision Rights; Context, Decision, Consequences). The README of an org carries `dwsd-format: \"<version>\"`."
-  - "**`same-as`** lists the same thing in other systems: `- system: atlassian` plus `id` (stable id) or `url` (browser address); optional `instance`, `label`, `part` (`/lane:X`, `#a-heading`). Not a relation. Identify by `system` + `id`. Reading one to answer is no reason to write it here; write `same-as`, not `sources`."
-  - "**Embedded fences** are plain YAML: `dwsd.board` (visualization with `visualization-type: board`), `dwsd.flightroute`, `dwsd.units`, `dwsd.orgchart`. Their syntax is not in this guide; read the type page of the spec before you write one."
+  - "**Body:** write in the organization's language (read existing files first), as prose; roles, agreements, mandates and decision records use `##` sections. The README of an org carries `dwsd-format: \"<version>\"`."
+  - "**`same-as`** lists the same thing in other systems: `- system: <word>` (one word per system) plus `id` (stable id) or `url` (browser address); optional `instance`, `label`, `part` (`/lane:X`, `#a-heading`). Not a relation. Identify by `system` + `id`. Write `same-as`, not `sources`."
+  - "**Live Link** (body): `[text](https://… 'system:key')` names an object in another system; the url is its identity. Not a relation."
+  - "**Embedded fences** are plain YAML: `dwsd.board` (visualization with `visualization-type: board`), `dwsd.flightroute`, `dwsd.units`, `dwsd.orgchart`. Read the type page before you write one."
 
 # One or two sentences per type: what it is for.
 meaning:
@@ -60,7 +61,6 @@ examples:
     role-keeper: "[[Jonas Keller]]"
     for-domain: "[[Bakehouse]]"
     ---
-    ## Purpose
     Keeps the bakehouse on schedule.
   unit: |
     ---
@@ -86,5 +86,4 @@ examples:
     start: "2026-11-10T09:00:00"
     rrule: "RRULE:FREQ=WEEKLY;BYDAY=MO"
     ---
-    ## Why are we doing this meeting?
-    To plan the week.
+    Plan the week.

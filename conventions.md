@@ -171,6 +171,11 @@ closed list: a key of the author's own stays allowed. The type pages and the con
 same thing; `python contracts/check-fields.py` reports any key that is on one but not the
 other.
 
+Since 1.11.0 the contract also lists, under `managed`, the **places in a file that tools
+read by their form** — fences, container tables, headings, mandate sections, Live Links,
+Mermaid click targets — each with where it stands, its form and what you get for keeping to
+it. Everything else in a body is free text.
+
 **Findings about the id.** Every tool reports them with the same codes, which this spec
 owns. None is an error, so they never change a check's exit code.
 

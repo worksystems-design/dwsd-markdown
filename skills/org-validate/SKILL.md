@@ -169,6 +169,16 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      locator; a heading anchor is checked as in **Fence and heading segments** below). Never check that the object over there exists, and never flag the same
      object named from two files. **Note** an earlier form (`sources:` map, flat
      `atlassian_id` / `atlassian_url`) as readable but superseded by `same-as`.
+   - **Live Links** (format 1.11.0; `<spec-root>/conventions.md` › Live Links) — an inline
+     body link whose title matches `^[a-z][a-z0-9-]{0,31}:\S+$` points out of the org. Never
+     a wikilink, never a dangler; do not check that the object exists. **Note** a word that
+     differs only in spelling from another `system` word of the org.
+   - **Mermaid `click` targets** (format 1.11.0; conventions › Links from a Mermaid node) —
+     in a flowchart / graph, classDiagram or gantt fence, the last link-form `click` per node
+     counts: `"[[Label]]"` (an optional locator suffix is not checked) or a relative `.md`
+     path must resolve, as in **Wikilink integrity**. Every other target is an ordinary link.
+   - **`automation`** (format 1.11.0) — `for-domain` and `bound-to` as on an `ai-agent`.
+     **Warn** on anything that looks like a token, key or secret in the file.
    - **Board-binding consistency (informational):** when an entity carries both
      `for-domain` (a work system) and a board-position `interaction-of` / `agreement-of`,
      **note** — not warn — if the anchored board's work system (its `visualization-of`)

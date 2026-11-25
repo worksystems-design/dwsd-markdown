@@ -1,6 +1,6 @@
 ---
 type: readme
-dwsd-format: "1.10.0"
+dwsd-format: "1.11.0"
 ---
 
 # Voltfeld
@@ -164,7 +164,8 @@ without a flight level stand for two **work modes**, not two places.
   [Order Exception Agent](ai-agents/Order%20Exception%20Agent.md), bound to the factory
   stage, flags them and prepares the case; people work it on the
   [Order Studio Board](visualizations/Order%20Studio%20Board.md); the clarified order flows
-  back.
+  back. At the last column the [Order Release Rule](automations/Order%20Release%20Rule.md),
+  an `automation`, releases it again by a fixed rule.
 
 The edge into the studio is an andon cord, and the [Order Andon](agreements/Order%20Andon.md)
 says who answers it within what time. The reason code every case leaves with feeds the
