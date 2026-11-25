@@ -78,7 +78,7 @@ size = len(text.encode("utf-8"))
 target = cdir / f"{version}.guide.md"
 
 if check:
-    ok = target.exists() and target.read_bytes() == text.encode("utf-8")
+    ok = target.exists() and target.read_text(encoding="utf-8") == text
     print(f"{target.name}: {'ok' if ok else 'differs from the generated guide'} ({size} bytes)")
     sys.exit(0 if ok else 1)
 
