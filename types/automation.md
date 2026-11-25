@@ -23,7 +23,9 @@
 Plus the shared optionals from [conventions](../conventions.md), among them `same-as` for
 the rule, workflow or system it is over there.
 
-The body is free text: what starts it, what it does, what it leaves to people.
+The body is free text: what starts it (a `## Trigger` section, as on an
+[`interaction`](interaction.md), where it needs more than a sentence), what it does, what it
+leaves to people.
 
 ## Example
 
