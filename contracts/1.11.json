@@ -792,11 +792,9 @@
             "primary": "Name",
             "aliases": []
           },
-          "result": {
-            "primary": "Result",
-            "aliases": [
-              "Outcome"
-            ]
+          "outcome": {
+            "primary": "Outcome",
+            "aliases": []
           },
           "locator": {
             "primary": "Interaction of",
@@ -805,7 +803,7 @@
             ]
           }
         },
-        "gives": "each row an interaction; a row with a locator shows where the locator points, with its result"
+        "gives": "each row an interaction; a row with a locator shows where the locator points, with its outcome"
       },
       {
         "name": "agreements-table",
@@ -821,11 +819,9 @@
             "primary": "Name",
             "aliases": []
           },
-          "result": {
-            "primary": "Result",
-            "aliases": [
-              "Outcome"
-            ]
+          "outcome": {
+            "primary": "Outcome",
+            "aliases": []
           },
           "locator": {
             "primary": "Agreement of",
@@ -844,26 +840,23 @@
             "meeting"
           ],
           "heading": {
-            "primary": "What should come out of it?",
+            "primary": "What is the outcome?",
             "aliases": [
-              "What is the outcome?",
               "Outcome"
             ]
           }
         },
-        "gives": "the first lines, shown as the short result where the interaction is drawn"
+        "gives": "the first lines, shown as the short outcome where the interaction is drawn"
       },
       {
-        "name": "decision-section",
+        "name": "proposal-outcome",
         "where": {
           "types": [
             "proposal"
           ],
           "heading": {
-            "primary": "Decision",
-            "aliases": [
-              "Outcome"
-            ]
+            "primary": "Outcome",
+            "aliases": []
           }
         },
         "gives": "consented or declined, shown where the proposal is drawn"
