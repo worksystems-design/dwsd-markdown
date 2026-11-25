@@ -185,6 +185,48 @@
         }
       }
     },
+    "automation": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "automations"
+      ],
+      "fields": {
+        "platform": {
+          "kind": "string"
+        },
+        "description": {
+          "kind": "string"
+        },
+        "status": {
+          "kind": "enum",
+          "values": [
+            "active",
+            "deactivated"
+          ],
+          "open": true
+        },
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "role",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "bound-to": {
+          "kind": "locator",
+          "targets": [
+            "work-system",
+            "unit",
+            "individual"
+          ]
+        }
+      }
+    },
     "driver": {
       "entity": true,
       "required": [],

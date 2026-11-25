@@ -23,6 +23,7 @@ rules:
 meaning:
   agreement: "A working agreement, protocol or SLA. Parties and who is responsible for what are in the body."
   ai-agent: "An AI agent present in the organization, described by where it surfaces (`bound-to`)."
+  automation: "Acts in the workflow by fixed rules: a rule, a workflow, a whole system. Never a secret in the file."
   driver: "Why to act: a situation, its effect and the need that follows. Comes from insights."
   flight-item-type: "A class of work item that flows (a standard order, a feature). Says what the item is, not an instance."
   flight-route: "How one item type flows through bands and stages. Body holds a `dwsd.flightroute` fence."

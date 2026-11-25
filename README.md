@@ -74,6 +74,7 @@ organizational-decision-record); see [conventions](conventions.md).
 | `unit` | structure | [spec](types/unit.md) | A named grouping (people, teams, or units) that others are `member-of` — the formal structure |
 | `work-system` | structure | [spec](types/work-system.md) | A flow / value-creation system (a unit whose `unit-type` includes `work-system`) |
 | `ai-agent` | structure | [spec](types/ai-agent.md) | An AI-agent surface — where an AI appears in the workflow (preliminary) |
+| `automation` | structure | [spec](types/automation.md) | Something that acts in the workflow by fixed rules: a rule, a workflow, a whole system (preliminary) |
 | `interaction` | flow | [spec](types/interaction.md) | People acting in relation across work systems |
 | `meeting` | flow | [spec](types/meeting.md) | A scheduled interaction that bundles a list of interactions |
 | `agreement` | flow | [spec](types/agreement.md) | A working agreement between work systems |

@@ -34,6 +34,7 @@ relationships, locators and the views.
 | something someone noticed, an open issue | `signals/`, `insights/`, `drivers/`, `proposals/` | `observes`; up and down the ladder along `derived-from` |
 | the mandates someone holds — what they may or must do | `individuals/` | see *Mandates of a person* below |
 | an AI agent and where it acts | `ai-agents/` | `bound-to`, `for-domain`, `delegator` |
+| an automation and where it acts | `automations/` | `bound-to`, `for-domain` |
 
 The folder is a convenience; the `type:` field decides. A work system is a `unit` whose
 `unit-type` includes `work-system`; a meeting is an `interaction` with

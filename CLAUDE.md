@@ -41,7 +41,7 @@ organization as a folder of Markdown files. It is a **public** repo, written for
 - **One file = one entity.** The `type:` field decides the type, not the folder. Each type
   lives in a flat plural folder (`individuals/`, `signals/`, …).
 - **Three conceptual categories — NOT folders:** `structure` (individual, role, unit,
-  work-system, ai-agent), `flow` (interaction, meeting, agreement, mandate, flight-item-type,
+  work-system, ai-agent, automation), `flow` (interaction, meeting, agreement, mandate, flight-item-type,
   flight-route, visualization), `change` (signal, insight, driver, proposal,
   organizational-decision-record — these *look at* the org and decide about it). The change
   category spans two phases: **Assess** (signal/insight/driver) and **Design**

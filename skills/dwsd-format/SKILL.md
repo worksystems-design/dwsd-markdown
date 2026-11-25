@@ -18,7 +18,7 @@ and the `type:` field in the frontmatter decides what it is. Entities are groupe
 **plural per-type folders** (`individuals/`, `roles/`, `units/`, `work-systems/`,
 `interactions/`, `agreements/`, `mandates/`, `signals/`, `insights/`, `drivers/`, `proposals/`,
 `decision-records/`, `visualizations/`, `flight-item-types/`, `flight-routes/`,
-`ai-agents/`) — the folder is a convenience; the `type:` is authoritative.
+`ai-agents/`, `automations/`) — the folder is a convenience; the `type:` is authoritative.
 
 ## The authoritative spec sits next to this skill — read it
 

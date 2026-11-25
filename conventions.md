@@ -14,7 +14,7 @@ type keeps its own flat plural folder (`individuals/`, `roles/`, …, `signals/`
 category is a way of thinking about an entity, not a directory.
 
 - **Structure** — the organization's makeup (who, and how they're organized): individual,
-  role, unit, work-system, ai-agent.
+  role, unit, work-system, ai-agent, automation.
 - **Flow** — how work is coordinated and flows: interaction, meeting, agreement, mandate,
   flight-item-type, flight-route, visualization.
 - **Change** — working *on* the system: signal, insight, driver, proposal,
