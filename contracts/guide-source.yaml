@@ -16,7 +16,7 @@ rules:
   - "**Dates** are ISO: `2026-11-10`, datetimes `2026-11-10T09:00:00`. Leave out what you do not know; most fields are optional."
   - "**Work systems and meetings are not types of their own.** A work system is a `unit` with `unit-type` containing `work-system` (it then needs `flightlevel` 1, 2 or 3) and lives in `work-systems/`. A meeting is an `interaction` with `interaction-type: meeting`."
   - "**Body:** write in the organization's language (read existing files first), as prose; roles, agreements, mandates and decision records use `##` sections. The README of an org carries `dwsd-format: \"<version>\"`."
-  - "**`same-as`** lists the same thing in other systems: `- system: <word>` (one word per system) plus `id` (stable id) or `url` (browser address); optional `instance`, `label`, `part` (`/lane:X`, `#a-heading`). Not a relation. Identify by `system` + `id`. Write `same-as`, not `sources`."
+  - "**`same-as`** lists the same thing in other systems: `- system: <word>` (one object, one word) plus `id` (stable id) or `url` (browser address); optional `instance`, `label`, `part` (`/lane:X`, `#a-heading`). Not a relation. Identify by `system` + `id`. Write `same-as`, not `sources`."
   - "**Live Link** (body): `[text](https://… 'system:key')` names an object in another system; the url is its identity. Not a relation."
   - "**Embedded fences** are plain YAML: `dwsd.board` (visualization with `visualization-type: board`), `dwsd.flightroute`, `dwsd.units`, `dwsd.orgchart`. Read the type page before you write one."
 

@@ -22,8 +22,8 @@ Format: 1.11.0
   mandates, no credentials. Thomas, 2026-11-25.
 - **The contract lists the places tools read** (`managed`).
 - **The format names no `system` words.** The known values of `same-as` › `system` are
-  gone from the contract and the text; the organization chooses the word and keeps to one
-  per system. Every existing file stays valid.
+  gone from the contract and the text; the organization chooses the word and keeps to
+  one word per object. Every existing file stays valid.
   Plugin 0.27.0; Voltfeld gains an automation and names 1.11.0.
   Host impact: `contracts/1.11.json` (type `automation`, `managed`, `same-as` `system`
   without values), `contracts/1.11.guide.md`, `conventions.md` › Relationships are
