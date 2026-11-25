@@ -536,8 +536,8 @@ same-as:
     id: "<team-id>"
     url: "https://home.atlassian.com/o/<org-id>/people/team/<team-id>"
     label: "Bakehouse Crew"
-  - system: oboard
-    url: "https://<site>.atlassian.net/…"
+  - system: okr-tool
+    url: "https://okr.example.com/…"
 ```
 
 | Key | Required | Meaning |
