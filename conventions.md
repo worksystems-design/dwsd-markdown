@@ -542,7 +542,7 @@ same-as:
 
 | Key | Required | Meaning |
 |---|---|---|
-| `system` | yes | The system the object lives in: the thing an agent talks to, with its own interface and its own ids. An open list; use a known value where one fits (`atlassian`, `oboard`, `businessmap`, `notion`), lowercase. The host of a URL does not say it (custom domains, several hosts per system). |
+| `system` | yes | The system the object lives in: the thing an agent talks to, with its own interface and its own ids. A short lowercase word of the organization's choice; the format names none. Use the same word for the same system throughout the org. The host of a URL does not say it (custom domains, several hosts per system). |
 | `id` | one of `id` / `url` | The object's own identifier in that system — the stable one (for Atlassian the ARI where there is one; for a Jira issue the numeric id, not the key, which changes when the issue moves). It carries the identity. |
 | `url` | one of `id` / `url` | The address a person opens in the browser, copied as it is; a permalink where the system offers one. Never an API endpoint. A tool may refresh it. |
 | `instance` | no | The space in which `id` is unique — a site, an organization, a workspace, a tenant — as the system names it: its own stable identifier where it has one, else a host. Give it when neither `id` nor `url` tells which one is meant. |
@@ -594,7 +594,7 @@ The bakery works toward [a quick yes for wholesale customers](https://okr.exampl
   before ASCII punctuation is resolved (`\"` → `"`), nothing else is decoded (no HTML
   entities). An image (`![…](… "okr-tool:x")`) is never a Live Link.
 - **`system`** uses the vocabulary of [`same-as`](#same-as-the-same-thing-in-another-system)
-  (an open list, lowercase).
+  — the same word for the same system.
 - **`ref`** is the key or id **as that system shows it to people** (`GC-12`, `PROJ-481`).
   Whether it is a key or a stable id is the reading tool's knowledge of that system, not
   the format's.

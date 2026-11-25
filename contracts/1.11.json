@@ -45,12 +45,7 @@
         "keys": {
           "system": {
             "kind": "token",
-            "values": [
-              "atlassian",
-              "oboard",
-              "businessmap",
-              "notion"
-            ],
+            "values": [],
             "open": true
           },
           "id": {
