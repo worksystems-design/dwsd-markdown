@@ -6,6 +6,20 @@ commit onward**. The current model is described by the reference itself — `REA
 An entry that changes the format names the new format version on a `Format: x.y.z` line
 (`conventions.md` › Format versions).
 
+## 2026-11-26
+
+Format: 1.12.0
+
+- **A board column's `check` retires; a Definition of Done is an agreement.** Write it under
+  the column's `agreements:` (`"DoD: First-article inspection passed"`). `check` is still
+  read, as an inline agreement of its column, with an info, and is dropped in the next
+  major. No renderer ever drew it; an inline agreement shows as a chip with its text.
+  Thomas, 2026-11-26. Voltfeld's seven `check` keys moved to `agreements:`; contract 1.12
+  (unchanged apart from the version), plugin 0.28.0.
+  Host impact: `types/visualization.md` › Columns and Reading it; `skills/org-validate`;
+  `contracts/1.12.json`, `contracts/1.12.guide.md`. The DSL warns on `check:` and ships a
+  migration script; example orgs are re-pinned.
+
 ## 2026-11-25
 
 Format: 1.11.0

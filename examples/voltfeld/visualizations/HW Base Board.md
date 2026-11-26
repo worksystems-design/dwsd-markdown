@@ -35,7 +35,8 @@ groups:
       - "[[DFM Review]]"
     columns:
       - name: Design Review
-        check: "Interface to both product lines confirmed with the System Architect"
+        agreements:
+          - "DoD: Interface to both product lines confirmed with the System Architect"
       - name: DFM Check
         agreements:
           - "No drawing goes to tooling without a DFM review with Manufacturing"
@@ -47,7 +48,8 @@ groups:
         aging: 98d
       - name: Handed Over
         status-category: done
-        check: "Drawings, BOM and test specification received by Manufacturing"
+        agreements:
+          - "DoD: Drawings, BOM and test specification received by Manufacturing"
 ```
 
 > [!NOTE]

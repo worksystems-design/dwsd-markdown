@@ -1,0 +1,936 @@
+{
+  "format": "1.12",
+  "aliases": [],
+  "okf": "0.2",
+  "shared-fields": {
+    "derived-from": {
+      "kind": "wikilink",
+      "aliases": [
+        "derived_from"
+      ]
+    },
+    "tags": {
+      "kind": "token-or-list",
+      "values": [],
+      "open": true
+    },
+    "created_at": {
+      "kind": "date",
+      "aliases": [
+        "created-at"
+      ]
+    },
+    "updated_at": {
+      "kind": "date",
+      "aliases": [
+        "updated-at"
+      ]
+    },
+    "created_by": {
+      "kind": "string",
+      "aliases": [
+        "created-by"
+      ]
+    },
+    "same-as": {
+      "kind": "object-list",
+      "items": {
+        "required": [
+          "system"
+        ],
+        "one-of": [
+          "id",
+          "url"
+        ],
+        "keys": {
+          "system": {
+            "kind": "token",
+            "values": [],
+            "open": true
+          },
+          "id": {
+            "kind": "string"
+          },
+          "url": {
+            "kind": "string"
+          },
+          "instance": {
+            "kind": "string"
+          },
+          "label": {
+            "kind": "string"
+          },
+          "part": {
+            "kind": "string",
+            "format": "anchor-path"
+          }
+        }
+      }
+    },
+    "sources": {
+      "kind": "object",
+      "earlier-form-of": "same-as"
+    },
+    "atlassian_id": {
+      "kind": "string",
+      "earlier-form-of": "same-as"
+    },
+    "atlassian_url": {
+      "kind": "string",
+      "earlier-form-of": "same-as"
+    }
+  },
+  "types": {
+    "agreement": {
+      "entity": true,
+      "required": [
+        "agreement-type"
+      ],
+      "folders": [
+        "agreements"
+      ],
+      "fields": {
+        "agreement-type": {
+          "kind": "token-or-list",
+          "values": [
+            "organizational",
+            "work"
+          ],
+          "open": false
+        },
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "role",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "agreement-of": {
+          "kind": "locator",
+          "targets": [
+            "work-system",
+            "unit",
+            "individual"
+          ]
+        },
+        "derived-from": {
+          "kind": "wikilink",
+          "targets": [
+            "organizational-decision-record",
+            "proposal"
+          ],
+          "aliases": [
+            "derived_from"
+          ]
+        },
+        "version": {
+          "kind": "string"
+        },
+        "decision_date": {
+          "kind": "date"
+        },
+        "review_date": {
+          "kind": "date"
+        }
+      }
+    },
+    "ai-agent": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "ai-agents"
+      ],
+      "fields": {
+        "platform": {
+          "kind": "string"
+        },
+        "description": {
+          "kind": "string"
+        },
+        "status": {
+          "kind": "enum",
+          "values": [
+            "active",
+            "deactivated"
+          ],
+          "open": true
+        },
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "role",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "bound-to": {
+          "kind": "locator",
+          "targets": [
+            "work-system",
+            "unit",
+            "individual"
+          ]
+        }
+      }
+    },
+    "automation": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "automations"
+      ],
+      "fields": {
+        "platform": {
+          "kind": "string"
+        },
+        "description": {
+          "kind": "string"
+        },
+        "status": {
+          "kind": "enum",
+          "values": [
+            "active",
+            "deactivated"
+          ],
+          "open": true
+        },
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "role",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "bound-to": {
+          "kind": "locator",
+          "targets": [
+            "work-system",
+            "unit",
+            "individual"
+          ]
+        }
+      }
+    },
+    "driver": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "drivers"
+      ],
+      "fields": {
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "role",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "derived-from": {
+          "kind": "wikilink",
+          "targets": [
+            "insight"
+          ],
+          "aliases": [
+            "derived_from"
+          ]
+        },
+        "status": {
+          "kind": "string"
+        }
+      }
+    },
+    "flight-item-type": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "flight-item-types"
+      ],
+      "fields": {
+        "uses-route": {
+          "kind": "wikilink",
+          "targets": [
+            "flight-route"
+          ]
+        }
+      }
+    },
+    "flight-route": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "flight-routes"
+      ],
+      "fields": {}
+    },
+    "individual": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "individuals"
+      ],
+      "fields": {
+        "role": {
+          "kind": "text-or-wikilink",
+          "targets": [
+            "role"
+          ]
+        },
+        "level": {
+          "kind": "string"
+        },
+        "reports-to": {
+          "kind": "wikilink",
+          "targets": [
+            "individual"
+          ],
+          "aliases": [
+            "reports_to"
+          ]
+        },
+        "member-of": {
+          "kind": "wikilink",
+          "targets": [
+            "unit"
+          ]
+        },
+        "position_key": {
+          "kind": "string"
+        },
+        "external_position_key": {
+          "kind": "string"
+        }
+      }
+    },
+    "insight": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "insights"
+      ],
+      "fields": {
+        "observes": {
+          "kind": "locator",
+          "targets": [
+            "any"
+          ]
+        },
+        "title": {
+          "kind": "string"
+        },
+        "status": {
+          "kind": "enum",
+          "values": [
+            "new",
+            "acknowledged"
+          ],
+          "open": false
+        },
+        "acknowledged_at": {
+          "kind": "datetime"
+        },
+        "derived-from": {
+          "kind": "wikilink",
+          "targets": [
+            "signal"
+          ],
+          "aliases": [
+            "derived_from"
+          ]
+        }
+      }
+    },
+    "interaction": {
+      "entity": true,
+      "required": [
+        "interaction-type"
+      ],
+      "folders": [
+        "interactions"
+      ],
+      "fields": {
+        "interaction-type": {
+          "kind": "token-or-list",
+          "values": [
+            "meeting",
+            "conversation",
+            "bilateral"
+          ],
+          "open": true
+        },
+        "interaction-of": {
+          "kind": "locator",
+          "targets": [
+            "work-system",
+            "unit",
+            "individual",
+            "visualization"
+          ]
+        },
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "role",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "start": {
+          "kind": "datetime"
+        },
+        "end": {
+          "kind": "datetime"
+        },
+        "rrule": {
+          "kind": "string",
+          "format": "rrule"
+        },
+        "trigger": {
+          "kind": "string"
+        },
+        "version": {
+          "kind": "string"
+        }
+      }
+    },
+    "mandate": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "mandates"
+      ],
+      "fields": {
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "role",
+            "unit",
+            "work-system"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "delegator": {
+          "kind": "wikilink",
+          "targets": [
+            "role",
+            "unit",
+            "work-system",
+            "individual"
+          ]
+        },
+        "mandate-of": {
+          "kind": "locator",
+          "targets": [
+            "any"
+          ]
+        },
+        "derived-from": {
+          "kind": "wikilink",
+          "targets": [
+            "organizational-decision-record",
+            "proposal"
+          ],
+          "aliases": [
+            "derived_from"
+          ]
+        },
+        "version": {
+          "kind": "string"
+        },
+        "decision_date": {
+          "kind": "date"
+        },
+        "review_date": {
+          "kind": "date"
+        }
+      }
+    },
+    "organizational-decision-record": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "decision-records"
+      ],
+      "fields": {
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "role",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "status": {
+          "kind": "enum",
+          "values": [
+            "proposed",
+            "accepted",
+            "superseded",
+            "deprecated"
+          ],
+          "open": false
+        },
+        "date": {
+          "kind": "date"
+        },
+        "decision-makers": {
+          "kind": "wikilink"
+        }
+      }
+    },
+    "proposal": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "proposals"
+      ],
+      "fields": {
+        "derived-from": {
+          "kind": "wikilink",
+          "targets": [
+            "driver",
+            "insight",
+            "signal"
+          ],
+          "aliases": [
+            "derived_from"
+          ]
+        },
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "role",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "status": {
+          "kind": "enum",
+          "values": [
+            "draft",
+            "in-consent",
+            "consented",
+            "declined"
+          ],
+          "open": false
+        }
+      }
+    },
+    "role": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "roles"
+      ],
+      "fields": {
+        "role-keeper": {
+          "kind": "wikilink",
+          "targets": [
+            "individual"
+          ],
+          "aliases": [
+            "role_keeper"
+          ]
+        },
+        "for-domain": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system",
+            "unit"
+          ],
+          "aliases": [
+            "for_domain"
+          ]
+        },
+        "version": {
+          "kind": "string"
+        },
+        "decision_date": {
+          "kind": "date"
+        },
+        "review_date": {
+          "kind": "date"
+        }
+      }
+    },
+    "signal": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "signals"
+      ],
+      "fields": {
+        "observes": {
+          "kind": "locator",
+          "targets": [
+            "any"
+          ]
+        }
+      }
+    },
+    "unit": {
+      "entity": true,
+      "required": [],
+      "folders": [
+        "units",
+        "work-systems"
+      ],
+      "fields": {
+        "unit-type": {
+          "kind": "token-or-list",
+          "values": [
+            "team",
+            "work-system"
+          ],
+          "open": true
+        },
+        "flightlevel": {
+          "kind": "enum",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ],
+          "open": false
+        },
+        "member-of": {
+          "kind": "wikilink",
+          "targets": [
+            "unit"
+          ]
+        },
+        "contributes-to": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system"
+          ]
+        },
+        "delegator": {
+          "kind": "wikilink"
+        },
+        "version": {
+          "kind": "string"
+        },
+        "decision_date": {
+          "kind": "date"
+        },
+        "review_date": {
+          "kind": "date"
+        },
+        "term": {
+          "kind": "string"
+        }
+      }
+    },
+    "visualization": {
+      "entity": true,
+      "required": [
+        "visualization-type"
+      ],
+      "folders": [
+        "visualizations"
+      ],
+      "fields": {
+        "visualization-type": {
+          "kind": "token-or-list",
+          "values": [
+            "board"
+          ],
+          "open": true
+        },
+        "title": {
+          "kind": "string"
+        },
+        "visualization-of": {
+          "kind": "wikilink",
+          "targets": [
+            "work-system"
+          ],
+          "aliases": [
+            "visualization_of"
+          ]
+        }
+      }
+    },
+    "readme": {
+      "entity": false,
+      "required": []
+    },
+    "tour": {
+      "entity": false,
+      "required": []
+    }
+  },
+  "rules": [
+    {
+      "type": "unit",
+      "when": {
+        "field": "unit-type",
+        "contains": "work-system"
+      },
+      "require": {
+        "field": "flightlevel",
+        "oneOf": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    }
+  ],
+  "managed": {
+    "$comment": "The places in a file that tools read by their form. Keep to the form and a tool gives you what `gives` says; anything else in the body stays free text. Generic on purpose: no tool is named.",
+    "rule": {
+      "heading": "an ATX heading of level 2; its text matches the primary or an alias exactly, case-insensitive, trimmed",
+      "column": "a table header cell matches the primary or an alias exactly, case-insensitive, trimmed",
+      "section-end": "the next heading of level 1 or 2",
+      "fenced-code": "lines inside a fenced code block are neither headings nor table rows"
+    },
+    "places": [
+      {
+        "name": "fences",
+        "where": {
+          "types": "any",
+          "form": "fenced code block"
+        },
+        "tags": [
+          {
+            "tag": "dwsd.board",
+            "aliases": [
+              "dwsd-board",
+              "wsd.board",
+              "wsd-board"
+            ]
+          },
+          {
+            "tag": "dwsd.flightroute",
+            "aliases": [
+              "dwsd-flightroute",
+              "wsd.flightroute",
+              "wsd-flightroute"
+            ]
+          },
+          {
+            "tag": "dwsd.topology",
+            "aliases": [
+              "dwsd-topology",
+              "wsd.topology",
+              "wsd-topology"
+            ]
+          },
+          {
+            "tag": "dwsd.orgchart",
+            "aliases": [
+              "dwsd-orgchart",
+              "wsd.orgchart",
+              "wsd-orgchart"
+            ]
+          },
+          {
+            "tag": "dwsd.units",
+            "aliases": [
+              "dwsd-units",
+              "wsd.units",
+              "wsd-units"
+            ]
+          },
+          {
+            "tag": "dwsd.change-trail",
+            "aliases": [
+              "dwsd-change-trail",
+              "wsd.change-trail",
+              "wsd-change-trail"
+            ]
+          }
+        ],
+        "gives": "a view drawn from the fence; its grammar is the fence spec in conventions.md › Embedded DSL fences"
+      },
+      {
+        "name": "interactions-table",
+        "where": {
+          "types": [
+            "interaction",
+            "meeting"
+          ],
+          "heading": {
+            "primary": "Interactions",
+            "aliases": []
+          }
+        },
+        "columns": {
+          "name": {
+            "primary": "Name",
+            "aliases": []
+          },
+          "outcome": {
+            "primary": "Outcome",
+            "aliases": []
+          },
+          "locator": {
+            "primary": "Interaction of",
+            "aliases": [
+              "interaction-of"
+            ]
+          }
+        },
+        "gives": "each row an interaction; a row with a locator shows where the locator points, with its outcome"
+      },
+      {
+        "name": "agreements-table",
+        "where": {
+          "types": "any",
+          "heading": {
+            "primary": "Agreements",
+            "aliases": []
+          }
+        },
+        "columns": {
+          "name": {
+            "primary": "Name",
+            "aliases": []
+          },
+          "outcome": {
+            "primary": "Outcome",
+            "aliases": []
+          },
+          "locator": {
+            "primary": "Agreement of",
+            "aliases": [
+              "agreement-of"
+            ]
+          }
+        },
+        "gives": "each row an agreement; a row with a locator shows where the locator points"
+      },
+      {
+        "name": "outcome-section",
+        "where": {
+          "types": [
+            "interaction",
+            "meeting"
+          ],
+          "heading": {
+            "primary": "What is the outcome?",
+            "aliases": [
+              "Outcome"
+            ]
+          }
+        },
+        "gives": "the first lines, shown as the short outcome where the interaction is drawn"
+      },
+      {
+        "name": "proposal-outcome",
+        "where": {
+          "types": [
+            "proposal"
+          ],
+          "heading": {
+            "primary": "Outcome",
+            "aliases": []
+          }
+        },
+        "gives": "consented or declined, shown where the proposal is drawn"
+      },
+      {
+        "name": "mandate-sections",
+        "where": {
+          "types": [
+            "individual",
+            "role",
+            "unit",
+            "ai-agent"
+          ],
+          "headings": [
+            {
+              "heading": {
+                "primary": "Accountabilities",
+                "aliases": []
+              },
+              "mode": "must"
+            },
+            {
+              "heading": {
+                "primary": "Decision Rights",
+                "aliases": []
+              },
+              "mode": "may"
+            },
+            {
+              "heading": {
+                "primary": "Key Responsibilities",
+                "aliases": []
+              },
+              "mode": "must"
+            },
+            {
+              "heading": {
+                "primary": "Mandates",
+                "aliases": []
+              },
+              "mode": null
+            }
+          ]
+        },
+        "columns": {
+          "name": {
+            "primary": "Name",
+            "aliases": []
+          },
+          "locator": {
+            "primary": "Mandate of",
+            "aliases": [
+              "mandate-of"
+            ]
+          }
+        },
+        "gives": "each row a mandate of the file's holder; a row with a locator shows as a mandate chip where it points"
+      },
+      {
+        "name": "mermaid-click",
+        "where": {
+          "types": "any",
+          "form": "a `click <node> \"<target>\"` line inside a mermaid fence in the body",
+          "targets": [
+            "[[Label]] (recommended)",
+            "relative path to a .md file of the org, spaces as %20"
+          ]
+        },
+        "gives": "a body reference from the node to that file; renamed with the file; an http(s) target stays an ordinary link"
+      },
+      {
+        "name": "live-links",
+        "where": {
+          "types": "any",
+          "form": "inline Markdown link on a prose line of the body",
+          "title": "^[a-z][a-z0-9-]{0,31}:\\S+$"
+        },
+        "gives": "a reference to an object in another system; a host that knows the system can resolve it live"
+      }
+    ]
+  }
+}

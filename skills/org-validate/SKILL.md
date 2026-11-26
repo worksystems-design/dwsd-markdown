@@ -87,7 +87,8 @@ Report findings as `file:line — issue`, grouped, with a final **PASS / FAIL** 
      YAML.
    - **Board fences** (` ```dwsd.board `) — the name key is `title:` (a root `board:`
      key is retired); flag a hyphenated `dwsd-board` fence tag (it highlights but does
-     not render). Inline inside-out `agreements:` / `interactions:` keys on a
+     not render). **Note** a column's `check:` as retired from format 1.12.0 (still read as an
+     inline agreement; write it under `agreements:`). Inline inside-out `agreements:` / `interactions:` keys on a
      column/lane/group are valid board content, not references to resolve.
    - **Change trail fences** (` ```dwsd.change-trail `) — the body may be empty; the keys
      are `around:` (a wikilink that must resolve, or `self`), `show:` (`all` | `open` | `recent`),

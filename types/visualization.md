@@ -50,8 +50,11 @@ renders it live; in plain Markdown the same block still reads as a YAML document
   header tint). There is **no `blocked`** — a stuck column is `waiting`.
 - `wip` — a number (the **max**) or `[min, max]`.
 - `aging` — duration string, e.g. `3d`. `max-returns` — escalation threshold.
-- `check` — a Definition-of-Done string. `tags` — descriptive chips.
+- `tags` — descriptive chips.
 - `agreements` / `interactions` — **inside-out** declarations on the column (see below).
+  A Definition of Done is one of its agreements: `agreements: ["DoD: First-article inspection passed"]`.
+- `check` — **retired** (1.12.0): the earlier key for a Definition-of-Done string. Still
+  read, as an inline agreement of the column, with an info; dropped in the next major.
 - `split` — `{ direction?: horizontal, of: [ {name, status-category?, wip?, …} ] }`.
 - `group` — back-reference to a group (a string, or a path array for nested groups).
 
@@ -122,7 +125,7 @@ columns:
 - **The question:** how does work move through this work system, and what applies at which
   column?
 - **Look first:** `visualization-of`, then the `dwsd.board` fence: columns left to right,
-  with their `status-category`, `wip` and `check`.
+  with their `status-category`, `wip` and `agreements`.
 - **Go next:** up via `visualization-of` to the work system; the `[[…]]` entries in inline
   `agreements:` / `interactions:` to their files.
 - **Backlinks:** the interactions, agreements and AI agents whose locator names this board

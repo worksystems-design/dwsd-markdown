@@ -35,7 +35,8 @@ lanes:
             status-category: to-do
           - name: Refined
             status-category: to-do
-            check: "Acceptance criteria, team assignment and platform dependencies named"
+            agreements:
+              - "DoD: Acceptance criteria, team assignment and platform dependencies named"
       - name: In PI
         interactions:
           - "[[ART Sync]]"

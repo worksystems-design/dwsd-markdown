@@ -22,12 +22,14 @@ columns:
   - name: In Studio
     wip: 4
     status-category: in-progress
-    check: "Cause understood, order corrected or customer asked"
+    agreements:
+      - "DoD: Cause understood, order corrected or customer asked"
   - name: Waiting on Customer
     status-category: waiting
   - name: Back in the ERP
     status-category: done
-    check: "Order released again, reason code set"
+    agreements:
+      - "DoD: Order released again, reason code set"
 lanes:
   - Configuration
   - Date

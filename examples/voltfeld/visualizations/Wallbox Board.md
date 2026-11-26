@@ -25,7 +25,8 @@ columns:
     status-category: to-do
   - name: Ready
     status-category: to-do
-    check: "Feature split into team stories, platform dependency resolved or named"
+    agreements:
+      - "DoD: Feature split into team stories, platform dependency resolved or named"
   - name: In Progress
     wip: 4
     status-category: in-progress

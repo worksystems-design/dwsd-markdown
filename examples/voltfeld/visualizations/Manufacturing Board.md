@@ -25,7 +25,8 @@ columns:
   - name: Pilot Build
     wip: 1
     status-category: in-progress
-    check: "First-article inspection passed"
+    agreements:
+      - "DoD: First-article inspection passed"
   - name: Ramp
     status-category: in-progress
   - name: Stable Production
